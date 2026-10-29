@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Immersion | Private 1-on-1 VIP Day with Michelle J. Lamont</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            deepPurple: '#2d154a',
+                            amethyst: '#4a2574',
+                            violet: '#683b9c',
+                            lavender: '#efe6f7',
+                            softLilac: '#f7f2fb',
+                            sunsetPeach: '#f89a80',
+                            warmRose: '#efa897',
+                            paleBlush: '#fdf3f0',
+                            celestialBlue: '#3a7bd5',
+                            powderBlue: '#eef4ff',
+                            gold: '#dfb15b'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.70);
+        }
+        .glass-dark {
+            background: rgba(45, 21, 74, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #f7dcd5 0%, #fad2ca 25%, #e8e4f5 60%, #ded9f7 100%);
+        }
+        .golden-ocean-gradient {
+            background: linear-gradient(180deg, rgba(45, 21, 74, 0.85) 0%, rgba(74, 37, 116, 0.75) 45%, rgba(248, 154, 128, 0.65) 100%);
+        }
+        .spiritual-gradient {
+            background: linear-gradient(135deg, #2d154a 0%, #4a2574 55%, #683b9c 100%);
+        }
+        .aurora-glow {
+            position: absolute;
+            filter: blur(85px);
+            opacity: 0.45;
+            pointer-events: none;
+            border-radius: 9999px;
+            z-index: 0;
+        }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+        @keyframes pulseBowl {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.08); opacity: 0.9; }
+        }
+        .animate-bowl-glow {
+            animation: pulseBowl 4s ease-in-out infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf3f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a9d8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9b72b8;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-[#fdfaf8] antialiased overflow-x-hidden selection:bg-brand-sunsetPeach selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-deepPurple via-brand-amethyst to-brand-deepPurple text-white py-2.5 px-4 text-xs md:text-sm font-medium tracking-wide">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2 mx-auto md:mx-0">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">Strictly Limited</span>
+                <span>✨ <strong>The Immersion VIP Sanctuary:</strong> Only 2 private in-person dates available per month</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-xs">
+                <a href="#what-you-receive" class="hover:text-brand-sunsetPeach transition-colors duration-200 underline">What You Receive</a>
+                <span class="text-white/40">•</span>
+                <button onclick="openImmersionModal('VIP Day Application')" class="text-brand-gold hover:text-white transition-colors duration-200 font-semibold">Reserve Your Date →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="index.html" class="flex flex-col group">
+                    <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover:text-brand-amethyst transition-colors">
+                        Michelle J. Lamont
+                    </span>
+                    <span class="text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">
+                        The Immersion™ • Private VIP Day
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">About</a>
+                    <a href="sacred-containers.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Sacred Containers (1:1)</a>
+                    <a href="the-immersion.html" class="text-sm font-semibold text-brand-amethyst transition-colors border-b-2 border-brand-sunsetPeach pb-0.5">The Immersion</a>
+                    <a href="podcast.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Podcast</a>
+                    <a href="speaking.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Speaking</a>
+                    <a href="press.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Press</a>
+                </nav>
+
+                <!-- Action CTA & Mobile Trigger -->
+                <div class="flex items-center space-x-3">
+                    <a href="#investment" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-100/80 text-brand-deepPurple hover:bg-purple-200 transition-all">
+                        <i class="fa-solid fa-gem mr-1.5 text-brand-sunsetPeach"></i> Investment & Plans
+                    </a>
+                    <button onclick="openImmersionModal('Hero Reserve Button')" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-white hover:brightness-105 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        Claim Your Portal
+                    </button>
+                    <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
+            <div class="flex flex-col space-y-4 pt-2">
+                <a href="index.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Home</a>
+                <a href="about.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">About Michelle</a>
+                <a href="sacred-containers.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Sacred Containers (1:1 Mentorship)</a>
+                <a href="the-immersion.html" class="mobile-link text-base font-semibold text-brand-amethyst py-1">The Immersion VIP Day</a>
+                <a href="#portal" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">The Experience</a>
+                <a href="#what-you-receive" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">What You Receive</a>
+                <a href="#itinerary" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">VIP Day Schedule</a>
+                <a href="#investment" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Investment & Payment</a>
+                <div class="pt-2">
+                    <button onclick="openImmersionModal('Mobile Drawer Apply')" class="w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white">
+                        Apply for The Immersion
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section: Golden Sunset Beach (Directly inspired by screenshot top banner) -->
+    <section class="relative pt-20 pb-28 lg:pt-32 lg:pb-40 text-white overflow-hidden text-center">
+        <!-- Golden Ocean Backdrop with high luxury warmth -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800&auto=format&fit=crop&q=85" alt="Golden sunset over tranquil sacred ocean" class="w-full h-full object-cover object-bottom" />
+            <div class="absolute inset-0 golden-ocean-gradient backdrop-blur-[1px]"></div>
+        </div>
+
+        <!-- Ambient Glow Orbs -->
+        <div class="aurora-glow w-[36rem] h-[36rem] bg-brand-sunsetPeach/40 top-1/4 left-1/2 -translate-x-1/2"></div>
+        <div class="aurora-glow w-80 h-80 bg-brand-amethyst/60 top-10 left-10"></div>
+        <div class="aurora-glow w-80 h-80 bg-brand-gold/30 bottom-10 right-10"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs font-semibold uppercase tracking-[0.25em] text-amber-200">
+                <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i>
+                <span>Private 1-on-1 Full-Day In-Person Calibration</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12]">
+                The Immersion
+            </h1>
+
+            <p class="font-serif text-xl sm:text-2xl lg:text-3xl text-amber-100 font-light italic max-w-3xl mx-auto leading-relaxed">
+                A private, bespoke energetic sanctuary where we collapse timelines, dissolve subconscious scarcity, and anchor your highest reality in a single unforgettable day.
+            </p>
+
+            <p class="text-sm sm:text-base text-purple-100 max-w-2xl mx-auto font-normal leading-relaxed">
+                Held privately with Michelle J. Lamont at a secluded luxury sanctuary in the Dallas/Fort Worth area, or arranged as a VIP destination fly-in.
+            </p>
+
+            <!-- Action CTAs matching screenshot button style -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <button onclick="scrollToApplication()" class="w-full sm:w-auto inline-flex items-center justify-center px-9 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-crown mr-2 text-base"></i> Claim Your Immersion Portal
+                </button>
+                <a href="#what-you-receive" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md transition-all">
+                    Explore The Full VIP Experience ↓
+                </a>
+            </div>
+
+            <!-- Trust Verification Badges -->
+            <div class="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-amber-100/90 font-medium">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-brand-sunsetPeach"></i> 100% Confidential VIP Atmosphere</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-spa text-brand-gold"></i> Dallas Sanctuary or Destination Fly-In</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-calendar-star text-brand-sunsetPeach"></i> Strictly 2 Apertures Monthly</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 1: "🔥 This Is Your Portal" (Directly inspired by screenshot crystal bowl photo) -->
+    <section id="portal" class="py-20 lg:py-28 bg-[#fdfaf8] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Channeled Narrative matching screenshot copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-fire-flame-curved text-brand-sunsetPeach"></i> The Energetic Threshold
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple leading-[1.15]">
+                        🔥 This Is Your Portal
+                    </h2>
+
+                    <p class="font-serif text-xl sm:text-2xl text-brand-amethyst font-semibold italic leading-snug">
+                        "When you change your frequency in the physical room with someone holding divine authority, the timeline you have waited years for happens in hours."
+                    </p>
+
+                    <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+                        <p>
+                            You have read the books. You have listened to the podcast episodes. You have meditated, affirmed, and strived. Yet there are moments in your spiritual and financial evolution where digital calls and one-hour Zoom sessions cannot hold the sheer volume of transformation your soul is demanding.
+                        </p>
+                        <p>
+                            <strong>The Immersion</strong> is a full-day private container designed for leaders, visionaries, empaths, and executives who need an immediate, cellular recalibration. In Michelle’s physical presence, the energetic interference that keeps you in looping self-sabotage is pinpointed, exposed, and lovingly dissolved.
+                        </p>
+                        <p>
+                            We do not leave the sanctuary until your nervous system feels completely safe holding the extraordinary abundance, love, and sovereignty that belongs to you.
+                        </p>
+                    </div>
+
+                    <!-- 3 Focal Transformations -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2 text-left">
+                        <div class="p-4 rounded-2xl bg-white border border-purple-100 shadow-sm">
+                            <i class="fa-solid fa-dna text-brand-sunsetPeach text-base mb-2"></i>
+                            <p class="font-bold text-xs text-brand-deepPurple">Ancestral Cleansing</p>
+                            <p class="text-[11px] text-gray-500 mt-1">Eradicating inherited vows of poverty, martyrdom, and silence.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white border border-purple-100 shadow-sm">
+                            <i class="fa-solid fa-hands-holding-circle text-brand-sunsetPeach text-base mb-2"></i>
+                            <p class="font-bold text-xs text-brand-deepPurple">Somatic Safety</p>
+                            <p class="text-[11px] text-gray-500 mt-1">Calibrating your nervous system so massive inflows don't trigger panic.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white border border-purple-100 shadow-sm">
+                            <i class="fa-solid fa-bullseye-arrow text-brand-sunsetPeach text-base mb-2"></i>
+                            <p class="font-bold text-xs text-brand-deepPurple">Timeline Collapse</p>
+                            <p class="text-[11px] text-gray-500 mt-1">Dissolving decades of waiting into immediate energetic embodiment.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="scrollToApplication()" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-md transition-all">
+                            Step Into Your Expansion →
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Crystal Sound Bowl Imagery & Interactive 432Hz Sound Bath Simulation -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 sm:w-88 group">
+                        <!-- Radiant Halo -->
+                        <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-gold via-brand-sunsetPeach to-brand-amethyst blur-2xl opacity-50 group-hover:opacity-75 transition duration-700 animate-pulse"></div>
+
+                        <!-- Main Image Card mimicking screenshot hands over glowing crystal singing bowls -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-2">
+                            <div class="relative rounded-2xl overflow-hidden h-96 sm:h-[480px]">
+                                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&auto=format&fit=crop&q=80" alt="Hands conducting crystal singing bowl sound healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                                <!-- Floating Quote Badge in Portrait -->
+                                <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-2xl shadow-lg border border-white/80 text-left">
+                                    <div class="flex items-center space-x-2 text-brand-sunsetPeach text-xs mb-1">
+                                        <i class="fa-solid fa-water"></i>
+                                        <span class="font-bold uppercase tracking-wider text-[10px]">Pure Frequency Calibration</span>
+                                    </div>
+                                    <p class="font-serif font-bold text-brand-deepPurple text-xs sm:text-sm">
+                                        "In this room, you will hear what spirit has been trying to tell you for forty years."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Sensory Badge -->
+                        <div class="absolute -top-4 -right-4 glass-card px-4 py-2.5 rounded-2xl shadow-xl border border-white/80 hidden sm:flex items-center space-x-2.5 animate-float">
+                            <div class="w-8 h-8 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-sm shadow">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[9px] uppercase font-bold text-gray-500">432Hz Sound Bath</p>
+                                <p class="text-xs font-bold text-brand-deepPurple">Included In Sanctuary</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Interactive 432Hz Crystal Sound Bath Preview Player -->
+            <div class="mt-16 max-w-4xl mx-auto glass-card p-6 sm:p-8 rounded-3xl border border-purple-200/80 shadow-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-4 border-b border-purple-100">
+                    <div class="flex items-center space-x-3 text-center sm:text-left">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-waveform-lines text-brand-sunsetPeach"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-sunsetPeach">Sensory Portal Sample</span>
+                            <h4 class="font-serif font-bold text-lg text-brand-deepPurple">Listen: 432Hz Crystal Singing Bowl Alignment Transmission</h4>
+                        </div>
+                    </div>
+                    <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-brand-amethyst">
+                        Cellular Calibration
+                    </span>
+                </div>
+
+                <div class="pt-6 flex flex-col sm:flex-row items-center gap-6">
+                    <button id="soundBathBtn" onclick="toggleSoundBathAudio()" class="w-14 h-14 rounded-full bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple flex items-center justify-center text-xl shadow-lg hover:scale-105 transition-all shrink-0">
+                        <i id="soundBathIcon" class="fa-solid fa-play ml-0.5"></i>
+                    </button>
+                    <div class="w-full space-y-2">
+                        <div class="w-full bg-purple-100 h-2.5 rounded-full overflow-hidden cursor-pointer" onclick="scrubSoundBath(event)">
+                            <div id="soundBathProgress" class="bg-gradient-to-r from-brand-sunsetPeach via-brand-gold to-brand-amethyst h-full w-0 rounded-full transition-all"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-500 font-mono">
+                            <span id="soundBathCurTime">00:00</span>
+                            <span>03:33</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-[11px] text-gray-500 italic mt-3 text-center sm:text-left">
+                    "Every Immersion Day concludes with Michelle playing 432Hz quartz crystal bowls over your body, locking the new energetic frequency into every cell of your physiology."
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 2: "What You Receive" (Directly inspired by screenshot 4-box layout) -->
+    <section id="what-you-receive" class="py-20 sunset-gradient relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Comprehensive Architecture</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    🎁 What You Receive
+                </h2>
+                <p class="text-gray-700 text-base sm:text-lg">
+                    This is not simply a single day—it is a closed, 60-day continuum of preparation, physical recalibration, and post-immersion integration.
+                </p>
+            </div>
+
+            <!-- The 4 Structured Cards Grid matching screenshot -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Card 1: Main Immersion Day (6-7 Hour Intensive) - Large Spotlight Card -->
+                <div class="lg:col-span-7 glass-card rounded-3xl p-8 sm:p-10 border-2 border-brand-sunsetPeach shadow-2xl flex flex-col justify-between relative group">
+                    <div class="absolute -top-3.5 left-8 bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+                        The Core Catalyst
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-lavender text-brand-amethyst">
+                                Full-Day Experience
+                            </span>
+                            <span class="text-xs text-brand-gold font-bold">In-Person VIP</span>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple">
+                                6-to-7 Hour In-Person Private Immersion Day
+                            </h3>
+                            <p class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach mt-1">
+                                Complete Nervous System & Quantum Timeline Recode
+                            </p>
+                            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mt-3">
+                                You and Michelle spend an undivided day in a secluded luxury sanctuary. We unpack every layer of unconscious resistance, rewire your autonomic response to wealth, and activate your highest divine channel.
+                            </p>
+                        </div>
+
+                        <!-- Bullet Checklist matching screenshot -->
+                        <div class="space-y-3 pt-2 border-t border-purple-100 text-xs sm:text-sm text-gray-700">
+                            <div class="flex items-start space-x-3">
+                                <span class="w-5 h-5 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>One-on-One Intimate Deep Dive:</strong> Direct channeled Akashic guidance tailored exclusively to your destiny.</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-5 h-5 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>Somatic Nervous System Recoding:</strong> Releasing the physical stored trauma of scarcity, debt, and abandonment.</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-5 h-5 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>Bespoke 432Hz Sound Healing Bath:</strong> Quartz singing bowl frequency alignment to seal your new receptive vibration.</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-5 h-5 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>Curated Organic Gourmet Lunch & Refreshments:</strong> Clean, high-vibrational nourishment provided throughout the day.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button onclick="scrollToApplication()" class="w-full py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-md">
+                            Apply for an In-Person Sanctuary Day →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: The 3 Ancillary Support Pillars matching screenshot stack -->
+                <div class="lg:col-span-5 flex flex-col justify-between gap-6">
+                    
+                    <!-- Card 2: Pre-Immersion Alignment -->
+                    <div class="glass-card p-6 sm:p-7 rounded-3xl border border-purple-100 shadow-md">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="w-8 h-8 rounded-xl bg-brand-sunsetPeach/20 text-brand-sunsetPeach flex items-center justify-center text-sm font-bold shrink-0">
+                                <i class="fa-solid fa-hourglass-start"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-brand-deepPurple">Pre-Energy Alignment Call</h4>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Prior to your immersion date, Michelle conducts an energetic scan and private diagnostic session to clarify your intentions, map your subconscious resistance, and prepare your nervous system for the physical portal.
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Three Integration Zoom Calls -->
+                    <div class="glass-card p-6 sm:p-7 rounded-3xl border border-purple-100 shadow-md">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="w-8 h-8 rounded-xl bg-brand-celestialBlue/20 text-brand-celestialBlue flex items-center justify-center text-sm font-bold shrink-0">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-brand-deepPurple">Three Post-Immersion Integration Calls</h4>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Transformation does not end when you leave. Over the following 6 weeks, you receive (3) 30-minute private Zoom sessions with Michelle to ground your new reality, dissolve ego blowback, and calibrate your physical results.
+                        </p>
+                    </div>
+
+                    <!-- Card 4: Full Lifetime Access to MMA -->
+                    <div class="spiritual-gradient text-white p-6 sm:p-7 rounded-3xl border border-white/20 shadow-lg">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="w-8 h-8 rounded-xl bg-brand-gold/30 text-brand-gold flex items-center justify-center text-sm font-bold shrink-0">
+                                <i class="fa-solid fa-infinity"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-white">Full Lifetime Access to MMA ($1,997 Value)</h4>
+                        </div>
+                        <p class="text-xs text-purple-100 leading-relaxed">
+                            Unrestricted lifetime enrollment in the <em>Manifesting Miracles Academy</em>, including all 8 foundational video modules, daily 333 alignment hypnoses, and our global private community.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: A Day in the Portal (Hour-by-Hour VIP Sanctuary Itinerary) -->
+    <section id="itinerary" class="py-20 bg-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Hour-By-Hour Flow</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    A Day Inside The Portal
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Every minute of your Immersion Day is deliberately orchestrated to move your body and spirit from defense into magnetic sovereignty.
+                </p>
+            </div>
+
+            <!-- Timeline Flow -->
+            <div class="relative border-l-2 border-purple-200 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-10">
+                
+                <!-- Stage 1 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs shadow-md">
+                        10A
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border border-purple-100 shadow-sm group-hover:border-brand-sunsetPeach transition-all">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-brand-sunsetPeach">10:00 AM • Arrival & Sanctuary Grounding</span>
+                        <h4 class="font-serif font-bold text-lg text-brand-deepPurple mt-1">Sacred Cleansing & Intention Anchoring</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                            You arrive at the private sanctuary. We begin with aromatic herbal aura clearing, heart-opening ceremonial tea, and a somatic grounding ritual to shed the physical stress of travel.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-amethyst text-white flex items-center justify-center font-bold text-xs shadow-md">
+                        11A
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border border-purple-100 shadow-sm group-hover:border-brand-sunsetPeach transition-all">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amethyst">11:30 AM • The Subconscious Crucible</span>
+                        <h4 class="font-serif font-bold text-lg text-brand-deepPurple mt-1">Ancestral Contract Erasure & Shadow Interrogation</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                            Michelle identifies the exact childhood contract that makes your nervous system contract when large sums of money, visibility, or unconditional love approach your field. We dismantle the contract cellularly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-gold text-brand-deepPurple flex items-center justify-center font-bold text-xs shadow-md">
+                        01P
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border border-purple-100 shadow-sm group-hover:border-brand-sunsetPeach transition-all">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-brand-gold">01:00 PM • Conscious Repose</span>
+                        <h4 class="font-serif font-bold text-lg text-brand-deepPurple mt-1">Curated Organic Gourmet Lunch & Sensory Reset</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                            A chef-prepared organic meal tailored to your dietary needs. A peaceful integration window where digestion and cellular recovery begin in absolute privacy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-celestialBlue text-white flex items-center justify-center font-bold text-xs shadow-md">
+                        02P
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border border-purple-100 shadow-sm group-hover:border-brand-sunsetPeach transition-all">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-brand-celestialBlue">02:15 PM • Akashic Quantum Alignment</span>
+                        <h4 class="font-serif font-bold text-lg text-brand-deepPurple mt-1">Direct Channeled Strategy & Reality Recoding</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                            With old resistance dismantled, Michelle channels your next multi-year sovereign blueprint. We map contracts, financial inflows, book releases, or corporate pivots with divine precision.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage 5 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] sm:-left-[51px] top-0 w-8 h-8 rounded-full bg-brand-deepPurple text-brand-sunsetPeach flex items-center justify-center font-bold text-xs shadow-md">
+                        04P
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border border-purple-100 shadow-sm group-hover:border-brand-sunsetPeach transition-all">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-brand-sunsetPeach">04:00 PM • The Sealing Ceremony</span>
+                        <h4 class="font-serif font-bold text-lg text-brand-deepPurple mt-1">432Hz Quartz Sound Bath & Timeline Anchor</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                            Lying down in total surrender, Michelle plays 432Hz crystal singing bowls directly over your chakras. The new vibration is anchored so it never leaks when you re-enter the physical world.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: "Who This Is For" (Matching screenshot full-moon lantern photo) -->
+    <section class="py-20 spiritual-gradient text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Full Moon Sky Lantern Photo from screenshot -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 sm:w-88 group">
+                        <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-sunsetPeach via-brand-gold to-brand-celestialBlue blur-2xl opacity-40 group-hover:opacity-75 transition duration-700 animate-pulse"></div>
+
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-brand-deepPurple p-2">
+                            <div class="relative rounded-2xl overflow-hidden h-96 sm:h-[480px]">
+                                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80" alt="Woman on beach holding glowing lantern under full moon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/90 via-transparent to-transparent"></div>
+
+                                <div class="absolute bottom-4 left-4 right-4 text-left">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-brand-sunsetPeach">Sovereign Awakening</span>
+                                    <p class="font-serif font-bold text-white text-sm mt-0.5">"The moment you stop waiting for permission, the entire universe rearranges itself."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Portal Counter -->
+                        <div class="absolute -bottom-4 -left-4 glass-dark px-4 py-2.5 rounded-2xl shadow-xl border border-white/20 hidden sm:flex items-center space-x-2.5 animate-float">
+                            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
+                            <span class="text-xs font-bold text-white">2 Apertures Open Per Month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Qualification Checklist from Screenshot -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-brand-sunsetPeach text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-compass text-brand-gold"></i> Readiness Assessment
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                        Who This Is For
+                    </h2>
+
+                    <p class="text-purple-200 text-sm sm:text-base leading-relaxed">
+                        The Immersion is an intimate, high-stakes energetic undertaking. It is not designed for casual curiosity; it is reserved for souls standing at the edge of a colossal leap.
+                    </p>
+
+                    <!-- Checklist matching screenshot points -->
+                    <div class="space-y-4 pt-2 text-left">
+                        <div class="glass-dark p-4 rounded-2xl border border-white/10 flex items-start space-x-3.5">
+                            <span class="w-6 h-6 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <p class="font-bold text-sm text-white">You have hit an invisible ceiling you cannot think your way through</p>
+                                <p class="text-xs text-purple-200 mt-0.5 leading-relaxed">You already have success, status, or intelligence, but your nervous system is stuck in an unconscious fight-or-flight boundary.</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-dark p-4 rounded-2xl border border-white/10 flex items-start space-x-3.5">
+                            <span class="w-6 h-6 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <p class="font-bold text-sm text-white">You are exhausted by years of intellectual, talk-only therapies</p>
+                                <p class="text-xs text-purple-200 mt-0.5 leading-relaxed">You understand your trauma conceptually, but your body is still experiencing the panic, contraction, and self-sabotage.</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-dark p-4 rounded-2xl border border-white/10 flex items-start space-x-3.5">
+                            <span class="w-6 h-6 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <p class="font-bold text-sm text-white">You crave Michelle’s undivided, in-person energetic focus</p>
+                                <p class="text-xs text-purple-200 mt-0.5 leading-relaxed">You don't want a group zoom room or a crowded seminar; you want seven hours of customized, high-precision spiritual surgery.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="scrollToApplication()" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-xl transition-all">
+                            Verify Your Candidacy & Apply →
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Investment & Payment Options (Directly matching screenshot) -->
+    <section id="investment" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Transparent Alignment</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    Investment & Flexible Payment Options
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Choose the payment structure aligned with your financial sovereignty. All options include the complete Immersion continuum.
+                </p>
+            </div>
+
+            <!-- 3 Payment Option Cards Grid matching screenshot -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
+                
+                <!-- Option 1: Pay In Full (Featured) -->
+                <div class="spiritual-gradient rounded-3xl p-8 border-2 border-brand-sunsetPeach text-white shadow-2xl flex flex-col justify-between relative transform md:-translate-y-2">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+                        Highest Value Bonus
+                    </div>
+
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach">Option 01</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">
+                            Pay in Full Sovereign
+                        </h3>
+                        <div class="py-2">
+                            <span class="font-serif text-4xl font-bold text-white">$6,500</span>
+                            <span class="text-xs text-purple-200 block mt-1">One-time full investment</span>
+                        </div>
+                        <p class="text-xs text-purple-100 leading-relaxed">
+                            Complete Immersion Day + 3 Integration Calls + Full MMA Academy access.
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-white/10 border border-white/20 text-xs text-brand-gold font-semibold">
+                            <i class="fa-solid fa-gift mr-1.5"></i> Included Exclusive Bonus: 30 Days of Direct Daily Voxer Voice Mentorship ($2,500 Value)
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button onclick="openImmersionModal('Pay in Full Sovereign ($6,500)')" class="w-full py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg font-bold transition-all">
+                            Select Pay in Full
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Option 2: 2 Payments -->
+                <div class="glass-card rounded-3xl p-8 border border-purple-200 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-amethyst">Option 02</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-deepPurple">
+                            2-Payment Recalibration
+                        </h3>
+                        <div class="py-2">
+                            <span class="font-serif text-4xl font-bold text-brand-deepPurple">2 × $3,400</span>
+                            <span class="text-xs text-gray-500 block mt-1">First payment reserves your date</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Split your investment over two comfortable installments. Second payment due 14 days prior to your sanctuary date.
+                        </p>
+                        <ul class="text-xs text-gray-700 space-y-2 pt-2 border-t border-purple-100">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Full In-Person Sanctuary Day</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> (3) Post-Immersion Integration Calls</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Lifetime Access to MMA</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6">
+                        <button onclick="openImmersionModal('2 Payments (2 x $3,400)')" class="w-full py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-lavender text-brand-deepPurple hover:bg-brand-deepPurple hover:text-white transition-all">
+                            Select 2-Payment Plan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Option 3: 3 Payments -->
+                <div class="glass-card rounded-3xl p-8 border border-purple-200 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-amethyst">Option 03</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-deepPurple">
+                            3-Payment Expansion
+                        </h3>
+                        <div class="py-2">
+                            <span class="font-serif text-4xl font-bold text-brand-deepPurple">3 × $2,350</span>
+                            <span class="text-xs text-gray-500 block mt-1">Flexible monthly structure</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Designed for high-growth visionaries preferring maximum monthly cash flow flexibility while securing their aperture.
+                        </p>
+                        <ul class="text-xs text-gray-700 space-y-2 pt-2 border-t border-purple-100">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Full In-Person Sanctuary Day</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> (3) Post-Immersion Integration Calls</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Lifetime Access to MMA</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6">
+                        <button onclick="openImmersionModal('3 Payments (3 x $2,350)')" class="w-full py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-lavender text-brand-deepPurple hover:bg-brand-deepPurple hover:text-white transition-all">
+                            Select 3-Payment Plan
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Critical Legal & Safety Steps for Client Boundaries (from screenshot) -->
+            <div class="mt-16 max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-[#faf6ff] border border-amber-200/80 shadow-sm space-y-4">
+                <div class="flex items-center space-x-3 text-amber-700">
+                    <i class="fa-solid fa-triangle-exclamation text-xl text-amber-500"></i>
+                    <h4 class="font-serif font-bold text-lg text-brand-deepPurple">Critical Client Agreement & Energetic Boundaries</h4>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    Because Michelle reserves an entire calendar day exclusively for you and prepares your energetic field weeks in advance, all deposits and payments are strictly non-refundable. Rescheduling requests must be submitted at least 21 days prior to your agreed date.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-[11px] text-gray-700">
+                    <div class="flex items-start space-x-2">
+                        <i class="fa-solid fa-shield-halved text-brand-sunsetPeach mt-0.5"></i>
+                        <span>Travel & lodging expenses to Dallas/Fort Worth (or agreed destination) are the client's responsibility.</span>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <i class="fa-solid fa-shield-halved text-brand-sunsetPeach mt-0.5"></i>
+                        <span>Full confidentiality NDA is executed prior to the immersion day for complete VIP privacy.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 6: "What Makes This Different" (Matching screenshot ocean photo & client proof) -->
+    <section class="py-20 sunset-gradient relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Ocean Sunset Portrait matching screenshot ("The Immersion - This is your portal") -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 sm:w-88 group">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-2">
+                            <div class="relative rounded-2xl overflow-hidden h-96 sm:h-[460px]">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80" alt="Michelle in tranquil waters holding sacred space" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                                <div class="absolute bottom-4 left-4 right-4 text-white text-left">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-brand-sunsetPeach">The Immersion</span>
+                                    <p class="font-serif font-bold text-base mt-0.5">"This is your portal. The water holds no resistance—neither will you."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Comparison Narrative & Client Miracle from Screenshot -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 text-brand-amethyst text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-scale-balanced text-brand-sunsetPeach"></i> The Crucible Comparison
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple leading-tight">
+                        What Makes This Different
+                    </h2>
+
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        Conventional masterminds and retreats pack 30 people into a ballroom where you receive generic lectures and zero individual energetic diagnosis.
+                    </p>
+
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        In <strong>The Immersion</strong>, there are no slides, no spectators, and nowhere for your ego to hide. Michelle’s intuitive perception tracks your exact micro-expressions, throat contractions, and energetic leaks in real time until the subconscious lock releases permanently.
+                    </p>
+
+                    <!-- Client Miracle Quote from Screenshot -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white shadow-xl space-y-4">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple italic leading-snug">
+                            "Within 72 hours of leaving our Immersion Day, the $1.2M partnership contract that had been stalled for nine months was signed with zero resistance."
+                        </p>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            "I didn't need another business consultant; I needed Michelle to pull the subconscious parasite of fear out of my solar plexus. She did exactly that. My marriage deepened, my health restored, and our company had its highest quarter in ten years."
+                        </p>
+                        <div class="pt-2 border-t border-purple-100 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs font-bold text-brand-deepPurple">G. Reynolds</p>
+                                <p class="text-[10px] text-gray-500">Tech Founder & Managing Partner</p>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold text-brand-sunsetPeach bg-brand-lavender px-2.5 py-1 rounded-full">Verified VIP Immersion Client</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Immersion Application Desk -->
+    <section id="application" class="py-20 bg-[#faf6ff] relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-purple-200 shadow-2xl relative overflow-hidden">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider mb-2">
+                        Confidential VIP Calendar Desk
+                    </span>
+                    <h3 class="font-serif text-3xl font-bold text-brand-deepPurple">
+                        Apply to Step Inside The Immersion
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                        Because only 2 private in-person immersion dates are opened each calendar month, please provide thoughtful responses below. Michelle and her executive team review every inquiry personally.
+                    </p>
+                </div>
+
+                <form onsubmit="handleImmersionFormSubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Your Full Name</label>
+                            <input type="text" required placeholder="Elena Vance" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" required placeholder="elena@company.com" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Phone / WhatsApp Number</label>
+                            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Preferred Location Format</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                                <option value="Dallas Sanctuary">Michelle's Private Sanctuary (Dallas / Fort Worth DFW)</option>
+                                <option value="Destination Fly-In">Destination Fly-In (Custom Location - Additional travel fee applies)</option>
+                                <option value="Virtual VIP Day">Virtual Full-Day Immersion (Zoom Broadcast Studio)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Target Timing / Desired Month</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                                <option value="Upcoming 30 Days">Immediate (Next 30 Days)</option>
+                                <option value="Next Quarter">Next Quarter</option>
+                                <option value="Flexible">Flexible / First Available Aperture</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Preferred Investment Alignment</label>
+                            <select id="investmentSelectInput" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                                <option value="Pay in Full Sovereign ($6,500)">Pay in Full Sovereign ($6,500 - Includes 30-Day Voxer Bonus)</option>
+                                <option value="2 Payments (2 x $3,400)">2 Payments (2 × $3,400)</option>
+                                <option value="3 Payments (3 x $2,350)">3 Payments (3 × $2,350)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">What is the #1 timeline blockage or ceiling you are demanding to collapse during this immersion?</label>
+                        <textarea rows="3" required placeholder="Describe your current reality, the resistance you are hitting, and what you are claiming..." class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-lg mt-2">
+                        Transmit Confidential Immersion Application
+                    </button>
+                    <p class="text-[10px] text-center text-gray-500">
+                        Applications receive strict executive review within 24–48 hours.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Academy Banner consistent with design system -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="spiritual-gradient rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 max-w-xl text-center md:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xs font-bold tracking-wider uppercase">
+                        Self-Paced Portal
+                    </span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+                        Looking for Self-Guided Mastery?
+                    </h3>
+                    <p class="text-purple-100 text-sm leading-relaxed">
+                        If an in-person immersion isn't aligned right now, step into the Manifesting Miracles Academy. Access Michelle’s foundational 8-week video modules, daily 333 rituals, and live activations.
+                    </p>
+                </div>
+                <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+                    <a href="index.html#academy" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg text-center transition-all">
+                        Join The Academy Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Brand Footer -->
+    <footer class="bg-brand-deepPurple text-white pt-16 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <a href="index.html" class="inline-block">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-white">Michelle J. Lamont</span>
+                        <span class="block text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">The Immersion™ VIP Day</span>
+                    </a>
+                    <p class="text-xs text-purple-200 max-w-sm leading-relaxed">
+                        Private full-day energetic sanctuaries for leaders, visionaries, and empaths ready to collapse timelines and co-create an extraordinary life.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Spotify">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                        <a href="https://apple.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Immersion Directory</p>
+                    <ul class="space-y-2 text-xs text-purple-200">
+                        <li><a href="#portal" class="hover:text-white transition-colors">The Immersion Portal</a></li>
+                        <li><a href="#what-you-receive" class="hover:text-white transition-colors">What You Receive</a></li>
+                        <li><a href="#itinerary" class="hover:text-white transition-colors">A Day in The Portal</a></li>
+                        <li><a href="#investment" class="hover:text-white transition-colors">Investment & Payment</a></li>
+                        <li><a href="sacred-containers.html" class="hover:text-white transition-colors">Long-Term Sacred Containers</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Confidentiality & Ethics</p>
+                    <p class="text-[11px] text-purple-300 leading-relaxed">
+                        All Immersion days operate under strict non-disclosure, legal non-disparagement, and sacred energetic trust. Mentorship is not a substitute for clinical psychiatric care.
+                    </p>
+                    <p class="text-[11px] text-purple-400">
+                        © 2026 Michelle J. Lamont. All Rights Reserved. Manifesting Miracles™ is a registered trademark.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300">
+                <p>Designed with conscious intention and sovereignty.</p>
+                <div class="flex space-x-6 mt-3 sm:mt-0">
+                    <a href="index.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="index.html" class="hover:text-white">Terms of Service</a>
+                    <a href="#application" class="hover:text-white">Immersion Calendar Desk</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Immersion Quick Booking Modal -->
+    <div id="immersionModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+        <div class="glass-card max-w-lg w-full rounded-3xl p-6 sm:p-8 border border-white/80 shadow-2xl relative text-left max-h-[90vh] overflow-y-auto">
+            <button onclick="closeImmersionModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-2">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="inline-block p-3 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xl mb-2">
+                    <i class="fa-solid fa-crown"></i>
+                </span>
+                <h3 class="font-serif text-2xl font-bold text-brand-deepPurple">The Immersion Application</h3>
+                <p class="text-xs text-gray-600 mt-1">Submit your intention for a private full-day sanctuary.</p>
+            </div>
+
+            <form onsubmit="handleModalImmersionSubmit(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Full Name</label>
+                    <input type="text" required placeholder="Elena Vance" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Email</label>
+                        <input type="email" required placeholder="elena@domain.com" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Payment Plan</label>
+                        <select id="modalPlanSelect" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                            <option value="Pay in Full Sovereign ($6,500)">Pay in Full ($6,500)</option>
+                            <option value="2 Payments (2 x $3,400)">2 Payments (2 × $3,400)</option>
+                            <option value="3 Payments (3 x $2,350)">3 Payments (3 × $2,350)</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Your Primary Intention</label>
+                    <textarea rows="3" required placeholder="Tell Michelle what transformation you are claiming right now..." class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-colors shadow-md mt-2">
+                    Submit Priority Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="fixed top-24 right-6 z-50 transform -translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-dark text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-white/20 flex items-center space-x-3">
+            <div id="toastIcon" class="w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p id="toastMessage" class="text-xs font-semibold">Action completed successfully!</p>
+        </div>
+    </div>
+
+    <script>
+        // Modal Handlers
+        const immersionModal = document.getElementById('immersionModal');
+
+        function openImmersionModal(defaultPlan = '') {
+            if (defaultPlan) {
+                const select = document.getElementById('modalPlanSelect');
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value.includes(defaultPlan) || defaultPlan.includes(select.options[i].text)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+                const pageSelect = document.getElementById('investmentSelectInput');
+                if (pageSelect) {
+                    for (let i = 0; i < pageSelect.options.length; i++) {
+                        if (pageSelect.options[i].value.includes(defaultPlan)) {
+                            pageSelect.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            }
+            immersionModal.classList.remove('hidden');
+        }
+
+        function closeImmersionModal() {
+            immersionModal.classList.add('hidden');
+        }
+
+        function scrollToApplication() {
+            const el = document.getElementById('application');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 432Hz Sound Bath Simulation
+        let isSoundBathPlaying = false;
+        let soundBathProgress = 0;
+        let soundBathInterval = null;
+
+        function toggleSoundBathAudio() {
+            isSoundBathPlaying = !isSoundBathPlaying;
+            const icon = document.getElementById('soundBathIcon');
+
+            if (isSoundBathPlaying) {
+                icon.className = 'fa-solid fa-pause';
+                showToast("Streaming 432Hz Quartz Singing Bowl Transmission...", "play");
+                soundBathInterval = setInterval(() => {
+                    if (soundBathProgress < 100) {
+                        soundBathProgress += 0.47; // 213 seconds total (03:33)
+                        document.getElementById('soundBathProgress').style.width = Math.min(soundBathProgress, 100) + '%';
+                        const curSec = Math.floor((soundBathProgress / 100) * 213);
+                        const m = Math.floor(curSec / 60);
+                        const s = curSec % 60;
+                        document.getElementById('soundBathCurTime').textContent = 
+                            String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+                    } else {
+                        clearInterval(soundBathInterval);
+                        isSoundBathPlaying = false;
+                        icon.className = 'fa-solid fa-play ml-0.5';
+                    }
+                }, 1000);
+            } else {
+                icon.className = 'fa-solid fa-play ml-0.5';
+                clearInterval(soundBathInterval);
+                showToast("Sound bath paused", "info");
+            }
+        }
+
+        function scrubSoundBath(e) {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            soundBathProgress = Math.min(Math.max((clickX / rect.width) * 100, 0), 100);
+            document.getElementById('soundBathProgress').style.width = soundBathProgress + '%';
+        }
+
+        // Form Handlers
+        function handleImmersionFormSubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast("Application transmitted! Michelle's team will contact you in 24 hours.", "success");
+        }
+
+        function handleModalImmersionSubmit(e) {
+            e.preventDefault();
+            closeImmersionModal();
+            e.target.reset();
+            showToast("Immersion request received! Alignment review dispatched.", "success");
+        }
+
+        // Toast Feedback System
+        function showToast(message, type = "success") {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastMsg.textContent = message;
+            if (type === 'play') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-waveform"></i>';
+            } else if (type === 'info') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-purple-200 text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+            } else {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+            }
+
+            toast.classList.remove('-translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('-translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        // Mobile Menu Drawer Handler
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

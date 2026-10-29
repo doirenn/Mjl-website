@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Engagements & Keynotes | Michelle J. Lamont</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            deepPurple: '#2d154a',
+                            amethyst: '#4a2574',
+                            violet: '#683b9c',
+                            lavender: '#efe6f7',
+                            softLilac: '#f7f2fb',
+                            sunsetPeach: '#f89a80',
+                            warmRose: '#efa897',
+                            paleBlush: '#fdf3f0',
+                            celestialBlue: '#3a7bd5',
+                            powderBlue: '#eef4ff',
+                            gold: '#dfb15b'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.70);
+        }
+        .glass-dark {
+            background: rgba(45, 21, 74, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #f7dcd5 0%, #fad2ca 25%, #e8e4f5 60%, #ded9f7 100%);
+        }
+        .spiritual-gradient {
+            background: linear-gradient(135deg, #2d154a 0%, #4a2574 55%, #683b9c 100%);
+        }
+        .ocean-gradient {
+            background: linear-gradient(135deg, #3a7bd5 0%, #4a2574 60%, #2d154a 100%);
+        }
+        .aurora-glow {
+            position: absolute;
+            filter: blur(85px);
+            opacity: 0.45;
+            pointer-events: none;
+            border-radius: 9999px;
+            z-index: 0;
+        }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf3f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a9d8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9b72b8;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-[#fdfaf8] antialiased overflow-x-hidden selection:bg-brand-sunsetPeach selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-deepPurple via-brand-amethyst to-brand-deepPurple text-white py-2.5 px-4 text-xs md:text-sm font-medium tracking-wide">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2 mx-auto md:mx-0">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">Now Booking 2026–2027</span>
+                <span>✨ <strong>Transformational Keynotes & Masterclasses:</strong> Empower your audience to manifest impossible realities</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-xs">
+                <a href="#topics" class="hover:text-brand-sunsetPeach transition-colors duration-200 underline">View Signature Topics</a>
+                <span class="text-white/40">•</span>
+                <button onclick="downloadSpeakerKit()" class="text-brand-gold hover:text-white transition-colors duration-200 font-semibold">Download Speaker One-Sheet (PDF) ↓</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="index.html" class="flex flex-col group">
+                    <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover:text-brand-amethyst transition-colors">
+                        Michelle J. Lamont
+                    </span>
+                    <span class="text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">
+                        Manifesting Miracles™
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">About</a>
+                    <a href="podcast.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Podcast</a>
+                    <a href="speaking.html" class="text-sm font-semibold text-brand-amethyst transition-colors border-b-2 border-brand-sunsetPeach pb-0.5">Speaking</a>
+                    <a href="#topics" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Signature Topics</a>
+                    <a href="#authority" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Press & Media</a>
+                    <a href="index.html#academy" class="text-sm font-semibold text-brand-sunsetPeach hover:text-brand-deepPurple transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-sparkles"></i> The Academy
+                    </a>
+                </nav>
+
+                <!-- Action CTA & Mobile Trigger -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="downloadSpeakerKit()" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-100/80 text-brand-deepPurple hover:bg-purple-200 transition-all">
+                        <i class="fa-solid fa-file-pdf mr-1.5 text-brand-sunsetPeach"></i> Speaker Kit
+                    </button>
+                    <button onclick="openSpeakerBookingModal('Keynote Presentation')" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-white hover:brightness-105 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        Book for Speaking
+                    </button>
+                    <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
+            <div class="flex flex-col space-y-4 pt-2">
+                <a href="index.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Home</a>
+                <a href="about.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">About Michelle</a>
+                <a href="podcast.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Podcast</a>
+                <a href="speaking.html" class="mobile-link text-base font-semibold text-brand-amethyst py-1">Speaking & Keynotes</a>
+                <a href="#topics" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Signature Speaking Topics</a>
+                <a href="#authority" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Press & Celebrity Moments</a>
+                <a href="#formats" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Presentation Formats</a>
+                <div class="pt-2">
+                    <button onclick="openSpeakerBookingModal('Mobile Menu Booking')" class="w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white">
+                        Check Michelle's Availability
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden sunset-gradient">
+        <!-- Ambient Decorative Orbs -->
+        <div class="aurora-glow w-96 h-96 bg-brand-sunsetPeach top-0 -left-12"></div>
+        <div class="aurora-glow w-[34rem] h-[34rem] bg-brand-violet bottom-0 right-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Hero Headline & Event Planner Pitch -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-brand-sunsetPeach/40 text-xs font-semibold text-brand-deepPurple shadow-sm">
+                        <i class="fa-solid fa-microphone-lines text-brand-sunsetPeach"></i>
+                        <span>International Keynote Speaker • Somatic Frequency Leader • Media Conduit</span>
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-brand-deepPurple leading-[1.12] tracking-tight">
+                        Speaking Engagements About the <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-amethyst to-brand-sunsetPeach">Power of Manifestation</span>
+                    </h1>
+
+                    <p class="font-serif text-xl sm:text-2xl text-brand-amethyst font-medium italic leading-snug">
+                        "With the courage to speak up and share your voice in this world, today we can live our dreams as our reality and leave an imprint that inspires generations to come."
+                    </p>
+
+                    <p class="text-base text-gray-700 leading-relaxed font-normal max-w-2xl">
+                        Michelle J. Lamont electrifies global stages, corporate retreats, and spiritual conferences. Combining raw vulnerability, quantum metaphysics, and neuro-somatic rewiring, she delivers an unforgettable stage experience that moves audiences from passive dreaming into immediate energetic embodiment.
+                    </p>
+
+                    <!-- Key Event Planner Triggers -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <button onclick="openSpeakerBookingModal('Keynote Inquiry')" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-calendar-check mr-2 text-brand-sunsetPeach"></i> Inquire for Availability
+                        </button>
+                        <button onclick="openReelModal()" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider text-brand-deepPurple bg-white/80 hover:bg-white border border-purple-200/60 shadow-md transition-all">
+                            <i class="fa-solid fa-circle-play mr-2 text-brand-sunsetPeach text-base"></i> Watch Speaker Reel
+                        </button>
+                    </div>
+
+                    <!-- Stage Credibility Badges -->
+                    <div class="pt-6 border-t border-purple-200/60 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-gray-600 font-semibold">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-brand-amethyst"></i> Global Keynotes (US, Europe & LatAm)</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-users text-brand-amethyst"></i> Audiences from 50 to 5,000+</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-star text-amber-400"></i> 100% 5-Star Stage Ratings</span>
+                    </div>
+
+                </div>
+
+                <!-- Right: Elevated Hero Portrait with Stage Spotlight Frame -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 sm:w-88 group">
+                        <!-- Radiant Halo Ambient Glow -->
+                        <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-sunsetPeach via-brand-gold to-brand-amethyst blur-2xl opacity-60 group-hover:opacity-85 transition duration-700 animate-pulse"></div>
+
+                        <!-- Main Stage Portrait -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-2">
+                            <div class="relative rounded-2xl overflow-hidden h-96 sm:h-[480px]">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80" alt="Michelle J. Lamont - Keynote Speaker on Manifestation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                                <!-- Floating Quote Overlay Card -->
+                                <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-2xl shadow-lg border border-white/70 text-left">
+                                    <div class="flex items-center space-x-2 text-brand-sunsetPeach text-xs mb-1">
+                                        <i class="fa-solid fa-sparkles"></i>
+                                        <span class="font-bold uppercase tracking-wider text-[10px]">High-Voltage Activation</span>
+                                    </div>
+                                    <p class="font-serif font-bold text-brand-deepPurple text-sm">"Your audience won't just take notes. Their frequency will physically elevate."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stage Metric Tag -->
+                        <div class="absolute -top-4 -right-4 glass-card px-4 py-2.5 rounded-2xl shadow-xl border border-white/80 hidden sm:flex items-center space-x-2.5 animate-float">
+                            <div class="w-8 h-8 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-sm shadow">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[9px] uppercase font-bold text-gray-500">Keynote Presence</p>
+                                <p class="text-xs font-bold text-brand-deepPurple">20+ Years On Stage</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="formats" class="py-20 bg-white border-y border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Versatile Delivery</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    Type of Presentations
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Whether commanding a convention center mainstage or leading an intimate executive vortex retreat, Michelle calibrates every engagement to produce tangible breakthroughs.
+                </p>
+            </div>
+
+            <!-- Formats Grid based on original site -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <div class="p-5 sm:p-6 rounded-3xl bg-[#fdfcff] border border-purple-100 hover:border-brand-sunsetPeach hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl mb-4 group-hover:bg-brand-sunsetPeach group-hover:text-white transition-all">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple">Keynote Address</h3>
+                    <p class="text-xs text-gray-500 mt-1">45–90 min inspirational mainstage experience designed to shift belief ceilings.</p>
+                </div>
+
+                <div class="p-5 sm:p-6 rounded-3xl bg-[#fdfcff] border border-purple-100 hover:border-brand-sunsetPeach hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl mb-4 group-hover:bg-brand-sunsetPeach group-hover:text-white transition-all">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple">Motivational Speeches</h3>
+                    <p class="text-xs text-gray-500 mt-1">High-voltage narrative storytelling rooted in overcoming severe trauma into abundance.</p>
+                </div>
+
+                <div class="p-5 sm:p-6 rounded-3xl bg-[#fdfcff] border border-purple-100 hover:border-brand-sunsetPeach hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl mb-4 group-hover:bg-brand-sunsetPeach group-hover:text-white transition-all">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple">Virtual Keynotes & Summits</h3>
+                    <p class="text-xs text-gray-500 mt-1">Broadcast-quality digital experiences with interactive chat & energetic activations.</p>
+                </div>
+
+                <div class="p-5 sm:p-6 rounded-3xl bg-[#fdfcff] border border-purple-100 hover:border-brand-sunsetPeach hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl mb-4 group-hover:bg-brand-sunsetPeach group-hover:text-white transition-all">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple">Hands-On Workshops</h3>
+                    <p class="text-xs text-gray-500 mt-1">Half-day or full-day somatic immersions rewiring attendees' autonomic nervous systems.</p>
+                </div>
+
+                <div class="p-5 sm:p-6 rounded-3xl bg-[#fdfcff] border border-purple-100 hover:border-brand-sunsetPeach hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl mb-4 group-hover:bg-brand-sunsetPeach group-hover:text-white transition-all">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple">Live Q&A / AMA Sessions</h3>
+                    <p class="text-xs text-gray-500 mt-1">Direct intuitive readings and live attendee frequency calibrations from the stage.</p>
+                </div>
+
+                <div class="p-5 sm:p-6 rounded-3xl bg-[#fdfcff] border border-purple-100 hover:border-brand-sunsetPeach hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl mb-4 group-hover:bg-brand-sunsetPeach group-hover:text-white transition-all">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple">Panel Discussions</h3>
+                    <p class="text-xs text-gray-500 mt-1">Sharp, witty, and grounded expert dialogue on mindfulness, wealth, and leadership.</p>
+                </div>
+
+                <div class="p-5 sm:p-6 rounded-3xl bg-[#fdfcff] border border-purple-100 hover:border-brand-sunsetPeach hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl mb-4 group-hover:bg-brand-sunsetPeach group-hover:text-white transition-all">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple">Executive Masterclasses</h3>
+                    <p class="text-xs text-gray-500 mt-1">Private mastermind sessions tailored for CEOs, founders, and high-net-worth teams.</p>
+                </div>
+
+                <div class="p-5 sm:p-6 rounded-3xl bg-[#fdfcff] border border-purple-100 hover:border-brand-sunsetPeach hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl mb-4 group-hover:bg-brand-sunsetPeach group-hover:text-white transition-all">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-base sm:text-lg text-brand-deepPurple">Meet & Greets / Signings</h3>
+                    <p class="text-xs text-gray-500 mt-1">Warm, personalized photo lines, book activations, and sacred connection moments.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="topics" class="py-20 bg-[#faf6ff] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Curated Curriculums</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    Signature Speaking Topics
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Each keynote combines visceral narrative power, practical neuro-somatic exercises, and quantum laws to ensure your audience walks away permanently transformed.
+                </p>
+            </div>
+
+            <!-- Topic Cards Stack -->
+            <div class="space-y-8 max-w-5xl mx-auto">
+                
+                <!-- Topic 1: Creating Your Dream Life -->
+                <div class="glass-card rounded-3xl p-8 sm:p-10 border border-purple-200/80 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-purple-100">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider mb-2">
+                                Topic 01 • Mainstage Flagship
+                            </span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple">
+                                CREATING YOUR DREAM LIFE: <span class="italic text-brand-sunsetPeach font-normal">The Beginner’s Guide to Manifestation</span>
+                            </h3>
+                        </div>
+                        <button onclick="openSpeakerBookingModal('Topic 1: Creating Your Dream Life')" class="shrink-0 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow">
+                            Select This Topic
+                        </button>
+                    </div>
+
+                    <div class="pt-6 space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+                        <p>
+                            Have you ever wondered what the exact universal mechanism is that separates those who dream from those who actually materialize? In this paradigm-shifting address, Michelle removes the confusing commercial buzzwords surrounding the Law of Attraction, giving audiences a practical, step-by-step roadmap to manifest real-world career elevation, financial freedom, and authentic joy.
+                        </p>
+                        <p>
+                            Attendees learn that the universe does not respond to desperation or surface-level positive affirmations; it responds strictly to somatic frequency. Michelle demonstrates how to align the subconscious mind with the conscious will, ending the exhausting cycle of self-sabotage once and for all.
+                        </p>
+
+                        <!-- Key Outcomes Box -->
+                        <div class="bg-brand-softLilac p-5 rounded-2xl border border-purple-100 mt-4 space-y-2">
+                            <p class="text-xs uppercase font-bold text-brand-amethyst tracking-wider">Key Audience Takeaways:</p>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> The Quantum Mechanics of Intention & Receptivity</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Dissolving Timeline Anxiety & The Need to Control the "How"</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Michelle’s Proprietary 333 Daily Frequency Calibration</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Actionable tools to break free from generational lack contracts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topic 2: From Surviving to Thriving -->
+                <div class="glass-card rounded-3xl p-8 sm:p-10 border border-purple-200/80 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-purple-100">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider mb-2">
+                                Topic 02 • Resilience & Leadership
+                            </span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple">
+                                FROM SURVIVING TO THRIVING: <span class="italic text-brand-sunsetPeach font-normal">How to Unblock The Best Version of You</span>
+                            </h3>
+                        </div>
+                        <button onclick="openSpeakerBookingModal('Topic 2: From Surviving to Thriving')" class="shrink-0 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow">
+                            Select This Topic
+                        </button>
+                    </div>
+
+                    <div class="pt-6 space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+                        <p>
+                            Born in an orphanage and having survived profound personal and professional crises, Michelle speaks from lived crucible experience—not ivory tower theories. In this soul-stirring keynote, she reveals how the trauma of being unchosen and overlooked became the exact energetic training ground for sovereign manifestation.
+                        </p>
+                        <p>
+                            Audiences discover how to release victim programming, overcome subconscious burnout, and pivot from survival mode into divine authority. This talk is an emotional tour de force that consistently receives standing ovations across diverse corporate and creative audiences.
+                        </p>
+
+                        <!-- Key Outcomes Box -->
+                        <div class="bg-brand-softLilac p-5 rounded-2xl border border-purple-100 mt-4 space-y-2">
+                            <p class="text-xs uppercase font-bold text-brand-amethyst tracking-wider">Key Audience Takeaways:</p>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Converting Childhood Trauma into Unshakeable Magnetism</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Dismantling Imposter Syndrome & The Fear of Visibility</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Nervous System Regulation for High-Performance Leadership</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Remembering that you are already chosen by the divine</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topic 3: Heal Your Mind -->
+                <div class="glass-card rounded-3xl p-8 sm:p-10 border border-purple-200/80 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-purple-100">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider mb-2">
+                                Topic 03 • Mindset & Spiritual Science
+                            </span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple">
+                                HEAL YOUR MIND: <span class="italic text-brand-sunsetPeach font-normal">Using The Laws of The Universe For Connection</span>
+                            </h3>
+                        </div>
+                        <button onclick="openSpeakerBookingModal('Topic 3: Heal Your Mind')" class="shrink-0 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow">
+                            Select This Topic
+                        </button>
+                    </div>
+
+                    <div class="pt-6 space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+                        <p>
+                            We live in an era of unprecedented digital noise, chronic mental fatigue, and relational alienation. In this immersive presentation, Michelle synthesizes modern neuroscience with ancient spiritual laws to help participants clear subconscious clutter and reopen their intuitive connection to God, the universe, and each other.
+                        </p>
+                        <p>
+                            Michelle guides the entire room through live somatic breathwork and group frequency tuning, allowing attendees to physically feel peace replace anxiety in real time. Perfect for wellness conferences, executive summits, and spiritual masterminds.
+                        </p>
+
+                        <!-- Key Outcomes Box -->
+                        <div class="bg-brand-softLilac p-5 rounded-2xl border border-purple-100 mt-4 space-y-2">
+                            <p class="text-xs uppercase font-bold text-brand-amethyst tracking-wider">Key Audience Takeaways:</p>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> The Neuroscience of Subconscious Thought Erasure</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Recognizing Synchronicities, Signs & Angelic Guidance</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> In-Room Somatic Tuning & Collective Breath Alignment</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Restoring Harmony in Professional & Personal Relationships</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="authority" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">High-Profile Authority</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    The Power of Manifestation in Action…
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    From exclusive red carpet conversations with icons like Oprah Winfrey and Kim Kardashian to premier media stages, Michelle has walked the path of high-visibility manifestation.
+                </p>
+            </div>
+
+            <!-- Press & Celebrity Photo Moments matching screenshot -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Oprah Winfrey Card -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-purple-100 shadow-xl group hover:-translate-y-1 transition-all duration-300">
+                    <div class="relative h-80 sm:h-96 overflow-hidden bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&auto=format&fit=crop&q=80" alt="Michelle Lamont with Oprah Winfrey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple via-brand-deepPurple/40 to-transparent"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 rounded-full bg-white/90 text-brand-deepPurple text-[10px] font-bold uppercase tracking-wider backdrop-blur-md shadow-sm">
+                                <i class="fa-solid fa-award mr-1 text-amber-500"></i> Media Icon Moment
+                            </span>
+                        </div>
+                        <div class="absolute bottom-5 left-5 right-5 text-white">
+                            <h4 class="font-serif text-2xl font-bold">Michelle Lamont & Oprah Winfrey</h4>
+                            <p class="text-xs text-purple-200 mt-1">Connecting on purposeful leadership, soul resilience, and sharing divine truth on the biggest stages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kim Kardashian Card -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-purple-100 shadow-xl group hover:-translate-y-1 transition-all duration-300">
+                    <div class="relative h-80 sm:h-96 overflow-hidden bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&auto=format&fit=crop&q=80" alt="Michelle Lamont with Kim Kardashian" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple via-brand-deepPurple/40 to-transparent"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 rounded-full bg-white/90 text-brand-deepPurple text-[10px] font-bold uppercase tracking-wider backdrop-blur-md shadow-sm">
+                                <i class="fa-solid fa-gem mr-1 text-brand-sunsetPeach"></i> Red Carpet Press
+                            </span>
+                        </div>
+                        <div class="absolute bottom-5 left-5 right-5 text-white">
+                            <h4 class="font-serif text-2xl font-bold">Michelle Lamont & Kim Kardashian</h4>
+                            <p class="text-xs text-purple-200 mt-1">Celebrating visionary entrepreneurship, magnetic media presence, and unapologetic self-belief.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Supporting Press Logos Bar -->
+            <div class="mt-14 pt-10 border-t border-purple-100 text-center">
+                <p class="text-xs uppercase tracking-[0.25em] font-semibold text-gray-400 mb-6">
+                    Trusted by Event Organizers & Media Outlets Worldwide
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 text-gray-400 font-serif">
+                    <div class="flex items-center gap-2 hover:text-brand-deepPurple transition-colors">
+                        <i class="fa-brands fa-apple text-2xl"></i>
+                        <span class="font-bold tracking-tight text-lg text-gray-600">Apple Podcasts #1</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:text-brand-deepPurple transition-colors">
+                        <i class="fa-brands fa-spotify text-2xl text-[#1DB954]"></i>
+                        <span class="font-bold tracking-tight text-lg text-gray-600">Spotify Global</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:text-brand-deepPurple transition-colors">
+                        <i class="fa-solid fa-radio text-xl text-rose-500"></i>
+                        <span class="font-bold tracking-tight text-lg text-gray-600">iHeartRadio</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:text-brand-deepPurple transition-colors">
+                        <span class="font-serif italic font-bold text-xl text-gray-600">FORBES</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:text-brand-deepPurple transition-colors">
+                        <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i>
+                        <span class="font-bold tracking-tight text-lg text-gray-600">Conscious Life Expo</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 sunset-gradient relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Experience The Energy</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-3">
+                    Are You Ready to Manifest?
+                </h2>
+                <p class="font-serif text-xl text-brand-amethyst font-semibold italic">
+                    Of course you are. Join thousands who have experienced this journey.
+                </p>
+            </div>
+
+            <!-- Video Player Mockup Container (mimicking the ocean reel frame in screenshot) -->
+            <div class="max-w-3xl mx-auto">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group cursor-pointer" onclick="openReelModal()">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format&fit=crop&q=80" alt="Speaker Reel Video Thumbnail" class="w-full h-80 sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-brand-amethyst/30 to-transparent"></div>
+
+                    <!-- Overlay Trigger -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-3xl shadow-2xl group-hover:scale-110 group-hover:bg-white transition-all mb-4">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                        <span class="text-xs uppercase tracking-[0.3em] font-bold text-brand-sunsetPeach">Watch Keynote Highlights</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold mt-1 text-white">Michelle J. Lamont Live On Stage</h3>
+                        <p class="text-xs text-purple-200 mt-2 max-w-md">See how Michelle engages audiences, conducts live frequency tuning, and commands the room.</p>
+                    </div>
+
+                    <!-- Lower Bar -->
+                    <div class="absolute bottom-4 left-6 right-6 flex justify-between items-center text-xs text-white/80">
+                        <span><i class="fa-solid fa-film mr-1.5 text-brand-sunsetPeach"></i> Official Sizzle Reel (03:45)</span>
+                        <span class="bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">HD 1080p</span>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button onclick="openSpeakerBookingModal('All Tickets & Events Booking')" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-lg hover:shadow-xl transition-all duration-300">
+                        View All Upcoming Tour Dates & Tickets →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-b border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-8 space-y-4">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider">
+                        For Event Planners & Coordinators
+                    </span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple">
+                        Everything You Need for a Seamless Production
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed max-w-2xl">
+                        We know event planning requires precision. Michelle arrives fully prepared, on-schedule, and works in total alignment with your technical team to ensure your attendees receive an extraordinary experience.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs text-gray-700">
+                        <div class="p-3.5 rounded-xl bg-purple-50/70 border border-purple-100">
+                            <strong class="block text-brand-deepPurple font-bold mb-1"><i class="fa-solid fa-headset text-brand-sunsetPeach mr-1"></i> Audio Rider</strong>
+                            Wireless Lavalier or Headset mic. High-grade audio output for somatic sound frequencies.
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-purple-50/70 border border-purple-100">
+                            <strong class="block text-brand-deepPurple font-bold mb-1"><i class="fa-solid fa-display text-brand-sunsetPeach mr-1"></i> Visual Media</strong>
+                            16:9 HD Keynote projection available. Supports both slide-assisted and pure conversational formats.
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-purple-50/70 border border-purple-100">
+                            <strong class="block text-brand-deepPurple font-bold mb-1"><i class="fa-solid fa-plane text-brand-sunsetPeach mr-1"></i> Travel Details</strong>
+                            Departs from United States (Dallas/Fort Worth DFW). Available for international and domestic fly-in.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 flex flex-col items-center justify-center p-6 rounded-3xl spiritual-gradient text-white text-center shadow-xl space-y-4">
+                    <i class="fa-solid fa-folder-open text-brand-gold text-4xl"></i>
+                    <div>
+                        <h4 class="font-serif font-bold text-xl">Speaker One-Sheet</h4>
+                        <p class="text-xs text-purple-200 mt-1">High-res headshots, approved stage bios, topic outlines, and intro script.</p>
+                    </div>
+                    <button onclick="downloadSpeakerKit()" class="w-full py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple hover:brightness-110 shadow transition-all">
+                        <i class="fa-solid fa-download mr-1.5"></i> Instant PDF Download
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="py-20 bg-[#faf6ff] relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-purple-200 shadow-2xl relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <!-- Left: Michelle Crown Portrait Frame -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-64 sm:w-72">
+                            <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80" alt="Michelle J. Lamont Crown Portrait" class="w-full h-80 sm:h-96 object-cover" />
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 glass-card p-3 rounded-2xl shadow-lg border border-white text-center">
+                                <p class="text-[10px] uppercase font-bold text-gray-500">Fast Response</p>
+                                <p class="text-xs font-bold text-brand-deepPurple">Within 24 Hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Direct Booking Pitch & Form -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider mb-2">
+                                Direct Calendar Request
+                            </span>
+                            <h3 class="font-serif text-3xl font-bold text-brand-deepPurple">
+                                Book a 15-min Free Discovery Call
+                            </h3>
+                            <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                                Let's discuss your event theme, audience profile, and dates. Michelle's executive management team will confirm availability and custom keynote options.
+                            </p>
+                        </div>
+
+                        <form onsubmit="handleSpeakerInquirySubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 mb-1">Your Full Name</label>
+                                    <input type="text" required placeholder="Elena Vance" class="w-full px-4 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" required placeholder="elena@company.com" class="w-full px-4 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 mb-1">Event Date / Range</label>
+                                    <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-600" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 mb-1">Estimated Audience Size</label>
+                                    <select class="w-full px-4 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                                        <option value="under-100">Under 100 attendees</option>
+                                        <option value="100-500">100 – 500 attendees</option>
+                                        <option value="500-1500">500 – 1,500 attendees</option>
+                                        <option value="1500+">1,500+ Mainstage</option>
+                                        <option value="virtual">Virtual Worldwide</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Event Location & Theme</label>
+                                <textarea rows="2" required placeholder="e.g., Annual Leadership Summit in Miami, FL. We want Michelle to speak on creating your dream life..." class="w-full px-4 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-md">
+                                Request Speaker Discovery Call
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="spiritual-gradient rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 max-w-xl text-center md:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xs font-bold tracking-wider uppercase">
+                        First 14 Days Free
+                    </span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+                        Join Manifesting Miracles Academy
+                    </h3>
+                    <p class="text-purple-100 text-sm leading-relaxed">
+                        Step out of survival mode and into conscious co-creation. Access Michelle's foundational 8-week video modules, daily 333 rituals, and live community activations.
+                    </p>
+                </div>
+                <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+                    <a href="index.html#academy" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg text-center transition-all">
+                        Get Started Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-deepPurple text-white pt-16 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <a href="index.html" class="inline-block">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-white">Michelle J. Lamont</span>
+                        <span class="block text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">Manifesting Miracles™</span>
+                    </a>
+                    <p class="text-xs text-purple-200 max-w-sm leading-relaxed">
+                        International keynote speaker, spiritual intuitive, and host of Manifesting Miracles. Helping organizations and visionaries awaken their infinite authority.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Spotify">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                        <a href="https://apple.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Speaker Navigation</p>
+                    <ul class="space-y-2 text-xs text-purple-200">
+                        <li><a href="#formats" class="hover:text-white transition-colors">Presentation Formats</a></li>
+                        <li><a href="#topics" class="hover:text-white transition-colors">Signature Keynote Topics</a></li>
+                        <li><a href="#authority" class="hover:text-white transition-colors">Oprah & Celebrity Press</a></li>
+                        <li><a href="#book" class="hover:text-white transition-colors">Book a 15-Min Call</a></li>
+                        <li><a href="podcast.html" class="hover:text-white transition-colors">Podcast Archive</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Booking & Representation</p>
+                    <p class="text-[11px] text-purple-300 leading-relaxed">
+                        Michelle J. Lamont is managed directly by Lamont Media Worldwide. For agency holds, television appearances, or keynote holds, please contact bookings@michellejlamont.com.
+                    </p>
+                    <p class="text-[11px] text-purple-400">
+                        © 2026 Michelle J. Lamont. All Rights Reserved. Manifesting Miracles™ is a registered trademark.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300">
+                <p>Designed with conscious intention and alignment.</p>
+                <div class="flex space-x-6 mt-3 sm:mt-0">
+                    <a href="index.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="index.html" class="hover:text-white">Terms of Service</a>
+                    <a href="#book" class="hover:text-white">Speaker Rider & Specs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Speaker Booking Inquiry Modal -->
+    <div id="speakerBookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+        <div class="glass-card max-w-lg w-full rounded-3xl p-6 sm:p-8 border border-white/80 shadow-2xl relative text-left">
+            <button onclick="closeSpeakerBookingModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-2">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="inline-block p-3 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xl mb-2">
+                    <i class="fa-solid fa-microphone"></i>
+                </span>
+                <h3 class="font-serif text-2xl font-bold text-brand-deepPurple">Book Michelle for Speaking</h3>
+                <p class="text-xs text-gray-600 mt-1">Submit your conference or corporate event details.</p>
+            </div>
+
+            <form onsubmit="handleModalSpeakerSubmit(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Event / Organization Name</label>
+                    <input type="text" required placeholder="Global Leadership Summit 2026" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Contact Name</label>
+                        <input type="text" required placeholder="Sarah Jenkins" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Contact Email</label>
+                        <input type="email" required placeholder="sarah@event.org" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Preferred Presentation Topic</label>
+                    <select id="modalTopicSelect" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                        <option value="Topic 1: Creating Your Dream Life">Creating Your Dream Life: Beginner's Guide</option>
+                        <option value="Topic 2: From Surviving to Thriving">From Surviving to Thriving: Unblock Your Best Self</option>
+                        <option value="Topic 3: Heal Your Mind">Heal Your Mind: Universal Laws & Connection</option>
+                        <option value="Custom Keynote">Custom Keynote / Panel Moderation</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Event Date, City & Anticipated Attendance</label>
+                    <textarea rows="3" required placeholder="Please include target dates, venue location, and expected attendance..." class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-colors shadow-md mt-2">
+                    Submit Booking Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Speaker Reel Video Simulation Modal -->
+    <div id="reelModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+        <div class="max-w-3xl w-full bg-brand-deepPurple rounded-3xl overflow-hidden shadow-2xl border border-white/20 relative">
+            <button onclick="closeReelModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 text-white hover:bg-black flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="relative pt-[56.25%] bg-black">
+                <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0" title="Michelle J. Lamont Speaker Reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-6 text-white space-y-2">
+                <span class="text-xs text-brand-sunsetPeach font-bold uppercase tracking-wider">Speaker Sizzle Reel</span>
+                <h4 class="font-serif text-xl font-bold">Live Keynote & Presentation Highlights</h4>
+                <p class="text-xs text-purple-200">Watch Michelle command the stage, connect with attendees, and activate the power of manifestation.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="fixed top-24 right-6 z-50 transform -translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-dark text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-white/20 flex items-center space-x-3">
+            <div id="toastIcon" class="w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p id="toastMessage" class="text-xs font-semibold">Action completed successfully!</p>
+        </div>
+    </div>
+
+    <script>
+        // Modal Handlers
+        const bookingModal = document.getElementById('speakerBookingModal');
+        const reelModal = document.getElementById('reelModal');
+
+        function openSpeakerBookingModal(defaultTopic = '') {
+            if (defaultTopic) {
+                const select = document.getElementById('modalTopicSelect');
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value.includes(defaultTopic) || select.options[i].text.includes(defaultTopic)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            bookingModal.classList.remove('hidden');
+        }
+
+        function closeSpeakerBookingModal() {
+            bookingModal.classList.add('hidden');
+        }
+
+        function openReelModal() {
+            reelModal.classList.remove('hidden');
+        }
+
+        function closeReelModal() {
+            reelModal.classList.add('hidden');
+        }
+
+        function handleSpeakerInquirySubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast("Discovery call request sent! Management will reach out in 24 hours.", "success");
+        }
+
+        function handleModalSpeakerSubmit(e) {
+            e.preventDefault();
+            closeSpeakerBookingModal();
+            e.target.reset();
+            showToast("Speaker request confirmed! We will contact you with availability.", "success");
+        }
+
+        function downloadSpeakerKit() {
+            showToast("Generating official Speaker One-Sheet PDF...", "download");
+            setTimeout(() => {
+                showToast("Speaker Kit (PDF) ready! Check your downloads folder.", "success");
+            }, 1200);
+        }
+
+        // Toast Feedback System
+        function showToast(message, type = "success") {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastMsg.textContent = message;
+            if (type === 'download') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-file-arrow-down"></i>';
+            } else if (type === 'info') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-purple-200 text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+            } else {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+            }
+
+            toast.classList.remove('-translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('-translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        // Mobile Menu Drawer Handler
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifesting Miracles™ Podcast | Michelle J. Lamont</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            deepPurple: '#2d154a',
+                            amethyst: '#4a2574',
+                            violet: '#683b9c',
+                            lavender: '#efe6f7',
+                            softLilac: '#f7f2fb',
+                            sunsetPeach: '#f89a80',
+                            warmRose: '#efa897',
+                            paleBlush: '#fdf3f0',
+                            celestialBlue: '#3a7bd5',
+                            powderBlue: '#eef4ff',
+                            gold: '#dfb15b'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.65);
+        }
+        .glass-dark {
+            background: rgba(45, 21, 74, 0.90);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #f7dcd5 0%, #fad2ca 25%, #e8e4f5 60%, #ded9f7 100%);
+        }
+        .spiritual-gradient {
+            background: linear-gradient(135deg, #2d154a 0%, #4a2574 55%, #683b9c 100%);
+        }
+        .aurora-glow {
+            position: absolute;
+            filter: blur(90px);
+            opacity: 0.45;
+            pointer-events: none;
+            border-radius: 9999px;
+            z-index: 0;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.65; transform: scale(1.05); }
+        }
+        .animate-aurora {
+            animation: pulseGlow 7s ease-in-out infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf3f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a9d8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9b72b8;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-[#fdfaf8] antialiased overflow-x-hidden selection:bg-brand-sunsetPeach selection:text-white pb-24">
+
+    <div class="bg-gradient-to-r from-brand-deepPurple via-brand-amethyst to-brand-deepPurple text-white py-2.5 px-4 text-xs md:text-sm font-medium tracking-wide">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2 mx-auto md:mx-0">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">New Episode</span>
+                <span>🎙️ <strong>Ep. 312:</strong> Erased For 40 Years – Reclaiming Your Energetic Channel is Live!</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-xs">
+                <a href="#featured" class="hover:text-brand-sunsetPeach transition-colors duration-200 underline">Watch Video Version</a>
+                <span class="text-white/40">•</span>
+                <a href="https://podcasts.apple.com" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-white transition-colors duration-200 font-semibold">Subscribe on Apple Podcasts →</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="index.html" class="flex flex-col group">
+                    <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover:text-brand-amethyst transition-colors">
+                        Michelle J. Lamont
+                    </span>
+                    <span class="text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">
+                        Manifesting Miracles™ Podcast
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Home</a>
+                    <a href="#episodes" class="text-sm font-semibold text-brand-amethyst transition-colors">Episodes</a>
+                    <a href="#featured" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Featured Story</a>
+                    <a href="#about-host" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Meet Michelle</a>
+                    <a href="#guest-inquiry" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Guest Pitch & Press</a>
+                    <a href="#academy-cta" class="text-sm font-semibold text-brand-sunsetPeach hover:text-brand-deepPurple transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i> The Academy
+                    </a>
+                </nav>
+
+                <!-- Actions & Mobile Trigger -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="copyRssFeed()" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-100/80 text-brand-deepPurple hover:bg-purple-200 transition-all">
+                        <i class="fa-solid fa-rss mr-1.5 text-brand-sunsetPeach"></i> RSS Feed
+                    </button>
+                    <a href="#episodes" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-white hover:brightness-105 shadow-md hover:shadow-lg transition-all duration-300">
+                        <i class="fa-solid fa-play mr-1.5"></i> Browse Archive
+                    </a>
+                    <button id="mobileMenuBtn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
+            <div class="flex flex-col space-y-4 pt-2">
+                <a href="index.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">← Return to Homepage</a>
+                <a href="#episodes" class="mobile-link text-base font-medium text-brand-amethyst py-1 font-semibold">Browse All Episodes</a>
+                <a href="#featured" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Featured Episode</a>
+                <a href="#about-host" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">About the Host</a>
+                <a href="#guest-inquiry" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Pitch as a Guest / Sponsor</a>
+                <a href="#academy-cta" class="mobile-link text-base font-medium text-brand-sunsetPeach py-1 flex items-center gap-2">
+                    <i class="fa-solid fa-sparkles"></i> Manifesting Miracles Academy
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden spiritual-gradient text-white">
+        <!-- Ambient decorative glowing orbs -->
+        <div class="aurora-glow animate-aurora w-[32rem] h-[32rem] bg-brand-sunsetPeach -top-24 -left-20"></div>
+        <div class="aurora-glow animate-aurora w-[36rem] h-[36rem] bg-brand-violet bottom-0 right-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Show Details, Narrative & Platform Hub -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-brand-sunsetPeach">
+                        <i class="fa-solid fa-waveform-lines"></i>
+                        <span>Weekly Spiritual Awakening & Manifestation Mastery</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.12] tracking-tight">
+                        Tune Into <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-sunsetPeach to-brand-gold">Divine Truth</span> & Quantum Miracles
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-purple-100 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Hosted by spiritual intuitive & manifestation mentor <strong>Michelle J. Lamont</strong>, this podcast offers weekly raw transmissions, neuro-spiritual blueprints, and deep soul alignments to release unconscious blocks and magnetize your destiny.
+                    </p>
+
+                    <!-- Primary Action Trigger -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <button onclick="playSelectedEpisode(0)" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-play mr-2 text-base"></i> Play Latest Episode (#312)
+                        </button>
+                        <a href="#episodes" class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all">
+                            View All 300+ Episodes
+                        </a>
+                    </div>
+
+                    <!-- Verified Metrics Grid (as seen in screenshot: 700k+, Top 1%, 4.9★) -->
+                    <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-6 max-w-lg mx-auto lg:mx-0">
+                        <div class="glass-dark p-4 rounded-2xl border border-white/15 text-center">
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-white">750K+</span>
+                            <span class="text-[11px] uppercase tracking-wider text-purple-200 mt-1 block">Global Downloads</span>
+                        </div>
+                        <div class="glass-dark p-4 rounded-2xl border border-white/15 text-center">
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-brand-gold">Top 1%</span>
+                            <span class="text-[11px] uppercase tracking-wider text-purple-200 mt-1 block">Spiritual Podcasts</span>
+                        </div>
+                        <div class="glass-dark p-4 rounded-2xl border border-white/15 text-center">
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-brand-sunsetPeach">4.9 ★</span>
+                            <span class="text-[11px] uppercase tracking-wider text-purple-200 mt-1 block">Apple Ratings</span>
+                        </div>
+                    </div>
+
+                    <!-- Platform Badges row -->
+                    <div class="pt-2">
+                        <p class="text-xs uppercase font-semibold text-purple-200 tracking-wider mb-3">Listen Free On Your Preferred Network:</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+                            <a href="https://podcasts.apple.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs text-white transition-all">
+                                <i class="fa-brands fa-apple text-base"></i> Apple Podcasts
+                            </a>
+                            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs text-white transition-all">
+                                <i class="fa-brands fa-spotify text-base text-[#1DB954]"></i> Spotify
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs text-white transition-all">
+                                <i class="fa-brands fa-youtube text-base text-rose-500"></i> YouTube Show
+                            </a>
+                            <a href="https://iheart.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs text-white transition-all">
+                                <i class="fa-solid fa-radio text-base text-rose-400"></i> iHeartRadio
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: High Impact Podcast Cover Art with Interactive Halo -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-72 sm:w-88 max-w-full group">
+                        <!-- Ambient back glow -->
+                        <div class="absolute -inset-4 bg-gradient-to-r from-brand-sunsetPeach to-brand-amethyst rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
+                        
+                        <!-- Main Show Art Card -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/30 bg-[#1e0c33]">
+                            <!-- Cover Art Graphic simulation -->
+                            <div class="relative h-96 sm:h-[420px] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&auto=format&fit=crop&q=80" alt="Cosmic spiritual aura backdrop" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple via-brand-deepPurple/50 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-brand-sunsetPeach p-1 mb-4 shadow-xl">
+                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=faces" alt="Michelle J. Lamont" class="w-full h-full rounded-full object-cover" />
+                                    </div>
+                                    <p class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-sunsetPeach">Manifesting Miracles™</p>
+                                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">WITH MICHELLE J. LAMONT</h2>
+                                    <p class="text-[11px] text-purple-200 mt-2 max-w-xs">Align your quantum vibration with unconditional love, abundance & divine authority.</p>
+                                </div>
+                            </div>
+
+                            <!-- Integrated Quick Play Overlay Strip -->
+                            <div class="p-4 bg-white/10 backdrop-blur-md border-t border-white/15 flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <button onclick="playSelectedEpisode(0)" class="w-10 h-10 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-sm shadow hover:scale-105 transition-all">
+                                        <i class="fa-solid fa-play ml-0.5"></i>
+                                    </button>
+                                    <div>
+                                        <p class="text-xs font-bold text-white">Ep. 312: Latest Episode</p>
+                                        <p class="text-[10px] text-purple-300">32 mins • Published Tuesday</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Free Stream</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-4 -left-6 glass-card text-brand-deepPurple px-4 py-2.5 rounded-2xl shadow-xl border border-white/70 hidden sm:flex items-center space-x-2">
+                            <i class="fa-solid fa-crown text-amber-500"></i>
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-gray-500">Global Ranking</p>
+                                <p class="text-xs font-bold">Top 1% Worldwide</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Must-Listen Landmark Episode</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    What to Expect: How & When Spirit Shows Up
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    A raw, vulnerable conversation unveiling Michelle's personal journey of ego dissolution, intuitive awakening, and why the universe strips away false identities to reveal your power.
+                </p>
+            </div>
+
+            <!-- Spotlight Card Styled as video documentary player -->
+            <div class="glass-card rounded-3xl p-6 sm:p-10 lg:p-12 border border-purple-100 shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <!-- Left: Video / Artwork Simulation Frame with Play Modal Trigger -->
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-purple-200" onclick="openVideoModal()">
+                            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=900&auto=format&fit=crop&q=80" alt="Deep spiritual conversation video thumbnail" class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/80 via-brand-amethyst/30 to-transparent"></div>
+                            
+                            <!-- Custom Thumbnail Content Overlay matching screenshot ("Erased For 40 Years") -->
+                            <div class="absolute inset-0 p-6 flex flex-col justify-between text-white">
+                                <div class="flex justify-between items-center">
+                                    <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-rose-600 text-white">
+                                        <i class="fa-solid fa-video mr-1"></i> Video Podcast
+                                    </span>
+                                    <span class="text-xs font-medium text-white/80 bg-black/40 px-2.5 py-1 rounded-full backdrop-blur-sm">
+                                        44:18 Mins
+                                    </span>
+                                </div>
+
+                                <div class="text-center my-auto">
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-2xl mx-auto shadow-2xl group-hover:scale-110 group-hover:bg-white transition-all">
+                                        <i class="fa-solid fa-play ml-1"></i>
+                                    </div>
+                                    <p class="text-xs uppercase tracking-widest text-brand-sunsetPeach font-bold mt-3">Click to Watch Full Video</p>
+                                </div>
+
+                                <div>
+                                    <span class="text-xs uppercase font-bold text-amber-300">Milestone Special</span>
+                                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-white leading-tight">
+                                        "ERASED FOR 40 YEARS": Surrendering to Spirit & Rebuilding in Divine Power
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Episode Breakdown, Takeaways & Timestamps -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-amethyst bg-brand-lavender px-3 py-1 rounded-full">
+                                Deep Dive Outline
+                            </span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple">
+                                Why rock bottom is often the catalyst for quantum manifestation.
+                            </h3>
+                            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                Most people pray for circumstances to change, but spirit doesn't respond to neediness—it responds to somatic frequency. In this landmark episode, Michelle breaks down:
+                            </p>
+                        </div>
+
+                        <!-- Checkpoint highlights -->
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3 text-sm text-gray-700">
+                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>Dissolving Identity Contracts:</strong> Why who you think you are is keeping you trapped in cyclical lack.</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-sm text-gray-700">
+                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>Recognizing Spiritual Signposts:</strong> Distinguishing between ego anxiety vs. authentic intuitive guidance.</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-sm text-gray-700">
+                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>The 3-Second Alignment Shift:</strong> Practical somatic tools to recalibrate your nervous system on demand.</span>
+                            </div>
+                        </div>
+
+                        <!-- Chapter Markers Grid -->
+                        <div class="bg-brand-softLilac p-4 rounded-2xl border border-purple-100">
+                            <p class="text-xs font-bold text-brand-amethyst uppercase tracking-wider mb-2">Key Timestamps:</p>
+                            <div class="grid grid-cols-2 gap-2 text-xs text-gray-600">
+                                <button onclick="seekToTimestamp(0)" class="text-left hover:text-brand-deepPurple hover:underline">⏱️ 00:00 - The Illusion of Control</button>
+                                <button onclick="seekToTimestamp(740)" class="text-left hover:text-brand-deepPurple hover:underline">⏱️ 12:20 - Surviving Ego Erasure</button>
+                                <button onclick="seekToTimestamp(1450)" class="text-left hover:text-brand-deepPurple hover:underline">⏱️ 24:10 - Somatic Calibration</button>
+                                <button onclick="seekToTimestamp(2100)" class="text-left hover:text-brand-deepPurple hover:underline">⏱️ 35:00 - Direct Q&A with Michelle</button>
+                            </div>
+                        </div>
+
+                        <!-- Action buttons -->
+                        <div class="flex flex-wrap items-center gap-3 pt-2">
+                            <button onclick="playSelectedEpisode(2)" class="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-md transition-all">
+                                <i class="fa-solid fa-headphones mr-1.5"></i> Stream Audio (44m)
+                            </button>
+                            <button onclick="openShowNotesModal(2)" class="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 border border-purple-200 hover:bg-purple-50 transition-all">
+                                <i class="fa-solid fa-file-lines mr-1.5 text-brand-sunsetPeach"></i> Episode Notes & PDF
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="episodes" class="py-20 bg-[#faf6ff]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">The Complete Library</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    Explore Episodes by Intention
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Filter by topic or search specific questions to unlock the exact vibrational medicine you need today.
+                </p>
+            </div>
+
+            <!-- Search Bar & Filters UI -->
+            <div class="max-w-3xl mx-auto mb-10 space-y-4">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="episodeSearchInput" oninput="handleEpisodeSearch()" placeholder="Search by topic, keyword (e.g. money, love, fear, spirit)..." class="w-full pl-12 pr-4 py-3.5 rounded-2xl glass-card border border-purple-200 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-amethyst shadow-sm" />
+                </div>
+
+                <!-- Category Filter Pills -->
+                <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+                    <button onclick="filterEpisodes('all', this)" class="ep-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white transition-all">
+                        All Episodes
+                    </button>
+                    <button onclick="filterEpisodes('wealth', this)" class="ep-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-600 hover:bg-purple-100 border border-purple-200 transition-all">
+                        Wealth & Abundance
+                    </button>
+                    <button onclick="filterEpisodes('spirituality', this)" class="ep-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-600 hover:bg-purple-100 border border-purple-200 transition-all">
+                        Spiritual Awakening
+                    </button>
+                    <button onclick="filterEpisodes('love', this)" class="ep-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-600 hover:bg-purple-100 border border-purple-200 transition-all">
+                        Love & Soulmates
+                    </button>
+                    <button onclick="filterEpisodes('mindset', this)" class="ep-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-600 hover:bg-purple-100 border border-purple-200 transition-all">
+                        Mindset & Shadow Work
+                    </button>
+                </div>
+            </div>
+
+            <!-- Episodes Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="episodesGrid">
+                <!-- Episodes dynamically generated via JS or loaded with rich mock data below -->
+            </div>
+
+            <!-- Pagination / Load more -->
+            <div class="text-center mt-12">
+                <button onclick="loadMoreEpisodes()" id="loadMoreBtn" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-brand-deepPurple hover:bg-brand-lavender border border-purple-200 shadow-sm transition-all">
+                    Load More Episodes <i class="fa-solid fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="relative py-24 text-white overflow-hidden">
+        <!-- Ocean Background visual inspired by screenshot -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80" alt="Sunset serene ocean tide" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-brand-deepPurple/75 backdrop-blur-[2px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-white/20 text-brand-sunsetPeach text-xs font-bold uppercase tracking-widest backdrop-blur-md">
+                Sacred Frequency Transmission
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                "You cannot attract what you want. You only attract who you are vibrating as."
+            </h2>
+            <p class="text-purple-100 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+                Take a deep breath. Release the timeline pressure. Let Michelle's voice guide your nervous system into pure receptivity.
+            </p>
+            <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+                <a href="https://podcasts.apple.com" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple hover:brightness-110 shadow-xl transition-all">
+                    <i class="fa-solid fa-heart mr-2"></i> Subscribe for Tuesday Alerts
+                </a>
+                <button onclick="copyRssFeed()" class="px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all">
+                    <i class="fa-solid fa-copy mr-2"></i> Copy Direct RSS Link
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-host" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Michelle's Portrait & Credentials -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-sm sm:max-w-md">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/90">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80" alt="Michelle J. Lamont - Host of Manifesting Miracles" class="w-full h-[480px] object-cover" />
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 glass-card p-4 rounded-2xl shadow-xl border border-white/80 max-w-xs text-left">
+                            <p class="font-serif font-bold text-brand-deepPurple text-base">From Orphanage to Alignment</p>
+                            <p class="text-xs text-gray-600 mt-1">"The universe never withheld abundance from you. It was waiting for you to receive it."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Bio copy from the actual site -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider">
+                        About Your Host
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple leading-tight">
+                        Michelle J. Lamont
+                    </h2>
+                    <p class="text-xs uppercase tracking-[0.2em] font-bold text-brand-sunsetPeach">
+                        Spiritual Conduit • International Keynote Speaker • Manifestation Coach
+                    </p>
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        Surviving profound early childhood trauma in an orphanage, Michelle discovered the invisible laws of energy and spiritual orchestration at an early age. Over the past two decades, she has helped thousands of leaders, entrepreneurs, and seekers shift from desperate striving to magnetic ease.
+                    </p>
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        On <em>Manifesting Miracles™</em>, Michelle pulls back the veil on commercial spiritual clichés, bringing hard-hitting neuro-spiritual practices and channeled insights directly to your headphones every single week.
+                    </p>
+
+                    <!-- Key badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="p-3 rounded-xl bg-[#faf6ff] border border-purple-100">
+                            <span class="block font-bold text-brand-deepPurple text-sm">300+ Episodes</span>
+                            <span class="text-[11px] text-gray-500">Unfiltered spiritual dialogue</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#faf6ff] border border-purple-100">
+                            <span class="block font-bold text-brand-deepPurple text-sm">Worldwide Reach</span>
+                            <span class="text-[11px] text-gray-500">Listened to in 115+ countries</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#faf6ff] border border-purple-100 col-span-2 sm:col-span-1">
+                            <span class="block font-bold text-brand-deepPurple text-sm">Weekly Live Drops</span>
+                            <span class="text-[11px] text-gray-500">Every Tuesday at 6 AM EST</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <a href="index.html#about" class="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-md transition-all">
+                            Full Biography & Story
+                        </a>
+                        <a href="#guest-inquiry" class="text-xs font-bold uppercase tracking-wider text-brand-amethyst hover:text-brand-sunsetPeach transition-colors">
+                            Book Michelle for an Interview →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#faf6ff]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Listener Praise</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple mt-2 mb-3">
+                    What Subscribers Are Saying
+                </h2>
+                <div class="flex items-center justify-center gap-1 text-amber-400 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="text-xs text-gray-600 font-semibold ml-2">4.9 Average on Apple Podcasts</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-purple-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-brand-deepPurple text-base mb-2">"Ep. 289 was a turning point for my finances"</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed italic">
+                            "I listen to Michelle every Tuesday morning on my commute. Her explanation of unconscious shame around money completely shifted my energetic contract. Within a month I signed my dream client!"
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-purple-100 mt-6 flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach flex items-center justify-center font-bold text-xs">
+                            JL
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-brand-deepPurple">Jessica L.</p>
+                            <p class="text-[10px] text-gray-500">Apple Podcasts Review</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-purple-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-brand-deepPurple text-base mb-2">"Zero fluff, pure divine activation"</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed italic">
+                            "So many manifestation coaches repeat the same generic positive thinking. Michelle's raw vulnerability and pragmatic somatic tools actually clear the blocks in the nervous system."
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-purple-100 mt-6 flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-purple-100 text-brand-amethyst flex items-center justify-center font-bold text-xs">
+                            DK
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-brand-deepPurple">David K.</p>
+                            <p class="text-[10px] text-gray-500">Spotify Listener</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-purple-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-brand-deepPurple text-base mb-2">"Found peace after 20 years of anxiety"</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed italic">
+                            "Her episode on surrendering control ('Erased for 40 years') had me in tears. It helped me forgive my past and step boldly into my soul's authentic calling."
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-purple-100 mt-6 flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">
+                            MR
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-brand-deepPurple">Maria R.</p>
+                            <p class="text-[10px] text-gray-500">iHeartRadio Subscriber</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Review CTA -->
+            <div class="text-center mt-10">
+                <a href="https://podcasts.apple.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-amethyst hover:text-brand-sunsetPeach transition-colors">
+                    <i class="fa-brands fa-apple mr-2 text-sm"></i> Leave an Apple Podcasts Review & Be Featured on the Show →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="guest-inquiry" class="py-20 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-purple-200 shadow-xl">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider mb-2">
+                        Collaborations & Appearances
+                    </span>
+                    <h3 class="font-serif text-3xl font-bold text-brand-deepPurple">
+                        Guest Pitches, Sponsorships & Speaking
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-2">
+                        Have an aligned spiritual story, looking to sponsor an upcoming episode, or want Michelle as a guest on your podcast? Send an inquiry below.
+                    </p>
+                </div>
+
+                <form onsubmit="handleInquirySubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Your Full Name</label>
+                            <input type="text" required placeholder="Alex Rivera" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" required placeholder="alex@domain.com" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Inquiry Type</label>
+                            <select id="inquiryTypeSelect" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                                <option value="guest">Pitching as a Podcast Guest</option>
+                                <option value="sponsor">Show Sponsorship & Advertising</option>
+                                <option value="michelle-guest">Interview Michelle on My Show</option>
+                                <option value="press">Press & Media Inquiries</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Website or Podcast Link</label>
+                            <input type="url" placeholder="https://yourpodcast.com" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Your Proposed Topic or Message</label>
+                        <textarea rows="4" required placeholder="Tell Michelle's production team about your angle, reach, and why this serves the Manifesting Miracles audience..." class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-md">
+                        Transmit Inquiry to Podcast Team
+                    </button>
+                    <p class="text-[10px] text-center text-gray-500">
+                        Our production team reviews all inquiries within 48–72 business hours.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="academy-cta" class="py-16 bg-[#faf6ff]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="spiritual-gradient rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 max-w-xl text-center md:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xs font-bold tracking-wider uppercase">
+                        Ready To Go Deeper?
+                    </span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+                        Join The Manifesting Miracles Academy
+                    </h3>
+                    <p class="text-purple-100 text-sm leading-relaxed">
+                        Don't just listen to the breakthroughs—live them. Unlock Michelle's 8-week core transformational system, live monthly coaching, and subconscious neuro-reprogramming sessions.
+                    </p>
+                </div>
+                <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+                    <a href="index.html#academy" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg text-center transition-all">
+                        Explore Academy Curriculum
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-deepPurple text-white pt-16 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <a href="index.html" class="inline-block">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-white">Michelle J. Lamont</span>
+                        <span class="block text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">Manifesting Miracles™</span>
+                    </a>
+                    <p class="text-xs text-purple-200 max-w-sm leading-relaxed">
+                        The top-ranked spirituality podcast dedicated to aligning your nervous system, expanding your wealth channel, and manifesting the miraculous.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Spotify">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                        <a href="https://apple.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Podcast Directory</p>
+                    <ul class="space-y-2 text-xs text-purple-200">
+                        <li><a href="#episodes" class="hover:text-white transition-colors">Latest Episodes</a></li>
+                        <li><a href="#featured" class="hover:text-white transition-colors">Featured Episode</a></li>
+                        <li><a href="#about-host" class="hover:text-white transition-colors">About Michelle</a></li>
+                        <li><a href="#guest-inquiry" class="hover:text-white transition-colors">Submit Guest Pitch</a></li>
+                        <li><a href="index.html" class="hover:text-white transition-colors">Michelle Lamont Home</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Podcast Disclaimer</p>
+                    <p class="text-[11px] text-purple-300 leading-relaxed">
+                        Episodes of Manifesting Miracles are intended for mindset, spiritual encouragement, and educational purposes. No statements are intended to diagnose or treat health conditions.
+                    </p>
+                    <p class="text-[11px] text-purple-400">
+                        © 2026 Michelle J. Lamont. All Rights Reserved.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300">
+                <p>Designed with conscious vibration & alignment.</p>
+                <div class="flex space-x-6 mt-3 sm:mt-0">
+                    <a href="index.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="index.html" class="hover:text-white">Terms of Use</a>
+                    <a href="#guest-inquiry" class="hover:text-white">Contact Management</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="persistentPlayerBar" class="fixed bottom-0 left-0 right-0 z-50 glass-dark border-t border-white/20 shadow-2xl px-4 py-3 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            
+            <!-- Track Meta -->
+            <div class="flex items-center space-x-3 w-full sm:w-1/3">
+                <img id="dockEpisodeCover" src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=100&h=100&fit=crop" alt="Episode cover" class="w-11 h-11 rounded-xl object-cover border border-white/20 shadow-md shrink-0" />
+                <div class="min-w-0">
+                    <p id="dockEpisodeTitle" class="text-xs font-bold text-white truncate">Ep. 312: Reclaiming Your Energetic Space & Channel</p>
+                    <p id="dockEpisodeMeta" class="text-[10px] text-purple-300 truncate">Manifesting Miracles™ with Michelle J. Lamont</p>
+                </div>
+            </div>
+
+            <!-- Central Controls & Scrubber -->
+            <div class="flex flex-col items-center w-full sm:w-1/3">
+                <div class="flex items-center space-x-5 mb-1.5">
+                    <button onclick="skipDockAudio(-15)" class="text-white/70 hover:text-white text-xs" title="Rewind 15s">
+                        <i class="fa-solid fa-rotate-left"></i> 15s
+                    </button>
+                    <button id="dockPlayBtn" onclick="toggleDockPlay()" class="w-10 h-10 rounded-full bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple flex items-center justify-center text-sm shadow hover:scale-105 transition-all">
+                        <i id="dockPlayIcon" class="fa-solid fa-play ml-0.5"></i>
+                    </button>
+                    <button onclick="skipDockAudio(30)" class="text-white/70 hover:text-white text-xs" title="Fast Forward 30s">
+                        30s <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                    <button onclick="cyclePlaybackRate()" id="speedBtn" class="text-xs text-brand-sunsetPeach font-bold px-2 py-0.5 rounded bg-white/10 hover:bg-white/20">
+                        1.0x
+                    </button>
+                </div>
+
+                <!-- Scrubber Slider -->
+                <div class="w-full flex items-center space-x-2 text-[10px] text-purple-300">
+                    <span id="dockCurrentTime">00:00</span>
+                    <div class="w-full bg-white/20 h-1.5 rounded-full overflow-hidden cursor-pointer" onclick="scrubDockAudio(event)">
+                        <div id="dockProgressBar" class="bg-gradient-to-r from-brand-sunsetPeach to-brand-gold h-full w-0 rounded-full transition-all duration-150"></div>
+                    </div>
+                    <span id="dockTotalDuration">32:00</span>
+                </div>
+            </div>
+
+            <!-- Quick Platform Shortcuts -->
+            <div class="hidden sm:flex items-center justify-end space-x-3 w-1/3 text-xs">
+                <button onclick="openShowNotesModal(currentPlayingIndex)" class="text-white/80 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10">
+                    <i class="fa-solid fa-notes-medical text-brand-sunsetPeach"></i> Notes
+                </button>
+                <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-[#1DB954] text-lg" title="Open in Spotify">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+                <a href="https://podcasts.apple.com" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white text-lg" title="Open in Apple Podcasts">
+                    <i class="fa-brands fa-apple"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Video Player Simulation Modal -->
+    <div id="videoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+        <div class="max-w-3xl w-full bg-brand-deepPurple rounded-3xl overflow-hidden shadow-2xl border border-white/20 relative">
+            <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 text-white hover:bg-black flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="relative pt-[56.25%] bg-black">
+                <!-- Video player simulation frame -->
+                <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0" title="Manifesting Miracles with Michelle" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-6 text-white space-y-2">
+                <span class="text-xs text-brand-sunsetPeach font-bold uppercase tracking-wider">Now Playing Special</span>
+                <h4 class="font-serif text-xl font-bold">Erased For 40 Years – Surrendering to the Divine Calling</h4>
+                <p class="text-xs text-purple-200">Watch Michelle describe the transformative shift from subconscious lack to unconditional trust.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Episode Show Notes Modal -->
+    <div id="showNotesModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="glass-card max-w-xl w-full rounded-3xl p-6 sm:p-8 border border-white/70 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeShowNotesModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Official Show Notes</span>
+            <h3 id="notesModalTitle" class="font-serif text-2xl font-bold text-brand-deepPurple mt-1 mb-3">Episode Details</h3>
+            <div id="notesModalBody" class="text-xs sm:text-sm text-gray-700 space-y-3 leading-relaxed">
+                <!-- Injected via JS -->
+            </div>
+            <div class="pt-6 border-t border-purple-100 mt-6 flex justify-between items-center">
+                <button onclick="copyCurrentEpisodeLink()" class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-lavender text-brand-amethyst hover:bg-brand-amethyst hover:text-white transition-all">
+                    <i class="fa-solid fa-share-nodes mr-1.5"></i> Share Episode
+                </button>
+                <button onclick="closeShowNotesModal()" class="text-xs text-gray-500 hover:underline">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="fixed top-24 right-6 z-50 transform -translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-dark text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-white/20 flex items-center space-x-3">
+            <div id="toastIcon" class="w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p id="toastMessage" class="text-xs font-semibold">Action completed successfully!</p>
+        </div>
+    </div>
+
+    <script>
+        // Comprehensive Episode Library
+        const episodes = [
+            {
+                id: 312,
+                title: "Reclaiming Your Energetic Space & Channeling Miracles in Chaos",
+                category: "spirituality",
+                duration: "32 mins",
+                durationSec: 1920,
+                date: "Oct 20, 2026",
+                image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=80",
+                description: "Learn how to establish an unshakeable vibrational boundary so external chaos cannot derail your manifestation field.",
+                takeaways: [
+                    "How to seal your aura against collective financial panic.",
+                    "The difference between reacting from fear vs. creating from authority.",
+                    "Michelle's 2-minute daily prayer for instant calm."
+                ]
+            },
+            {
+                id: 311,
+                title: "Clearing Subconscious Scarcity to Open Your Wealth Portal",
+                category: "wealth",
+                duration: "28 mins",
+                durationSec: 1680,
+                date: "Oct 13, 2026",
+                image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&auto=format&fit=crop&q=80",
+                description: "Why thinking rich doesn't work until your autonomic nervous system feels safe holding money. Practical release methods.",
+                takeaways: [
+                    "Dissolving ancestral vows of poverty.",
+                    "Why receiving feels physically uncomfortable to empaths.",
+                    "A somatic exercise to expand your financial ceiling."
+                ]
+            },
+            {
+                id: 310,
+                title: "Erased For 40 Years: Surrendering to Spirit & Radical Rebirth",
+                category: "spirituality",
+                duration: "44 mins",
+                durationSec: 2640,
+                date: "Oct 06, 2026",
+                image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&auto=format&fit=crop&q=80",
+                description: "Michelle's most personal interview sharing how rock bottom dissolved false ego constructs, unlocking her channeled gifts.",
+                takeaways: [
+                    "Why the universe strips away attachments before upgrades.",
+                    "Healing the trauma of orphan identity.",
+                    "Hearing the voice of direct spiritual guidance."
+                ]
+            },
+            {
+                id: 309,
+                title: "The Energetic Blueprint of Soulmate Alignment",
+                category: "love",
+                duration: "35 mins",
+                durationSec: 2100,
+                date: "Sep 29, 2026",
+                image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&auto=format&fit=crop&q=80",
+                description: "Stop chasing unavailable partners. Discover how to become an energetic mirror for secure, sacred, soul-deep romance.",
+                takeaways: [
+                    "Ending the anxious-avoidant karmic loop.",
+                    "The 3 energetic standards you must embody before love arrives.",
+                    "Manifesting partnership without sacrificing independence."
+                ]
+            },
+            {
+                id: 308,
+                title: "How to Read Signs, Repeating Numbers & Synchronicities",
+                category: "spirituality",
+                duration: "26 mins",
+                durationSec: 1560,
+                date: "Sep 22, 2026",
+                image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80",
+                description: "Are you seeing 111, 444, or white feathers? Decode the difference between mere coincidence and active spirit intervention.",
+                takeaways: [
+                    "The actual metaphysical meaning of angel sequences.",
+                    "What to do immediately when you spot a synchronicity.",
+                    "How to request unambiguous confirmation from your guides."
+                ]
+            },
+            {
+                id: 307,
+                title: "Somatic Shadow Work: Dissolving The Fear of Visibility",
+                category: "mindset",
+                duration: "31 mins",
+                durationSec: 1860,
+                date: "Sep 15, 2026",
+                image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=600&auto=format&fit=crop&q=80",
+                description: "Overcome the subconscious dread of being judged, criticized, or rejected when you dare to succeed or speak your truth.",
+                takeaways: [
+                    "Where the 'witch wound' lives in the throat and solar plexus.",
+                    "Tools to speak authentically without trembling.",
+                    "Embodying unapologetic self-trust."
+                ]
+            }
+        ];
+
+        let currentPlayingIndex = 0;
+        let isDockPlaying = false;
+        let playbackProgress = 0; // percentage
+        let dockAudioInterval = null;
+        let playbackRate = 1.0;
+
+        function renderEpisodes(list) {
+            const grid = document.getElementById('episodesGrid');
+            grid.innerHTML = '';
+
+            if (list.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 glass-card rounded-3xl p-8 border border-purple-200">
+                        <i class="fa-solid fa-podcast text-4xl text-brand-amethyst/40 mb-3"></i>
+                        <p class="font-serif text-lg font-bold text-brand-deepPurple">No episodes matched your query</p>
+                        <p class="text-xs text-gray-500 mt-1">Try another keyword like 'money', 'love', 'spirit', or clear filters.</p>
+                        <button onclick="filterEpisodes('all', document.querySelector('.ep-filter-btn'))" class="mt-4 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white">Reset Filters</button>
+                    </div>
+                `;
+                return;
+            }
+
+            list.forEach((ep) => {
+                const card = document.createElement('div');
+                card.className = 'glass-card rounded-3xl overflow-hidden border border-purple-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1';
+                card.innerHTML = `
+                    <div>
+                        <!-- Thumbnail banner with duration -->
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="${ep.image}" alt="${ep.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/70 to-transparent"></div>
+                            
+                            <div class="absolute top-3 left-3">
+                                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm shadow-sm">
+                                    ${ep.category}
+                                </span>
+                            </div>
+
+                            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white text-xs">
+                                <span class="font-bold text-brand-sunsetPeach">Episode #${ep.id}</span>
+                                <span class="bg-black/50 px-2 py-0.5 rounded-full text-[10px] backdrop-blur-sm">
+                                    <i class="fa-regular fa-clock mr-1"></i> ${ep.duration}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Content info -->
+                        <div class="p-6 space-y-2.5">
+                            <span class="text-[11px] font-semibold text-gray-400 block">${ep.date}</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors line-clamp-2">
+                                ${ep.title}
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-2 leading-relaxed">
+                                ${ep.description}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Footer actions -->
+                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-purple-50">
+                        <button onclick="playSelectedEpisodeById(${ep.id})" class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-brand-deepPurple hover:text-brand-sunsetPeach transition-colors">
+                            <span class="w-8 h-8 rounded-full bg-brand-lavender group-hover:bg-brand-sunsetPeach group-hover:text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-play ml-0.5 text-xs"></i>
+                            </span>
+                            <span>Play Episode</span>
+                        </button>
+                        <button onclick="openShowNotesModalById(${ep.id})" class="text-xs text-gray-500 hover:text-brand-deepPurple font-medium underline">
+                            Show Notes
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Initialize grid on load
+        renderEpisodes(episodes);
+
+        function filterEpisodes(category, btn) {
+            document.querySelectorAll('.ep-filter-btn').forEach(b => {
+                b.className = 'ep-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-600 hover:bg-purple-100 border border-purple-200 transition-all';
+            });
+            btn.className = 'ep-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white transition-all';
+
+            document.getElementById('episodeSearchInput').value = '';
+            if (category === 'all') {
+                renderEpisodes(episodes);
+            } else {
+                const filtered = episodes.filter(e => e.category === category);
+                renderEpisodes(filtered);
+            }
+        }
+
+        function handleEpisodeSearch() {
+            const query = document.getElementById('episodeSearchInput').value.toLowerCase().trim();
+            const results = episodes.filter(e => 
+                e.title.toLowerCase().includes(query) || 
+                e.description.toLowerCase().includes(query) ||
+                e.category.toLowerCase().includes(query)
+            );
+            renderEpisodes(results);
+        }
+
+        function loadMoreEpisodes() {
+            showToast("You have reached the end of the recent transmissions archive.", "info");
+        }
+
+        function playSelectedEpisode(index) {
+            currentPlayingIndex = index;
+            const ep = episodes[index];
+            if (!ep) return;
+
+            document.getElementById('dockEpisodeTitle').textContent = `Ep. ${ep.id}: ${ep.title}`;
+            document.getElementById('dockEpisodeCover').src = ep.image;
+            document.getElementById('dockTotalDuration').textContent = ep.duration;
+            playbackProgress = 0;
+            document.getElementById('dockProgressBar').style.width = '0%';
+            document.getElementById('dockCurrentTime').textContent = '00:00';
+
+            isDockPlaying = true;
+            updateDockPlayButton();
+            startDockTimer();
+            showToast(`Now streaming Episode #${ep.id}`, "play");
+        }
+
+        function playSelectedEpisodeById(id) {
+            const index = episodes.findIndex(e => e.id === id);
+            if (index !== -1) {
+                playSelectedEpisode(index);
+            }
+        }
+
+        function toggleDockPlay() {
+            isDockPlaying = !isDockPlaying;
+            updateDockPlayButton();
+            if (isDockPlaying) {
+                startDockTimer();
+                showToast("Audio resumed", "play");
+            } else {
+                clearInterval(dockAudioInterval);
+                showToast("Audio paused", "info");
+            }
+        }
+
+        function updateDockPlayButton() {
+            const icon = document.getElementById('dockPlayIcon');
+            if (isDockPlaying) {
+                icon.className = 'fa-solid fa-pause';
+            } else {
+                icon.className = 'fa-solid fa-play ml-0.5';
+            }
+        }
+
+        function startDockTimer() {
+            clearInterval(dockAudioInterval);
+            dockAudioInterval = setInterval(() => {
+                if (playbackProgress < 100) {
+                    playbackProgress += (0.4 * playbackRate);
+                    document.getElementById('dockProgressBar').style.width = Math.min(playbackProgress, 100) + '%';
+                    
+                    const ep = episodes[currentPlayingIndex];
+                    const totalSec = ep ? ep.durationSec : 1920;
+                    const curSec = Math.floor((playbackProgress / 100) * totalSec);
+                    const m = Math.floor(curSec / 60);
+                    const s = curSec % 60;
+                    document.getElementById('dockCurrentTime').textContent = 
+                        String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+                } else {
+                    clearInterval(dockAudioInterval);
+                    isDockPlaying = false;
+                    updateDockPlayButton();
+                }
+            }, 1000);
+        }
+
+        function skipDockAudio(seconds) {
+            playbackProgress = Math.min(Math.max(playbackProgress + (seconds > 0 ? 3 : -3), 0), 100);
+            document.getElementById('dockProgressBar').style.width = playbackProgress + '%';
+            showToast(`Skipped ${seconds > 0 ? '+' : ''}${seconds}s`, "info");
+        }
+
+        function scrubDockAudio(e) {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            playbackProgress = Math.min(Math.max((clickX / rect.width) * 100, 0), 100);
+            document.getElementById('dockProgressBar').style.width = playbackProgress + '%';
+        }
+
+        function cyclePlaybackRate() {
+            const rates = [1.0, 1.25, 1.5, 2.0];
+            const currentIdx = rates.indexOf(playbackRate);
+            playbackRate = rates[(currentIdx + 1) % rates.length];
+            document.getElementById('speedBtn').textContent = playbackRate + 'x';
+            showToast(`Playback speed: ${playbackRate}x`, "info");
+        }
+
+        function seekToTimestamp(seconds) {
+            playSelectedEpisode(2); // Landmark episode
+            const ep = episodes[2];
+            playbackProgress = (seconds / ep.durationSec) * 100;
+            document.getElementById('dockProgressBar').style.width = playbackProgress + '%';
+            showToast(`Jumped to chapter @ ${Math.floor(seconds/60)}m`, "info");
+        }
+
+        function openVideoModal() {
+            document.getElementById('videoModal').classList.remove('hidden');
+        }
+        function closeVideoModal() {
+            document.getElementById('videoModal').classList.add('hidden');
+        }
+
+        function openShowNotesModal(index) {
+            const ep = episodes[index];
+            if (!ep) return;
+            document.getElementById('notesModalTitle').textContent = `Episode #${ep.id}: ${ep.title}`;
+            
+            let takeawaysList = ep.takeaways.map(t => `<li class="flex items-start gap-2"><i class="fa-solid fa-sparkles text-brand-sunsetPeach mt-1"></i><span>${t}</span></li>`).join('');
+            
+            document.getElementById('notesModalBody').innerHTML = `
+                <p><strong>Air Date:</strong> ${ep.date} • <strong>Length:</strong> ${ep.duration}</p>
+                <p class="text-gray-700">${ep.description}</p>
+                <div class="bg-purple-50 p-4 rounded-xl border border-purple-100 my-3">
+                    <p class="font-bold text-brand-deepPurple text-xs uppercase mb-2">Key Takeaways & Activations:</p>
+                    <ul class="space-y-2 text-xs text-gray-700">${takeawaysList}</ul>
+                </div>
+                <p class="text-xs text-gray-500">Resources mentioned: The Manifesting Miracles Academy, 333 Alignment Ritual, Michelle's Private Voxer Mentorship.</p>
+            `;
+            document.getElementById('showNotesModal').classList.remove('hidden');
+        }
+
+        function openShowNotesModalById(id) {
+            const index = episodes.findIndex(e => e.id === id);
+            if (index !== -1) openShowNotesModal(index);
+        }
+
+        function closeShowNotesModal() {
+            document.getElementById('showNotesModal').classList.add('hidden');
+        }
+
+        function copyRssFeed() {
+            const dummy = document.createElement('input');
+            dummy.value = "https://feeds.megaphone.fm/manifesting-miracles-michelle-lamont";
+            document.body.appendChild(dummy);
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            showToast("Podcast RSS Feed copied to clipboard!", "success");
+        }
+
+        function copyCurrentEpisodeLink() {
+            const dummy = document.createElement('input');
+            dummy.value = window.location.href;
+            document.body.appendChild(dummy);
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            showToast("Direct episode link copied!", "success");
+        }
+
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast("Inquiry received! Michelle's production team will follow up.", "success");
+        }
+
+        // Toast Helper
+        function showToast(message, type = "success") {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastMsg.textContent = message;
+            if (type === 'play') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-play"></i>';
+            } else if (type === 'info') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-purple-200 text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+            } else {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+            }
+
+            toast.classList.remove('-translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('-translate-y-20', 'opacity-0');
+            }, 3200);
+        }
+
+        // Mobile drawer toggling
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

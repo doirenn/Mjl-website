@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Containers | 1-on-1 Private Mentorship with Michelle J. Lamont</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            deepPurple: '#2d154a',
+                            amethyst: '#4a2574',
+                            violet: '#683b9c',
+                            lavender: '#efe6f7',
+                            softLilac: '#f7f2fb',
+                            sunsetPeach: '#f89a80',
+                            warmRose: '#efa897',
+                            paleBlush: '#fdf3f0',
+                            celestialBlue: '#3a7bd5',
+                            powderBlue: '#eef4ff',
+                            gold: '#dfb15b'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.70);
+        }
+        .glass-dark {
+            background: rgba(45, 21, 74, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #f7dcd5 0%, #fad2ca 25%, #e8e4f5 60%, #ded9f7 100%);
+        }
+        .spiritual-gradient {
+            background: linear-gradient(135deg, #2d154a 0%, #4a2574 55%, #683b9c 100%);
+        }
+        .cosmic-gradient {
+            background: radial-gradient(circle at center, #4a2574 0%, #200c36 60%, #120521 100%);
+        }
+        .aurora-glow {
+            position: absolute;
+            filter: blur(85px);
+            opacity: 0.5;
+            pointer-events: none;
+            border-radius: 9999px;
+            z-index: 0;
+        }
+        .portal-ring {
+            box-shadow: 0 0 60px 15px rgba(248, 154, 128, 0.45), 0 0 100px 30px rgba(104, 59, 156, 0.35);
+        }
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-portal {
+            animation: rotateSlow 40s linear infinite;
+        }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf3f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a9d8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9b72b8;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-[#fdfaf8] antialiased overflow-x-hidden selection:bg-brand-sunsetPeach selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-deepPurple via-brand-amethyst to-brand-deepPurple text-white py-2.5 px-4 text-xs md:text-sm font-medium tracking-wide">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2 mx-auto md:mx-0">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">Strictly Limited</span>
+                <span>✨ <strong>Private 1:1 Sacred Containers:</strong> Only 3 client apertures open for the upcoming quarter</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-xs">
+                <a href="#containers" class="hover:text-brand-sunsetPeach transition-colors duration-200 underline">View The 3 Containers</a>
+                <span class="text-white/40">•</span>
+                <button onclick="openApplicationModal('VIP Sovereign Inquiry')" class="text-brand-gold hover:text-white transition-colors duration-200 font-semibold">Apply for Private Mentorship →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="index.html" class="flex flex-col group">
+                    <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover:text-brand-amethyst transition-colors">
+                        Michelle J. Lamont
+                    </span>
+                    <span class="text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">
+                        Manifesting Miracles™ Mentorship
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">About</a>
+                    <a href="podcast.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Podcast</a>
+                    <a href="speaking.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Speaking</a>
+                    <a href="press.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Press</a>
+                    <a href="sacred-containers.html" class="text-sm font-semibold text-brand-amethyst transition-colors border-b-2 border-brand-sunsetPeach pb-0.5">Sacred Containers</a>
+                    <a href="#voxer" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Daily Voice Portal</a>
+                </nav>
+
+                <!-- Action CTA & Mobile Trigger -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="scrollToApplication()" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-100/80 text-brand-deepPurple hover:bg-purple-200 transition-all">
+                        <i class="fa-solid fa-sparkles mr-1.5 text-brand-sunsetPeach"></i> Check Availability
+                    </button>
+                    <button onclick="openApplicationModal('General Mentorship')" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-white hover:brightness-105 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        Apply to Work 1:1
+                    </button>
+                    <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
+            <div class="flex flex-col space-y-4 pt-2">
+                <a href="index.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Home</a>
+                <a href="about.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">About Michelle</a>
+                <a href="podcast.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Podcast</a>
+                <a href="speaking.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Speaking</a>
+                <a href="press.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Press Room</a>
+                <a href="sacred-containers.html" class="mobile-link text-base font-semibold text-brand-amethyst py-1">Sacred Containers (1:1)</a>
+                <a href="#containers" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">The 3 Containers</a>
+                <a href="#voxer" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Voxer Voice Channel</a>
+                <div class="pt-2">
+                    <button onclick="openApplicationModal('Mobile Drawer Apply')" class="w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white">
+                        Submit Mentorship Application
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section: "THIS IS THE SACRED PORTAL TO YOUR BECOMING" (Matching screenshot top banner) -->
+    <section class="relative pt-16 pb-24 lg:pt-28 lg:pb-36 cosmic-gradient text-white overflow-hidden text-center">
+        <!-- Ambient Aurora & Cosmic Particles -->
+        <div class="aurora-glow w-[38rem] h-[38rem] bg-brand-amethyst/60 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="aurora-glow w-96 h-96 bg-brand-sunsetPeach/30 top-10 left-10"></div>
+        <div class="aurora-glow w-96 h-96 bg-brand-celestialBlue/30 bottom-10 right-10"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            
+            <!-- Radiant Eclipse Ring Graphic inspired by screenshot -->
+            <div class="relative mx-auto w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center">
+                <div class="absolute inset-0 rounded-full border border-brand-sunsetPeach/40 portal-ring animate-portal"></div>
+                <div class="absolute inset-3 rounded-full border-2 border-dashed border-purple-300/30"></div>
+                <div class="w-36 h-36 sm:w-48 sm:h-48 rounded-full bg-gradient-to-tr from-brand-deepPurple via-black to-brand-amethyst flex items-center justify-center shadow-2xl p-4">
+                    <div class="text-center">
+                        <i class="fa-solid fa-gem text-brand-gold text-2xl sm:text-3xl mb-1 animate-pulse"></i>
+                        <span class="block text-[9px] uppercase tracking-[0.3em] text-brand-sunsetPeach font-bold">Aperture of Light</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Portal Headline from Screenshot -->
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-[0.25em] text-brand-sunsetPeach">
+                    Private Energetic Architecture
+                </span>
+                
+                <h1 class="font-serif text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12]">
+                    THIS IS THE SACRED PORTAL TO YOUR <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-sunsetPeach via-brand-gold to-brand-warmRose">BECOMING.</span>
+                </h1>
+
+                <p class="text-base sm:text-xl text-purple-100 max-w-2xl mx-auto font-light leading-relaxed">
+                    Step inside an exclusive, intimate 1-on-1 energetic sanctuary where Michelle J. Lamont anchors the frequency of your highest timeline until your physical reality calibrates.
+                </p>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <button onclick="scrollToApplication()" class="w-full sm:w-auto inline-flex items-center justify-center px-9 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-sparkles mr-2 text-base"></i> Apply For A Sacred Container
+                </button>
+                <a href="#containers" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all">
+                    Explore The 3 Levels of Mentorship ↓
+                </a>
+            </div>
+
+            <!-- Verified Indicator Badges -->
+            <div class="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-purple-200">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-brand-sunsetPeach"></i> 100% Confidential VIP Sanctuaries</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-walkie-talkie text-brand-sunsetPeach"></i> Direct Daily Voxer Access</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-shield text-brand-gold"></i> Max 3 Clients Active Concurrently</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 1: "Your Highest Becoming Starts Here" (Matching ocean green dress photo in screenshot) -->
+    <section class="py-20 lg:py-28 bg-[#fdfaf8] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Ocean Green Robe Portrait from Screenshot -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 sm:w-88 group">
+                        <!-- Radiant Glow Halo -->
+                        <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-celestialBlue via-emerald-400 to-brand-amethyst blur-2xl opacity-50 group-hover:opacity-75 transition duration-700 animate-pulse"></div>
+
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-2">
+                            <div class="relative rounded-2xl overflow-hidden h-96 sm:h-[480px]">
+                                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&auto=format&fit=crop&q=80" alt="Michelle J. Lamont standing in sacred waters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/80 via-transparent to-transparent"></div>
+
+                                <!-- Floating Quote Badge in Portrait -->
+                                <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-2xl shadow-lg border border-white/80 text-left">
+                                    <div class="flex items-center space-x-2 text-brand-amethyst text-xs mb-1">
+                                        <i class="fa-solid fa-water"></i>
+                                        <span class="font-bold uppercase tracking-wider text-[10px]">Pure Energetic Alignment</span>
+                                    </div>
+                                    <p class="font-serif font-bold text-brand-deepPurple text-sm">"The water holds no resistance. Neither will your reality when we realign your channel."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Aperture Counter -->
+                        <div class="absolute -top-4 -right-4 glass-card px-4 py-2.5 rounded-2xl shadow-xl border border-white/80 hidden sm:flex items-center space-x-2.5 animate-float">
+                            <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-sm shadow">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[9px] uppercase font-bold text-gray-500">Status</p>
+                                <p class="text-xs font-bold text-brand-deepPurple">By Application Only</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Editorial Narrative matching screenshot copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-circle-nodes text-brand-sunsetPeach"></i> The Energetic Contract
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple leading-[1.15]">
+                        Your Highest Becoming <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-amethyst to-brand-sunsetPeach">Starts Here.</span>
+                    </h2>
+
+                    <p class="font-serif text-xl sm:text-2xl text-brand-amethyst font-semibold italic leading-snug">
+                        "You are not broken. You were simply taught to operate from borrowed limits."
+                    </p>
+
+                    <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+                        <p>
+                            When you reach a certain level of consciousness and success, conventional advice and generic mass courses fall completely flat. You don't need more intellectual theory—you need an unwavering energetic counterpart who can see your blind spots, dissolve ancestral scarcity contracts, and hold you to your divine authority.
+                        </p>
+                        <p>
+                            In Michelle's <strong>Sacred Containers</strong>, you enter a private vortex. This is a bespoke, immersive energetic container designed for leaders, high-performers, and conscious creators who are ready to make quantum leaps in wealth, intimacy, and spiritual clarity without self-sabotage.
+                        </p>
+                    </div>
+
+                    <!-- 4 Fundamental Tenets Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 text-left">
+                        <div class="p-4 rounded-2xl bg-white border border-purple-100 shadow-sm flex items-start space-x-3">
+                            <i class="fa-solid fa-fingerprint text-brand-sunsetPeach text-base mt-1"></i>
+                            <div>
+                                <p class="font-bold text-xs text-brand-deepPurple">Bespoke Blueprint</p>
+                                <p class="text-[11px] text-gray-500">No cookie-cutter curriculums. Channeled directly for your nervous system.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white border border-purple-100 shadow-sm flex items-start space-x-3">
+                            <i class="fa-solid fa-satellite-dish text-brand-sunsetPeach text-base mt-1"></i>
+                            <div>
+                                <p class="font-bold text-xs text-brand-deepPurple">Real-Time Calibration</p>
+                                <p class="text-[11px] text-gray-500">Continuous Voxer access keeps you from dropping into scarcity between calls.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="scrollToApplication()" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-md transition-all">
+                            Claim Your Sanctuary Space →
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: "Why Now? & Holding Space For Your Transformation" (Matching beach dancing photo & vortex circle photo) -->
+    <section class="py-20 sunset-gradient relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">The Threshold of Decision</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    Why Now? And Why You’re Ready
+                </h2>
+                <p class="text-gray-700 text-base sm:text-lg">
+                    You have spent years surviving, proving, and carrying everyone else’s expectations. The soul fatigue you feel is not weakness—it is the old paradigm crumbling to make room for your sovereign power.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Narrative & Readiness Checklist -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white shadow-lg space-y-4">
+                        <h3 class="font-serif text-2xl font-bold text-brand-deepPurple">
+                            Holding Space For Your Ultimate Expansion
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            A sacred container is fundamentally different from therapy, mastermind groups, or ordinary business coaching. It is an energetic covenant where Michelle holds your highest vibration without wavering, even when your ego tries to retreat into old comfort zones.
+                        </p>
+
+                        <!-- Checklist from screenshot -->
+                        <div class="space-y-3 pt-2">
+                            <div class="flex items-start space-x-3 text-xs sm:text-sm text-gray-700">
+                                <span class="w-6 h-6 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs mt-0.5 shrink-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>Dissolving Timeline Anxiety:</strong> Ending the exhausting obsession with the "how" and stepping into magnetic receptivity.</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-xs sm:text-sm text-gray-700">
+                                <span class="w-6 h-6 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs mt-0.5 shrink-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>Neuro-Somatic Wealth Capacity:</strong> Calibrating your physical nervous system so multi-six and seven-figure inflows don't trigger panic.</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-xs sm:text-sm text-gray-700">
+                                <span class="w-6 h-6 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-xs mt-0.5 shrink-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span><strong>Direct Channeled Guidance:</strong> Accessing intuitive clarity on your contracts, partnerships, and soul mission with zero second-guessing.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Vortex photo matching the screenshot with geometric circle art -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 sm:w-88 group">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-2">
+                            <div class="relative rounded-2xl overflow-hidden h-96 sm:h-[460px]">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80" alt="Michelle in front of cosmic geometric portal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                                <div class="absolute bottom-4 left-4 right-4 text-white text-left">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-brand-sunsetPeach">Sacred Protocol</span>
+                                    <p class="font-serif font-bold text-base mt-0.5">"Step through the threshold. Your future self is waiting."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: "This Is For You If..." (Matching deep purple banner in screenshot) -->
+    <section class="py-20 spiritual-gradient text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Title Banner -->
+                <div class="lg:col-span-5 space-y-4 text-center lg:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-brand-sunsetPeach text-xs font-bold uppercase tracking-wider">
+                        Aperture Alignment
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                        This Is For You If…
+                    </h2>
+                    <p class="text-purple-200 text-sm sm:text-base leading-relaxed">
+                        These containers are deliberately designed for high-calibre seekers who are ready for radical ownership, visceral truth, and unprecedented energetic acceleration.
+                    </p>
+                    <div class="pt-2">
+                        <button onclick="scrollToApplication()" class="px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple hover:bg-white transition-all shadow-lg">
+                            Verify Your Readiness →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Criteria Matrix Cards -->
+                <div class="lg:col-span-7 space-y-4">
+                    
+                    <div class="glass-dark p-5 sm:p-6 rounded-2xl border border-white/15 flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-sunsetPeach/20 text-brand-sunsetPeach flex items-center justify-center text-lg font-bold shrink-0 mt-0.5">
+                            01
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-base sm:text-lg text-white">You have hit an invisible ceiling in your business or life</h4>
+                            <p class="text-xs sm:text-sm text-purple-200 mt-1 leading-relaxed">
+                                You are already successful by traditional standards, yet you know in your bones that you are operating at only a fraction of your actual energetic and financial destiny.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-dark p-5 sm:p-6 rounded-2xl border border-white/15 flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-sunsetPeach/20 text-brand-sunsetPeach flex items-center justify-center text-lg font-bold shrink-0 mt-0.5">
+                            02
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-base sm:text-lg text-white">You are done with superficial, toxic positivity fluff</h4>
+                            <p class="text-xs sm:text-sm text-purple-200 mt-1 leading-relaxed">
+                                You don’t need another vision board or 100 affirmations. You want deep, neuro-somatic rewiring and direct spiritual surgery that dismantles generational trauma contracts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-dark p-5 sm:p-6 rounded-2xl border border-white/15 flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-sunsetPeach/20 text-brand-sunsetPeach flex items-center justify-center text-lg font-bold shrink-0 mt-0.5">
+                            03
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-base sm:text-lg text-white">You crave high-touch, real-time energetic intimacy</h4>
+                            <p class="text-xs sm:text-sm text-purple-200 mt-1 leading-relaxed">
+                                You want direct access to Michelle between sessions on Voxer, ensuring that when self-doubt or high-stakes negotiations arise, your frequency is recalibrated within minutes.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: The 3 Tiers of Sacred Containers (Foundations, Acceleration, Mastery matching screenshot cards) -->
+    <section id="containers" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Choose Your Container</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    The 3 Sacred Apertures
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Select the level of immersion and timeline alignment tailored to your soul's current evolutionary threshold.
+                </p>
+            </div>
+
+            <!-- The 3 Cards Grid based on Foundations, Acceleration, and Mastery in screenshot -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Container 1: Foundations (Purple Aura figure in screenshot) -->
+                <div class="glass-card rounded-3xl p-8 border border-purple-200 shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="space-y-6">
+                        <!-- Card Header & Badge -->
+                        <div class="flex items-center justify-between">
+                            <span class="px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-lavender text-brand-amethyst">
+                                4-Week Immersion
+                            </span>
+                            <span class="text-xs text-gray-400 font-semibold">Tier 01</span>
+                        </div>
+
+                        <!-- Illustrated Avatar Graphic -->
+                        <div class="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-brand-lavender via-purple-100 to-white flex items-center justify-center p-4 border border-purple-100">
+                            <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&auto=format&fit=crop&q=80" alt="Foundations Sacred Energy" class="w-full h-full object-cover rounded-xl opacity-90 group-hover:scale-105 transition-all duration-500" />
+                            <div class="absolute inset-0 bg-brand-deepPurple/40 flex items-center justify-center">
+                                <span class="font-serif text-xl font-bold text-white tracking-wide">FOUNDATIONS</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors">
+                                Foundations of Becoming
+                            </h3>
+                            <p class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach mt-1">
+                                Nervous System Reset & Channel Activation
+                            </p>
+                            <p class="text-xs text-gray-600 leading-relaxed mt-3">
+                                Ideal for those standing at a critical crossroads. In 4 concentrated weeks, we locate and dissolve the subconscious blockage holding your next level hostage.
+                            </p>
+                        </div>
+
+                        <!-- Features list -->
+                        <div class="space-y-2.5 pt-2 border-t border-purple-100 text-xs text-gray-700">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-brand-sunsetPeach"></i>
+                                <span>(4) 60-Minute Private 1:1 Deep Dives</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-brand-sunsetPeach"></i>
+                                <span>Mon–Fri Direct Voxer Voice Coaching</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-brand-sunsetPeach"></i>
+                                <span>Custom 333 Subconscious Audio Reset</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-brand-sunsetPeach"></i>
+                                <span>Full Lifetime Access to the Academy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8">
+                        <button onclick="openApplicationModal('Tier 1: Foundations (4 Weeks)')" class="w-full py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-lavender text-brand-deepPurple hover:bg-brand-deepPurple hover:text-white transition-all shadow-sm">
+                            Apply for Foundations
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Container 2: Acceleration (Amber fire portal figure in screenshot - Flagship VIP) -->
+                <div class="spiritual-gradient rounded-3xl p-8 border-2 border-brand-sunsetPeach text-white shadow-2xl flex flex-col justify-between relative transform lg:-translate-y-3 group">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+                        Most Requested Immersion
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Card Header & Badge -->
+                        <div class="flex items-center justify-between">
+                            <span class="px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/20 text-brand-sunsetPeach">
+                                3-Month Intensive
+                            </span>
+                            <span class="text-xs text-brand-gold font-semibold">Tier 02</span>
+                        </div>
+
+                        <!-- Illustrated Avatar Graphic -->
+                        <div class="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-amber-600 via-brand-sunsetPeach to-brand-deepPurple flex items-center justify-center p-4 border border-white/20">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&auto=format&fit=crop&q=80" alt="Acceleration Quantum Energy" class="w-full h-full object-cover rounded-xl opacity-85 group-hover:scale-105 transition-all duration-500" />
+                            <div class="absolute inset-0 bg-brand-deepPurple/50 flex items-center justify-center">
+                                <span class="font-serif text-xl font-bold text-white tracking-wide">ACCELERATION</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-white">
+                                Quantum Acceleration
+                            </h3>
+                            <p class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach mt-1">
+                                Complete Reality & Wealth Restructuring
+                            </p>
+                            <p class="text-xs text-purple-100 leading-relaxed mt-3">
+                                Michelle's signature 90-day sovereign portal. We recode your identity, heal ancestral contracts of lack, and expand your physical capacity to receive extraordinary wealth and sacred intimacy.
+                            </p>
+                        </div>
+
+                        <!-- Features list -->
+                        <div class="space-y-2.5 pt-2 border-t border-white/10 text-xs text-purple-100">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-star text-brand-gold"></i>
+                                <span>(12) 60-Minute Weekly Private 1:1 Sessions</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-star text-brand-gold"></i>
+                                <span>Priority Daily Voxer Audio & Text Mentorship</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-star text-brand-gold"></i>
+                                <span>Direct Energy & Nervous System Calibrations</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-star text-brand-gold"></i>
+                                <span>Real-Time Business, Relationship & Wealth Strategy</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-star text-brand-gold"></i>
+                                <span>All Masterclasses + Priority Retreat Guest Pass</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8">
+                        <button onclick="openApplicationModal('Tier 2: Quantum Acceleration (3 Months)')" class="w-full py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg transition-all font-bold">
+                            Apply for Acceleration
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Container 3: Mastery (Crown queen sovereign figure in screenshot) -->
+                <div class="glass-card rounded-3xl p-8 border border-purple-200 shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="space-y-6">
+                        <!-- Card Header & Badge -->
+                        <div class="flex items-center justify-between">
+                            <span class="px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-lavender text-brand-amethyst">
+                                6-Month Sovereign
+                            </span>
+                            <span class="text-xs text-gray-400 font-semibold">Tier 03</span>
+                        </div>
+
+                        <!-- Illustrated Avatar Graphic -->
+                        <div class="relative h-44 rounded-2xl overflow-hidden bg-gradient-to-br from-brand-deepPurple via-purple-900 to-black flex items-center justify-center p-4 border border-purple-100">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80" alt="Mastery Crown Energy" class="w-full h-full object-cover rounded-xl opacity-80 group-hover:scale-105 transition-all duration-500" />
+                            <div class="absolute inset-0 bg-brand-deepPurple/50 flex items-center justify-center">
+                                <span class="font-serif text-xl font-bold text-white tracking-wide">MASTERY</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors">
+                                Sovereign Mastery
+                            </h3>
+                            <p class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach mt-1">
+                                Bespoke High-Council Mentorship
+                            </p>
+                            <p class="text-xs text-gray-600 leading-relaxed mt-3">
+                                Reserved strictly for high-impact leaders, public figures, and visionaries navigating generational wealth, legacy projects, and multi-dimensional spiritual sovereignty.
+                            </p>
+                        </div>
+
+                        <!-- Features list -->
+                        <div class="space-y-2.5 pt-2 border-t border-purple-100 text-xs text-gray-700">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-crown text-amber-500"></i>
+                                <span>(24) Bi-Weekly / Weekly Deep Dives Over 6 Mo.</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-crown text-amber-500"></i>
+                                <span>Unrestricted Direct Voxer Voice Access</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-crown text-amber-500"></i>
+                                <span>(1) Private In-Person VIP Immersion Day with Michelle</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-crown text-amber-500"></i>
+                                <span>Complete Energetic Life & Corporate Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8">
+                        <button onclick="openApplicationModal('Tier 3: Sovereign Mastery (6 Months)')" class="w-full py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-sm">
+                            Apply for Mastery Council
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: "You're 1 Message Away From The Magic" (Matching Michelle selfie blowing kiss in screenshot) -->
+    <section id="voxer" class="py-20 bg-[#faf6ff] border-y border-purple-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Michelle Selfie Portrait matching screenshot ("Blowing kiss / turquoise nails") -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 sm:w-80 group">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-2">
+                            <div class="relative rounded-2xl overflow-hidden h-96 sm:h-[440px]">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80" alt="Michelle J. Lamont Voxer Channel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/75 via-transparent to-transparent"></div>
+
+                                <div class="absolute bottom-4 left-4 right-4 glass-card p-3.5 rounded-2xl text-left border border-white">
+                                    <div class="flex items-center space-x-2 text-brand-sunsetPeach text-xs mb-1">
+                                        <i class="fa-solid fa-microphone-lines"></i>
+                                        <span class="font-bold uppercase tracking-wider text-[10px]">Real-Time Access</span>
+                                    </div>
+                                    <p class="font-serif font-bold text-xs text-brand-deepPurple">"I am in your pocket every single day so you never drop frequency."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Voxer Badge -->
+                        <div class="absolute -top-3 -left-3 glass-card px-4 py-2 rounded-2xl shadow-xl border border-white/80 flex items-center space-x-2 animate-float">
+                            <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
+                            <span class="text-xs font-bold text-brand-deepPurple">Active Voice Channel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: The Voxer Magic Narrative + Interactive Voice Note Simulation -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-walkie-talkie text-brand-sunsetPeach"></i> The Unfair Advantage
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple leading-tight">
+                        You're 1 Message Away From The Magic.
+                    </h2>
+
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        Traditional coaching fails because you meet for one hour on Tuesday, but by Thursday you hit a trigger, contract into panic, and spend five days spiraling until your next session.
+                    </p>
+
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        In Michelle’s Sacred Containers, you receive private daily access via Voxer voice memo. When high-stakes decisions, relationship conflicts, or subconscious resistance flare up in real-time, you press record. Michelle listens, tunes into your frequency, and returns channeled, actionable guidance within hours.
+                    </p>
+
+                    <!-- Interactive Voice Transmission Player Simulation -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border border-purple-200/80 shadow-md space-y-3">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-deepPurple flex items-center gap-1.5">
+                                <i class="fa-solid fa-waveform text-brand-sunsetPeach"></i> Listen: Channeled Voice Memo Sample
+                            </span>
+                            <span class="text-[10px] text-gray-400">Duration: 01:15</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <button id="voxerAudioBtn" onclick="toggleVoxerAudio()" class="w-12 h-12 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-lg shadow-md hover:scale-105 transition-all shrink-0">
+                                <i id="voxerPlayIcon" class="fa-solid fa-play ml-0.5"></i>
+                            </button>
+                            <div class="w-full space-y-1">
+                                <div class="w-full bg-purple-200 h-2 rounded-full overflow-hidden cursor-pointer" onclick="scrubVoxerAudio(event)">
+                                    <div id="voxerProgress" class="bg-gradient-to-r from-brand-sunsetPeach to-brand-amethyst h-full w-0 rounded-full transition-all"></div>
+                                </div>
+                                <div class="flex justify-between text-[10px] text-gray-500 font-mono">
+                                    <span id="voxerCurTime">00:00</span>
+                                    <span>01:15</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-[11px] text-gray-500 italic">
+                            "When you send a note in your darkest hour, you receive somatic truth that lifts your nervous system back into sovereign alignment immediately."
+                        </p>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="scrollToApplication()" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-md transition-all">
+                            Unlock Daily Voxer Mentorship
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Client Miracles & Verification (Matching screenshot testimonials) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Sovereign Proof</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">
+                    Transformation From The Sacred Containers
+                </h2>
+                <div class="flex items-center justify-center gap-1 text-amber-400 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="text-xs text-gray-600 font-semibold ml-2">100% Confidential Client Breakthroughs</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="glass-card p-8 rounded-3xl border border-purple-100 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-brand-deepPurple text-lg mb-2">"She saw straight through my 7-year ceiling"</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed italic">
+                            "I run a multi-million-dollar fund and thought I had tried everything. Within three weeks of entering Michelle’s 3-month container, she identified the exact childhood survivor contract keeping me in chronic fight-or-flight. My nervous system finally relaxed, and our firm closed our largest capital raise in history."
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-purple-100 mt-6 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach flex items-center justify-center font-bold text-xs">
+                            RH
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-brand-deepPurple">R. Henderson</p>
+                            <p class="text-[10px] text-gray-500">Managing Partner, Austin TX</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl border border-purple-100 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-brand-deepPurple text-lg mb-2">"The daily Voxer support was a game changer"</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed italic">
+                            "Having Michelle in my pocket every morning meant I never fell back into old self-sabotage loops. When I walked into a critical contract renegotiation, her voice memo grounded my field. I doubled my fee with zero hesitation."
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-purple-100 mt-6 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 text-brand-amethyst flex items-center justify-center font-bold text-xs">
+                            ES
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-brand-deepPurple">Elena S.</p>
+                            <p class="text-[10px] text-gray-500">Creative Agency Founder, London</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl border border-purple-100 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-brand-deepPurple text-lg mb-2">"Pure divine activation and zero fluff"</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed italic">
+                            "Michelle is not a standard coach; she is an authentic spiritual conduit. She doesn’t allow your ego to hide. If you are truly ready to leave struggle behind and step into sovereign power, do not hesitate to apply."
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-purple-100 mt-6 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">
+                            ML
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-brand-deepPurple">Dr. Miriam L.</p>
+                            <p class="text-[10px] text-gray-500">Physician & Wellness Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Mentorship Application & Discovery Call Section (Elevating the booking card in screenshot) -->
+    <section id="application" class="py-20 bg-[#faf6ff] relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-purple-200 shadow-2xl relative overflow-hidden">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider mb-2">
+                        Confidential Application Desk
+                    </span>
+                    <h3 class="font-serif text-3xl font-bold text-brand-deepPurple">
+                        Apply to Step Inside a Sacred Container
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                        Because of the deep energetic investment and round-the-clock Voxer intimacy, Michelle accepts only 3 private clients concurrently. Please answer candidly to explore alignment.
+                    </p>
+                </div>
+
+                <form onsubmit="handleApplicationSubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Your Full Name</label>
+                            <input type="text" required placeholder="Elena Vance" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" required placeholder="elena@company.com" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Phone / WhatsApp Number</label>
+                            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Preferred Sacred Container</label>
+                            <select id="containerSelectInput" class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                                <option value="Tier 2: Quantum Acceleration (3 Months)">Tier 02: Quantum Acceleration (3 Months) — Recommended</option>
+                                <option value="Tier 1: Foundations (4 Weeks)">Tier 01: Foundations of Becoming (4 Weeks)</option>
+                                <option value="Tier 3: Sovereign Mastery (6 Months)">Tier 03: Sovereign Mastery (6 Months)</option>
+                                <option value="Custom Consultation">I'd like Michelle's guidance on which container is right</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">What is the #1 breakthrough you are craving in this season?</label>
+                        <textarea rows="3" required placeholder="Describe your current circumstance and what sovereign manifestation you are ready to embody..." class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Previous Experience with Somatic Manifestation & Mentorship</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                            <option value="experienced">I have worked with high-level coaches / mentors previously</option>
+                            <option value="intermediate">I listen to the podcast & study manifestation, ready for my first 1:1</option>
+                            <option value="advanced">I am a coach, healer, or CEO seeking my own confidential sounding board</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-lg mt-2">
+                        Transmit Confidential Application
+                    </button>
+                    <p class="text-[10px] text-center text-gray-500">
+                        Applications are reviewed personally by Michelle and her executive team within 24–48 hours.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Academy Banner consistent with design system -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="spiritual-gradient rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 max-w-xl text-center md:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xs font-bold tracking-wider uppercase">
+                        Self-Paced Portal
+                    </span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+                        Looking for Self-Guided Mastery?
+                    </h3>
+                    <p class="text-purple-100 text-sm leading-relaxed">
+                        If 1-on-1 mentorship isn't aligned right now, step into the Manifesting Miracles Academy. Access Michelle’s foundational 8-week video modules, daily 333 rituals, and monthly live activations.
+                    </p>
+                </div>
+                <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+                    <a href="index.html#academy" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg text-center transition-all">
+                        Join The Academy Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Brand Footer -->
+    <footer class="bg-brand-deepPurple text-white pt-16 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <a href="index.html" class="inline-block">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-white">Michelle J. Lamont</span>
+                        <span class="block text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">Sacred Containers™</span>
+                    </a>
+                    <p class="text-xs text-purple-200 max-w-sm leading-relaxed">
+                        Private energetic sanctuary for leaders, visionaries, and empaths ready to dissolve scarcity and co-create an extraordinary life.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Spotify">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                        <a href="https://apple.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Mentorship Navigation</p>
+                    <ul class="space-y-2 text-xs text-purple-200">
+                        <li><a href="#containers" class="hover:text-white transition-colors">The 3 Containers</a></li>
+                        <li><a href="#voxer" class="hover:text-white transition-colors">Voxer Voice Support</a></li>
+                        <li><a href="#application" class="hover:text-white transition-colors">Apply for 1:1 Mentorship</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">Michelle's Origin Story</a></li>
+                        <li><a href="podcast.html" class="hover:text-white transition-colors">Manifesting Miracles Podcast</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Confidentiality & Ethics</p>
+                    <p class="text-[11px] text-purple-300 leading-relaxed">
+                        All sacred containers operate under strict non-disclosure and sacred energetic trust. Mentorship is not a substitute for clinical psychological or psychiatric therapy.
+                    </p>
+                    <p class="text-[11px] text-purple-400">
+                        © 2026 Michelle J. Lamont. All Rights Reserved. Manifesting Miracles™ is a registered trademark.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300">
+                <p>Designed with conscious intention and sovereignty.</p>
+                <div class="flex space-x-6 mt-3 sm:mt-0">
+                    <a href="index.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="index.html" class="hover:text-white">Terms of Service</a>
+                    <a href="#application" class="hover:text-white">Mentorship Desk</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Modal -->
+    <div id="applicationModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+        <div class="glass-card max-w-lg w-full rounded-3xl p-6 sm:p-8 border border-white/80 shadow-2xl relative text-left max-h-[90vh] overflow-y-auto">
+            <button onclick="closeApplicationModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-2">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="inline-block p-3 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xl mb-2">
+                    <i class="fa-solid fa-crown"></i>
+                </span>
+                <h3 class="font-serif text-2xl font-bold text-brand-deepPurple">Sacred Container Application</h3>
+                <p class="text-xs text-gray-600 mt-1">Submit your intention for private 1:1 mentorship.</p>
+            </div>
+
+            <form onsubmit="handleModalApplicationSubmit(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Full Name</label>
+                    <input type="text" required placeholder="Elena Vance" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Email</label>
+                        <input type="email" required placeholder="elena@domain.com" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">Container</label>
+                        <select id="modalContainerSelect" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst text-gray-700">
+                            <option value="Tier 2: Quantum Acceleration (3 Months)">Quantum Acceleration (3 Mo)</option>
+                            <option value="Tier 1: Foundations (4 Weeks)">Foundations (4 Wks)</option>
+                            <option value="Tier 3: Sovereign Mastery (6 Months)">Sovereign Mastery (6 Mo)</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Your Primary Intention</label>
+                    <textarea rows="3" required placeholder="Tell Michelle what transformation you are claiming right now..." class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-colors shadow-md mt-2">
+                    Submit Priority Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="fixed top-24 right-6 z-50 transform -translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-dark text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-white/20 flex items-center space-x-3">
+            <div id="toastIcon" class="w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p id="toastMessage" class="text-xs font-semibold">Action completed successfully!</p>
+        </div>
+    </div>
+
+    <script>
+        // Modal Handlers
+        const appModal = document.getElementById('applicationModal');
+
+        function openApplicationModal(defaultContainer = '') {
+            if (defaultContainer) {
+                const select = document.getElementById('modalContainerSelect');
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value.includes(defaultContainer) || defaultContainer.includes(select.options[i].text)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+                const pageSelect = document.getElementById('containerSelectInput');
+                if (pageSelect) {
+                    for (let i = 0; i < pageSelect.options.length; i++) {
+                        if (pageSelect.options[i].value.includes(defaultContainer)) {
+                            pageSelect.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            }
+            appModal.classList.remove('hidden');
+        }
+
+        function closeApplicationModal() {
+            appModal.classList.add('hidden');
+        }
+
+        function scrollToApplication() {
+            const el = document.getElementById('application');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Voxer Audio Simulation
+        let isVoxerPlaying = false;
+        let voxerProgress = 0;
+        let voxerInterval = null;
+
+        function toggleVoxerAudio() {
+            isVoxerPlaying = !isVoxerPlaying;
+            const icon = document.getElementById('voxerPlayIcon');
+
+            if (isVoxerPlaying) {
+                icon.className = 'fa-solid fa-pause';
+                showToast("Playing Channeled Voxer Voice Note...", "play");
+                voxerInterval = setInterval(() => {
+                    if (voxerProgress < 100) {
+                        voxerProgress += 1.33; // 75 seconds total (01:15)
+                        document.getElementById('voxerProgress').style.width = Math.min(voxerProgress, 100) + '%';
+                        const curSec = Math.floor((voxerProgress / 100) * 75);
+                        const m = Math.floor(curSec / 60);
+                        const s = curSec % 60;
+                        document.getElementById('voxerCurTime').textContent = 
+                            String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+                    } else {
+                        clearInterval(voxerInterval);
+                        isVoxerPlaying = false;
+                        icon.className = 'fa-solid fa-play ml-0.5';
+                    }
+                }, 1000);
+            } else {
+                icon.className = 'fa-solid fa-play ml-0.5';
+                clearInterval(voxerInterval);
+                showToast("Voice memo paused", "info");
+            }
+        }
+
+        function scrubVoxerAudio(e) {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            voxerProgress = Math.min(Math.max((clickX / rect.width) * 100, 0), 100);
+            document.getElementById('voxerProgress').style.width = voxerProgress + '%';
+        }
+
+        // Form Handlers
+        function handleApplicationSubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast("Application transmitted! Michelle's team will contact you in 24 hours.", "success");
+        }
+
+        function handleModalApplicationSubmit(e) {
+            e.preventDefault();
+            closeApplicationModal();
+            e.target.reset();
+            showToast("Mentorship request received! Executive team will review alignment.", "success");
+        }
+
+        // Toast Feedback System
+        function showToast(message, type = "success") {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastMsg.textContent = message;
+            if (type === 'play') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-waveform"></i>';
+            } else if (type === 'info') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-purple-200 text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+            } else {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+            }
+
+            toast.classList.remove('-translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('-translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        // Mobile Menu Drawer Handler
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
