@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifestation Blog for Abundance | Michelle J. Lamont</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            deepPurple: '#2d154a',
+                            amethyst: '#4a2574',
+                            violet: '#683b9c',
+                            lavender: '#efe6f7',
+                            softLilac: '#f7f2fb',
+                            sunsetPeach: '#f89a80',
+                            warmRose: '#efa897',
+                            paleBlush: '#fdf3f0',
+                            celestialBlue: '#3a7bd5',
+                            powderBlue: '#eef4ff',
+                            gold: '#dfb15b'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        summary::-webkit-details-marker { display: none; }
+        summary { list-style: none; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.75);
+        }
+        .glass-dark {
+            background: rgba(45, 21, 74, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #f7dcd5 0%, #fad2ca 25%, #e8e4f5 60%, #ded9f7 100%);
+        }
+        .spiritual-gradient {
+            background: linear-gradient(135deg, #2d154a 0%, #4a2574 55%, #683b9c 100%);
+        }
+        .aurora-glow {
+            position: absolute;
+            filter: blur(85px);
+            opacity: 0.45;
+            pointer-events: none;
+            border-radius: 9999px;
+            z-index: 0;
+        }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf3f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a9d8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9b72b8;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-[#fdfaf8] antialiased overflow-x-hidden selection:bg-brand-sunsetPeach selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-deepPurple via-brand-amethyst to-brand-deepPurple text-white py-2.5 px-4 text-xs md:text-sm font-medium tracking-wide">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2 mx-auto md:mx-0">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">Spiritual Codex</span>
+                <span>✨ <strong>Manifestation Blog for Abundance:</strong> Practical quantum wisdom, neuroscience & somatic shifts</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-xs">
+                <a href="#audit-booking" class="hover:text-brand-sunsetPeach transition-colors duration-200 underline">Book Manifestation Audit</a>
+                <span class="text-white/40">•</span>
+                <a href="index.html#academy" class="text-brand-gold hover:text-white transition-colors duration-200 font-semibold">Join The Academy Free →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between gap-6 h-20">
+                <!-- Brand Logo -->
+                <a href="index.html" class="flex flex-col shrink-0 group/logo">
+                    <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover/logo:text-brand-amethyst transition-colors">
+                        Michelle J. Lamont
+                    </span>
+                    <span class="text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">
+                        Manifesting Miracles™
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden xl:flex items-center gap-4 2xl:gap-5">
+                    <a href="academy.html" class="text-sm font-semibold text-brand-deepPurple hover:text-brand-amethyst transition-colors whitespace-nowrap">MMA Academy</a>
+                    <a href="podcast.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">Podcast</a>
+
+                    <div class="relative group/coach">
+                        <button type="button" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors inline-flex items-center gap-1.5 whitespace-nowrap" aria-haspopup="true">
+                            1:1 Coaching
+                            <i class="fa-solid fa-chevron-down text-[9px] opacity-70"></i>
+                        </button>
+                        <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover/coach:visible group-hover/coach:opacity-100 group-hover/coach:translate-y-0 group-focus-within/coach:visible group-focus-within/coach:opacity-100 group-focus-within/coach:translate-y-0 transition-all duration-200 z-50">
+                            <div class="min-w-[250px] rounded-2xl bg-white border border-purple-100 shadow-xl py-2">
+                                <a href="sacred-containers.html" class="block px-4 py-2.5 hover:bg-brand-softLilac">
+                                    <span class="block text-sm font-medium text-gray-800">Sacred Containers</span>
+                                    <span class="block text-[11px] text-gray-500">1:1 Mentorship</span>
+                                </a>
+                                <a href="the-immersion.html" class="block px-4 py-2.5 hover:bg-brand-softLilac">
+                                    <span class="block text-sm font-medium text-gray-800">The Immersion</span>
+                                    <span class="block text-[11px] text-gray-500">Private VIP Day</span>
+                                </a>
+                                <a href="the-portal.html" class="block px-4 py-2.5 hover:bg-brand-softLilac">
+                                    <span class="block text-sm font-medium text-gray-800">The Portal</span>
+                                    <span class="block text-[11px] text-gray-500">VIP Experience</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="success-stories.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">Success Stories</a>
+                    <a href="index.html#quiz" class="text-sm font-semibold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i> Energy Quiz
+                    </a>
+
+                    <div class="relative group/resources">
+                        <button type="button" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors inline-flex items-center gap-1.5 whitespace-nowrap" aria-haspopup="true">
+                            Resources
+                            <i class="fa-solid fa-chevron-down text-[9px] opacity-70"></i>
+                        </button>
+                        <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover/resources:visible group-hover/resources:opacity-100 group-hover/resources:translate-y-0 group-focus-within/resources:visible group-focus-within/resources:opacity-100 group-focus-within/resources:translate-y-0 transition-all duration-200 z-50">
+                            <div class="min-w-[220px] rounded-2xl bg-white border border-purple-100 shadow-xl py-2">
+                                <a href="press.html" class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">Media & Press</a>
+                                <a href="speaking.html" class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">Speaking</a>
+                                <a href="blog.html" class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">Blog</a>
+                                <a href="about.html" class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">About Michelle</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">Contact</a>
+                </nav>
+
+                <!-- Action CTA & Mobile Trigger -->
+                <div class="flex items-center space-x-3">
+                    <a href="#audit-booking" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-100/80 text-brand-deepPurple hover:bg-purple-200 transition-all">
+                        <i class="fa-solid fa-calendar-check mr-1.5 text-brand-sunsetPeach"></i> Free Audit Call
+                    </a>
+                    <button onclick="scrollToNewsletter()" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-white hover:brightness-105 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        Free Audio Toolkit
+                    </button>
+                    <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="xl:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden xl:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
+            <div class="flex flex-col space-y-3 pt-2">
+                <a href="academy.html" class="mobile-link text-base font-semibold text-brand-deepPurple hover:text-brand-amethyst py-1">MMA Academy</a>
+                <a href="podcast.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Podcast</a>
+                <details>
+                    <summary class="cursor-pointer flex items-center justify-between text-base font-medium text-gray-800 py-1">
+                        1:1 Coaching
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                    </summary>
+                    <div class="flex flex-col pl-3 pt-2 space-y-2">
+                        <a href="sacred-containers.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">Sacred Containers</a>
+                        <a href="the-immersion.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">The Immersion</a>
+                        <a href="the-portal.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">The Portal</a>
+                    </div>
+                </details>
+                <a href="success-stories.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Success Stories</a>
+                <a href="index.html#quiz" class="mobile-link text-base font-medium text-brand-amethyst py-1 flex items-center gap-2">
+                    <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i> Energy Quiz
+                </a>
+                <details>
+                    <summary class="cursor-pointer flex items-center justify-between text-base font-medium text-gray-800 py-1">
+                        Resources
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                    </summary>
+                    <div class="flex flex-col pl-3 pt-2 space-y-2">
+                        <a href="press.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">Media & Press</a>
+                        <a href="speaking.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">Speaking</a>
+                        <a href="blog.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">Blog</a>
+                        <a href="about.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">About Michelle</a>
+                    </div>
+                </details>
+                <a href="contact.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Contact</a>
+                <div class="pt-2 flex flex-col gap-2">
+                    <a href="index.html#coaching" class="mobile-link w-full text-center py-3 rounded-full text-sm font-bold bg-brand-deepPurple text-white">
+                        Book Private Coaching
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section: "Manifestation Blog for Abundance" matching original header -->
+    <section class="relative pt-16 pb-20 lg:pt-24 lg:pb-28 bg-[#faf6ff] overflow-hidden text-center">
+        <!-- Ambient Glow Orbs -->
+        <div class="aurora-glow w-[36rem] h-[36rem] bg-brand-sunsetPeach/30 top-1/4 left-1/2 -translate-x-1/2"></div>
+        <div class="aurora-glow w-80 h-80 bg-brand-amethyst/35 top-10 left-10"></div>
+        <div class="aurora-glow w-80 h-80 bg-brand-gold/25 bottom-10 right-10"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-[0.25em]">
+                <i class="fa-solid fa-book-sparkles text-brand-sunsetPeach"></i>
+                <span>Quantum Teachings & Articles</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-brand-deepPurple leading-[1.12]">
+                Manifestation Blog <br class="hidden sm:block">
+                <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-amethyst via-brand-sunsetPeach to-brand-gold">for Abundance</span>
+            </h1>
+
+            <p class="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto font-normal leading-relaxed">
+                Explore master manifestation tips, neuro-reticular rewiring, nervous system regulation, and quantum laws to collapse timelines into physical reality.
+            </p>
+
+            <!-- Search Bar & Instant Filter Component -->
+            <div class="pt-4 max-w-2xl mx-auto">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                    <input type="text" id="blogSearchInput" oninput="handleBlogSearch()" placeholder="Search articles by keyword (e.g. nervous system, sleep, RAS, wealth, trauma)..." class="w-full pl-11 pr-28 py-3.5 rounded-full glass-card border border-purple-200/80 text-xs sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-amethyst shadow-sm transition-all" />
+                    <button onclick="clearBlogSearch()" id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 px-3 py-1 rounded-full text-xs font-semibold text-gray-500 hover:text-brand-deepPurple">
+                        Clear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Pills Row -->
+            <div class="pt-3 flex flex-wrap items-center justify-center gap-2">
+                <button onclick="filterBlogCategory('all', this)" class="blog-cat-pill active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white shadow-sm transition-all">
+                    All Transmissions
+                </button>
+                <button onclick="filterBlogCategory('nervous-system', this)" class="blog-cat-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-purple-100 border border-purple-200/80 shadow-sm transition-all">
+                    Nervous System & Somatics
+                </button>
+                <button onclick="filterBlogCategory('subconscious', this)" class="blog-cat-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-purple-100 border border-purple-200/80 shadow-sm transition-all">
+                    Subconscious Rewiring & Sleep
+                </button>
+                <button onclick="filterBlogCategory('wealth', this)" class="blog-cat-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-purple-100 border border-purple-200/80 shadow-sm transition-all">
+                    Wealth Hacks & The RAS
+                </button>
+                <button onclick="filterBlogCategory('neuro-manifestation', this)" class="blog-cat-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-purple-100 border border-purple-200/80 shadow-sm transition-all">
+                    Neuro-Manifestation
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Featured Editor's Choice Spotlight Article -->
+    <section class="py-10 bg-white border-y border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="spiritual-gradient rounded-3xl p-6 sm:p-10 lg:p-12 text-white shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+                <!-- Visual Thumbnail -->
+                <div class="relative w-full lg:w-5/12 rounded-2xl overflow-hidden shadow-2xl shrink-0 group cursor-pointer" onclick="openArticleModal(2)">
+                    <div class="relative h-64 sm:h-72 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80" alt="How to Reprogram Your Nervous System for Manifestation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple via-brand-deepPurple/40 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple shadow-md">
+                                Editor's Channeled Pick
+                            </span>
+                        </div>
+                        <div class="absolute bottom-3 left-3 right-3 text-xs text-white/90 flex justify-between items-center">
+                            <span><i class="fa-regular fa-clock mr-1 text-brand-gold"></i> 7 Min Read</span>
+                            <span class="bg-black/50 px-2.5 py-0.5 rounded-full text-[10px] backdrop-blur-sm">Somatic Mastery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Summary -->
+                <div class="space-y-4 w-full lg:w-7/12 text-center lg:text-left">
+                    <div class="flex items-center justify-center lg:justify-start gap-2 text-brand-gold text-xs font-semibold">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Featured Deep Dive by Michelle J. Lamont</span>
+                    </div>
+                    <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
+                        How to Reprogram Your Nervous System for Manifestation (Rewiring for Miracle Inflows)
+                    </h2>
+                    <p class="text-xs sm:text-sm text-purple-100 leading-relaxed max-w-2xl">
+                        You cannot manifest what your autonomic nervous system chemically perceives as a threat. Discover why thinking rich fails when your vagus nerve is trapped in survival panic—and how somatic resets normalize high-volume inflows.
+                    </p>
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <button onclick="openArticleModal(2)" class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg transition-all font-bold">
+                            Read Channeled Article →
+                        </button>
+                        <button onclick="playArticleAudio('How to Reprogram Your Nervous System for Manifestation')" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-200 hover:text-white transition-colors">
+                            <i class="fa-solid fa-headphones text-brand-sunsetPeach text-base"></i> Listen to Audio (07:15)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: The 9 Blog Transmissions Grid (Directly matching blog.jpg screenshot entries) -->
+    <section class="py-20 bg-[#faf6ff]" id="articles-feed">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-purple-200/80 gap-3">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach">Archive Index</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple" id="articleCountHeading">
+                        All Manifestation Transmissions (9 Articles)
+                    </h2>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <span>Sort by:</span>
+                    <select id="sortSelect" onchange="sortBlogArticles()" class="bg-white border border-purple-200 rounded-xl px-3 py-1.5 text-xs text-brand-deepPurple font-semibold focus:outline-none focus:ring-1 focus:ring-brand-amethyst">
+                        <option value="newest">Most Recent</option>
+                        <option value="popular">Most Read</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 9 Cards Grid matching the screenshot 3x3 layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
+                
+                <!-- Card 1: The Most Dangerous Thing Happening to You Right Now -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="subconscious" data-tags="danger trauma subconscious reality">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(1)">
+                            <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=700&auto=format&fit=crop&q=80" alt="The Most Dangerous Thing Happening to You Right Now" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+                            
+                            <!-- Thumbnail Banner text matching screenshot -->
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-sunsetPeach mb-1">Warning Signs</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    THE MOST DANGEROUS THING HAPPENING TO YOU RIGHT NOW
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">(And It’s Not What You're Thinking)</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                Subconscious Alert
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 6 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(1)">
+                                The Most Dangerous Thing Happening to You Right Now (And It's Not What You're Thinking)
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                You aren't lacking discipline or willpower. The silent killer of your manifestations is subconscious desensitization—when your nervous system normalizes disappointment so deeply that your reality stops offering miracles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(1)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('The Most Dangerous Thing Happening to You Right Now')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 2: How to Reprogram Your Nervous System for Manifestation -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="nervous-system" data-tags="nervous system vagus somatic inflow">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(2)">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&auto=format&fit=crop&q=80" alt="How to Reprogram Your Nervous System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-sunsetPeach mb-1">Somatic Blueprint</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    HOW TO REPROGRAM YOUR NERVOUS SYSTEM
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">For Miracle Inflows & Sustained Wealth</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                Somatic Reset
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 7 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(2)">
+                                How to Reprogram Your Nervous System for Manifestation (Rewiring for Miracle Inflows)
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                Never let anyone tell you to just "vibrate higher" when your body is chemically saturated with cortisol. Learn how to physically calm the vagus nerve so receiving massive sums of wealth feels entirely natural.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(2)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('How to Reprogram Your Nervous System')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 3: Rewiring Your RAS for Wealth -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="wealth" data-tags="ras reticular wealth money subconscious">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(3)">
+                            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=700&auto=format&fit=crop&q=80" alt="Rewiring Your RAS for Wealth" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-gold mb-1">Neuro-Filter</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    REWIRING YOUR RAS FOR WEALTH
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">Turning Brain Filters into Money Magnets</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                The RAS Portal
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 5 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(3)">
+                                Rewiring Your Reticular Activating System (RAS) for Wealth: Transforming Your Subconscious Mind
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                Are your subconscious thoughts deleting opportunities right in front of your eyes? Discover the biological gatekeeper in your brainstem and how to assign it new orders to scout luxury contracts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(3)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('Rewiring Your RAS for Wealth')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 4: Reprogram Your Subconscious Mind While You Sleep -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="subconscious" data-tags="sleep delta theta night hypnosis">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(4)">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=700&auto=format&fit=crop&q=80" alt="Reprogram Subconscious Mind While You Sleep" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-sunsetPeach mb-1">Theta State Magic</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    REPROGRAM YOUR SUBCONSCIOUS MIND WHILE YOU SLEEP
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">The 8-Hour Night-Time Manifestation Protocol</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                Night Ritual
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 8 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(4)">
+                                How to Reprogram Your Subconscious Mind While You Sleep: The 8-Hour Night-Time Manifestation Guide
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                The critical 20-minute window before sleep is the doorway to your soul blueprint. Learn the exact auditory anchors that bypass the critical analytical mind and install multi-million-dollar neural pathways.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(4)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('Reprogram Subconscious Mind While You Sleep')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 5: Neuro-Manifestation: How to Rewire Your Brain -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="neuro-manifestation" data-tags="neuroplasticity brain quantum frequency">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(5)">
+                            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=700&auto=format&fit=crop&q=80" alt="Neuro-Manifestation Brain Rewiring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-celestialBlue mb-1">Quantum Synapse</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    NEURO-MANIFESTATION: REWIRE YOUR BRAIN
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">For Divine Abundance & Quantum Wealth</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                Neuro Science
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 6 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(5)">
+                                Neuro-Manifestation: How to Rewire Your Brain for Divine Abundance and Quantum Wealth
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                Upgrade from wishful thinking to neuroplastic command. Discover how deliberate synaptic firing synchronizes with the quantum field to crystallize outcomes at exponential speed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(5)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('Neuro-Manifestation Brain Rewiring')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 6: How to Reprogram Your Subconscious Mind: 7 Secret Steps -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="subconscious" data-tags="7 steps subconscious protocol desires">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(6)">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=700&auto=format&fit=crop&q=80" alt="Reprogram Subconscious Mind 7 Steps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-sunsetPeach mb-1">Step-by-Step Blueprint</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    7 SECRET STEPS TO REPROGRAM SUBCONSCIOUS
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">To Manifest Desires at Lightning Speed</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                Core Method
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 7 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(6)">
+                                How to Reprogram Your Subconscious Mind: The 7 Secret Steps to Manifest Your Desires Fast
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                In this comprehensive guide, Michelle lays bare the 7 non-negotiable spiritual steps to dislodge old vows of lack and encode your energetic field with royalty consciousness.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(6)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('7 Steps to Reprogram Subconscious')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 7: The Neuroscience of Spiritual Wealth -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="wealth" data-tags="neuroscience wealth alignment money abundance">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(7)">
+                            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=700&auto=format&fit=crop&q=80" alt="The Neuroscience of Spiritual Wealth" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-gold mb-1">Spiritual Finance</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    THE NEUROSCIENCE OF SPIRITUAL WEALTH
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">Practical Tools to Manifest Physical Abundance</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                Wealth Somatics
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 6 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(7)">
+                                The Neuroscience of Spiritual Wealth: Practical Alignment Tools to Manifest Physical Abundance
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                Bridging the holy and the neurological: learn how electromagnetic cardiac coherence acts as an energetic transmitter that draws bank accounts and resources into your orbit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(7)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('The Neuroscience of Spiritual Wealth')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 8: Why Manifesting Feels Hard -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="nervous-system" data-tags="hard resistance struggle ease flow">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(8)">
+                            <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=700&auto=format&fit=crop&q=80" alt="Why Manifesting Feels Hard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-sunsetPeach mb-1">Crucible Truth</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    WHY MANIFESTING FEELS HARD
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">Nervous Regulation vs. Forcing Reality</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                Shadow & Flow
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 5 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(8)">
+                                Why Manifesting Feels Hard: Nervous System Regulation and the Quantum Frequency of Abundance
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                If you feel exhausted trying to force your dreams into existence, you are wrestling with circumstances instead of shifting your vibration. Here is why dropping resistance is the only catalyst that works.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(8)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('Why Manifesting Feels Hard')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 9: 5 Money Manifestation Hacks -->
+                <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5" data-category="wealth" data-tags="money hacks somatic cash wealth 5 hacks">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-brand-deepPurple cursor-pointer" onclick="openArticleModal(9)">
+                            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=700&auto=format&fit=crop&q=80" alt="5 Money Manifestation Hacks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/85 via-transparent to-transparent"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                                <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-brand-gold mb-1">Instant Activation</span>
+                                <h4 class="font-serif text-lg font-bold text-white drop-shadow-md">
+                                    5 MONEY MANIFESTATION HACKS
+                                </h4>
+                                <span class="text-[10px] text-purple-200 mt-1 italic font-serif">Somatic Shifts to Upgrade Financial Energy</span>
+                            </div>
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple backdrop-blur-sm">
+                                Quick Shifts
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span>By Michelle J. Lamont</span>
+                                <span><i class="fa-regular fa-clock mr-1 text-brand-sunsetPeach"></i> 4 min read</span>
+                            </div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-deepPurple group-hover:text-brand-amethyst transition-colors leading-snug cursor-pointer" onclick="openArticleModal(9)">
+                                5 Money Manifestation Hacks: Somatic Shifts to Upgrade Your Financial Energy Today
+                            </h3>
+                            <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                                Five simple somatic rituals you can execute in less than 90 seconds to stop financial leakages, recalibrate your wallet's energetic field, and become magnetically receptive to surprises.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 border-t border-purple-100 flex items-center justify-between">
+                        <button onclick="openArticleModal(9)" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5">
+                            Read Channeled Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                        <button onclick="shareArticle('5 Money Manifestation Hacks')" class="text-gray-400 hover:text-brand-deepPurple text-xs" title="Share article">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Empty Search State -->
+            <div id="noResultsState" class="hidden text-center py-16 glass-card rounded-3xl p-8 border border-purple-200 max-w-lg mx-auto">
+                <i class="fa-solid fa-compass text-3xl text-brand-amethyst/40 mb-3"></i>
+                <h3 class="font-serif text-lg font-bold text-brand-deepPurple">No Transmissions Found</h3>
+                <p class="text-xs text-gray-500 mt-1">Try another keyword like "vagus", "money", "brain", or reset the filter.</p>
+                <button onclick="filterBlogCategory('all', document.querySelector('.blog-cat-pill'))" class="mt-4 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white">
+                    View All Articles
+                </button>
+            </div>
+
+            <!-- Pagination / Archive Navigator from screenshot ("Older Posts") -->
+            <div class="mt-14 pt-8 border-t border-purple-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-gray-600">
+                <span>Showing 9 of 48 Published Quantum Transmissions</span>
+                <div class="flex items-center space-x-2">
+                    <button class="px-4 py-2 rounded-xl bg-brand-deepPurple text-white font-bold">1</button>
+                    <button onclick="showToast('Loading page 2 archives...', 'info')" class="px-4 py-2 rounded-xl bg-white hover:bg-purple-100 border border-purple-200">2</button>
+                    <button onclick="showToast('Loading page 3 archives...', 'info')" class="px-4 py-2 rounded-xl bg-white hover:bg-purple-100 border border-purple-200">3</button>
+                    <button onclick="showToast('Loading older archives...', 'info')" class="px-4 py-2 rounded-xl bg-white hover:bg-purple-100 border border-purple-200">Older Posts →</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section: "Let's unlock what's holding you back from abundance." with Interactive Calendar (From Screenshot) -->
+    <section id="audit-booking" class="py-20 sunset-gradient relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left: Alignment Audit Card -->
+                <div class="lg:col-span-5 glass-card p-8 sm:p-10 rounded-3xl border border-white shadow-xl space-y-4 text-center sm:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-sunsetPeach/20 text-brand-deepPurple text-[10px] font-bold uppercase tracking-wider">
+                        Private Diagnostic
+                    </span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple leading-tight">
+                        Let's unlock what's holding you back from abundance.
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                        Schedule a complimentary 15-minute Manifestation Audit with Michelle's alignment desk. We'll pinpoint your #1 subconscious ceiling and give you immediate clarity on your energetic breakthrough.
+                    </p>
+                    <ul class="text-xs text-gray-600 space-y-2 pt-2 border-t border-purple-100 text-left">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> 100% Confidential 1:1 Diagnostic</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Identify your exact nervous system block</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> Direct recommendation for your container</li>
+                    </ul>
+                    <div class="pt-2">
+                        <a href="sacred-containers.html" class="inline-block text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors">
+                            Explore All 1:1 Mentorship Containers →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Calendar Widget (Directly matching screenshot appointment calendar) -->
+                <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-3xl border border-white shadow-xl">
+                    <div class="flex items-center justify-between pb-4 border-b border-purple-100">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-brand-sunsetPeach">Select a Day</span>
+                            <h4 class="font-serif font-bold text-lg text-brand-deepPurple">15-Minute Manifestation Audit</h4>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-500"><i class="fa-solid fa-video text-brand-amethyst mr-1"></i> Zoom Audio/Video</span>
+                    </div>
+
+                    <!-- Interactive Calendar View -->
+                    <div class="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Month Picker -->
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-xs font-bold text-brand-deepPurple">
+                                <button onclick="changeAuditMonth(-1)" class="p-1 hover:text-brand-sunsetPeach"><i class="fa-solid fa-chevron-left"></i></button>
+                                <span id="auditMonthTitle">October 2026</span>
+                                <button onclick="changeAuditMonth(1)" class="p-1 hover:text-brand-sunsetPeach"><i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                            <div class="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-gray-400 pb-1">
+                                <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                            </div>
+                            <div class="grid grid-cols-7 gap-1 text-center text-xs" id="auditDaysGrid">
+                                <!-- Days injected via JS -->
+                            </div>
+                        </div>
+
+                        <!-- Time Slot Selector -->
+                        <div class="space-y-3 border-t md:border-t-0 md:border-l border-purple-100 pt-4 md:pt-0 md:pl-6">
+                            <p class="text-xs font-bold text-brand-deepPurple" id="auditSelectedDateDisplay">
+                                Available Slots for Oct 22:
+                            </p>
+                            <div class="space-y-2 max-h-48 overflow-y-auto pr-1" id="auditTimeSlots">
+                                <button onclick="selectAuditSlot(this, '10:00 AM')" class="audit-slot-btn w-full py-2 px-3 rounded-xl border border-purple-200 text-xs text-gray-700 hover:border-brand-amethyst hover:bg-brand-softLilac text-left font-medium transition-all">
+                                    <i class="fa-regular fa-clock mr-1.5 text-brand-sunsetPeach"></i> 10:00 AM EST
+                                </button>
+                                <button onclick="selectAuditSlot(this, '11:30 AM')" class="audit-slot-btn w-full py-2 px-3 rounded-xl border border-purple-200 text-xs text-gray-700 hover:border-brand-amethyst hover:bg-brand-softLilac text-left font-medium transition-all">
+                                    <i class="fa-regular fa-clock mr-1.5 text-brand-sunsetPeach"></i> 11:30 AM EST
+                                </button>
+                                <button onclick="selectAuditSlot(this, '02:15 PM')" class="audit-slot-btn w-full py-2 px-3 rounded-xl border border-purple-200 text-xs text-gray-700 hover:border-brand-amethyst hover:bg-brand-softLilac text-left font-medium transition-all">
+                                    <i class="fa-regular fa-clock mr-1.5 text-brand-sunsetPeach"></i> 02:15 PM EST
+                                </button>
+                                <button onclick="selectAuditSlot(this, '04:00 PM')" class="audit-slot-btn w-full py-2 px-3 rounded-xl border border-purple-200 text-xs text-gray-700 hover:border-brand-amethyst hover:bg-brand-softLilac text-left font-medium transition-all">
+                                    <i class="fa-regular fa-clock mr-1.5 text-brand-sunsetPeach"></i> 04:00 PM EST
+                                </button>
+                            </div>
+                            <button onclick="confirmAuditBookingModal()" id="confirmAuditBtn" class="w-full py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-md mt-2 disabled:opacity-50" disabled>
+                                Confirm Audit Appointment
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Lead Magnet / Free Toolkit Opt-in -->
+    <section id="newsletter-toolkit" class="py-16 bg-white border-b border-purple-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-10 border border-purple-200/80 shadow-lg flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+                <div class="space-y-2 max-w-xl">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-[10px] font-bold uppercase tracking-wider">
+                        Channeled Bonus
+                    </span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple">
+                        Get Michelle's 7-Minute Frequency Reset Audio Free
+                    </h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Join 65,000+ conscious souls receiving Michelle’s weekly Tuesday alignment transmission, subconscious audio tracks, and private invitations.
+                    </p>
+                </div>
+                <form onsubmit="handleToolkitOptin(event)" class="w-full md:w-auto shrink-0 flex flex-col sm:flex-row gap-2.5">
+                    <input type="email" required placeholder="Enter your email address..." class="px-4 py-3 rounded-full border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst w-full sm:w-64" />
+                    <button type="submit" class="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-md">
+                        Get Instant Audio
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Academy Banner consistent with design system (matching bottom banner in screenshot) -->
+    <section class="py-16 bg-[#faf6ff]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="spiritual-gradient rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 max-w-xl text-center md:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xs font-bold tracking-wider uppercase">
+                        First 14 Days Free
+                    </span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+                        Join Manifesting Miracles Academy
+                    </h3>
+                    <p class="text-purple-100 text-sm leading-relaxed">
+                        Step out of survival mode and into conscious co-creation. Access Michelle's foundational 8-week video modules, daily 333 rituals, and live community activations.
+                    </p>
+                </div>
+                <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+                    <a href="index.html#academy" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg text-center transition-all">
+                        Get Started Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Brand Footer -->
+    <footer class="bg-brand-deepPurple text-white pt-16 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <a href="index.html" class="inline-block">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-white">Michelle J. Lamont</span>
+                        <span class="block text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">Manifesting Miracles™</span>
+                    </a>
+                    <p class="text-xs text-purple-200 max-w-sm leading-relaxed">
+                        International speaker, manifestation mentor, and host of Manifesting Miracles. Helping organizations and visionaries awaken their infinite authority.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Spotify">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                        <a href="https://apple.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all" aria-label="Apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Blog Directory</p>
+                    <ul class="space-y-2 text-xs text-purple-200">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home Page</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Michelle</a></li>
+                        <li><a href="podcast.html" class="hover:text-white transition-colors">Podcast Archive</a></li>
+                        <li><a href="sacred-containers.html" class="hover:text-white transition-colors">1:1 Mentorship</a></li>
+                        <li><a href="success-stories.html" class="hover:text-white transition-colors">Client Miracles</a></li>
+                        <li><a href="#audit-booking" class="hover:text-white transition-colors">Manifestation Audit</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Confidentiality & Ethics</p>
+                    <p class="text-[11px] text-purple-300 leading-relaxed">
+                        All articles, transmissions, and coaching content represent spiritual perspectives and somatic educational methodologies. Content is not intended to replace clinical medical or psychological care.
+                    </p>
+                    <p class="text-[11px] text-purple-400">
+                        © 2026 Michelle J. Lamont. All Rights Reserved. Manifesting Miracles™ is a registered trademark.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300">
+                <p>Designed with conscious intention and sovereignty.</p>
+                <div class="flex space-x-6 mt-3 sm:mt-0">
+                    <a href="index.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="index.html" class="hover:text-white">Terms of Service</a>
+                    <a href="#audit-booking" class="hover:text-white">Audit Calendar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Full Article Reader Modal with Simulated Audio Player -->
+    <div id="articleModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+        <div class="glass-card max-w-2xl w-full rounded-3xl p-6 sm:p-8 border border-white/80 shadow-2xl relative text-left max-h-[90vh] overflow-y-auto">
+            <button onclick="closeArticleModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-2">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="flex items-center space-x-2 text-brand-sunsetPeach text-xs mb-2">
+                <span id="modalArticleCat" class="px-2.5 py-0.5 rounded-full bg-brand-lavender text-brand-amethyst font-bold uppercase tracking-wider text-[10px]">
+                    Somatic Protocol
+                </span>
+                <span id="modalArticleReadTime" class="text-gray-400 font-semibold text-[11px]">7 min read</span>
+            </div>
+            <h3 id="modalArticleTitle" class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple mb-2">
+                Article Title
+            </h3>
+            <p class="text-xs text-gray-400 mb-4">By Michelle J. Lamont • Manifesting Miracles™ Codex</p>
+
+            <!-- Embedded Quick Audio Player for the Article -->
+            <div class="bg-purple-50 p-3.5 rounded-2xl border border-purple-100 flex items-center justify-between gap-3 mb-5">
+                <div class="flex items-center space-x-3">
+                    <button id="modalAudioPlayBtn" onclick="toggleModalArticleAudio()" class="w-9 h-9 rounded-full bg-brand-deepPurple text-white flex items-center justify-center text-xs shadow hover:bg-brand-amethyst transition-all">
+                        <i id="modalAudioPlayIcon" class="fa-solid fa-play ml-0.5"></i>
+                    </button>
+                    <div>
+                        <p class="text-xs font-bold text-brand-deepPurple">Listen to Channeled Audio Read</p>
+                        <p class="text-[10px] text-gray-500">Narrated with binaural frequency background</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-brand-amethyst font-semibold">05:40</span>
+            </div>
+
+            <!-- Article Body -->
+            <div id="modalArticleBody" class="text-xs sm:text-sm text-gray-700 space-y-3 leading-relaxed border-t border-purple-100 pt-4">
+                <!-- Dynamically injected via JS -->
+            </div>
+
+            <div class="pt-6 border-t border-purple-100 mt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <button onclick="copyCurrentArticleUrl()" class="text-xs font-bold text-brand-amethyst hover:text-brand-sunsetPeach flex items-center gap-1.5">
+                    <i class="fa-solid fa-link text-brand-sunsetPeach"></i> Copy Article Link
+                </button>
+                <div class="flex items-center space-x-3">
+                    <a href="#audit-booking" onclick="closeArticleModal()" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all">
+                        Book Manifestation Audit
+                    </a>
+                    <button onclick="closeArticleModal()" class="text-xs text-gray-500 hover:underline">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audit Booking Confirmation Modal -->
+    <div id="auditConfirmModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+        <div class="glass-card max-w-md w-full rounded-3xl p-6 sm:p-8 border border-white/80 shadow-2xl relative text-left">
+            <button onclick="closeAuditConfirmModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-2">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="inline-block p-3 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xl mb-2">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </span>
+                <h3 class="font-serif text-2xl font-bold text-brand-deepPurple">Reserve Your 15-Min Audit</h3>
+                <p id="auditModalSelectedTime" class="text-xs text-brand-amethyst font-semibold mt-1">Oct 22, 2026 @ 10:00 AM EST</p>
+            </div>
+            <form onsubmit="handleAuditBookingSubmit(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Your Full Name</label>
+                    <input type="text" required placeholder="Elena Vance" class="w-full px-3.5 py-2 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
+                    <input type="email" required placeholder="elena@domain.com" class="w-full px-3.5 py-2 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst" />
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">What is your #1 manifestation question?</label>
+                    <textarea rows="2" placeholder="e.g., How do I rewire nervous system resistance around wealth..." class="w-full px-3.5 py-2 rounded-xl border border-purple-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-amethyst"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-md mt-2">
+                    Finalize Free Manifestation Audit
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="fixed top-24 right-6 z-50 transform -translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-dark text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-white/20 flex items-center space-x-3">
+            <div id="toastIcon" class="w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p id="toastMessage" class="text-xs font-semibold">Action completed successfully!</p>
+        </div>
+    </div>
+
+    <script>
+        // Article Database for Modal Reader
+        const articleDatabase = {
+            1: {
+                title: "The Most Dangerous Thing Happening to You Right Now (And It's Not What You're Thinking)",
+                cat: "Subconscious Alert",
+                readTime: "6 min read",
+                body: `
+                    <p>When seekers reach out to me feeling utterly trapped, they almost always diagnose themselves with laziness, lack of discipline, or poor mindset. But that isn't the truth.</p>
+                    <p>The most dangerous phenomenon happening to your energy field right now is <strong>subconscious desensitization</strong>. Over decades of small disappointments, family trauma, and cultural conditioning, your nervous system made an unspoken survival vow: <em>'If I expect nothing, I will never be crushed.'</em></p>
+                    <p>Your subconscious mind does not care about your happiness—it cares about your survival. When you normalize struggle, the brain treats comfort and poverty as safe, and treats wealth, extraordinary visibility, and deep soulmate intimacy as acute biological danger.</p>
+                    <div class="bg-brand-softLilac p-4 rounded-xl border border-purple-200 my-2">
+                        <strong class="text-brand-deepPurple block mb-1">Key Somatic Remedy:</strong>
+                        <p class="text-xs text-gray-700">Before attempting positive affirmations, practice recognizing where contraction lives in your throat and solar plexus. Breathe directly into the tightness until the chemical emergency response subsides.</p>
+                    </div>
+                `
+            },
+            2: {
+                title: "How to Reprogram Your Nervous System for Manifestation (Rewiring for Miracle Inflows)",
+                cat: "Somatic Reset",
+                readTime: "7 min read",
+                body: `
+                    <p>You cannot attract what your body believes will kill you. In modern manifestation culture, we are constantly told to 'act as if' and recite affirmations in the mirror. But if you have unconscious scarcity trauma, shouting affirmations while your chest is hyperventilating is like screaming at a burning house to be cold.</p>
+                    <p>Your <strong>vagus nerve</strong> acts as the master conductor of your receptive field. When you down-regulate into parasympathetic safety, your vascular tension drops, your heart rate variability widens, and your brain signals to the quantum field that you can hold mass abundance without leaking it in self-sabotage.</p>
+                    <p>Module 3 of the Manifesting Miracles Academy focuses directly on this somatic shift. When clients anchor their physical safety, five- and six-figure months happen without friction.</p>
+                `
+            },
+            3: {
+                title: "Rewiring Your Reticular Activating System (RAS) for Wealth",
+                cat: "The RAS Portal",
+                readTime: "5 min read",
+                body: `
+                    <p>Your brain processes millions of bits of sensory information every single second, but your <strong>Reticular Activating System (RAS)</strong> filters out 99.9% of it so your brain doesn't short-circuit. It only lets through what confirms your current identity.</p>
+                    <p>If your RAS is calibrated to believe 'money is hard and clients are scarce', it will literally erase million-dollar opportunities right in front of your face. You will walk past ideal investors and never notice them.</p>
+                    <p>By implementing Michelle's 333 morning calibration ritual, you assign your RAS explicit daily commands to identify financial abundance, unexpected checks, and divine synchronicity.</p>
+                `
+            },
+            4: {
+                title: "How to Reprogram Your Subconscious Mind While You Sleep",
+                cat: "Night Ritual",
+                readTime: "8 min read",
+                body: `
+                    <p>As you drift off to sleep, your brain waves slow from active Beta into relaxed Alpha, and finally into the highly receptive <strong>Theta frequency</strong>. In Theta, your critical ego filter is asleep—meaning whatever suggestions you whisper into your ears bypass all resistance and record directly onto your autonomic soul blueprint.</p>
+                    <p>Never fall asleep watching chaotic television, doom-scrolling catastrophic news, or rehashing unresolved debts. Use Michelle's Soul Sleep series to steep your cells in unconditional divine favor for 8 continuous hours.</p>
+                `
+            },
+            5: {
+                title: "Neuro-Manifestation: How to Rewire Your Brain for Divine Abundance and Quantum Wealth",
+                cat: "Neuro Science",
+                readTime: "6 min read",
+                body: `
+                    <p>Every time you think a thought, an electrical impulse fires across neurons, building myelin sheath bridges. When you dwell in habitual lack, your brain hardwires scarcity like a six-lane highway.</p>
+                    <p>Through <strong>neuroplasticity</strong>, you can decommission those old neural highways. In this transmission, we explore the precise intersection of quantum physics, epigenetic expression, and spiritual sovereignty.</p>
+                `
+            },
+            6: {
+                title: "How to Reprogram Your Subconscious Mind: The 7 Secret Steps to Manifest Your Desires Fast",
+                cat: "Core Method",
+                readTime: "7 min read",
+                body: `
+                    <p>The 7-step blueprint Michelle discovered in her Dallas sanctuary:</p>
+                    <ol class="list-decimal pl-4 space-y-1 text-xs text-gray-700">
+                        <li><strong>Identify the Shadow Contract:</strong> Pinpoint the exact age your scarcity vow was born.</li>
+                        <li><strong>Somatic Discharge:</strong> Physically exhale the stored panic through breathwork.</li>
+                        <li><strong>Ancestral Severance:</strong> Return inherited poverty vows to previous generations with love.</li>
+                        <li><strong>Vocal Toning:</strong> Use 432Hz harmonic sound to realign your throat chakra.</li>
+                        <li><strong>Theta Programming:</strong> Listen to channeled hypnoses during sleep transitions.</li>
+                        <li><strong>Action from Sovereignty:</strong> Take moves from certainty rather than desperate need.</li>
+                        <li><strong>Radical Surrender:</strong> Release the timeline and allow the universe to deliver.</li>
+                    </ol>
+                `
+            },
+            7: {
+                title: "The Neuroscience of Spiritual Wealth: Practical Alignment Tools to Manifest Physical Abundance",
+                cat: "Wealth Somatics",
+                readTime: "6 min read",
+                body: `
+                    <p>Spiritual wealth is not an airy, abstract concept. Your heart emits an electromagnetic field that extends several feet outside your physical ribcage. When your thoughts of abundance harmonize with genuine somatic gratitude, this field becomes an irresistible tractor beam for physical resources.</p>
+                `
+            },
+            8: {
+                title: "Why Manifesting Feels Hard: Nervous System Regulation and the Quantum Frequency of Abundance",
+                cat: "Shadow & Flow",
+                readTime: "5 min read",
+                body: `
+                    <p>Manifestation only feels like an exhausting uphill climb when you are operating from ego will instead of divine alignment. When you try to muscle reality into submission, you signal distrust to the cosmos.</p>
+                    <p>The moment you exhale, regulate your nervous system, and step into total receptivity, circumstances rearrange without friction.</p>
+                `
+            },
+            9: {
+                title: "5 Money Manifestation Hacks: Somatic Shifts to Upgrade Your Financial Energy Today",
+                cat: "Quick Shifts",
+                readTime: "4 min read",
+                body: `
+                    <p>Five rapid shifts to execute today:</p>
+                    <ul class="list-disc pl-4 space-y-1 text-xs text-gray-700">
+                        <li>Bless every bill as you pay it, thanking money for circulating through your hands.</li>
+                        <li>Clear the physical clutter from your wallet and discard old expired receipts.</li>
+                        <li>Touch your solar plexus and recite: 'My capacity to receive wealth expands infinitely.'</li>
+                        <li>Place a crisp high-denomination bill in your phone case as an energetic anchor.</li>
+                        <li>Practice 60 seconds of silent gratitude for what is already on its way.</li>
+                    </ul>
+                `
+            }
+        };
+
+        function handleBlogSearch() {
+            const query = document.getElementById('blogSearchInput').value.toLowerCase().trim();
+            const clearBtn = document.getElementById('clearSearchBtn');
+            clearBtn.classList.toggle('hidden', query === '');
+
+            const cards = document.querySelectorAll('.blog-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                const tags = card.getAttribute('data-tags') || '';
+
+                if (title.includes(query) || desc.includes(query) || tags.includes(query)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            const noRes = document.getElementById('noResultsState');
+            noRes.classList.toggle('hidden', visibleCount > 0);
+            document.getElementById('articleCountHeading').textContent = `Transmissions Matching Search (${visibleCount} Articles)`;
+        }
+
+        function clearBlogSearch() {
+            document.getElementById('blogSearchInput').value = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            handleBlogSearch();
+        }
+
+        function filterBlogCategory(category, btn) {
+            document.querySelectorAll('.blog-cat-pill').forEach(b => {
+                b.className = 'blog-cat-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-purple-100 border border-purple-200/80 shadow-sm transition-all';
+            });
+            if (btn) {
+                btn.className = 'blog-cat-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white shadow-sm transition-all';
+            }
+
+            document.getElementById('blogSearchInput').value = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+
+            const cards = document.querySelectorAll('.blog-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResultsState').classList.toggle('hidden', visibleCount > 0);
+            document.getElementById('articleCountHeading').textContent = category === 'all' 
+                ? `All Manifestation Transmissions (${visibleCount} Articles)` 
+                : `Transmissions in ${category} (${visibleCount} Articles)`;
+            showToast(`Filtered by ${category === 'all' ? 'all categories' : category}`, 'info');
+        }
+
+        function sortBlogArticles() {
+            const sortVal = document.getElementById('sortSelect').value;
+            const grid = document.getElementById('blogGrid');
+            const cards = Array.from(grid.querySelectorAll('.blog-card'));
+
+            if (sortVal === 'popular') {
+                cards.reverse();
+            }
+            cards.forEach(card => grid.appendChild(card));
+            showToast(`Articles sorted by ${sortVal}`, 'info');
+        }
+
+        let isArticleAudioPlaying = false;
+        function openArticleModal(id) {
+            const article = articleDatabase[id];
+            if (!article) return;
+
+            document.getElementById('modalArticleTitle').textContent = article.title;
+            document.getElementById('modalArticleCat').textContent = article.cat;
+            document.getElementById('modalArticleReadTime').textContent = article.readTime;
+            document.getElementById('modalArticleBody').innerHTML = article.body;
+
+            isArticleAudioPlaying = false;
+            document.getElementById('modalAudioPlayIcon').className = 'fa-solid fa-play ml-0.5';
+            document.getElementById('articleModal').classList.remove('hidden');
+        }
+
+        function closeArticleModal() {
+            document.getElementById('articleModal').classList.add('hidden');
+            isArticleAudioPlaying = false;
+        }
+
+        function toggleModalArticleAudio() {
+            isArticleAudioPlaying = !isArticleAudioPlaying;
+            const icon = document.getElementById('modalAudioPlayIcon');
+            if (isArticleAudioPlaying) {
+                icon.className = 'fa-solid fa-pause';
+                showToast("Streaming channeled audio transmission...", "play");
+            } else {
+                icon.className = 'fa-solid fa-play ml-0.5';
+                showToast("Audio playback paused", "info");
+            }
+        }
+
+        function playArticleAudio(title) {
+            showToast(`Streaming audio version for: ${title}`, "play");
+        }
+
+        function copyCurrentArticleUrl() {
+            const dummy = document.createElement("input");
+            dummy.value = window.location.href;
+            document.body.appendChild(dummy);
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            showToast("Article transmission link copied to clipboard!", "success");
+        }
+
+        function shareArticle(title) {
+            copyCurrentArticleUrl();
+        }
+
+        let currentCalMonth = 9; // October 2026
+        let currentCalYear = 2026;
+        let selectedAuditDate = 22;
+        let selectedAuditTime = '';
+
+        function renderAuditCalendarDays() {
+            const grid = document.getElementById('auditDaysGrid');
+            grid.innerHTML = '';
+
+            // 4 empty cells for October 2026 start (Thursday)
+            for (let i = 0; i < 4; i++) {
+                const empty = document.createElement('span');
+                grid.appendChild(empty);
+            }
+
+            for (let d = 1; d <= 31; d++) {
+                const dayBtn = document.createElement('button');
+                dayBtn.className = `w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+                    d === selectedAuditDate ? 'bg-brand-deepPurple text-white font-bold' : 'hover:bg-purple-100 text-gray-700'
+                }`;
+                dayBtn.textContent = d;
+                dayBtn.onclick = () => {
+                    selectedAuditDate = d;
+                    renderAuditCalendarDays();
+                    document.getElementById('auditSelectedDateDisplay').textContent = `Available Slots for Oct ${d}:`;
+                    document.getElementById('confirmAuditBtn').disabled = !selectedAuditTime;
+                };
+                grid.appendChild(dayBtn);
+            }
+        }
+        renderAuditCalendarDays();
+
+        function changeAuditMonth(delta) {
+            currentCalMonth += delta;
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            const safeIdx = Math.min(Math.max(currentCalMonth, 0), 11);
+            document.getElementById('auditMonthTitle').textContent = `${months[safeIdx]} ${currentCalYear}`;
+            showToast(`Viewing calendar for ${months[safeIdx]}`, 'info');
+        }
+
+        function selectAuditSlot(btn, time) {
+            document.querySelectorAll('.audit-slot-btn').forEach(b => {
+                b.className = 'audit-slot-btn w-full py-2 px-3 rounded-xl border border-purple-200 text-xs text-gray-700 hover:border-brand-amethyst hover:bg-brand-softLilac text-left font-medium transition-all';
+            });
+            btn.className = 'audit-slot-btn w-full py-2 px-3 rounded-xl border-2 border-brand-sunsetPeach bg-brand-sunsetPeach/10 text-xs text-brand-deepPurple text-left font-bold transition-all';
+            selectedAuditTime = time;
+            document.getElementById('confirmAuditBtn').disabled = false;
+        }
+
+        function confirmAuditBookingModal() {
+            if (!selectedAuditTime) return;
+            document.getElementById('auditModalSelectedTime').textContent = `Oct ${selectedAuditDate}, 2026 @ ${selectedAuditTime} EST`;
+            document.getElementById('auditConfirmModal').classList.remove('hidden');
+        }
+
+        function closeAuditConfirmModal() {
+            document.getElementById('auditConfirmModal').classList.add('hidden');
+        }
+
+        function handleAuditBookingSubmit(e) {
+            e.preventDefault();
+            closeAuditConfirmModal();
+            e.target.reset();
+            selectedAuditTime = '';
+            document.getElementById('confirmAuditBtn').disabled = true;
+            showToast("Manifestation Audit scheduled! Zoom details sent to your inbox.", "success");
+        }
+
+        function handleToolkitOptin(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast("7-Minute Frequency Reset audio dispatched to your inbox!", "success");
+        }
+
+        function scrollToNewsletter() {
+            const el = document.getElementById('newsletter-toolkit');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showToast(message, type = "success") {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastMsg.textContent = message;
+            if (type === 'play') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-waveform"></i>';
+            } else if (type === 'info') {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-purple-200 text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+            } else {
+                toastIcon.className = 'w-7 h-7 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center text-xs font-bold';
+                toastIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+            }
+
+            toast.classList.remove('-translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('-translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        // Mobile Menu Drawer Handler
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

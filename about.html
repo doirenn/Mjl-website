@@ -42,6 +42,9 @@
     </script>
 
     <style>
+        summary::-webkit-details-marker { display: none; }
+        summary { list-style: none; }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(14px);
@@ -110,12 +113,12 @@
         </div>
     </div>
 
-    <header class="sticky top-0 z-40 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
+    <header class="sticky top-0 z-50 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center justify-between gap-6 h-20">
                 <!-- Brand Logo -->
-                <a href="index.html" class="flex flex-col group">
-                    <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover:text-brand-amethyst transition-colors">
+                <a href="index.html" class="flex flex-col shrink-0 group/logo">
+                    <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover/logo:text-brand-amethyst transition-colors">
                         Michelle J. Lamont
                     </span>
                     <span class="text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">
@@ -124,16 +127,54 @@
                 </a>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Home</a>
-                    <a href="about.html" class="text-sm font-semibold text-brand-amethyst transition-colors border-b-2 border-brand-sunsetPeach pb-0.5">About Michelle</a>
-                    <a href="podcast.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Podcast</a>
-                    <a href="index.html#academy" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">The Academy</a>
-                    <a href="#offerings" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">What I Offer</a>
-                    <a href="#praise" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors">Praise</a>
-                    <a href="index.html#quiz" class="text-sm font-semibold text-brand-sunsetPeach hover:text-brand-deepPurple transition-colors flex items-center gap-1.5">
-                        <i class="fa-solid fa-sparkles"></i> Energy Quiz
+                <nav class="hidden xl:flex items-center gap-4 2xl:gap-5">
+                    <a href="academy.html" class="text-sm font-semibold text-brand-deepPurple hover:text-brand-amethyst transition-colors whitespace-nowrap">MMA Academy</a>
+                    <a href="podcast.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">Podcast</a>
+
+                    <div class="relative group/coach">
+                        <button type="button" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors inline-flex items-center gap-1.5 whitespace-nowrap" aria-haspopup="true">
+                            1:1 Coaching
+                            <i class="fa-solid fa-chevron-down text-[9px] opacity-70"></i>
+                        </button>
+                        <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover/coach:visible group-hover/coach:opacity-100 group-hover/coach:translate-y-0 group-focus-within/coach:visible group-focus-within/coach:opacity-100 group-focus-within/coach:translate-y-0 transition-all duration-200 z-50">
+                            <div class="min-w-[250px] rounded-2xl bg-white border border-purple-100 shadow-xl py-2">
+                                <a href="sacred-containers.html" class="block px-4 py-2.5 hover:bg-brand-softLilac">
+                                    <span class="block text-sm font-medium text-gray-800">Sacred Containers</span>
+                                    <span class="block text-[11px] text-gray-500">1:1 Mentorship</span>
+                                </a>
+                                <a href="the-immersion.html" class="block px-4 py-2.5 hover:bg-brand-softLilac">
+                                    <span class="block text-sm font-medium text-gray-800">The Immersion</span>
+                                    <span class="block text-[11px] text-gray-500">Private VIP Day</span>
+                                </a>
+                                <a href="the-portal.html" class="block px-4 py-2.5 hover:bg-brand-softLilac">
+                                    <span class="block text-sm font-medium text-gray-800">The Portal</span>
+                                    <span class="block text-[11px] text-gray-500">VIP Experience</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="success-stories.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">Success Stories</a>
+                    <a href="index.html#quiz" class="text-sm font-semibold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i> Energy Quiz
                     </a>
+
+                    <div class="relative group/resources">
+                        <button type="button" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors inline-flex items-center gap-1.5 whitespace-nowrap" aria-haspopup="true">
+                            Resources
+                            <i class="fa-solid fa-chevron-down text-[9px] opacity-70"></i>
+                        </button>
+                        <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover/resources:visible group-hover/resources:opacity-100 group-hover/resources:translate-y-0 group-focus-within/resources:visible group-focus-within/resources:opacity-100 group-focus-within/resources:translate-y-0 transition-all duration-200 z-50">
+                            <div class="min-w-[220px] rounded-2xl bg-white border border-purple-100 shadow-xl py-2">
+                                <a href="press.html" class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">Media & Press</a>
+                                <a href="speaking.html" class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">Speaking</a>
+                                <a href="blog.html" class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">Blog</a>
+                                <a href="about.html" class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">About Michelle</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">Contact</a>
                 </nav>
 
                 <!-- Action CTA & Mobile Trigger -->
@@ -144,7 +185,7 @@
                     <button onclick="openBookingModal('1:1 Discovery Call')" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-white hover:brightness-105 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
                         Book a Session
                     </button>
-                    <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
+                    <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="xl:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -152,18 +193,42 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
-            <div class="flex flex-col space-y-4 pt-2">
-                <a href="index.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Home</a>
-                <a href="about.html" class="mobile-link text-base font-semibold text-brand-amethyst py-1">About Michelle</a>
-                <a href="podcast.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Manifesting Miracles Podcast</a>
-                <a href="index.html#academy" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">The Academy</a>
-                <a href="#offerings" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Offerings & Mentorship</a>
-                <a href="#praise" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Testimonials</a>
-                <div class="pt-2">
-                    <button onclick="openBookingModal('Mobile Menu Consultation')" class="w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white">
-                        Book Private Mentorship
-                    </button>
+        <div id="mobileMenu" class="hidden xl:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
+            <div class="flex flex-col space-y-3 pt-2">
+                <a href="academy.html" class="mobile-link text-base font-semibold text-brand-deepPurple hover:text-brand-amethyst py-1">MMA Academy</a>
+                <a href="podcast.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Podcast</a>
+                <details>
+                    <summary class="cursor-pointer flex items-center justify-between text-base font-medium text-gray-800 py-1">
+                        1:1 Coaching
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                    </summary>
+                    <div class="flex flex-col pl-3 pt-2 space-y-2">
+                        <a href="sacred-containers.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">Sacred Containers</a>
+                        <a href="the-immersion.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">The Immersion</a>
+                        <a href="the-portal.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">The Portal</a>
+                    </div>
+                </details>
+                <a href="success-stories.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Success Stories</a>
+                <a href="index.html#quiz" class="mobile-link text-base font-medium text-brand-amethyst py-1 flex items-center gap-2">
+                    <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i> Energy Quiz
+                </a>
+                <details>
+                    <summary class="cursor-pointer flex items-center justify-between text-base font-medium text-gray-800 py-1">
+                        Resources
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                    </summary>
+                    <div class="flex flex-col pl-3 pt-2 space-y-2">
+                        <a href="press.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">Media & Press</a>
+                        <a href="speaking.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">Speaking</a>
+                        <a href="blog.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">Blog</a>
+                        <a href="about.html" class="mobile-link text-sm text-gray-700 hover:text-brand-amethyst py-1">About Michelle</a>
+                    </div>
+                </details>
+                <a href="contact.html" class="mobile-link text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">Contact</a>
+                <div class="pt-2 flex flex-col gap-2">
+                    <a href="index.html#coaching" class="mobile-link w-full text-center py-3 rounded-full text-sm font-bold bg-brand-deepPurple text-white">
+                        Book Private Coaching
+                    </a>
                 </div>
             </div>
         </div>
