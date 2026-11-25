@@ -1,0 +1,34 @@
+---
+import type { ImageSlot } from '../data/goat';
+import { imageIsReady } from '../lib/image';
+
+interface Props {
+  image: ImageSlot;
+  class?: string;
+  priority?: boolean;
+}
+
+const { image, class: className = '', priority = false } = Astro.props;
+const ready = imageIsReady(image);
+---
+
+<div class:list={['relative overflow-hidden bg-navy-950', className]}>
+  {
+    ready ? (
+      <img
+        src={image.src}
+        alt={image.alt}
+        class="h-full w-full object-cover"
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+      />
+    ) : (
+      <div class="flex h-full w-full items-center justify-center px-4 py-8 text-center">
+        <div class="pointer-events-none absolute inset-3 border border-gold-300/40" aria-hidden="true" />
+        <p class="relative max-w-[16rem] text-[11px] font-semibold uppercase leading-snug tracking-[0.12em] text-gold-300 sm:text-xs">
+          {image.placeholder}
+        </p>
+      </div>
+    )
+  }
+</div>

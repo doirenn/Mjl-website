@@ -1,0 +1,143 @@
+---
+import { tiers } from '../data/goat';
+import CtaLink from './CtaLink.astro';
+---
+
+<section id="tiers" class="border-b border-gold-500/20 bg-navy-900 py-20 text-ivory sm:py-28" aria-labelledby="tiers-title">
+  <div class="shell">
+    <div class="mx-auto mb-16 max-w-2xl text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-gold-300">{tiers.eyebrow}</p>
+      <h2 id="tiers-title" class="mt-3 font-serif text-4xl font-medium text-ivory sm:text-5xl lg:text-6xl">{tiers.title}</h2>
+      <p class="mt-3 text-base text-ivory sm:text-lg">{tiers.intro}</p>
+    </div>
+
+    <div class="grid items-stretch gap-8 pt-4 lg:grid-cols-3">
+      {
+        tiers.items.map((tier) => {
+          const dark = tier.tone === 'dark';
+          return (
+            <article
+              id={tier.anchor}
+              class:list={[
+                'relative flex scroll-mt-28 flex-col justify-between rounded-2xl p-8 sm:p-9',
+                dark
+                  ? 'border-2 border-gold-500 bg-navy-950 text-ivory shadow-card'
+                  : 'border border-gold-500/30 bg-ivory text-ink shadow-card',
+                tier.featured && 'border-2 border-gold-500',
+              ]}
+            >
+              {tier.badge && (
+                <p
+                  class:list={[
+                    'absolute -top-3.5 left-8 rounded-full px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.16em]',
+                    dark ? 'border border-gold-300 bg-navy-800 text-gold-300' : 'bg-gold-300 text-navy-950',
+                  ]}
+                >
+                  {tier.badge}
+                </p>
+              )}
+
+              <div>
+                <p class:list={['mt-2 block text-xs font-semibold uppercase tracking-[0.18em]', dark ? 'text-gold-300' : 'text-gold-ink']}>
+                  {tier.level}
+                </p>
+                <h3 class:list={['mt-1 font-serif text-3xl font-medium', dark ? 'text-ivory' : 'text-navy-950']}>{tier.title}</h3>
+
+                <div class:list={['mt-6 border-b pb-6', dark ? 'border-ivory/20' : 'border-gold-500/30']}>
+                  <p class="flex flex-wrap items-baseline gap-3">
+                    <span class:list={['font-serif text-5xl font-medium', dark ? 'text-gold-300' : 'text-navy-950']}>{tier.price}</span>
+                    {tier.priceSuffix && (
+                      <span class="text-sm text-ink-soft">
+                        presale / <span class="line-through">{tier.struck}</span> after
+                      </span>
+                    )}
+                  </p>
+                  <p class:list={['mt-2 text-xs leading-relaxed', dark ? 'text-ivory' : 'text-ink-soft']}>{tier.priceNote}</p>
+
+                  <div class="mt-4">
+                    <label for={`${tier.id}-plan`} class:list={['mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.16em]', dark ? 'text-gold-300' : 'text-gold-ink']}>
+                      {tiers.planLabel}
+                    </label>
+                    <select
+                      id={`${tier.id}-plan`}
+                      data-plan-select
+                      data-plan-target={`${tier.id}-cta`}
+                      class:list={[
+                        'min-h-12 w-full rounded-xl border px-3.5 py-2.5 text-sm',
+                        dark
+                          ? 'border-gold-300/40 bg-navy-900 text-ivory'
+                          : 'border-navy-800/20 bg-cream text-navy-950',
+                      ]}
+                      style={dark ? 'color-scheme: dark' : 'color-scheme: light'}
+                    >
+                      {tier.plans.map((plan, index) => (
+                        <option value={plan.checkoutUrl} data-url={plan.checkoutUrl} selected={index === 0}>
+                          {plan.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <ul class="mt-6 space-y-3.5 text-sm">
+                  {tier.inclusions.map((item) => (
+                    <li class="flex items-start gap-3">
+                      <span class:list={['mt-0.5', dark ? 'text-gold-300' : 'text-gold-ink']} aria-hidden="true">
+                        &#10022;
+                      </span>
+                      <span class={dark ? 'text-ivory' : 'text-ink'}>
+                        {item.before}
+                        {item.strong && <strong class={dark ? 'text-gold-300' : 'font-semibold text-navy-950'}>{item.strong}</strong>}
+                        {item.rest}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {tier.bonusLabel && (
+                  <div class:list={['mt-6 rounded-xl border p-4 text-xs leading-relaxed', dark ? 'border-gold-300/40 bg-white/5 text-ivory' : 'border-gold-500/50 bg-cream text-navy-950']}>
+                    <strong class:list={['mb-1 block uppercase tracking-wider', dark ? 'text-gold-300' : 'text-gold-ink']}>{tier.bonusLabel}</strong>{' '}
+                    {tier.bonusBody}
+                  </div>
+                )}
+              </div>
+
+              <CtaLink
+                id={`${tier.id}-cta`}
+                href={tier.plans[0]?.checkoutUrl ?? `#${tier.anchor}`}
+                variant={dark ? 'gold' : tier.featured ? 'gold' : 'outline'}
+                class="mt-8 w-full"
+              >
+                {tier.cta}
+              </CtaLink>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  const bindPlans = () => {
+    document.querySelectorAll('[data-plan-select]').forEach((node) => {
+      if (!(node instanceof HTMLSelectElement)) return;
+      if (node.dataset.bound === 'true') return;
+      node.dataset.bound = 'true';
+      const target = node.dataset.planTarget;
+      if (!target) return;
+      const link = document.getElementById(target);
+      if (!(link instanceof HTMLAnchorElement)) return;
+      const apply = () => {
+        const selected = node.selectedOptions[0];
+        const url = selected?.dataset.url;
+        if (url) link.href = url;
+      };
+      node.addEventListener('change', apply);
+      apply();
+    });
+  };
+
+  bindPlans();
+  document.addEventListener('astro:page-load', bindPlans);
+</script>

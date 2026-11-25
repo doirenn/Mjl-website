@@ -1,0 +1,40 @@
+---
+import { pillars } from '../data/goat';
+import ImageSlot from './ImageSlot.astro';
+---
+
+<section class="border-b border-gold-500/20 bg-ivory py-20 text-ink sm:py-28" aria-labelledby="pillars-title">
+  <div class="shell">
+    <div class="mx-auto mb-16 max-w-2xl text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-gold-ink">{pillars.eyebrow}</p>
+      <h2 id="pillars-title" class="mt-3 font-serif text-4xl font-medium text-navy-950 sm:text-5xl">
+        {pillars.titleLead}{' '}
+        <span class="italic font-normal text-gold-ink">{pillars.titleAccent}</span>
+      </h2>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-3 lg:gap-10">
+      {
+        pillars.items.map((item) => (
+          <article class="flex flex-col overflow-hidden rounded-2xl border border-navy-800/10 bg-cream shadow-card">
+            <div class="relative">
+              <ImageSlot image={item.image} class="aspect-[4/5]" />
+              <p class="absolute top-4 left-4 rounded-full bg-ivory px-3 py-1 text-xs font-semibold tracking-[0.18em] text-navy-950">
+                {item.number}
+              </p>
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-7 sm:p-8">
+              <div>
+                <h3 class="font-serif text-3xl font-medium text-navy-950">{item.title}</h3>
+                <p class="mt-3 text-sm leading-relaxed text-ink-soft sm:text-base">{item.body}</p>
+              </div>
+              <p class="mt-6 border-t border-gold-500/40 pt-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold-ink">
+                {item.footer}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

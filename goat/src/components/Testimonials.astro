@@ -1,0 +1,38 @@
+---
+import { testimonials } from '../data/goat';
+---
+
+<section class="border-b border-gold-500/20 bg-ivory py-20 text-ink sm:py-28" aria-labelledby="testimonials-title">
+  <div class="shell">
+    <div class="mx-auto mb-16 max-w-3xl text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-gold-ink">{testimonials.eyebrow}</p>
+      <h2 id="testimonials-title" class="mt-3 font-serif text-4xl font-medium text-navy-950 sm:text-5xl">{testimonials.title}</h2>
+      <p class="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">{testimonials.intro}</p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2">
+      {
+        testimonials.items.map((item) => (
+          <figure class="flex flex-col justify-between rounded-2xl border border-navy-800/10 bg-cream p-8 shadow-card sm:p-10">
+            <div>
+              <div class="mb-5 flex items-center justify-between gap-3">
+                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gold-ink">{item.label}</p>
+                <p class="tracking-widest text-gold-ink" aria-hidden="true">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </p>
+                <p class="sr-only">5 out of 5 stars</p>
+              </div>
+              <blockquote class="text-base leading-relaxed text-ink sm:text-lg">
+                <p>{item.quote}</p>
+              </blockquote>
+            </div>
+            <figcaption class="mt-6 flex items-center justify-between gap-3 border-t border-gold-500/30 pt-4">
+              <cite class="font-serif text-2xl font-medium text-navy-950 not-italic">{item.name}</cite>
+              <p class="text-right text-xs font-semibold uppercase tracking-[0.14em] text-gold-ink">{item.theme}</p>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>
