@@ -57,8 +57,8 @@ Las fotos de stock del sample se quitaron. En su lugar hay bloques marcados, por
 Para usar una foto real:
 
 1. Guarda el archivo en `goat/public/images/`.
-2. En `src/data/goat.ts`, escribe la ruta en `src`. Ejemplo: `src: "/images/michelle.jpg"`.
-3. Si `src` queda vacio, o el archivo no existe, se sigue viendo el bloque marcado.
+2. En `src/data/goat.ts`, escribe la ruta local en `src`. Ejemplo: `src: "/images/michelle.jpg"`.
+3. Si `src` queda vacio, el archivo no existe, o la ruta es una URL externa, se sigue viendo el bloque marcado. Una URL de stock no se muestra.
 
 `suggestedSrc` indica el nombre pensado para cada espacio:
 
