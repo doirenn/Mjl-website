@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOAT 2027: Your Greatest Year Ever — Michelle J. Lamont</title>
+  <meta name="description" content="GOAT means Greatest Of All Time. Step into the spotlight, take up space, and claim your biggest year with Michelle J. Lamont. 25 seats. Kickoff January 10, 2027." />
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury Serif) + Inter (Clean Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: '#4B3F72',
+            plum: '#4C0168',
+            brightPurple: '#6353C1',
+            oceanBlue: '#30AEFE',
+            iconNavy: '#0B4091',
+            inkNavy: '#313453',
+            teal: '#15C39A',
+            gold: '#F3C969',
+            skyBlue: '#72CDFD',
+            coral: '#FE7F5C',
+            lilac: '#F9EFFF',
+            lavender: '#E3D3ED',
+            iceBlue: '#D9F3FC',
+            cream: '#FCF3E4',
+            offWhite: '#FAFAFA',
+            slate: '#747D88',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            luxury: '0 25px 60px -15px rgba(49, 52, 83, 0.18)',
+            goldGlow: '0 10px 30px -5px rgba(75, 63, 114, 0.28)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom Editorial Styling & Brand Color Finishes */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FAFAFA;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-editorial {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* Official Brand Gradients */
+    .bg-hero-brand {
+      background: linear-gradient(135deg, #ACC5D8 0%, #E7C8BA 100%);
+    }
+
+    .bg-retreat-overlay {
+      background: linear-gradient(135deg, #9F8BE5 0%, #62C6D1 100%);
+    }
+
+    .bg-sky-brand {
+      background: linear-gradient(180deg, #A2D2FF 0%, #E6EBF5 100%);
+    }
+
+    /* Editorial Photography Color Grade */
+    .editorial-photo {
+      filter: contrast(1.04) saturate(1.02);
+      transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+    }
+
+    .editorial-card:hover .editorial-photo {
+      transform: scale(1.04);
+      filter: contrast(1.06) saturate(1.06);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #E3D3ED;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4B3F72;
+      border-radius: 4px;
+    }
+
+    /* Accordion Smooth Transitions */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.38s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 420px;
+      opacity: 1;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-lavender selection:text-plum">
+
+  <!-- =====================================================================
+       MINIMAL EDITORIAL TOP BAR (NO MENU — PURE SALES PAGE FOCUS)
+  ====================================================================== -->
+  <header class="w-full bg-white/95 backdrop-blur-md border-b border-purple/15 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <!-- Brand Signature Only (No Navigation Links) -->
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-iconNavy animate-pulse"></span>
+        <span class="text-xs sm:text-sm tracking-[0.28em] uppercase text-iconNavy font-semibold">
+          Michelle J. Lamont
+        </span>
+      </div>
+
+      <!-- Scarcity & Kickoff Status -->
+      <div class="flex items-center gap-4 text-[11px] sm:text-xs tracking-[0.18em] uppercase text-inkNavy font-medium">
+        <span>25 Seats Only</span>
+        <span class="text-teal">•</span>
+        <span class="hidden md:inline">Kickoff Jan 10, 2027</span>
+        <span class="hidden md:inline text-teal">•</span>
+        <button onclick="openCheckoutModal('GOAT Your Greatest Year Ever', '$777 (Pay in Full)')"
+                class="text-purple hover:text-plum underline underline-offset-4 font-semibold transition cursor-pointer">
+          Presale $777
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       1) HERO SECTION + ENROLLMENT CARD
+       Vibe: Editorial Quiet Luxury, Winter Lock-In 2027
+  ====================================================================== -->
+  <section class="relative bg-hero-brand text-inkNavy overflow-hidden border-b border-purple/20">
+    <!-- Ambient Editorial Background Photo with Soft Brand Wash -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=85"
+        onerror="this.onerror=null;this.src='https://placehold.co/1800x1100/ACC5D8/4B3F72?text=GOAT+2027+EDITORIAL';"
+        alt="Confident woman in tailored luxury coat embodying 2027 lock-in energy"
+        class="w-full h-full object-cover object-center opacity-20 editorial-photo"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-white/60 via-white/35 to-lavender/45"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-white/40"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+        <!-- Left Column: Editorial Sales Headline & Voice -->
+        <div class="lg:col-span-7 space-y-7">
+          <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-purple/25 bg-white/85 backdrop-blur-sm">
+            <span class="text-[11px] tracking-[0.26em] uppercase text-purple font-semibold">2027 Lock-In Container</span>
+            <span class="text-teal">|</span>
+            <span class="text-[11px] tracking-[0.2em] uppercase text-inkNavy font-medium">January – April 2027</span>
+          </div>
+
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.03] tracking-tight text-inkNavy">
+            GOAT 2027: <br />
+            <span class="italic font-normal text-plum">Your Greatest Year Ever</span>
+          </h1>
+
+          <p class="text-base sm:text-lg lg:text-xl text-black/85 leading-relaxed font-normal max-w-2xl">
+            This is the year you put yourself on display. Stop waiting for permission. Stop playing small.
+            <strong class="font-semibold text-purple">GOAT means Greatest Of All Time</strong>, and this is how you become the greatest version of yourself. Step into the spotlight. Take up space. Own every room you walk into. Find opportunities everywhere you go.
+            <span class="italic font-serif text-xl sm:text-2xl text-plum font-medium block mt-3">
+              Come in as you are. Leave with the crown.
+            </span>
+          </p>
+
+          <!-- Editorial Aesthetic Mood Strip -->
+          <div class="pt-4 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl">
+            <div class="rounded-xl overflow-hidden border border-white/80 shadow-sm aspect-[4/3] relative editorial-card">
+              <img
+                src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=600&q=80"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x450/4B3F72/FFFFFF?text=TAILORED+POWER';"
+                alt="Tailored black blazer quiet luxury aesthetic"
+                class="w-full h-full object-cover editorial-photo"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-inkNavy/85 via-inkNavy/15 to-transparent"></div>
+              <span class="absolute bottom-2 left-2.5 text-[10px] tracking-[0.2em] uppercase text-white font-medium">Own The Room</span>
+            </div>
+
+            <div class="rounded-xl overflow-hidden border border-white/80 shadow-sm aspect-[4/3] relative editorial-card">
+              <img
+                src="https://images.unsplash.com/photo-1611288618898-e2a93f848cf6?auto=format&fit=crop&w=600&q=80"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x450/4B3F72/FFFFFF?text=CAFE+LOCK+IN';"
+                alt="Chic winter cafe espresso and journal aesthetic"
+                class="w-full h-full object-cover editorial-photo"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-inkNavy/85 via-inkNavy/15 to-transparent"></div>
+              <span class="absolute bottom-2 left-2.5 text-[10px] tracking-[0.2em] uppercase text-white font-medium">Winter Arc</span>
+            </div>
+
+            <div class="rounded-xl overflow-hidden border border-white/80 shadow-sm aspect-[4/3] relative editorial-card">
+              <img
+                src="https://images.unsplash.com/photo-1522322420883-600684d7f9f1?auto=format&fit=crop&w=600&q=80"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x450/4B3F72/FFFFFF?text=THE+CROWN';"
+                alt="Luxury dinner and champagne toast aesthetic"
+                class="w-full h-full object-cover editorial-photo"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-inkNavy/85 via-inkNavy/15 to-transparent"></div>
+              <span class="absolute bottom-2 left-2.5 text-[10px] tracking-[0.2em] uppercase text-white font-medium">The Crown</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: High-Converting Enrollment Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-white/95 backdrop-blur-xl border border-purple/25 rounded-2xl p-7 sm:p-9 shadow-luxury relative">
+            <!-- Top Corner Accent -->
+            <div class="flex items-center justify-between border-b border-purple/15 pb-4 mb-6">
+              <span class="text-xs tracking-[0.26em] uppercase text-purple font-semibold">
+                2027 IS YOUR YEAR
+              </span>
+              <span class="px-3 py-1 rounded-full bg-lilac border border-purple/25 text-[11px] tracking-[0.16em] uppercase text-plum font-semibold">
+                Presale Open
+              </span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-semibold text-inkNavy leading-tight mb-4">
+              GOAT 2027: Your Greatest Year Ever
+            </h2>
+
+            <p class="text-sm text-black/80 leading-relaxed mb-6">
+              6 live weeks with Michelle J. Lamont, recorded teachings &amp; workbooks in February and March, plus a private Voxer container from January through April.
+            </p>
+
+            <!-- Pricing Summary Box -->
+            <div class="bg-cream border border-gold rounded-xl p-5 mb-6 space-y-3">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <span class="text-xs uppercase tracking-[0.2em] text-purple font-semibold block">Presale Investment</span>
+                  <div class="flex items-baseline gap-2.5 mt-1">
+                    <span class="text-4xl font-serif font-semibold text-plum">$777</span>
+                    <span class="text-sm text-slate line-through">$888 after</span>
+                  </div>
+                </div>
+                <span class="text-xs text-inkNavy font-medium bg-lavender border border-purple/20 px-2.5 py-1 rounded-lg">
+                  First 15 seats or Jan 7
+                </span>
+              </div>
+
+              <div class="pt-3 border-t border-gold/60 text-xs text-inkNavy flex flex-wrap gap-x-3 gap-y-1">
+                <span>Pay in full <strong class="text-plum">$777</strong></span>
+                <span class="text-purple">•</span>
+                <span><strong class="text-plum">3 × $259</strong></span>
+                <span class="text-purple">•</span>
+                <span><strong class="text-plum">6 × $129</strong></span>
+              </div>
+            </div>
+
+            <!-- Presale Bonus Callout -->
+            <div class="flex items-start gap-3 bg-iceBlue/80 border border-skyBlue rounded-xl p-4 mb-7">
+              <svg class="w-5 h-5 text-iconNavy shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+              </svg>
+              <p class="text-xs text-inkNavy leading-relaxed">
+                <strong class="text-iconNavy uppercase tracking-wider">Presale Bonus:</strong> The first 15 to join receive a free 30-minute private session with Michelle (<span class="text-plum font-semibold">$111 value</span>).
+              </p>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <button
+              onclick="openCheckoutModal('GOAT Your Greatest Year Ever', '$777 (Pay in Full)')"
+              class="w-full py-4 px-6 rounded-xl bg-purple hover:bg-plum text-white font-semibold text-sm tracking-[0.22em] uppercase transition shadow-goldGlow cursor-pointer">
+              Claim Your Spot
+            </button>
+
+            <p class="text-center text-xs tracking-[0.16em] uppercase text-slate font-medium mt-4">
+              25 seats. Kickoff January 10, 2027.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       2) HIGHLIGHTS WITH IMAGES (3 EDITORIAL PILLARS)
+  ====================================================================== -->
+  <section class="bg-offWhite text-inkNavy py-20 sm:py-28 border-b border-purple/15">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs tracking-[0.28em] uppercase text-teal font-semibold">The 2027 Shift</span>
+        <h2 class="text-4xl sm:text-5xl font-semibold text-purple mt-3">
+          Stop playing small. <span class="italic font-normal text-plum">Take the crown.</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        <!-- Highlight 1 -->
+        <article class="bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm editorial-card flex flex-col">
+          <div class="aspect-[4/5] relative overflow-hidden bg-lavender">
+            <img
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/900x1125/9F8BE5/FFFFFF?text=STEP+INTO+THE+SPOTLIGHT';"
+              alt="Confident editorial portrait in sleek dark styling"
+              class="w-full h-full object-cover editorial-photo"
+            />
+            <div class="absolute inset-0 bg-retreat-overlay opacity-25 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-inkNavy/65 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/95 text-purple font-semibold text-xs tracking-[0.22em] uppercase">
+              01
+            </span>
+          </div>
+          <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-semibold text-purple mb-3">
+                Step into the spotlight
+              </h3>
+              <p class="text-sm sm:text-base text-black/80 leading-relaxed">
+                Learn how to take up space, own every room you walk into, and put yourself on display, as the boldest version of yourself.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-purple/15 text-xs tracking-[0.2em] uppercase text-teal font-semibold">
+              Presence &amp; Authority
+            </div>
+          </div>
+        </article>
+
+        <!-- Highlight 2 -->
+        <article class="bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm editorial-card flex flex-col">
+          <div class="aspect-[4/5] relative overflow-hidden bg-lavender">
+            <img
+              src="https://images.unsplash.com/photo-1564128153130-3c9cbaf1e0be?auto=format&fit=crop&w=900&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/900x1125/9F8BE5/FFFFFF?text=FIND+OPPORTUNITIES+EVERYWHERE';"
+              alt="Chic coffee cafe table journal and winter luxury aesthetic"
+              class="w-full h-full object-cover editorial-photo"
+            />
+            <div class="absolute inset-0 bg-retreat-overlay opacity-25 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-inkNavy/65 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/95 text-purple font-semibold text-xs tracking-[0.22em] uppercase">
+              02
+            </span>
+          </div>
+          <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-semibold text-purple mb-3">
+                Find opportunities everywhere
+              </h3>
+              <p class="text-sm sm:text-base text-black/80 leading-relaxed">
+                Train the skill of looking at every situation and asking, “How can I make that into something?” so opportunities become something you create, not something you wait for.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-purple/15 text-xs tracking-[0.2em] uppercase text-teal font-semibold">
+              The Opportunity Lens
+            </div>
+          </div>
+        </article>
+
+        <!-- Highlight 3 -->
+        <article class="bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm editorial-card flex flex-col">
+          <div class="aspect-[4/5] relative overflow-hidden bg-lavender">
+            <img
+              src="https://images.unsplash.com/photo-1504276288612-c18c8df55e05?auto=format&fit=crop&w=900&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/900x1125/9F8BE5/FFFFFF?text=GREATEST+VERSION+OF+YOURSELF';"
+              alt="Luxury winter coat and sunglasses confidence aesthetic"
+              class="w-full h-full object-cover editorial-photo"
+            />
+            <div class="absolute inset-0 bg-retreat-overlay opacity-25 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-inkNavy/65 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/95 text-purple font-semibold text-xs tracking-[0.22em] uppercase">
+              03
+            </span>
+          </div>
+          <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-semibold text-purple mb-3">
+                Become the greatest version of yourself
+              </h3>
+              <p class="text-sm sm:text-base text-black/80 leading-relaxed">
+                A live container from January through April, with recorded teachings and workbooks in between, to claim your biggest year. Limited to 25 seats.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-purple/15 text-xs tracking-[0.2em] uppercase text-teal font-semibold">
+              25-Seat Intimate Container
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3) ABOUT THE COURSE (EDITORIAL STORY + CONTAINER ARCHITECTURE)
+  ====================================================================== -->
+  <section class="bg-lavender text-inkNavy py-20 sm:py-28 border-b border-purple/15">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+        <!-- Left Editorial Header & Key Container Pillars -->
+        <div class="lg:col-span-5 lg:sticky lg:top-24 space-y-6">
+          <span class="text-xs tracking-[0.28em] uppercase text-purple font-semibold">The Container</span>
+          <h2 class="text-4xl sm:text-5xl font-semibold text-inkNavy leading-tight">
+            About the course
+          </h2>
+          <div class="w-16 h-0.5 bg-teal"></div>
+
+          <p class="font-serif italic text-2xl text-plum leading-snug">
+            “GOAT means Greatest Of All Time. It is also a play on words: 2027 is the Year of the Goat, and this is the year you become the greatest version of yourself.”
+          </p>
+
+          <!-- 4 Structured Container Cards -->
+          <div class="grid grid-cols-2 gap-3.5 pt-2">
+            <div class="bg-white/95 border border-purple/15 rounded-xl p-4 shadow-sm">
+              <span class="text-xs uppercase tracking-[0.18em] text-purple font-semibold block">Live Format</span>
+              <span class="text-xl font-serif font-semibold text-inkNavy mt-1 block">6 Live Weeks</span>
+              <span class="text-xs text-slate">Jan–Feb + April Comeback</span>
+            </div>
+            <div class="bg-white/95 border border-purple/15 rounded-xl p-4 shadow-sm">
+              <span class="text-xs uppercase tracking-[0.18em] text-purple font-semibold block">Lunar New Year</span>
+              <span class="text-xl font-serif font-semibold text-inkNavy mt-1 block">The GOAT Gate</span>
+              <span class="text-xs text-slate">Saturday, February 6</span>
+            </div>
+            <div class="bg-white/95 border border-purple/15 rounded-xl p-4 shadow-sm">
+              <span class="text-xs uppercase tracking-[0.18em] text-purple font-semibold block">Feb &amp; March</span>
+              <span class="text-xl font-serif font-semibold text-inkNavy mt-1 block">Deep Integration</span>
+              <span class="text-xs text-slate">Recorded Video/Audio + Workbooks</span>
+            </div>
+            <div class="bg-white/95 border border-purple/15 rounded-xl p-4 shadow-sm">
+              <span class="text-xs uppercase tracking-[0.18em] text-purple font-semibold block">Direct Access</span>
+              <span class="text-xl font-serif font-semibold text-inkNavy mt-1 block">Private Voxer</span>
+              <span class="text-xs text-slate">Jan–April (Separate from MMA)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Complete Verbatim Narrative -->
+        <div class="lg:col-span-7 bg-white border border-purple/15 rounded-2xl p-8 sm:p-11 shadow-sm space-y-6 text-base sm:text-lg text-black/85 leading-relaxed">
+          <p>
+            <strong class="font-semibold text-purple">GOAT means Greatest Of All Time.</strong> It is also a play on words: 2027 is the Year of the Goat, and this is the year you become the greatest version of yourself.
+          </p>
+
+          <p>
+            This is a live program with Michelle J. Lamont, from January to April, for women who are done playing small. If you have been stuck, if you do not see opportunities everywhere you go, if you have never tapped into your richest self, if you are still waiting for someone else to tell you what to do: this is the work. Michelle will teach you how to step into the spotlight, take up space, find opportunities everywhere you go, and be the boldest version of yourself. You will also work with your chart, the nodes, and the Chinese calendar. The spiritual tools are there. <strong class="font-semibold text-purple">The point is the spotlight.</strong>
+          </p>
+
+          <p>
+            GOAT Your Greatest Year Ever is 6 live weeks: 4 weeks from January into February, including <strong class="font-semibold text-purple">The GOAT Gate on Saturday, February 6 (Lunar New Year)</strong>, plus 2 weeks in April called <strong class="font-semibold text-purple">The Comeback</strong>. Live classes are Tuesdays and Thursdays at 7 PM ET. February and March are recorded video and audio classes, with a workbook for each month. You also get a private Voxer group with Michelle from January to April, separate from the MMA community. Kickoff is Sunday, January 10. First live class is Tuesday, January 12. <strong class="font-semibold text-purple">There are 25 seats.</strong>
+          </p>
+
+          <div class="pt-4 border-t border-purple/15">
+            <p class="font-serif italic text-2xl sm:text-3xl text-plum">
+              This is for you if you want a different life, and you are ready to stop taking the chance of doing nothing.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <button
+              onclick="openCheckoutModal('GOAT Your Greatest Year Ever', '$777 (Pay in Full)')"
+              class="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-purple hover:bg-plum text-white text-xs tracking-[0.22em] uppercase font-semibold transition cursor-pointer">
+              <span>Claim Your Spot</span>
+              <span class="text-gold">→</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4) TEXT AND MEDIA: MEET MICHELLE J. LAMONT
+  ====================================================================== -->
+  <section class="bg-plum text-white py-20 sm:py-28 border-b border-white/15">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+
+        <!-- Left Editorial Portrait Frame -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border-2 border-gold shadow-luxury editorial-card aspect-[4/5] bg-inkNavy">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/1000x1250/313453/F3C969?text=MICHELLE+J.+LAMONT';"
+              alt="Michelle J. Lamont — Spiritual Guide and Opportunity Architect"
+              class="w-full h-full object-cover object-top editorial-photo"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-plum via-plum/25 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 border-t border-gold/60 pt-4">
+              <span class="text-[11px] tracking-[0.26em] uppercase text-gold font-semibold block">Your Guide</span>
+              <span class="font-serif text-2xl text-white">Michelle J. Lamont</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Verbatim Bio & Signature Story -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-xs tracking-[0.28em] uppercase text-teal font-semibold">Meet Your Teacher</span>
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white">
+            Michelle J. Lamont
+          </h2>
+
+          <div class="space-y-5 text-base sm:text-lg text-white/90 font-normal leading-relaxed">
+            <p class="text-xl text-lilac font-medium">
+              Michelle J. Lamont is going to teach you how to be in the spotlight and claim your biggest year.
+            </p>
+
+            <p>
+              Her rare skill is this: she looks at every situation and asks, <em class="font-serif italic text-xl text-gold">how can I make that into something?</em> She knows how to turn any space into a space that creates opportunities, and that is what she will teach you.
+            </p>
+
+            <p>
+              She lives in Tampa, Florida. She is not a city spokesperson, and she has never done television there except for one interview. And still, when a hurricane hits, national media have called and asked her to come on air. That is the point of this work: being so fully yourself that the spotlight finds you, and you know how to walk into it.
+            </p>
+
+            <p>
+              People have told her she sees fifty things when the average person would not see one. In GOAT she will teach you how to look at your chart, the nodes, and the Chinese calendar. The whole point is still this: take up space, find opportunities everywhere you go, and become the boldest version of yourself.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-white/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <p class="font-serif italic text-2xl sm:text-3xl text-gold">
+              “You come in as your old self. You leave with the crown.”
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5) CURRICULUM (THE 5 CHAPTERS OF GOAT 2027)
+  ====================================================================== -->
+  <section class="bg-offWhite text-inkNavy py-20 sm:py-28 border-b border-purple/15">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs tracking-[0.28em] uppercase text-teal font-semibold">The Curriculum</span>
+        <h2 class="text-4xl sm:text-5xl font-semibold text-purple mt-3">
+          Inside the GOAT 2027 Arc
+        </h2>
+        <p class="text-sm sm:text-base text-slate mt-4">
+          Five structured chapters guiding you from January kickoff through The GOAT Gate, deep February–March integration, and April’s Comeback.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Chapter 1 -->
+        <div class="bg-lilac/70 border border-purple/15 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-purple transition">
+          <div class="flex items-start sm:items-center gap-5">
+            <span class="font-serif text-3xl sm:text-4xl italic text-brightPurple font-semibold">01</span>
+            <div>
+              <span class="text-[11px] tracking-[0.22em] uppercase text-teal font-semibold block">Chapter One</span>
+              <h3 class="text-2xl sm:text-3xl font-semibold text-inkNavy">Welcome to Your Greatest Year</h3>
+            </div>
+          </div>
+          <span class="text-xs tracking-[0.18em] uppercase text-slate font-medium sm:text-right">
+            Kickoff &amp; 2027 Alignment
+          </span>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="bg-lilac/70 border border-purple/15 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-purple transition">
+          <div class="flex items-start sm:items-center gap-5">
+            <span class="font-serif text-3xl sm:text-4xl italic text-brightPurple font-semibold">02</span>
+            <div>
+              <span class="text-[11px] tracking-[0.22em] uppercase text-teal font-semibold block">Chapter Two</span>
+              <h3 class="text-2xl sm:text-3xl font-semibold text-inkNavy">Stepping into the Spotlight</h3>
+            </div>
+          </div>
+          <span class="text-xs tracking-[0.18em] uppercase text-slate font-medium sm:text-right">
+            Taking Up Space &amp; Owning Rooms
+          </span>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="bg-lilac/70 border border-purple/15 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-purple transition">
+          <div class="flex items-start sm:items-center gap-5">
+            <span class="font-serif text-3xl sm:text-4xl italic text-brightPurple font-semibold">03</span>
+            <div>
+              <span class="text-[11px] tracking-[0.22em] uppercase text-teal font-semibold block">Chapter Three</span>
+              <h3 class="text-2xl sm:text-3xl font-semibold text-inkNavy">Finding Opportunities Everywhere</h3>
+            </div>
+          </div>
+          <span class="text-xs tracking-[0.18em] uppercase text-slate font-medium sm:text-right">
+            Chart, Nodes &amp; The GOAT Gate
+          </span>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="bg-lilac/70 border border-purple/15 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-purple transition">
+          <div class="flex items-start sm:items-center gap-5">
+            <span class="font-serif text-3xl sm:text-4xl italic text-brightPurple font-semibold">04</span>
+            <div>
+              <span class="text-[11px] tracking-[0.22em] uppercase text-teal font-semibold block">Chapter Four</span>
+              <h3 class="text-2xl sm:text-3xl font-semibold text-inkNavy">Seeing Yourself in the Spotlight</h3>
+            </div>
+          </div>
+          <span class="text-xs tracking-[0.18em] uppercase text-slate font-medium sm:text-right">
+            Feb–Mar Recorded Workbooks
+          </span>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="bg-lilac/70 border border-purple/15 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-purple transition">
+          <div class="flex items-start sm:items-center gap-5">
+            <span class="font-serif text-3xl sm:text-4xl italic text-brightPurple font-semibold">05</span>
+            <div>
+              <span class="text-[11px] tracking-[0.22em] uppercase text-teal font-semibold block">Chapter Five</span>
+              <h3 class="text-2xl sm:text-3xl font-semibold text-inkNavy">The Comeback and Beyond</h3>
+            </div>
+          </div>
+          <span class="text-xs tracking-[0.18em] uppercase text-slate font-medium sm:text-right">
+            April Live Crown Integration
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       6) CHOOSE YOUR LEVEL (3 INVESTMENT TIERS)
+  ====================================================================== -->
+  <section id="tiers" class="bg-lavender text-inkNavy py-20 sm:py-28 border-b border-purple/15">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs tracking-[0.28em] uppercase text-purple font-semibold">Enrollment Options</span>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-inkNavy mt-3">
+          Choose your level
+        </h2>
+        <p class="text-base sm:text-lg text-inkNavy/85 mt-3 font-normal">
+          All three levels include the GOAT class.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+        <!-- TIER 1: GOAT Your Greatest Year Ever (Featured Presale) -->
+        <div class="bg-white border-2 border-purple rounded-2xl p-8 sm:p-9 shadow-luxury flex flex-col justify-between relative">
+          <div class="absolute -top-3.5 left-8 px-4 py-1 rounded-full bg-gold text-inkNavy text-[11px] tracking-[0.22em] uppercase font-semibold shadow-sm">
+            25 Seats · Presale Active
+          </div>
+
+          <div>
+            <span class="text-xs tracking-[0.22em] uppercase text-teal font-semibold block mt-2">Level 01</span>
+            <h3 class="text-3xl font-semibold text-inkNavy mt-1">
+              GOAT Your Greatest Year Ever
+            </h3>
+
+            <div class="mt-6 pb-6 border-b border-purple/15">
+              <div class="flex items-baseline gap-3">
+                <span class="text-5xl font-serif font-semibold text-plum">$777</span>
+                <span class="text-sm text-slate">presale / <span class="line-through">$888</span> after</span>
+              </div>
+              <p class="text-xs text-black/80 mt-2 leading-relaxed">
+                Presale is $777 for the first 15 seats or until January 7, whichever comes first. Then $888.
+              </p>
+
+              <!-- Interactive Tier 1 Payment Plan Selector -->
+              <div class="mt-4">
+                <label for="tier1-plan" class="text-[11px] tracking-[0.18em] uppercase text-purple font-semibold block mb-1.5">
+                  Select Payment Option:
+                </label>
+                <select id="tier1-plan"
+                        class="w-full bg-offWhite border border-purple/25 rounded-xl px-3.5 py-2.5 text-sm text-inkNavy focus:outline-none focus:border-purple">
+                  <option value="$777 (Pay in Full)">Pay in full — $777</option>
+                  <option value="3 payments of $259">3 monthly payments of $259</option>
+                  <option value="6 payments of $129">6 monthly payments of $129</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Inclusions -->
+            <ul class="mt-6 space-y-3.5 text-sm text-black/85">
+              <li class="flex items-start gap-3">
+                <span class="text-teal mt-0.5 font-bold">✦</span>
+                <span><strong class="text-inkNavy">6 live weeks</strong> (January–February + April’s The Comeback)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-teal mt-0.5 font-bold">✦</span>
+                <span>Recorded video &amp; audio classes and monthly workbooks in February and March</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-teal mt-0.5 font-bold">✦</span>
+                <span>Private Voxer group with Michelle from January to April (separate from MMA)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-teal mt-0.5 font-bold">✦</span>
+                <span>25 seats total</span>
+              </li>
+            </ul>
+
+            <!-- Presale Bonus Box -->
+            <div class="mt-6 p-4 rounded-xl bg-cream border border-gold text-xs text-inkNavy leading-relaxed">
+              <strong class="text-plum uppercase tracking-wider block mb-1">Presale Bonus (First 15 Seats):</strong>
+              The first 15 to join get a free 30-minute private session with Michelle ($111 value), bookable February to December 2027 after the last live class in February.
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <button
+              onclick="selectTier1AndOpen()"
+              class="w-full py-4 px-6 rounded-xl bg-purple hover:bg-plum text-white font-semibold text-xs tracking-[0.22em] uppercase transition shadow-goldGlow cursor-pointer">
+              Claim Your Spot
+            </button>
+          </div>
+        </div>
+
+        <!-- TIER 2: GOAT Spotlight -->
+        <div class="bg-white/95 border border-purple/20 rounded-2xl p-8 sm:p-9 shadow-md flex flex-col justify-between">
+          <div>
+            <span class="text-xs tracking-[0.22em] uppercase text-brightPurple font-semibold block mt-2">Level 02 · Year-Long Expansion</span>
+            <h3 class="text-3xl font-semibold text-inkNavy mt-1">
+              GOAT Spotlight
+            </h3>
+
+            <div class="mt-6 pb-6 border-b border-purple/15">
+              <div class="flex items-baseline gap-3">
+                <span class="text-5xl font-serif font-semibold text-purple">$2,222</span>
+              </div>
+              <p class="text-xs text-black/80 mt-2">
+                Pay $2,222 in full, or <strong class="text-purple">12 monthly payments of $185</strong>.
+              </p>
+
+              <div class="mt-4">
+                <label for="tier2-plan" class="text-[11px] tracking-[0.18em] uppercase text-purple font-semibold block mb-1.5">
+                  Select Payment Option:
+                </label>
+                <select id="tier2-plan"
+                        class="w-full bg-offWhite border border-purple/25 rounded-xl px-3.5 py-2.5 text-sm text-inkNavy focus:outline-none focus:border-purple">
+                  <option value="$2,222 (Pay in Full)">Pay in full — $2,222</option>
+                  <option value="12 monthly payments of $185">12 monthly payments of $185</option>
+                </select>
+              </div>
+            </div>
+
+            <ul class="mt-6 space-y-3.5 text-sm text-black/85">
+              <li class="flex items-start gap-3">
+                <span class="text-brightPurple mt-0.5 font-bold">✦</span>
+                <span><strong class="text-purple">Everything in GOAT Your Greatest Year Ever</strong></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brightPurple mt-0.5 font-bold">✦</span>
+                <span>One group coaching call a month from February to December</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brightPurple mt-0.5 font-bold">✦</span>
+                <span>A small 2-day reset workshop each quarter</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brightPurple mt-0.5 font-bold">✦</span>
+                <span>A short private check-in with Michelle each quarter</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <button
+              onclick="selectTier2AndOpen()"
+              class="w-full py-4 px-6 rounded-xl bg-lilac border border-purple/30 text-purple hover:bg-purple hover:text-white font-semibold text-xs tracking-[0.22em] uppercase transition cursor-pointer">
+              Claim GOAT Spotlight
+            </button>
+          </div>
+        </div>
+
+        <!-- TIER 3: GOAT Legend -->
+        <div class="bg-plum text-white border-2 border-gold rounded-2xl p-8 sm:p-9 shadow-luxury flex flex-col justify-between relative">
+          <div class="absolute -top-3.5 left-8 px-4 py-1 rounded-full bg-inkNavy border border-gold text-gold text-[11px] tracking-[0.22em] uppercase font-semibold">
+            Limited to ~4 People
+          </div>
+
+          <div>
+            <span class="text-xs tracking-[0.22em] uppercase text-gold font-semibold block mt-2">Level 03 · Private 1:1 Mastery</span>
+            <h3 class="text-3xl font-semibold text-white mt-1">
+              GOAT Legend
+            </h3>
+
+            <div class="mt-6 pb-6 border-b border-white/20">
+              <div class="flex items-baseline gap-3">
+                <span class="text-5xl font-serif font-semibold text-gold">$5,555</span>
+              </div>
+              <p class="text-xs text-white/85 mt-2">
+                Pay $5,555, or <strong class="text-gold">18 monthly payments of $308</strong>.
+              </p>
+
+              <div class="mt-4">
+                <label for="tier3-plan" class="text-[11px] tracking-[0.18em] uppercase text-lilac font-semibold block mb-1.5">
+                  Select Payment Option:
+                </label>
+                <select id="tier3-plan"
+                        class="w-full bg-inkNavy border border-white/25 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold">
+                  <option value="$1,000 Deposit ($555 Off — Total $5,000)">$1,000 Deposit ($555 Off — Total $5,000)</option>
+                  <option value="$5,555 (Pay in Full)">Pay in full — $5,555</option>
+                  <option value="18 monthly payments of $308">18 monthly payments of $308</option>
+                </select>
+              </div>
+            </div>
+
+            <ul class="mt-6 space-y-3.5 text-sm text-white/90">
+              <li class="flex items-start gap-3">
+                <span class="text-gold mt-0.5 font-bold">✦</span>
+                <span><strong class="text-gold">Everything in GOAT Spotlight</strong></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-gold mt-0.5 font-bold">✦</span>
+                <span>A <strong class="text-white">private 1-hour session with Michelle every month</strong> for 12 months</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-gold mt-0.5 font-bold">✦</span>
+                <span>Intimate high-touch container limited to about 4 people</span>
+              </li>
+            </ul>
+
+            <!-- Deposit Offer Callout -->
+            <div class="mt-6 p-4 rounded-xl bg-white/10 border border-gold/50 text-xs text-white/95 leading-relaxed">
+              <strong class="text-gold uppercase tracking-wider block mb-1">Deposit Offer:</strong>
+              Enroll with a <strong class="text-gold">$1,000 deposit</strong> and get <strong class="text-gold">$555 off</strong> (total $5,000).
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <button
+              onclick="selectTier3AndOpen()"
+              class="w-full py-4 px-6 rounded-xl bg-gold hover:brightness-105 text-inkNavy font-semibold text-xs tracking-[0.22em] uppercase transition cursor-pointer">
+              Claim GOAT Legend
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       7) THE SCHEDULE (2027 LIVE & RECORDED DATES)
+  ====================================================================== -->
+  <section class="bg-sky-brand text-inkNavy py-20 sm:py-28 border-b border-iconNavy/15">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs tracking-[0.28em] uppercase text-iconNavy font-semibold">Calendar &amp; Rhythm</span>
+        <h2 class="text-4xl sm:text-5xl font-semibold text-inkNavy mt-3">
+          The schedule
+        </h2>
+        <p class="text-sm sm:text-base text-inkNavy mt-4 bg-white/90 border border-iconNavy/20 rounded-xl px-5 py-3.5 inline-block shadow-sm">
+          Live classes are at <strong>7 PM ET</strong> (7 PM Ecuador in January and February; 6 PM Ecuador in April, after the U.S. time change).
+        </p>
+      </div>
+
+      <!-- Structured Editorial Timeline -->
+      <div class="space-y-4">
+        <!-- Kickoff -->
+        <div class="bg-white border-2 border-purple/35 rounded-2xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+          <div>
+            <span class="text-xs tracking-[0.2em] uppercase text-purple font-semibold">Kickoff</span>
+            <h3 class="text-2xl font-serif font-semibold text-inkNavy mt-0.5">Sunday, January 10, 2027</h3>
+          </div>
+          <span class="text-xs uppercase tracking-[0.18em] text-plum font-semibold bg-lilac border border-purple/20 px-3.5 py-1.5 rounded-full self-start sm:self-center">
+            Opening Ceremony
+          </span>
+        </div>
+
+        <!-- Weeks 1 - 3 Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white/90 border border-purple/15 rounded-2xl p-6 shadow-sm">
+            <span class="text-xs tracking-[0.2em] uppercase text-iconNavy font-semibold block">Week 1</span>
+            <p class="text-lg font-serif font-semibold text-inkNavy mt-2">Tuesday, January 12 &amp;<br/>Thursday, January 14</p>
+            <span class="text-xs text-slate font-medium mt-2 block">7 PM ET</span>
+          </div>
+
+          <div class="bg-white/90 border border-purple/15 rounded-2xl p-6 shadow-sm">
+            <span class="text-xs tracking-[0.2em] uppercase text-iconNavy font-semibold block">Week 2</span>
+            <p class="text-lg font-serif font-semibold text-inkNavy mt-2">Tuesday, January 19 &amp;<br/>Thursday, January 21</p>
+            <span class="text-xs text-slate font-medium mt-2 block">7 PM ET</span>
+          </div>
+
+          <div class="bg-white/90 border border-purple/15 rounded-2xl p-6 shadow-sm">
+            <span class="text-xs tracking-[0.2em] uppercase text-iconNavy font-semibold block">Week 3</span>
+            <p class="text-lg font-serif font-semibold text-inkNavy mt-2">Tuesday, January 26 &amp;<br/>Thursday, January 28</p>
+            <span class="text-xs text-slate font-medium mt-2 block">7 PM ET</span>
+          </div>
+        </div>
+
+        <!-- Week 4: The GOAT Gate -->
+        <div class="bg-white border-2 border-teal/60 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+            <span class="text-xs tracking-[0.2em] uppercase text-teal font-semibold">Week 4 · Lunar New Year Special</span>
+            <span class="text-xs text-purple font-semibold">Saturday time to be announced</span>
+          </div>
+          <h3 class="text-2xl font-serif font-semibold text-inkNavy">
+            Tuesday, February 2 &amp; Saturday, February 6 — <span class="italic text-plum">The GOAT Gate</span>
+          </h3>
+          <p class="text-sm text-black/80 mt-2">
+            The GOAT Gate: Lunar New Year; this Saturday class replaces Thursday, February 4.
+          </p>
+        </div>
+
+        <!-- Feb & March -->
+        <div class="bg-white/90 border border-purple/15 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <span class="text-xs tracking-[0.2em] uppercase text-brightPurple font-semibold block">February &amp; March</span>
+          <h3 class="text-2xl font-serif font-semibold text-inkNavy mt-1">
+            Recorded Video &amp; Audio Classes + Monthly Workbooks
+          </h3>
+          <p class="text-sm text-black/80 mt-1.5">
+            Recorded video and audio classes, plus a dedicated workbook for each month while your Private Voxer group stays active.
+          </p>
+        </div>
+
+        <!-- April: The Comeback -->
+        <div class="bg-white border-2 border-purple/35 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <span class="text-xs tracking-[0.2em] uppercase text-purple font-semibold block">April · The Comeback</span>
+          <h3 class="text-2xl font-serif font-semibold text-inkNavy mt-1">
+            Tuesday, April 6 · Thursday, April 8 · Tuesday, April 13 · Thursday, April 15
+          </h3>
+          <p class="text-sm text-black/80 mt-1.5">
+            Live classes at 7 PM ET (6 PM Ecuador in April, after the U.S. time change).
+          </p>
+        </div>
+
+        <!-- Ongoing Support Note -->
+        <div class="bg-cream border border-gold rounded-2xl p-6 text-sm text-inkNavy space-y-2">
+          <p><strong class="text-plum">Private Voxer:</strong> January through April.</p>
+          <p><strong class="text-plum">Tier Extensions:</strong> GOAT Spotlight continues with monthly group coaching from February to December, plus a quarterly reset and a quarterly private check-in. GOAT Legend adds a private session each month for 12 months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       8) TESTIMONIALS ("WHAT CHANGES WHEN YOU WORK WITH MICHELLE")
+  ====================================================================== -->
+  <section class="bg-iceBlue text-inkNavy py-20 sm:py-28 border-b border-iconNavy/15">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs tracking-[0.28em] uppercase text-iconNavy font-semibold">Client Proof</span>
+        <h2 class="text-4xl sm:text-5xl font-semibold text-purple mt-3">
+          What changes when you work with Michelle
+        </h2>
+        <p class="text-base sm:text-lg text-inkNavy/85 mt-4 leading-relaxed">
+          Real words from women who have already done this work with Michelle: more confidence, more opportunities, more money, and a different way of seeing themselves.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Quote 1: Sully -->
+        <div class="bg-white border border-iconNavy/15 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="text-xs tracking-[0.22em] uppercase text-teal font-semibold">Transformational Review</span>
+              <span class="text-gold text-sm tracking-widest">★★★★★</span>
+            </div>
+            <blockquote class="text-base sm:text-lg text-black/85 leading-relaxed font-normal">
+              “Before this course, I was stuck in a career rut and undervaluing myself in all my relationships, especially the one with myself. Six weeks later, I’ve not only secured a substantial salary increase but more importantly – I now recognize and advocate for my worth with unshakable confidence. … Now I approach opportunities thinking “I deserve this” instead of “Am I good enough?” … This isn’t just theory; it’s a blueprint to get paid what you’re worth.”
+            </blockquote>
+          </div>
+          <div class="mt-6 pt-4 border-t border-purple/15 flex items-center justify-between">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">— Sully</span>
+            <span class="text-xs uppercase tracking-[0.18em] text-purple font-semibold">Confidence &amp; Worth</span>
+          </div>
+        </div>
+
+        <!-- Quote 2: Laura M. -->
+        <div class="bg-white border border-iconNavy/15 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="text-xs tracking-[0.22em] uppercase text-teal font-semibold">Manifesting Manifestor’s Masterclass</span>
+              <span class="text-gold text-sm tracking-widest">★★★★★</span>
+            </div>
+            <blockquote class="text-base sm:text-lg text-black/85 leading-relaxed font-normal">
+              “Have I manifested money working with Michelle? Yes… over 6 figures!! Did I manifest money during the masterclass? Yes, I did… but this course was not about the money for me… with this course came an awakening of self awareness… self love… self worth… and finding my power. I no longer accept anything or anyone that is not for my best interest and highest good… I no longer accept settling for less than I deserve…”
+            </blockquote>
+          </div>
+          <div class="mt-6 pt-4 border-t border-purple/15 flex items-center justify-between">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">— Laura M.</span>
+            <span class="text-xs uppercase tracking-[0.18em] text-purple font-semibold">Over 6 Figures &amp; Power</span>
+          </div>
+        </div>
+
+        <!-- Quote 3: Jessica (Verbatim spelling preserved) -->
+        <div class="bg-white border border-iconNavy/15 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="text-xs tracking-[0.22em] uppercase text-teal font-semibold">6 Weeks to Success</span>
+              <span class="text-gold text-sm tracking-widest">★★★★★</span>
+            </div>
+            <blockquote class="text-base sm:text-lg text-black/85 leading-relaxed font-normal">
+              “The beginning was hard because I was filled with so much fear! Michelle held me through the process and gave me tools to find my way out of it! The rest of the weeks I felt like I was flying! Through learning and growing, I became more confident in myself than I have every been! … You won’t recognize yourself at the end and you won’t regret it!”
+            </blockquote>
+          </div>
+          <div class="mt-6 pt-4 border-t border-purple/15 flex items-center justify-between">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">— Jessica</span>
+            <span class="text-xs uppercase tracking-[0.18em] text-purple font-semibold">6-Week Breakthrough</span>
+          </div>
+        </div>
+
+        <!-- Quote 4: Devin S. (Verbatim spelling preserved) -->
+        <div class="bg-white border border-iconNavy/15 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="text-xs tracking-[0.22em] uppercase text-teal font-semibold">Life Changing</span>
+              <span class="text-gold text-sm tracking-widest">★★★★★</span>
+            </div>
+            <blockquote class="text-base sm:text-lg text-black/85 leading-relaxed font-normal">
+              “Since meeting Michelle last year scrolling through Tiktok my life has transformed in every way. … I finally have found who I am and what my purpose is. … SHES A MANIFESTING MAGNET! Once you take 1 live class you’ll keep coming back for more. The best part is she connects spirituality with science, for me that’s what made it all click.”
+            </blockquote>
+          </div>
+          <div class="mt-6 pt-4 border-t border-purple/15 flex items-center justify-between">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">— Devin S.</span>
+            <span class="text-xs uppercase tracking-[0.18em] text-purple font-semibold">Spirituality &amp; Science</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       9) FAQ (INTERACTIVE EDITORIAL ACCORDION)
+  ====================================================================== -->
+  <section class="bg-offWhite text-inkNavy py-20 sm:py-28 border-b border-purple/15">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="text-center mb-14">
+        <span class="text-xs tracking-[0.28em] uppercase text-teal font-semibold">Details &amp; Clarity</span>
+        <h2 class="text-4xl sm:text-5xl font-semibold text-purple mt-3">
+          FAQ
+        </h2>
+      </div>
+
+      <div class="space-y-3.5" id="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item active bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">What does GOAT mean?</span>
+            <span class="faq-icon text-2xl text-brightPurple transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer px-6 sm:px-8">
+            <p class="pb-6 text-sm sm:text-base text-black/80 leading-relaxed">
+              Greatest Of All Time. It is also a play on the Year of the Goat. The work is about becoming the greatest version of yourself, not about an animal.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">Who is this for?</span>
+            <span class="faq-icon text-2xl text-brightPurple transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer px-6 sm:px-8">
+            <p class="pb-6 text-sm sm:text-base text-black/80 leading-relaxed">
+              Women who are ready to stop playing small, take up space, and claim their biggest year. If you have been stuck, doubtful, or waiting for permission, this is for you.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">What is included in Tier 1?</span>
+            <span class="faq-icon text-2xl text-brightPurple transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer px-6 sm:px-8">
+            <p class="pb-6 text-sm sm:text-base text-black/80 leading-relaxed">
+              6 live weeks, recorded teachings and workbooks in February and March, and a private Voxer group from January to April. Kickoff is January 10. First live class is January 12. Live classes are Tuesdays and Thursdays at 7 PM ET, plus The GOAT Gate on Saturday, February 6.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">How much is it, and is there a payment plan?</span>
+            <span class="faq-icon text-2xl text-brightPurple transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer px-6 sm:px-8">
+            <p class="pb-6 text-sm sm:text-base text-black/80 leading-relaxed">
+              Presale is $777 until the first 15 seats are filled, or until January 7, whichever comes first. After that, the price is $888. At the $777 price you can pay in full, or 3 payments of $259, or 6 payments of $129. GOAT Spotlight is $2,222, or 12 monthly payments of $185. GOAT Legend is $5,555, or 18 monthly payments of $308. For Legend, you can enroll with a $1,000 deposit and get $555 off (total $5,000).
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">Is there a bonus for joining early?</span>
+            <span class="faq-icon text-2xl text-brightPurple transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer px-6 sm:px-8">
+            <p class="pb-6 text-sm sm:text-base text-black/80 leading-relaxed">
+              Yes. The first 15 to join get a free 30-minute private session with Michelle ($111 value), bookable February to December 2027 after the last live class in February.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">How many seats are there?</span>
+            <span class="faq-icon text-2xl text-brightPurple transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer px-6 sm:px-8">
+            <p class="pb-6 text-sm sm:text-base text-black/80 leading-relaxed">
+              25 seats in GOAT Your Greatest Year Ever. GOAT Legend is limited to about 4 people.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">What is the difference between the three levels?</span>
+            <span class="faq-icon text-2xl text-brightPurple transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer px-6 sm:px-8">
+            <p class="pb-6 text-sm sm:text-base text-black/80 leading-relaxed">
+              Tier 1 is the GOAT class (January–April). Spotlight includes the class and adds monthly group coaching, a quarterly reset, and a quarterly private check-in through December. Legend includes Spotlight and adds a private 1-hour session with Michelle every month for 12 months.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item bg-white border border-purple/15 rounded-2xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full px-6 sm:px-8 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-serif text-2xl font-semibold text-inkNavy">Are there refunds?</span>
+            <span class="faq-icon text-2xl text-brightPurple transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer px-6 sm:px-8">
+            <p class="pb-6 text-sm sm:text-base text-black/80 leading-relaxed">
+              All sales are final. No refunds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       10) FINAL CTA SECTION + SULLY VERBATIM QUOTE
+  ====================================================================== -->
+  <section class="relative bg-plum text-white py-24 sm:py-32 overflow-hidden">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative z-10">
+      <span class="text-xs tracking-[0.3em] uppercase text-coral font-semibold">2027 Is Your Year</span>
+
+      <h2 class="text-4xl sm:text-6xl font-semibold text-white mt-4 leading-tight">
+        Claim your seat for your greatest year
+      </h2>
+
+      <div class="mt-8 space-y-4 text-base sm:text-lg text-white/90 font-normal leading-relaxed max-w-2xl mx-auto">
+        <p>
+          <strong class="text-lilac font-semibold">25 seats. Kickoff January 10, 2027.</strong> Presale is <strong class="text-gold font-semibold">$777</strong> until the first 15 seats are filled, or until January 7, whichever comes first. After that, the price is $888.
+        </p>
+        <p>
+          Pay in full for <strong class="text-gold">$777</strong>, or choose <strong class="text-gold">3 payments of $259</strong>, or <strong class="text-gold">6 payments of $129</strong>.
+        </p>
+        <p class="text-sm sm:text-base bg-cream border border-gold rounded-xl p-4 text-inkNavy shadow-sm">
+          <strong class="text-plum uppercase tracking-wider">Presale bonus:</strong> The first 15 to join get a free 30-minute private session with Michelle ($111 value), bookable February to December 2027 after the last live class in February.
+        </p>
+      </div>
+
+      <!-- Verbatim Sully Quote Near Price -->
+      <div class="my-10 max-w-xl mx-auto border-y border-white/20 py-5">
+        <p class="font-serif italic text-2xl sm:text-3xl text-lilac">
+          “This isn’t just theory; it’s a blueprint to get paid what you’re worth.”
+        </p>
+        <span class="text-xs tracking-[0.22em] uppercase text-gold font-semibold mt-2 block">— Sully</span>
+      </div>
+
+      <button
+        onclick="openCheckoutModal('GOAT Your Greatest Year Ever', '$777 (Pay in Full)')"
+        class="px-12 py-5 rounded-xl bg-gold hover:brightness-105 text-inkNavy font-semibold text-sm tracking-[0.24em] uppercase transition shadow-luxury cursor-pointer">
+        Claim Your Spot
+      </button>
+
+      <p class="text-xs tracking-[0.18em] uppercase text-white/75 mt-6">
+        All sales are final. No refunds.
+      </p>
+    </div>
+  </section>
+
+  <!-- Minimal Luxury Footer (No Menu Links) -->
+  <footer class="bg-inkNavy border-t border-white/15 py-10 text-center text-xs text-white/75 tracking-[0.2em] uppercase">
+    <p>© 2027 Michelle J. Lamont · GOAT 2027: Your Greatest Year Ever</p>
+  </footer>
+
+  <!-- =====================================================================
+       INTERACTIVE SPOT RESERVATION / CHECKOUT MODAL (NO alert() OR confirm())
+  ====================================================================== -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-inkNavy/80 backdrop-blur-md p-4">
+    <div class="bg-white border border-purple/25 rounded-2xl max-w-lg w-full p-7 sm:p-9 shadow-luxury relative text-inkNavy">
+      <button onclick="closeCheckoutModal()" aria-label="Close modal"
+              class="absolute top-5 right-5 w-9 h-9 rounded-full border border-purple/25 text-slate hover:text-plum hover:border-plum flex items-center justify-center transition cursor-pointer">
+        ✕
+      </button>
+
+      <span class="text-[11px] tracking-[0.26em] uppercase text-teal font-semibold">Seat Reservation</span>
+      <h3 class="text-3xl font-serif font-semibold text-inkNavy mt-1">
+        GOAT 2027 Enrollment
+      </h3>
+      <p class="text-xs text-slate mt-1">
+        Kickoff January 10, 2027 · Limited to 25 seats.
+      </p>
+
+      <!-- Reservation Form -->
+      <form id="reservation-form" onsubmit="handleReservationSubmit(event)" class="mt-6 space-y-4">
+        <div>
+          <label class="text-xs uppercase tracking-[0.18em] text-purple font-semibold block mb-1.5">Selected Level</label>
+          <select id="modal-tier" onchange="syncModalPlans()"
+                  class="w-full bg-offWhite border border-purple/25 rounded-xl px-4 py-3 text-sm text-inkNavy focus:outline-none focus:border-purple">
+            <option value="GOAT Your Greatest Year Ever">GOAT Your Greatest Year Ever (Tier 1)</option>
+            <option value="GOAT Spotlight">GOAT Spotlight (Tier 2)</option>
+            <option value="GOAT Legend">GOAT Legend (Tier 3)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="text-xs uppercase tracking-[0.18em] text-purple font-semibold block mb-1.5">Payment Option</label>
+          <select id="modal-plan"
+                  class="w-full bg-offWhite border border-purple/25 rounded-xl px-4 py-3 text-sm text-inkNavy focus:outline-none focus:border-purple">
+            <option value="$777 (Pay in Full)">$777 — Pay in Full (Presale)</option>
+            <option value="3 payments of $259">3 Monthly Payments of $259</option>
+            <option value="6 payments of $129">6 Monthly Payments of $129</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label class="text-xs uppercase tracking-[0.18em] text-purple font-semibold block mb-1.5">Full Name</label>
+            <input type="text" id="modal-name" required placeholder="Your full name"
+                   class="w-full bg-offWhite border border-purple/25 rounded-xl px-4 py-3 text-sm text-inkNavy placeholder-slate focus:outline-none focus:border-purple" />
+          </div>
+          <div>
+            <label class="text-xs uppercase tracking-[0.18em] text-purple font-semibold block mb-1.5">Email Address</label>
+            <input type="email" id="modal-email" required placeholder="you@example.com"
+                   class="w-full bg-offWhite border border-purple/25 rounded-xl px-4 py-3 text-sm text-inkNavy placeholder-slate focus:outline-none focus:border-purple" />
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-cream border border-gold text-xs text-inkNavy leading-relaxed">
+          Includes Private Voxer access (Jan–Apr) and eligibility for the <strong class="text-plum">First 15 Presale Bonus</strong> (free 30-min private session with Michelle, $111 value). All sales are final. No refunds.
+        </div>
+
+        <button type="submit"
+                class="w-full py-4 px-6 rounded-xl bg-purple hover:bg-plum text-white font-semibold text-xs tracking-[0.22em] uppercase transition shadow-goldGlow cursor-pointer">
+          Continue to Secure Seat
+        </button>
+      </form>
+
+      <!-- Confirmation State (Hidden until submit) -->
+      <div id="reservation-success" class="hidden mt-6 p-6 rounded-2xl bg-lilac border border-purple/30 text-center space-y-3">
+        <span class="inline-block px-3 py-1 rounded-full bg-teal/20 text-inkNavy font-semibold text-xs tracking-[0.2em] uppercase">
+          Seat Reserved
+        </span>
+        <h4 class="text-2xl font-serif font-semibold text-plum" id="success-headline">Welcome to GOAT 2027</h4>
+        <p class="text-sm text-inkNavy leading-relaxed" id="success-details"></p>
+        <p class="text-xs text-purple italic pt-2">
+          “Come in as you are. Leave with the crown.” — Michelle J. Lamont
+        </p>
+        <button onclick="closeCheckoutModal()"
+                class="mt-4 px-6 py-2.5 rounded-xl bg-purple text-white text-xs uppercase tracking-[0.2em] hover:bg-plum cursor-pointer">
+          Return to Page
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       JAVASCRIPT: ACCORDION, TIER PLAN SYNC & CHECKOUT MODAL
+  ====================================================================== -->
+  <script>
+    // Toggle FAQ Accordion Items
+    function toggleFaq(buttonEl) {
+      const item = buttonEl.closest('.faq-item');
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
+    // Payment Plans Map per Tier
+    const tierPlans = {
+      'GOAT Your Greatest Year Ever': [
+        '$777 (Pay in Full)',
+        '3 payments of $259',
+        '6 payments of $129'
+      ],
+      'GOAT Spotlight': [
+        '$2,222 (Pay in Full)',
+        '12 monthly payments of $185'
+      ],
+      'GOAT Legend': [
+        '$1,000 Deposit ($555 Off — Total $5,000)',
+        '$5,555 (Pay in Full)',
+        '18 monthly payments of $308'
+      ]
+    };
+
+    // Sync Modal Dropdown when Tier changes
+    function syncModalPlans(preferredPlan = null) {
+      const tierSelect = document.getElementById('modal-tier');
+      const planSelect = document.getElementById('modal-plan');
+      const selectedTier = tierSelect.value;
+      const plans = tierPlans[selectedTier] || [];
+
+      planSelect.innerHTML = '';
+      plans.forEach(plan => {
+        const option = document.createElement('option');
+        option.value = plan;
+        option.textContent = plan;
+        if (preferredPlan && plan === preferredPlan) {
+          option.selected = true;
+        }
+        planSelect.appendChild(option);
+      });
+    }
+
+    // Open Checkout Modal with Selected Tier & Plan
+    function openCheckoutModal(tierName, planName) {
+      const modal = document.getElementById('checkout-modal');
+      const form = document.getElementById('reservation-form');
+      const successBox = document.getElementById('reservation-success');
+
+      form.classList.remove('hidden');
+      successBox.classList.add('hidden');
+
+      document.getElementById('modal-tier').value = tierName;
+      syncModalPlans(planName);
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function selectTier1AndOpen() {
+      const plan = document.getElementById('tier1-plan').value;
+      openCheckoutModal('GOAT Your Greatest Year Ever', plan);
+    }
+
+    function selectTier2AndOpen() {
+      const plan = document.getElementById('tier2-plan').value;
+      openCheckoutModal('GOAT Spotlight', plan);
+    }
+
+    function selectTier3AndOpen() {
+      const plan = document.getElementById('tier3-plan').value;
+      openCheckoutModal('GOAT Legend', plan);
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Handle Form Submission cleanly without alert()
+    function handleReservationSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('modal-name').value.trim();
+      const email = document.getElementById('modal-email').value.trim();
+      const tier = document.getElementById('modal-tier').value;
+      const plan = document.getElementById('modal-plan').value;
+
+      document.getElementById('reservation-form').classList.add('hidden');
+      const successBox = document.getElementById('reservation-success');
+      successBox.classList.remove('hidden');
+
+      document.getElementById('success-headline').textContent = `You’re Locked In, ${name}`;
+      document.getElementById('success-details').innerHTML =
+        `Your spot in <strong class="text-purple">${tier}</strong> (<strong class="text-plum">${plan}</strong>) is reserved. Confirmation and onboarding details for Kickoff on <strong>January 10, 2027</strong> have been prepared for <span class="underline">${email}</span>.`;
+    }
+  </script>
+</body>
+</html>
