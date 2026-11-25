@@ -27,16 +27,17 @@ Todo esta en un solo archivo: `src/data/goat.ts`.
 
 ### Precios y fechas
 
-Al inicio del archivo esta el objeto `offer`. Ahi se cambian:
+Al inicio del archivo esta el objeto `offer`. Los precios confirmados son:
 
-- precios de preventa, precio posterior y planes de pago
-- cupos (25 en el curso, 15 del bono, cerca de 4 en Legend)
-- kickoff, primera clase y cierre de la preventa
-- la hora del sabado 6 de febrero, en `saturdayTime`
+- preventa `$777`, con el precio regular `$888` tachado
+- GOAT Spotlight `$2,222`
+- GOAT Legend `$5,555`
 
-Hoy esa hora dice `Saturday time to be announced`. Cuando este confirmada, se reemplaza esa frase.
+La preventa sigue hasta las primeras 15 plazas o hasta el 7 de enero, lo que ocurra primero. Despues el precio es `$888`.
 
-Los precios y las fechas siguen sin confirmar. El texto que se ve ahora es el del sample. Las frases de la pagina leen los valores de `offer`, asi que no hace falta repetir el mismo precio en cada seccion.
+Las cuotas y el deposito de `$1,000` no se muestran. Los pagos se van a revisar a mano mas adelante.
+
+Las fechas del sample estan confirmadas: kickoff el 10 de enero de 2027, clases en vivo martes y jueves a las 7 PM ET, y The GOAT Gate el sabado 6 de febrero. La hora de ese sabado sigue en `saturdayTime` como `Saturday time to be announced`.
 
 ### Enlaces de pago
 
@@ -46,49 +47,28 @@ En el mismo archivo, `checkout` tiene un enlace por nivel:
 - `tier2`: `#checkout-tier2`
 - `tier3`: `#checkout-tier3`
 
-Cada plan de pago tiene ademas su `checkoutUrl`. Hoy los planes de un mismo nivel apuntan al mismo enlace. Cuando Thinkific entregue un enlace distinto por plan, se cambia solo ese `checkoutUrl`. El selector del nivel actualiza el boton.
-
-Los botones son enlaces. No hay modal de reserva. La pagina no simula un pago y no muestra un mensaje de exito.
+Los botones son enlaces. No hay selector de cuotas, ni modal de reserva, ni mensaje de exito. Cuando Thinkific entregue el enlace real, se reemplaza el valor de ese nivel.
 
 ### Imagenes
 
-Las fotos de stock del sample se quitaron. En su lugar hay bloques marcados, por ejemplo `IMAGE: Michelle J. Lamont photo`.
+Las fotos que se ven ahora son las mismas del sample `goat-sample/goat-sample.html`, guardadas en local. Para pedir un cambio, nombra el espacio o el archivo.
 
-Para usar una foto real:
+| Espacio | Seccion | Archivo |
+| --- | --- | --- |
+| Fondo del hero | Hero | `public/images/hero.jpg` |
+| Own The Room | Hero | `public/images/own-the-room.jpg` |
+| Winter Arc | Hero | `public/images/winter-arc.jpg` |
+| The Crown | Hero | `public/images/the-crown.jpg` |
+| Step into the spotlight | Pilares | `public/images/pillar-spotlight.jpg` |
+| Find opportunities everywhere | Pilares | `public/images/pillar-opportunities.jpg` |
+| Become the greatest version of yourself | Pilares | `public/images/pillar-greatest.jpg` |
+| Retrato de Michelle J. Lamont | Meet Michelle J. Lamont | `public/images/michelle.jpg` |
 
-1. Guarda el archivo en `goat/public/images/`.
-2. En `src/data/goat.ts`, escribe la ruta local en `src`. Ejemplo: `src: "/images/michelle.jpg"`.
-3. Si `src` queda vacio, el archivo no existe, o la ruta es una URL externa, se sigue viendo el bloque marcado. Una URL de stock no se muestra.
+La ruta de cada espacio esta en `src`, dentro de `images` en `src/data/goat.ts`. `sourceUrl` guarda la URL original del sample. Si `src` queda vacio o el archivo no existe, se ve el bloque marcado.
 
-`suggestedSrc` indica el nombre pensado para cada espacio:
+Para cambiar una foto, reemplaza el archivo en `goat/public/images/` con el mismo nombre, o escribe otra ruta local en `src`.
 
-| Espacio | Archivo sugerido |
-| --- | --- |
-| Fondo del hero | `/images/hero.jpg` |
-| Own The Room | `/images/own-the-room.jpg` |
-| Winter Arc | `/images/winter-arc.jpg` |
-| The Crown | `/images/the-crown.jpg` |
-| Pilar 1 | `/images/pillar-spotlight.jpg` |
-| Pilar 2 | `/images/pillar-opportunities.jpg` |
-| Pilar 3 | `/images/pillar-greatest.jpg` |
-| Michelle J. Lamont | `/images/michelle.jpg` |
-
-Reglas para las fotos:
-
-- Personas reales y diversas: hombres, mujeres, grupos, varias razas.
-- Sin celebridades.
-- Ambiente navy y gold.
-- La foto de Michelle tiene que ser una foto real de Michelle J. Lamont. Nunca una persona de stock presentada como ella.
-
-El fondo del hero es opcional. Si `images.heroBackground.src` queda vacio, esa zona usa el fondo navy y gold. Las tres tarjetas del hero, los tres pilares y el retrato de Michelle muestran el bloque marcado.
-
-### Formulario de Kit
-
-`src/components/KitFormPlaceholder.astro` es opcional y no esta conectado. Los campos estan desactivados. No envia datos y no confirma un lugar.
-
-Cuando exista el formulario real de Kit, se reemplaza el contenido de ese componente. No agregues un mensaje de exito inventado.
-
-El texto visible del bloque tambien se puede ajustar en `kitForm`, dentro de `src/data/goat.ts`.
+El retrato de Michelle es la foto del sample, para que se pueda ver el encuadre. Cuando haya una foto real de Michelle J. Lamont, se reemplaza `public/images/michelle.jpg`.
 
 ## Como desplegar en Vercel, en un proyecto aparte
 

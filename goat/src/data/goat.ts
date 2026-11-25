@@ -3,10 +3,10 @@
  * Los textos de la pagina salen de aqui. Si cambias un valor de `offer`,
  * las frases que usan ese valor se actualizan solas.
  *
- * Fotos: deja `src` vacio para mostrar el bloque marcado.
- * Cuando el archivo exista en public/images/, escribe la ruta en `src`.
- * Personas reales y diversas. Sin celebridades.
- * La foto de Michelle tiene que ser una foto real de Michelle J. Lamont.
+ * Fotos: cada `src` apunta a un archivo en public/images/.
+ * Son las mismas fotos del sample, guardadas en local.
+ * `sourceUrl` es la URL original del sample.
+ * Si `src` queda vacio o el archivo no existe, se ve el bloque marcado.
  */
 
 export type Inline = {
@@ -19,12 +19,7 @@ export type ImageSlot = {
   suggestedSrc: string;
   alt: string;
   placeholder: string;
-};
-
-export type PaymentPlan = {
-  id: string;
-  label: string;
-  checkoutUrl: string;
+  sourceUrl: string;
 };
 
 export const offer = {
@@ -33,19 +28,8 @@ export const offer = {
   legendCapacity: '4',
   presalePrice: '$777',
   standardPrice: '$888',
-  tier1Plan3Count: '3',
-  tier1Plan3: '$259',
-  tier1Plan6Count: '6',
-  tier1Plan6: '$129',
   spotlightPrice: '$2,222',
-  spotlightPaymentCount: '12',
-  spotlightPayment: '$185',
   legendPrice: '$5,555',
-  legendPaymentCount: '18',
-  legendPayment: '$308',
-  legendDeposit: '$1,000',
-  legendDiscount: '$555',
-  legendDepositTotal: '$5,000',
   bonusLength: '30-minute',
   bonusValue: '$111',
   bonusWindow: 'February to December 2027',
@@ -94,52 +78,60 @@ export const seo = {
 
 export const images = {
   heroBackground: {
-    src: '',
+    src: '/images/hero.jpg',
     suggestedSrc: '/images/hero.jpg',
-    alt: 'A diverse group of adults celebrating a shared success',
-    placeholder: 'IMAGE: real diverse people - group celebrating success',
+    alt: 'Confident woman in a tailored coat',
+    placeholder: 'IMAGE: hero background from the sample',
+    sourceUrl: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=85',
   },
   ownTheRoom: {
-    src: '',
+    src: '/images/own-the-room.jpg',
     suggestedSrc: '/images/own-the-room.jpg',
-    alt: 'A diverse group of adults standing together with quiet confidence',
-    placeholder: 'IMAGE: real diverse people - owning the room',
+    alt: 'Tailored black blazer',
+    placeholder: 'IMAGE: Own The Room from the sample',
+    sourceUrl: 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=600&q=80',
   },
   winterArc: {
-    src: '',
+    src: '/images/winter-arc.jpg',
     suggestedSrc: '/images/winter-arc.jpg',
-    alt: 'A multiracial group in a focused winter work session',
-    placeholder: 'IMAGE: real diverse people - focused winter work, group',
+    alt: 'Winter cafe table with espresso and a journal',
+    placeholder: 'IMAGE: Winter Arc from the sample',
+    sourceUrl: 'https://images.unsplash.com/photo-1611288618898-e2a93f848cf6?auto=format&fit=crop&w=600&q=80',
   },
   theCrown: {
-    src: '',
+    src: '/images/the-crown.jpg',
     suggestedSrc: '/images/the-crown.jpg',
-    alt: 'Men and women of different backgrounds celebrating together',
-    placeholder: 'IMAGE: real diverse people - group celebrating success',
+    alt: 'Dinner table set for a toast',
+    placeholder: 'IMAGE: The Crown from the sample',
+    sourceUrl: 'https://images.unsplash.com/photo-1522322420883-600684d7f9f1?auto=format&fit=crop&w=600&q=80',
   },
   pillarSpotlight: {
-    src: '',
+    src: '/images/pillar-spotlight.jpg',
     suggestedSrc: '/images/pillar-spotlight.jpg',
-    alt: 'Diverse adults stepping forward into a shared spotlight',
-    placeholder: 'IMAGE: real diverse people - stepping into the spotlight',
+    alt: 'Editorial portrait in dark styling',
+    placeholder: 'IMAGE: Step into the spotlight from the sample',
+    sourceUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85',
   },
   pillarOpportunities: {
-    src: '',
+    src: '/images/pillar-opportunities.jpg',
     suggestedSrc: '/images/pillar-opportunities.jpg',
-    alt: 'A mixed group of adults finding opportunities together',
-    placeholder: 'IMAGE: real diverse people - finding opportunities together',
+    alt: 'Cafe table with a journal',
+    placeholder: 'IMAGE: Find opportunities everywhere from the sample',
+    sourceUrl: 'https://images.unsplash.com/photo-1564128153130-3c9cbaf1e0be?auto=format&fit=crop&w=900&q=85',
   },
   pillarGreatest: {
-    src: '',
+    src: '/images/pillar-greatest.jpg',
     suggestedSrc: '/images/pillar-greatest.jpg',
-    alt: 'A diverse group of adults standing as their fullest selves',
-    placeholder: 'IMAGE: real diverse people - becoming their greatest selves',
+    alt: 'Winter coat and sunglasses',
+    placeholder: 'IMAGE: Become the greatest version of yourself from the sample',
+    sourceUrl: 'https://images.unsplash.com/photo-1504276288612-c18c8df55e05?auto=format&fit=crop&w=900&q=85',
   },
   michelle: {
-    src: '',
+    src: '/images/michelle.jpg',
     suggestedSrc: '/images/michelle.jpg',
-    alt: 'Michelle J. Lamont',
+    alt: 'Portrait from the sample, shown in the Michelle J. Lamont slot',
     placeholder: 'IMAGE: Michelle J. Lamont photo',
+    sourceUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=85',
   },
 } satisfies Record<string, ImageSlot>;
 
@@ -181,8 +173,6 @@ export const hero = {
   priceAfter: `${offer.standardPrice} after`,
   priceWindow: `First ${offer.bonusSeats} seats or ${offer.presaleDeadlineShort}`,
   payFull: `Pay in full ${offer.presalePrice}`,
-  payPlan3: `${offer.tier1Plan3Count} \u00d7 ${offer.tier1Plan3}`,
-  payPlan6: `${offer.tier1Plan6Count} \u00d7 ${offer.tier1Plan6}`,
   bonusLabel: 'Presale Bonus:',
   bonusBody: bonusReceive,
   cta: 'Claim Your Spot',
@@ -333,60 +323,10 @@ export const curriculum = {
   ],
 };
 
-const tier1Plans: PaymentPlan[] = [
-  {
-    id: 'tier1-full',
-    label: `Pay in full \u2014 ${offer.presalePrice}`,
-    checkoutUrl: checkout.tier1,
-  },
-  {
-    id: 'tier1-3',
-    label: `${offer.tier1Plan3Count} monthly payments of ${offer.tier1Plan3}`,
-    checkoutUrl: checkout.tier1,
-  },
-  {
-    id: 'tier1-6',
-    label: `${offer.tier1Plan6Count} monthly payments of ${offer.tier1Plan6}`,
-    checkoutUrl: checkout.tier1,
-  },
-];
-
-const tier2Plans: PaymentPlan[] = [
-  {
-    id: 'tier2-full',
-    label: `Pay in full \u2014 ${offer.spotlightPrice}`,
-    checkoutUrl: checkout.tier2,
-  },
-  {
-    id: 'tier2-12',
-    label: `${offer.spotlightPaymentCount} monthly payments of ${offer.spotlightPayment}`,
-    checkoutUrl: checkout.tier2,
-  },
-];
-
-const tier3Plans: PaymentPlan[] = [
-  {
-    id: 'tier3-deposit',
-    label: `${offer.legendDeposit} Deposit (${offer.legendDiscount} Off \u2014 Total ${offer.legendDepositTotal})`,
-    checkoutUrl: checkout.tier3,
-  },
-  {
-    id: 'tier3-full',
-    label: `Pay in full \u2014 ${offer.legendPrice}`,
-    checkoutUrl: checkout.tier3,
-  },
-  {
-    id: 'tier3-18',
-    label: `${offer.legendPaymentCount} monthly payments of ${offer.legendPayment}`,
-    checkoutUrl: checkout.tier3,
-  },
-];
-
 export const tiers = {
   eyebrow: 'Enrollment Options',
   title: 'Choose your level',
   intro: 'All three levels include the GOAT class.',
-  planLabel: 'Select Payment Option:',
   items: [
     {
       id: 'tier1',
@@ -400,7 +340,7 @@ export const tiers = {
       priceSuffix: `presale / ${offer.standardPrice} after`,
       struck: offer.standardPrice,
       priceNote: `Presale is ${offer.presalePrice} for the first ${offer.bonusSeats} seats or until ${offer.presaleDeadline}, whichever comes first. Then ${offer.standardPrice}.`,
-      plans: tier1Plans,
+      checkoutUrl: checkout.tier1,
       inclusions: [
         {
           strong: '6 live weeks',
@@ -431,8 +371,8 @@ export const tiers = {
       price: offer.spotlightPrice,
       priceSuffix: '',
       struck: '',
-      priceNote: `Pay ${offer.spotlightPrice} in full, or ${offer.spotlightPaymentCount} monthly payments of ${offer.spotlightPayment}.`,
-      plans: tier2Plans,
+      priceNote: '',
+      checkoutUrl: checkout.tier2,
       inclusions: [
         { strong: 'Everything in GOAT Your Greatest Year Ever', rest: '' },
         { strong: '', rest: 'One group coaching call a month from February to December' },
@@ -454,8 +394,8 @@ export const tiers = {
       price: offer.legendPrice,
       priceSuffix: '',
       struck: '',
-      priceNote: `Pay ${offer.legendPrice}, or ${offer.legendPaymentCount} monthly payments of ${offer.legendPayment}.`,
-      plans: tier3Plans,
+      priceNote: '',
+      checkoutUrl: checkout.tier3,
       inclusions: [
         { strong: 'Everything in GOAT Spotlight', rest: '' },
         {
@@ -468,8 +408,8 @@ export const tiers = {
           rest: `Intimate high-touch container limited to about ${offer.legendCapacity} people`,
         },
       ],
-      bonusLabel: 'Deposit Offer:',
-      bonusBody: `Enroll with a ${offer.legendDeposit} deposit and get ${offer.legendDiscount} off (total ${offer.legendDepositTotal}).`,
+      bonusLabel: '',
+      bonusBody: '',
       cta: 'Claim GOAT Legend',
     },
   ],
@@ -570,8 +510,8 @@ export const faq = {
       answer: `6 live weeks, recorded teachings and workbooks in February and March, and a private Voxer group from January to April. Kickoff is ${offer.kickoffMonthDay}. First live class is ${offer.firstClassMonthDay}. Live classes are Tuesdays and Thursdays at ${offer.liveTime}, plus The GOAT Gate on ${offer.goatGateDate}.`,
     },
     {
-      question: 'How much is it, and is there a payment plan?',
-      answer: `Presale is ${offer.presalePrice} until the first ${offer.bonusSeats} seats are filled, or until ${offer.presaleDeadline}, whichever comes first. After that, the price is ${offer.standardPrice}. At the ${offer.presalePrice} price you can pay in full, or ${offer.tier1Plan3Count} payments of ${offer.tier1Plan3}, or ${offer.tier1Plan6Count} payments of ${offer.tier1Plan6}. GOAT Spotlight is ${offer.spotlightPrice}, or ${offer.spotlightPaymentCount} monthly payments of ${offer.spotlightPayment}. GOAT Legend is ${offer.legendPrice}, or ${offer.legendPaymentCount} monthly payments of ${offer.legendPayment}. For Legend, you can enroll with a ${offer.legendDeposit} deposit and get ${offer.legendDiscount} off (total ${offer.legendDepositTotal}).`,
+      question: 'How much is it?',
+      answer: `Presale is ${offer.presalePrice} until the first ${offer.bonusSeats} seats are filled, or until ${offer.presaleDeadline}, whichever comes first. After that, the price is ${offer.standardPrice}. GOAT Spotlight is ${offer.spotlightPrice}. GOAT Legend is ${offer.legendPrice}.`,
     },
     {
       question: 'Is there a bonus for joining early?',
@@ -598,7 +538,6 @@ export const finalCta = {
   title: 'Claim your seat for your greatest year',
   lead: `${offer.seats} seats. Kickoff ${kickoffLong}.`,
   presale: `Presale is ${offer.presalePrice} until the first ${offer.bonusSeats} seats are filled, or until ${offer.presaleDeadline}, whichever comes first. After that, the price is ${offer.standardPrice}.`,
-  plans: `Pay in full for ${offer.presalePrice}, or choose ${offer.tier1Plan3Count} payments of ${offer.tier1Plan3}, or ${offer.tier1Plan6Count} payments of ${offer.tier1Plan6}.`,
   bonusLabel: 'Presale bonus:',
   bonusBody: bonusGet,
   quote:
@@ -607,14 +546,6 @@ export const finalCta = {
   cta: 'Claim Your Spot',
   checkoutUrl: checkout.tier1,
   refunds: 'All sales are final. No refunds.',
-};
-
-export const kitForm = {
-  eyebrow: 'Optional placeholder',
-  title: 'Kit form',
-  body: 'Not connected. This form does not submit and does not confirm a seat.',
-  nameLabel: 'First name',
-  emailLabel: 'Email',
 };
 
 export const footer = {

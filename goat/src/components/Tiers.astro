@@ -52,31 +52,9 @@ import CtaLink from './CtaLink.astro';
                       </span>
                     )}
                   </p>
-                  <p class:list={['mt-2 text-xs leading-relaxed', dark ? 'text-ivory' : 'text-ink-soft']}>{tier.priceNote}</p>
-
-                  <div class="mt-4">
-                    <label for={`${tier.id}-plan`} class:list={['mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.16em]', dark ? 'text-gold-300' : 'text-gold-ink']}>
-                      {tiers.planLabel}
-                    </label>
-                    <select
-                      id={`${tier.id}-plan`}
-                      data-plan-select
-                      data-plan-target={`${tier.id}-cta`}
-                      class:list={[
-                        'min-h-12 w-full rounded-xl border px-3.5 py-2.5 text-sm',
-                        dark
-                          ? 'border-gold-300/40 bg-navy-900 text-ivory'
-                          : 'border-navy-800/20 bg-cream text-navy-950',
-                      ]}
-                      style={dark ? 'color-scheme: dark' : 'color-scheme: light'}
-                    >
-                      {tier.plans.map((plan, index) => (
-                        <option value={plan.checkoutUrl} data-url={plan.checkoutUrl} selected={index === 0}>
-                          {plan.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                  {tier.priceNote && (
+                    <p class:list={['mt-2 text-xs leading-relaxed', dark ? 'text-ivory' : 'text-ink-soft']}>{tier.priceNote}</p>
+                  )}
                 </div>
 
                 <ul class="mt-6 space-y-3.5 text-sm">
@@ -104,7 +82,7 @@ import CtaLink from './CtaLink.astro';
 
               <CtaLink
                 id={`${tier.id}-cta`}
-                href={tier.plans[0]?.checkoutUrl ?? `#${tier.anchor}`}
+                href={tier.checkoutUrl}
                 variant={dark ? 'gold' : tier.featured ? 'gold' : 'outline'}
                 class="mt-8 w-full"
               >
@@ -117,27 +95,3 @@ import CtaLink from './CtaLink.astro';
     </div>
   </div>
 </section>
-
-<script>
-  const bindPlans = () => {
-    document.querySelectorAll('[data-plan-select]').forEach((node) => {
-      if (!(node instanceof HTMLSelectElement)) return;
-      if (node.dataset.bound === 'true') return;
-      node.dataset.bound = 'true';
-      const target = node.dataset.planTarget;
-      if (!target) return;
-      const link = document.getElementById(target);
-      if (!(link instanceof HTMLAnchorElement)) return;
-      const apply = () => {
-        const selected = node.selectedOptions[0];
-        const url = selected?.dataset.url;
-        if (url) link.href = url;
-      };
-      node.addEventListener('change', apply);
-      apply();
-    });
-  };
-
-  bindPlans();
-  document.addEventListener('astro:page-load', bindPlans);
-</script>
