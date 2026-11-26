@@ -180,3 +180,31 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Acceleration | Niveles | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
 | Mastery | Niveles | `/images/client-avatar-1.jpg` | https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=faces |
 | Voxer | Acceso diario | `/images/michelle-headshot-square.png` | https://www.michellejlamont.com/wp-content/uploads/2022/07/mjl-web-photos-square2-1.png |
+
+## 6. The Immersion (`/the-immersion`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `the-immersion.html` ahora es `/the-immersion`, con el dia, lo incluido, los tres planes y las condiciones del sample.
+2. El audio de 432Hz que se simulaba (03:33) quedo en un espacio de embed vacio.
+3. Los botones de pago y la solicitud no cobran ni confirman un envio. Dicen placeholder.
+4. La foto que el sample presentaba como Michelle en el agua se reemplazo por una foto real. El atardecer y el bosque siguen siendo stock.
+5. Se elimino `the-immersion.html`. El contenido editable esta en `src/data/the-immersion.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Confirmar precios: $6,500, 2 x $3,400 y 3 x $2,350, el bono de Voxer de $2,500 y el valor de MMA de $1,997.
+2. Confirmar que solo hay 2 fechas al mes, que los pagos no son reembolsables y que el viaje corre por cuenta del cliente.
+3. Conectar el checkout y la solicitud.
+4. Pasar el audio real de 432Hz.
+5. Confirmar el testimonio de G. Reynolds y la cifra de $1.2M.
+6. Decidir si el dia virtual por Zoom debe seguir en el formulario.
+7. La foto de stock del farol en la playa (unsplash 1509198397868) no se uso como retrato de Michelle. Decir si hay que colocarla.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Fondo del hero | Hero | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
+| Cuencos | Audio 432Hz | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
+| Retrato de Michelle | Testimonio | `/images/michelle-portrait-2022.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/08/Michelle-J-Lamont-00503.jpg |
