@@ -259,6 +259,31 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | --- | --- | --- | --- |
 | Sin fotos | Toda la pagina | Ninguno | El sample de esta pagina no usaba imagenes de personas en el texto extraido. |
 
+## 11. Blog (`/blog`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `blog.html` ahora es `/blog`, con los nueve extractos del sample y sus tiempos de lectura.
+2. No hay paginas de articulo completas porque el sample solo mostraba la tarjeta. El enlace "leer articulo" no abre un texto inventado.
+3. El sample decia 9 de 48. Los otros 39 no estan en el HTML, asi que no se inventaron.
+4. El calendario de auditoria y el audio gratis de 7 minutos no envian nada.
+5. Los filtros si agrupan las nueve notas.
+6. El contenido editable esta en `src/data/blog.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Pasar los articulos completos, o confirmar que estos extractos alcanzan.
+2. Confirmar la cifra de 48 publicaciones y de 65,000+ personas en la lista.
+3. Conectar Kit para el audio de 7 minutos.
+4. Conectar el calendario de la auditoria de 15 minutos.
+5. Decidir las imagenes de cada nota. Hoy se reutiliza stock del sample y, en un caso, el retrato real de Michelle.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Notas | Archivo | Varias en `src/data/blog.ts` | Reutilizan fotos ya descargadas del sample y del sitio en vivo. No hay fotos nuevas solo para el blog. |
+
 ## 10. Speaking (`/speaking`)
 
 ### a) Qué cambió respecto al sample HTML

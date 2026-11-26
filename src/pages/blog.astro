@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { articles, blogAudio, blogAudit, blogCtas, blogFilters, blogFooter, blogSeo } from '../data/blog';
+const featured = articles.find((article) => article.featured);
+const rest = articles.filter((article) => !article.featured);
+---
+
+<BaseLayout title={blogSeo.title} description={blogSeo.description} announcement={null} headerCtas={blogCtas} footer={blogFooter}>
+  <section class="py-16 sunset-gradient text-center">
+    <p class="text-xs font-bold uppercase tracking-[0.25em] text-brand-sunsetPeach">Quantum Teachings & Articles</p>
+    <h1 class="font-serif text-5xl font-bold text-brand-deepPurple mt-2">Manifestation Blog for Abundance</h1>
+    <p class="max-w-3xl mx-auto text-gray-700 mt-4">Explore master manifestation tips, neuro-reticular rewiring, nervous system regulation, and quantum laws to collapse timelines into physical reality.</p>
+  </section>
+
+  {featured && (
+    <section class="py-12 bg-white">
+      <a href="#archive" class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+        <img src={featured.image} alt="" class="rounded-3xl h-80 w-full object-cover" />
+        <div>
+          <p class="text-xs font-bold uppercase text-brand-sunsetPeach">Editor's Channeled Pick · {featured.minutes}</p>
+          <h2 class="font-serif text-3xl font-bold text-brand-deepPurple mt-2">{featured.title}</h2>
+          <p class="text-sm text-gray-600 mt-3">{featured.excerpt}</p>
+          <p class="text-xs text-gray-500 mt-3">The sample did not include a full article page. This excerpt is the copy that was on the card.</p>
+        </div>
+      </a>
+    </section>
+  )}
+
+  <section id="archive" class="py-12 bg-[#faf6ff]">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">All Manifestation Transmissions (9 Articles)</h2>
+      <p class="text-xs text-gray-500 mt-2 mb-4">The sample said "Showing 9 of 48". Only these nine excerpts exist in the HTML. Older posts are not loaded.</p>
+      <div class="flex flex-wrap gap-2 mb-6">
+        {blogFilters.map((filter, index) => (
+          <button type="button" data-blog-filter={filter.id} class:list={['px-4 py-2 rounded-full text-xs font-bold', index === 0 ? 'bg-brand-deepPurple text-white' : 'bg-white border border-purple-200']}>{filter.label}</button>
+        ))}
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {rest.map((article) => (
+          <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-100" data-category={article.category}>
+            <img src={article.image} alt="" class="h-40 w-full object-cover" />
+            <div class="p-5">
+              <p class="text-[11px] font-bold uppercase text-brand-sunsetPeach">{article.minutes} · By Michelle J. Lamont</p>
+              <h3 class="font-serif text-xl font-bold text-brand-deepPurple mt-2">{article.title}</h3>
+              <p class="text-xs text-gray-600 mt-2">{article.excerpt}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 space-y-3">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">{blogAudit.title}</h2>
+      <p class="text-sm text-gray-700">{blogAudit.body}</p>
+      <p class="text-xs text-gray-500">{blogAudit.note}</p>
+      <a href="/sacred-containers" class="inline-flex text-xs font-bold uppercase text-brand-amethyst">Explore All 1:1 Mentorship Containers</a>
+      <button type="button" disabled class="block px-6 py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white opacity-70 cursor-not-allowed">{blogAudit.button}</button>
+    </div>
+  </section>
+
+  <section class="py-16 bg-[#faf6ff]">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">{blogAudio.title}</h2>
+      <p class="text-sm text-gray-700 mt-2">{blogAudio.body}</p>
+      <p class="text-xs font-semibold text-brand-sunsetPeach mt-2">{blogAudio.note}</p>
+      <button type="button" disabled class="mt-4 px-6 py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white opacity-70 cursor-not-allowed">{blogAudio.button}</button>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('[data-blog-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const id = button.getAttribute('data-blog-filter');
+      document.querySelectorAll('[data-blog-filter]').forEach((item) => {
+        item.className = 'px-4 py-2 rounded-full text-xs font-bold bg-white border border-purple-200';
+      });
+      button.className = 'px-4 py-2 rounded-full text-xs font-bold bg-brand-deepPurple text-white';
+      document.querySelectorAll('.blog-card').forEach((card) => {
+        const match = id === 'all' || card.getAttribute('data-category') === id;
+        card.classList.toggle('hidden', !match);
+      });
+    });
+  });
+</script>
