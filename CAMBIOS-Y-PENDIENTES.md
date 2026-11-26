@@ -84,3 +84,33 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Curso Rich & Regulated | Biblioteca | `/images/course-rich-regulated.jpg` | https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&auto=format&fit=crop&q=80 |
 | Curso Wreck This Shadow Journal | Biblioteca | `/images/course-shadow-journal.jpg` | https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=900&auto=format&fit=crop&q=80 |
 | Imagen Open Graph | SEO | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
+
+## 3. About (`/about`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `about.html` ahora es `/about`, con la historia, los pilares, la oferta y los testimonios del sample.
+2. El audio de 60 segundos que simulaba una transmision quedo en un espacio de embed vacio.
+3. El modal de contacto ya no confirma un envio. Muestra la categoria y un boton deshabilitado.
+4. Los retratos que el sample presentaba como Michelle se reemplazaron por fotos reales del sitio en vivo. La playa y el bosque de los capitulos 1 y 2 siguen siendo stock.
+5. Learn About Academy apunta a `/academy`. El episodio 310 apunta a `/podcast`.
+6. Se elimino `about.html`. El contenido editable esta en `src/data/about.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Confirmar las cifras: 150K+ seguidores, 320+ episodios, 20+ anos, Top 1%, 750,000+ descargas y 1,200+ resenas.
+2. Pasar el audio real de la transmision de 60 segundos.
+3. Confirmar los testimonios de Karen Miller, Daniel Ramirez y Amanda Lewis.
+4. Decidir a donde debe ir la solicitud de mentoria, speaking y retiros. Hoy no se envia.
+5. Revisar si el relato del orfanato, The Great Erasure y los destinos Sedona, Bali y Tulum deben quedarse tal como estan en el sample.
+6. Elegir si el retrato principal y el del capitulo 3 son las fotos correctas.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Retrato principal | Hero | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
+| Capitulo 01 | Historia | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
+| Capitulo 02 | Historia | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
+| Capitulo 03 | Historia | `/images/michelle-portrait-2022.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/08/Michelle-J-Lamont-00503.jpg |
+| Imagen Open Graph | SEO | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
