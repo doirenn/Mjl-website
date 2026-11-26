@@ -1,0 +1,56 @@
+---
+import { brand, footer, socialPlaceholders } from '../data/site';
+---
+
+<footer class="bg-brand-deepPurple text-white pt-16 pb-12 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+      <div class="lg:col-span-5 space-y-4">
+        <a href="/" class="inline-block">
+          <span class="font-serif text-2xl font-bold tracking-tight text-white">{brand.name}</span>
+          <span class="block text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">{brand.mark}</span>
+        </a>
+        <p class="text-xs text-purple-200 max-w-sm leading-relaxed">{footer.blurb}</p>
+        <div class="flex space-x-4 pt-2">
+          {
+            socialPlaceholders.map((item) => (
+              <a
+                href="#placeholder"
+                class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-sunsetPeach hover:text-brand-deepPurple flex items-center justify-center text-sm transition-all"
+                aria-label={item.label}
+                title={item.label}
+              >
+                <i class={item.icon}></i>
+              </a>
+            ))
+          }
+        </div>
+        <p class="text-[11px] text-purple-300">Social links are placeholders and are not connected.</p>
+      </div>
+
+      <div class="lg:col-span-3 space-y-3">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Quick Exploration</p>
+        <ul class="space-y-2 text-xs text-purple-200">
+          {footer.explore.map((link) => (
+            <li><a href={link.href} class="hover:text-white transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="lg:col-span-4 space-y-3">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Disclaimer & Integrity</p>
+        <p class="text-[11px] text-purple-300 leading-relaxed">{footer.disclaimer}</p>
+        <p class="text-[11px] text-purple-400">{footer.copyright}</p>
+      </div>
+    </div>
+
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300">
+      <p>{footer.signoff}</p>
+      <div class="flex space-x-6 mt-3 sm:mt-0">
+        <a href="#placeholder" class="hover:text-white" title="Placeholder: Privacy Policy">Placeholder: Privacy Policy</a>
+        <a href="#placeholder" class="hover:text-white" title="Placeholder: Terms of Service">Placeholder: Terms of Service</a>
+        <a href="/contact" class="hover:text-white">Contact Support</a>
+      </div>
+    </div>
+  </div>
+</footer>

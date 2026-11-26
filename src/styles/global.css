@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-deepPurple: #2d154a;
+  --color-brand-amethyst: #4a2574;
+  --color-brand-violet: #683b9c;
+  --color-brand-lavender: #efe6f7;
+  --color-brand-softLilac: #f7f2fb;
+  --color-brand-sunsetPeach: #f89a80;
+  --color-brand-warmRose: #efa897;
+  --color-brand-paleBlush: #fdf3f0;
+  --color-brand-celestialBlue: #3a7bd5;
+  --color-brand-powderBlue: #eef4ff;
+  --color-brand-gold: #dfb15b;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  list-style: none;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-dark {
+  background: rgba(45, 21, 74, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sunset-gradient {
+  background: linear-gradient(135deg, #f7dcd5 0%, #fad2ca 25%, #e8e4f5 60%, #ded9f7 100%);
+}
+
+.spiritual-gradient {
+  background: linear-gradient(135deg, #2d154a 0%, #4a2574 55%, #683b9c 100%);
+}
+
+.aurora-glow {
+  position: absolute;
+  filter: blur(80px);
+  opacity: 0.5;
+  pointer-events: none;
+  border-radius: 9999px;
+  z-index: 0;
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdf3f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5a9d8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9b72b8;
+}

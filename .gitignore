@@ -1,3 +1,6 @@
 ﻿.vercel
 michelle_j_lamont_*.html
 manifesting_miracles_academy_memberships.html
+node_modules
+dist
+.astro

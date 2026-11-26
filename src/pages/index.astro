@@ -1,0 +1,616 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmbedSlot from '../components/EmbedSlot.astro';
+import { aboutTeaser, academy, booking, faqs, hero, homeSeo, leadMagnet, pathways, podcastTeaser, pressRow, quiz, reviews } from '../data/home';
+---
+
+<BaseLayout title={homeSeo.title} description={homeSeo.description} ogImage={homeSeo.ogImage} ogAlt={homeSeo.ogAlt}>
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden sunset-gradient">
+    <div class="aurora-glow w-96 h-96 bg-brand-sunsetPeach top-0 -left-20"></div>
+    <div class="aurora-glow w-[30rem] h-[30rem] bg-purple-300 bottom-0 right-0"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-brand-sunsetPeach/40 text-xs font-semibold text-brand-deepPurple shadow-sm">
+            <i class="fa-solid fa-sun text-brand-sunsetPeach"></i>
+            <span>{hero.eyebrow}</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-deepPurple leading-[1.15] tracking-tight">
+            {hero.titleLead} <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-amethyst to-brand-sunsetPeach">{hero.titleAccent}</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            {hero.body} <strong>{hero.bodyStrong}</strong> {hero.bodyTail}
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href={hero.primary.href} class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+              {hero.primary.label}
+              <i class="fa-solid fa-arrow-right ml-2 text-brand-sunsetPeach"></i>
+            </a>
+            <a href={hero.secondary.href} class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-bold tracking-wide text-brand-deepPurple bg-white/80 hover:bg-white border border-purple-200/60 shadow-md hover:shadow-lg transition-all duration-300">
+              <i class="fa-solid fa-circle-play mr-2.5 text-brand-sunsetPeach text-lg"></i>
+              {hero.secondary.label}
+            </a>
+          </div>
+
+          <div class="pt-6 border-t border-purple-200/60 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <div class="flex -space-x-2">
+                {hero.avatars.map((avatar) => (
+                  <img class="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover" src={avatar.src} alt={avatar.alt} />
+                ))}
+              </div>
+              <div>
+                <div class="flex text-amber-400 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-xs font-semibold text-gray-700">{hero.rating}</span>
+              </div>
+            </div>
+            <div class="h-8 w-px bg-purple-200/60 hidden sm:block"></div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-podcast text-brand-amethyst text-xl"></i>
+              <span class="text-xs font-semibold text-gray-700">{hero.podcastProof}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+              <img src={hero.scene.src} alt={hero.scene.alt} class="w-full h-[460px] object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/70 via-brand-amethyst/20 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-2xl shadow-lg border border-white/60">
+                <div class="flex items-center space-x-3.5">
+                  <img src={hero.portrait.src} alt={hero.portrait.alt} class="w-14 h-14 rounded-full border-2 border-brand-sunsetPeach object-cover shadow-sm bg-white" />
+                  <div>
+                    <p class="font-serif font-bold text-brand-deepPurple text-base">Michelle J. Lamont</p>
+                    <p class="text-xs text-gray-600">"{hero.quote}"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-4 -left-4 glass-card px-4 py-2.5 rounded-2xl shadow-xl border border-white/70 animate-float flex items-center space-x-2.5">
+              <div class="w-8 h-8 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach flex items-center justify-center font-bold">
+                <i class="fa-solid fa-infinity"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">{hero.alignmentLabel}</p>
+                <p class="text-xs font-bold text-brand-deepPurple">{hero.alignmentValue}</p>
+              </div>
+            </div>
+            <div class="absolute -bottom-6 -right-4 glass-card px-4 py-3 rounded-2xl shadow-xl border border-white/70 hidden sm:flex items-center space-x-3">
+              <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-brand-deepPurple">{hero.programName}</p>
+                <p class="text-[11px] text-gray-500">{hero.programDetail}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 bg-white border-y border-purple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs uppercase tracking-[0.25em] font-semibold text-gray-400 mb-6">{pressRow.label}</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 text-gray-400 font-serif">
+        {pressRow.items.map((item) => (
+          <div class="flex items-center gap-2">
+            {item.icon && <i class:list={[item.icon, 'text-2xl', item.iconClass]}></i>}
+            <span class:list={['font-bold tracking-tight text-lg text-gray-600', item.serif && 'font-serif italic']}>{item.name}</span>
+            {item.extra && <span class="text-xs uppercase tracking-wider text-gray-400 font-sans">{item.extra}</span>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="academy" class="py-20 bg-[#faf6ff] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{academy.eyebrow}</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">{academy.title}</h2>
+        <p class="text-gray-600 text-base sm:text-lg">{academy.intro}</p>
+      </div>
+
+      <div class="spiritual-gradient rounded-3xl p-6 sm:p-10 lg:p-12 text-white shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full border border-white/10 pointer-events-none"></div>
+        <div class="absolute -right-10 -bottom-10 w-60 h-60 rounded-full border border-white/15 pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative group">
+              <div class="w-64 sm:w-72 h-96 rounded-2xl bg-gradient-to-br from-brand-sunsetPeach via-brand-amethyst to-brand-deepPurple p-1 shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-full bg-[#1e0c33] rounded-2xl p-6 flex flex-col justify-between border border-white/20 text-center relative overflow-hidden">
+                  <div class="absolute top-0 right-0 w-32 h-32 bg-brand-sunsetPeach/20 rounded-full blur-2xl"></div>
+                  <div class="text-center">
+                    <i class="fa-solid fa-compass text-brand-gold text-3xl mb-3"></i>
+                    <p class="text-xs tracking-[0.25em] text-brand-sunsetPeach uppercase font-semibold">{academy.cardEyebrow}</p>
+                    <h3 class="font-serif text-2xl font-bold text-white mt-1">{academy.cardTitle}</h3>
+                    <p class="text-[11px] text-gray-300 mt-2">{academy.cardBody}</p>
+                  </div>
+                  <div class="py-4 border-y border-white/10 my-auto space-y-1">
+                    {academy.cardPoints.map((point, index) => (
+                      <p class:list={['text-xs', index === 0 ? 'text-brand-gold font-medium' : 'text-gray-300']}>{point}</p>
+                    ))}
+                  </div>
+                  <a href="#placeholder" class="w-full py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-brand-deepPurple hover:bg-brand-sunsetPeach hover:text-white transition-colors">
+                    {academy.cardCta}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-block px-3 py-1 rounded-full bg-white/15 text-brand-sunsetPeach text-xs font-bold tracking-wide uppercase">{academy.badge}</div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold leading-snug">{academy.headline}</h3>
+            <p class="text-purple-100 text-sm sm:text-base leading-relaxed">{academy.body}</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+              {academy.pillars.map((pillar) => (
+                <div class="flex items-start space-x-3 bg-white/10 p-3.5 rounded-xl backdrop-blur-sm border border-white/10">
+                  <i class:list={[pillar.icon, 'text-brand-sunsetPeach mt-1 text-base']}></i>
+                  <div>
+                    <h4 class="text-sm font-bold">{pillar.title}</h4>
+                    <p class="text-xs text-purple-200 mt-0.5">{pillar.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+              <a href={academy.cta.href} class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-sm tracking-wide bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg transition-all">
+                {academy.cta.label}
+                <i class="fa-solid fa-arrow-right ml-2"></i>
+              </a>
+              <span class="text-xs text-purple-200">
+                <i class="fa-solid fa-shield-halved text-brand-gold mr-1"></i> {academy.guarantee}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="py-16 bg-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-10 border border-purple-100 shadow-xl text-center relative overflow-hidden">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-wider mb-4">
+          <i class="fa-solid fa-sparkles"></i> {quiz.eyebrow}
+        </div>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-deepPurple mb-2">{quiz.title}</h3>
+        <p class="text-gray-600 text-sm max-w-xl mx-auto mb-8">{quiz.intro}</p>
+
+        <div id="quizContainer" class="text-left max-w-xl mx-auto" data-quiz>
+          {quiz.steps.map((step, index) => (
+            <div data-quiz-step={index + 1} class:list={['space-y-4', index > 0 && 'hidden']}>
+              <div class="flex justify-between items-center text-xs text-gray-500 font-semibold mb-2">
+                <span>{step.label}</span>
+                <span>{step.progress}</span>
+              </div>
+              <div class="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden mb-6">
+                <div class:list={['bg-brand-sunsetPeach h-full transition-all duration-300', step.width]}></div>
+              </div>
+              <p class="font-semibold text-gray-800 text-base mb-3">{step.question}</p>
+              <div class="space-y-2.5">
+                {step.options.map((option) => (
+                  <button type="button" data-quiz-next={index + 2} class="w-full text-left p-3.5 rounded-xl border border-purple-100 hover:border-brand-amethyst hover:bg-brand-softLilac transition-all flex items-center justify-between group">
+                    <span class="text-sm text-gray-700 group-hover:text-brand-deepPurple font-medium">{step.quoted ? `"${option}"` : option}</span>
+                    <i class="fa-solid fa-chevron-right text-gray-400 group-hover:text-brand-amethyst text-xs"></i>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <div id="quizResult" data-quiz-result class="hidden text-center space-y-4 py-4">
+            <div class="w-16 h-16 bg-brand-sunsetPeach/20 text-brand-sunsetPeach rounded-full flex items-center justify-center mx-auto text-2xl">
+              <i class="fa-solid fa-crystal-ball"></i>
+            </div>
+            <h4 class="font-serif text-2xl font-bold text-brand-deepPurple">{quiz.resultTitle}</h4>
+            <p class="text-gray-600 text-sm max-w-md mx-auto leading-relaxed">{quiz.resultBody}</p>
+            <div class="bg-brand-softLilac p-4 rounded-xl border border-purple-200 text-left max-w-md mx-auto">
+              <p class="text-xs font-bold text-brand-amethyst uppercase tracking-wider">{quiz.nextStepLabel}</p>
+              <p class="text-xs text-gray-700 mt-1">{quiz.nextStep}</p>
+            </div>
+            <div class="pt-2">
+              <a href={quiz.cta.href} class="inline-flex items-center px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst transition-all shadow-md">
+                {quiz.cta.label}
+              </a>
+              <button type="button" data-quiz-reset class="block mx-auto mt-3 text-xs text-gray-400 hover:text-gray-600 underline">Start Over</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 sunset-gradient relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-sm sm:max-w-md">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/90">
+              <img src={aboutTeaser.image.src} alt={aboutTeaser.image.alt} class="w-full h-[500px] object-cover" />
+            </div>
+            <div class="absolute -bottom-6 -left-4 glass-card p-4 rounded-2xl shadow-xl border border-white/80 max-w-xs">
+              <p class="font-serif font-bold text-brand-deepPurple text-lg">{aboutTeaser.years}</p>
+              <p class="text-xs text-gray-600">{aboutTeaser.yearsDetail}</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 text-brand-amethyst text-xs font-bold uppercase tracking-wider">{aboutTeaser.eyebrow}</div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple leading-tight">"{aboutTeaser.quote}"</h2>
+          {aboutTeaser.paragraphs.map((paragraph, index) => (
+            <p class="text-gray-700 text-base leading-relaxed">
+              {index === 0 ? (
+                <>
+                  Michelle J. Lamont is an internationally acclaimed manifestation coach, certified spiritual intuitive, and host of the chart-topping <strong>Manifesting Miracles Podcast</strong>.
+                </>
+              ) : paragraph}
+            </p>
+          ))}
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            {aboutTeaser.stats.map((stat) => (
+              <div class="bg-white/70 p-4 rounded-2xl border border-purple-100 shadow-sm">
+                <span class="block font-serif text-2xl font-bold text-brand-deepPurple">{stat.value}</span>
+                <span class="text-xs text-gray-600 mt-1 block font-medium">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href={aboutTeaser.primary.href} class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-md transition-all">
+              {aboutTeaser.primary.label}
+            </a>
+            <a href={aboutTeaser.secondary.href} class="inline-flex items-center text-sm font-bold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors">
+              {aboutTeaser.secondary.label} <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coaching" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{pathways.eyebrow}</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">{pathways.title}</h2>
+        <p class="text-gray-600 text-base sm:text-lg">{pathways.intro}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {pathways.cards.map((card) => (
+          <div class:list={[
+            'rounded-3xl p-8 flex flex-col justify-between relative',
+            card.featured
+              ? 'border-2 border-brand-sunsetPeach spiritual-gradient text-white shadow-xl transform md:-translate-y-3'
+              : 'border border-purple-100 bg-[#fdfcff] shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1',
+          ]}>
+            {card.ribbon && (
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-sunsetPeach text-brand-deepPurple text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-sm">
+                {card.ribbon}
+              </div>
+            )}
+            <div>
+              <div class:list={[
+                'w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-6',
+                card.featured ? 'bg-white/20 text-brand-gold' : 'bg-brand-lavender text-brand-amethyst group-hover:scale-110 transition-transform',
+              ]}>
+                <i class={card.icon}></i>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach">{card.eyebrow}</span>
+              <h3 class:list={['font-serif text-2xl font-bold mt-1 mb-3', card.featured ? 'text-white' : 'text-brand-deepPurple']}>{card.title}</h3>
+              <p class:list={['text-sm mb-6 leading-relaxed', card.featured ? 'text-purple-100' : 'text-gray-600']}>{card.body}</p>
+              <ul class:list={['space-y-3 text-xs mb-8', card.featured ? 'text-purple-200' : 'text-gray-600']}>
+                {card.points.map((point) => (
+                  <li class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-circle-check text-brand-sunsetPeach"></i>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              {card.href ? (
+                <a href={card.href} class="block w-full py-3 text-center rounded-full text-xs font-bold uppercase tracking-wider bg-brand-lavender text-brand-amethyst hover:bg-brand-amethyst hover:text-white transition-colors">
+                  {card.cta}
+                </a>
+              ) : (
+                <button type="button" data-open-booking data-program={card.modal} class:list={[
+                  'w-full text-center rounded-full text-xs font-bold uppercase tracking-wider transition-all',
+                  card.featured
+                    ? 'py-3.5 bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg'
+                    : 'py-3 bg-brand-lavender text-brand-amethyst hover:bg-brand-amethyst hover:text-white',
+                ]}>
+                  {card.cta}
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="podcast" class="py-20 sunset-gradient relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 text-brand-amethyst text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-podcast"></i> {podcastTeaser.eyebrow}
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple leading-tight">{podcastTeaser.title}</h2>
+          <p class="text-gray-700 text-base leading-relaxed">{podcastTeaser.body}</p>
+          <div class="pt-2">
+            <p class="text-xs uppercase font-bold text-gray-500 tracking-wider mb-3">{podcastTeaser.platformsLabel}</p>
+            <div class="flex flex-wrap gap-3">
+              {podcastTeaser.platforms.map((platform) => (
+                <a href="#placeholder" title={platform.label} class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 hover:bg-white text-xs font-semibold text-gray-800 shadow-sm transition-all border border-purple-100">
+                  <i class:list={[platform.icon, 'text-base', platform.iconClass]}></i> {platform.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="glass-dark rounded-3xl p-6 sm:p-8 text-white shadow-2xl border border-white/20">
+            <div class="flex items-center justify-between pb-6 border-b border-white/10">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-brand-sunsetPeach flex items-center justify-center text-brand-deepPurple font-bold">
+                  <i class="fa-solid fa-podcast"></i>
+                </div>
+                <div>
+                  <p class="text-xs uppercase font-bold tracking-wider text-brand-sunsetPeach">Now Featuring</p>
+                  <p class="font-serif font-bold text-sm sm:text-base text-white">{podcastTeaser.showName}</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300">
+                {podcastTeaser.status}
+              </span>
+            </div>
+            <div class="py-6 space-y-4">
+              <span class="text-xs text-purple-200">{podcastTeaser.meta}</span>
+              <h4 class="font-serif text-xl sm:text-2xl font-bold text-white">{podcastTeaser.episodeTitle}</h4>
+              <p class="text-xs text-purple-200">{podcastTeaser.episodeBody}</p>
+              <EmbedSlot label={podcastTeaser.embedLabel} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 bg-[#faf6ff]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{reviews.eyebrow}</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">{reviews.title}</h2>
+        <p class="text-gray-600 text-base sm:text-lg">{reviews.intro}</p>
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-8" data-review-filters>
+          {reviews.filters.map((filter, index) => (
+            <button type="button" data-review-filter={filter.id} class:list={[
+              'review-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all',
+              index === 0 ? 'bg-brand-deepPurple text-white' : 'bg-white text-gray-600 hover:bg-purple-100 border border-purple-200',
+            ]}>
+              {filter.label}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="reviewsGrid">
+        {reviews.items.map((item) => (
+          <article class="review-card glass-card p-6 sm:p-8 rounded-3xl border border-purple-100 shadow-sm flex flex-col justify-between" data-category={item.category}>
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed italic">"{item.quote}"</p>
+            </div>
+            <div class="flex items-center space-x-3.5 pt-6 border-t border-purple-100 mt-6">
+              <img src={item.image.src} alt={item.image.alt} class="w-11 h-11 rounded-full object-cover border border-brand-sunsetPeach" />
+              <div>
+                <p class="font-bold text-sm text-brand-deepPurple">{item.name}</p>
+                <p class="text-[11px] text-gray-500">{item.detail}</p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="lead-magnet" class="py-20 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="spiritual-gradient rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-2xl relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xs font-bold tracking-wider uppercase">{leadMagnet.eyebrow}</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">{leadMagnet.title}</h2>
+            <p class="text-purple-100 text-sm sm:text-base leading-relaxed">{leadMagnet.body}</p>
+            <div class="space-y-2 pt-2 text-xs text-purple-200">
+              {leadMagnet.points.map((point) => (
+                <p class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i> {point}</p>
+              ))}
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/20 space-y-4">
+              <p class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach">Placeholder form</p>
+              <p class="text-xs text-purple-100 leading-relaxed">{leadMagnet.note}</p>
+              <div>
+                <label class="block text-xs font-medium text-purple-200 mb-1">{leadMagnet.nameLabel}</label>
+                <input type="text" disabled placeholder={leadMagnet.namePlaceholder} class="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-400 text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-purple-200 mb-1">{leadMagnet.emailLabel}</label>
+                <input type="email" disabled placeholder={leadMagnet.emailPlaceholder} class="w-full px-4 py-3 rounded-xl bg-white/90 text-gray-800 placeholder-gray-400 text-sm" />
+              </div>
+              <button type="button" disabled class="w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple opacity-80 cursor-not-allowed">
+                {leadMagnet.button}
+              </button>
+              <p class="text-[10px] text-center text-purple-300">{leadMagnet.privacy}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-[#faf6ff]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Clarity & Guidance</span>
+        <h2 class="font-serif text-3xl font-bold text-brand-deepPurple mt-1">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-3.5" data-faq>
+        {faqs.map((item) => (
+          <div class="border border-purple-100 rounded-2xl bg-white overflow-hidden shadow-sm">
+            <button type="button" data-faq-toggle aria-expanded="false" class="w-full px-6 py-4 text-left flex justify-between items-center text-gray-800 font-semibold text-sm sm:text-base hover:text-brand-amethyst transition-colors">
+              <span>{item.question}</span>
+              <i class="fa-solid fa-plus text-xs text-brand-sunsetPeach" data-faq-icon></i>
+            </button>
+            <div data-faq-panel class="hidden px-6 pb-4 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-purple-50 pt-3">
+              {item.answer}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+    <div class="glass-card max-w-md w-full rounded-3xl p-6 sm:p-8 border border-white/60 shadow-2xl relative text-left">
+      <button type="button" data-close-booking class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-2" aria-label="Close">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="text-center mb-6">
+        <span class="inline-block p-3 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xl mb-2">
+          <i class="fa-solid fa-calendar-check"></i>
+        </span>
+        <h3 id="bookingTitle" class="font-serif text-2xl font-bold text-brand-deepPurple">{booking.title}</h3>
+        <p class="text-xs text-gray-600 mt-1">{booking.intro}</p>
+      </div>
+      <div class="space-y-3.5">
+        <p class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach">Placeholder form</p>
+        <p class="text-xs text-gray-600">{booking.note}</p>
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1" for="bookingName">Your Full Name</label>
+          <input id="bookingName" type="text" disabled placeholder="Jane Doe" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1" for="bookingEmail">Email Address</label>
+          <input id="bookingEmail" type="email" disabled placeholder="jane@example.com" class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1" for="modalProgramSelect">Program of Interest</label>
+          <select id="modalProgramSelect" disabled class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs text-gray-700">
+            {booking.programs.map((program) => (
+              <option value={program}>{booking.programLabels[program]}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1" for="bookingIntention">What is your primary intention?</label>
+          <textarea id="bookingIntention" rows="3" disabled placeholder="Tell us briefly about what you are desiring to manifest..." class="w-full px-3.5 py-2.5 rounded-xl border border-purple-200 text-xs"></textarea>
+        </div>
+        <button type="button" disabled class="w-full py-3 rounded-full font-bold text-xs uppercase tracking-wider bg-brand-deepPurple text-white opacity-70 cursor-not-allowed mt-2">
+          {booking.button}
+        </button>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const quizRoot = document.querySelector('[data-quiz]');
+  quizRoot?.querySelectorAll('[data-quiz-next]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const next = button.getAttribute('data-quiz-next');
+      quizRoot.querySelectorAll('[data-quiz-step]').forEach((step) => step.classList.add('hidden'));
+      quizRoot.querySelector('[data-quiz-result]')?.classList.add('hidden');
+      if (next === '3') {
+        quizRoot.querySelector('[data-quiz-result]')?.classList.remove('hidden');
+      } else {
+        quizRoot.querySelector(`[data-quiz-step="${next}"]`)?.classList.remove('hidden');
+      }
+    });
+  });
+
+  document.querySelector('[data-quiz-reset]')?.addEventListener('click', () => {
+    quizRoot?.querySelectorAll('[data-quiz-step]').forEach((step, index) => {
+      step.classList.toggle('hidden', index !== 0);
+    });
+    quizRoot?.querySelector('[data-quiz-result]')?.classList.add('hidden');
+  });
+
+  const activeFilter = 'review-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-deepPurple text-white transition-all';
+  const idleFilter = 'review-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-gray-600 hover:bg-purple-100 transition-all border border-purple-200';
+
+  document.querySelectorAll('[data-review-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-review-filter');
+      document.querySelectorAll('[data-review-filter]').forEach((item) => {
+        item.className = idleFilter;
+      });
+      button.className = activeFilter;
+      document.querySelectorAll('.review-card').forEach((card) => {
+        const match = category === 'all' || card.getAttribute('data-category') === category;
+        card.classList.toggle('hidden', !match);
+        card.classList.toggle('flex', match);
+      });
+    });
+  });
+
+  document.querySelectorAll('[data-faq-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const panel = button.parentElement?.querySelector('[data-faq-panel]');
+      const icon = button.querySelector('[data-faq-icon]');
+      const willOpen = panel?.classList.contains('hidden');
+      document.querySelectorAll('[data-faq-panel]').forEach((item) => item.classList.add('hidden'));
+      document.querySelectorAll('[data-faq-toggle]').forEach((item) => item.setAttribute('aria-expanded', 'false'));
+      document.querySelectorAll('[data-faq-icon]').forEach((item) => {
+        item.classList.remove('fa-minus');
+        item.classList.add('fa-plus');
+      });
+      if (willOpen) {
+        panel?.classList.remove('hidden');
+        button.setAttribute('aria-expanded', 'true');
+        icon?.classList.remove('fa-plus');
+        icon?.classList.add('fa-minus');
+      }
+    });
+  });
+
+  const bookingModal = document.getElementById('bookingModal');
+  const programSelect = document.getElementById('modalProgramSelect');
+
+  document.querySelectorAll('[data-open-booking]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const program = button.getAttribute('data-program');
+      if (programSelect instanceof HTMLSelectElement && program) {
+        programSelect.value = program;
+      }
+      bookingModal?.classList.remove('hidden');
+      bookingModal?.classList.add('flex');
+    });
+  });
+
+  document.querySelector('[data-close-booking]')?.addEventListener('click', () => {
+    bookingModal?.classList.add('hidden');
+    bookingModal?.classList.remove('flex');
+  });
+
+  bookingModal?.addEventListener('click', (event) => {
+    if (event.target === bookingModal) {
+      bookingModal.classList.add('hidden');
+      bookingModal.classList.remove('flex');
+    }
+  });
+</script>

@@ -1,0 +1,184 @@
+---
+import { brand, mainNav, type Announcement } from '../data/site';
+
+interface Cta {
+  href: string;
+  label: string;
+  className: string;
+}
+
+interface Props {
+  announcement: Announcement;
+  ctas: Cta[];
+}
+
+const { announcement, ctas } = Astro.props;
+---
+
+<div class="bg-gradient-to-r from-brand-deepPurple via-brand-amethyst to-brand-deepPurple text-white py-2.5 px-4 text-xs md:text-sm font-medium tracking-wide">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="flex items-center space-x-2 mx-auto md:mx-0">
+      <span class="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">
+        {announcement.badge}
+      </span>
+      <span>✨ <strong>{announcement.emphasis}</strong> {announcement.text}</span>
+    </div>
+    <div class="hidden md:flex items-center space-x-4">
+      {
+        announcement.links.map((link, index) => (
+          <>
+            {index > 0 && <span class="text-white/40">•</span>}
+            <a
+              href={link.href}
+              class:list={[
+                'transition-colors duration-200 text-xs',
+                link.tone === 'gold'
+                  ? 'text-brand-gold hover:text-white font-semibold'
+                  : 'hover:text-brand-sunsetPeach underline',
+              ]}
+            >
+              {link.label}
+            </a>
+          </>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<header class="sticky top-0 z-50 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between gap-6 h-20">
+      <a href="/" class="flex flex-col shrink-0 group/logo">
+        <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover/logo:text-brand-amethyst transition-colors">
+          {brand.name}
+        </span>
+        <span class="text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">
+          {brand.mark}
+        </span>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5" aria-label="Primary">
+        <a href={mainNav.academy.href} class="text-sm font-semibold text-brand-deepPurple hover:text-brand-amethyst transition-colors whitespace-nowrap">
+          {mainNav.academy.label}
+        </a>
+        <a href={mainNav.podcast.href} class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">
+          {mainNav.podcast.label}
+        </a>
+
+        <div class="relative group/coach">
+          <button type="button" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors inline-flex items-center gap-1.5 whitespace-nowrap" aria-haspopup="true">
+            1:1 Coaching
+            <i class="fa-solid fa-chevron-down text-[9px] opacity-70"></i>
+          </button>
+          <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover/coach:visible group-hover/coach:opacity-100 group-hover/coach:translate-y-0 group-focus-within/coach:visible group-focus-within/coach:opacity-100 group-focus-within/coach:translate-y-0 transition-all duration-200 z-50">
+            <div class="min-w-[250px] rounded-2xl bg-white border border-purple-100 shadow-xl py-2">
+              {
+                mainNav.coaching.map((item) => (
+                  <a href={item.href} class="block px-4 py-2.5 hover:bg-brand-softLilac">
+                    <span class="block text-sm font-medium text-gray-800">{item.label}</span>
+                    <span class="block text-[11px] text-gray-500">{item.detail}</span>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <a href={mainNav.stories.href} class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">
+          {mainNav.stories.label}
+        </a>
+        <a href={mainNav.quiz.href} class="text-sm font-semibold text-brand-amethyst hover:text-brand-sunsetPeach transition-colors flex items-center gap-1.5 whitespace-nowrap">
+          <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i> {mainNav.quiz.label}
+        </a>
+
+        <div class="relative group/resources">
+          <button type="button" class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors inline-flex items-center gap-1.5 whitespace-nowrap" aria-haspopup="true">
+            Resources
+            <i class="fa-solid fa-chevron-down text-[9px] opacity-70"></i>
+          </button>
+          <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover/resources:visible group-hover/resources:opacity-100 group-hover/resources:translate-y-0 group-focus-within/resources:visible group-focus-within/resources:opacity-100 group-focus-within/resources:translate-y-0 transition-all duration-200 z-50">
+            <div class="min-w-[220px] rounded-2xl bg-white border border-purple-100 shadow-xl py-2">
+              {
+                mainNav.resources.map((item) => (
+                  <a href={item.href} class="block px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-brand-softLilac hover:text-brand-amethyst">
+                    {item.label}
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <a href={mainNav.contact.href} class="text-sm font-medium text-gray-700 hover:text-brand-amethyst transition-colors whitespace-nowrap">
+          {mainNav.contact.label}
+        </a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        {ctas.map((cta) => (
+          <a href={cta.href} class={cta.className}>{cta.label}</a>
+        ))}
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenu" class="xl:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden xl:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
+    <div class="flex flex-col space-y-3 pt-2">
+      <a href={mainNav.academy.href} class="text-base font-semibold text-brand-deepPurple hover:text-brand-amethyst py-1">{mainNav.academy.label}</a>
+      <a href={mainNav.podcast.href} class="text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">{mainNav.podcast.label}</a>
+      <details>
+        <summary class="cursor-pointer flex items-center justify-between text-base font-medium text-gray-800 py-1">
+          1:1 Coaching
+          <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+        </summary>
+        <div class="flex flex-col pl-3 pt-2 space-y-2">
+          {mainNav.coaching.map((item) => (
+            <a href={item.href} class="text-sm text-gray-700 hover:text-brand-amethyst py-1">{item.label}</a>
+          ))}
+        </div>
+      </details>
+      <a href={mainNav.stories.href} class="text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">{mainNav.stories.label}</a>
+      <a href={mainNav.quiz.href} class="text-base font-medium text-brand-amethyst py-1 flex items-center gap-2">
+        <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i> {mainNav.quiz.label}
+      </a>
+      <details>
+        <summary class="cursor-pointer flex items-center justify-between text-base font-medium text-gray-800 py-1">
+          Resources
+          <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+        </summary>
+        <div class="flex flex-col pl-3 pt-2 space-y-2">
+          {mainNav.resources.map((item) => (
+            <a href={item.href} class="text-sm text-gray-700 hover:text-brand-amethyst py-1">{item.label}</a>
+          ))}
+        </div>
+      </details>
+      <a href={mainNav.contact.href} class="text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">{mainNav.contact.label}</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="/#coaching" class="w-full text-center py-3 rounded-full text-sm font-bold bg-brand-deepPurple text-white">
+          Book Private Coaching
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    const isHidden = mobileMenu?.classList.toggle('hidden');
+    mobileMenuBtn.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
