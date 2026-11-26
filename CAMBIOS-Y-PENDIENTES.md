@@ -337,3 +337,32 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | --- | --- | --- | --- |
 | Fondo | Hero | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
 | Retrato de Michelle | Meet Michelle | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
+
+## 9. Press (`/press`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `press.html` ahora es `/press`, con las apariciones, los angulos, las bios y la solicitud del sample.
+2. El boton de copiar solo mostraba un toast. Ahora el texto esta visible para copiarlo a mano.
+3. El ZIP del press kit y los clips de los episodios apuntan a `#placeholder`.
+4. La solicitud de entrevista no se envia.
+5. Las fotos de stock presentadas como Michelle, incluida la de alfombra roja, se reemplazaron por fotos reales del sitio en vivo.
+6. El contenido editable esta en `src/data/press.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Pasar el ZIP del press kit y los enlaces de Second Wind, The Dynamis Phase y 52 Weeks of Hope.
+2. Confirmar 320+ episodios, 750,000+ descargas, Top 1% y la respuesta en 24 horas.
+3. Confirmar las tres bios y el guion del host.
+4. Conectar el formulario de prensa.
+5. Decidir si estas cuatro fotos son las de prensa correctas. No hay una foto de escenario en el material real que se bajo.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Hero | Prensa | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
+| Retrato de gala | Fotos | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
+| Halo | Fotos | `/images/michelle-headshot-square.png` | https://www.michellejlamont.com/wp-content/uploads/2022/07/mjl-web-photos-square2-1.png |
+| Agua | Fotos | `/images/michelle-portrait-2022.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/08/Michelle-J-Lamont-00503.jpg |
+| Con Oprah | Fotos | `/images/michelle-with-oprah.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/04/Michelle-j-lamont-Oprah.jpg |

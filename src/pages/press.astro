@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  appearances,
+  bios,
+  hooks,
+  photos,
+  pressAnnouncement,
+  pressCtas,
+  pressFooter,
+  pressHero,
+  pressRequest,
+  pressSeo,
+} from '../data/press';
+---
+
+<BaseLayout title={pressSeo.title} description={pressSeo.description} ogImage={pressSeo.ogImage} ogAlt={pressSeo.ogAlt} announcement={pressAnnouncement} headerCtas={pressCtas} footer={pressFooter}>
+  <section class="py-20 sunset-gradient">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div class="space-y-4">
+        <p class="text-xs uppercase tracking-[0.2em] font-bold text-brand-sunsetPeach">{pressHero.kicker}</p>
+        <h1 class="font-serif text-4xl sm:text-5xl font-bold text-brand-deepPurple">{pressHero.title}</h1>
+        <p class="font-serif italic text-xl text-brand-amethyst">"{pressHero.quote}"</p>
+        <p class="text-gray-700">{pressHero.body}</p>
+        <p class="text-gray-700">{pressHero.more}</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#request" class="px-6 py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white">Book Michelle for Your Show</a>
+          <a href="#placeholder" class="px-6 py-3 rounded-full text-xs font-bold uppercase border border-purple-200 bg-white">Placeholder: press kit ZIP</a>
+        </div>
+        <ul class="text-xs font-semibold text-gray-600 space-y-1">{pressHero.proofs.map((item) => <li>{item}</li>)}</ul>
+      </div>
+      <img src={pressHero.image.src} alt={pressHero.image.alt} class="rounded-3xl h-[480px] w-full object-cover border-4 border-white shadow-xl" />
+    </div>
+  </section>
+
+  <section id="appearances" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-serif text-4xl font-bold text-brand-deepPurple mb-2">Featured Podcast Appearances</h2>
+      <p class="text-sm text-gray-600 mb-6">Host of Manifesting Miracles™ (Top 1% Worldwide). Over 320+ published episodes and 750,000+ global downloads.</p>
+      <div class="grid md:grid-cols-3 gap-4">
+        {appearances.map((item) => (
+          <article class="p-5 rounded-3xl border border-purple-100 bg-[#faf6ff]">
+            <p class="text-xs font-bold text-brand-sunsetPeach">{item.length} · {item.show}</p>
+            <h3 class="font-serif text-xl font-bold text-brand-deepPurple mt-2">"{item.title}"</h3>
+            <p class="text-sm text-gray-600 mt-2">{item.body}</p>
+            <p class="text-xs font-semibold mt-3">Key highlight: {item.highlight}</p>
+            <a href="#placeholder" class="inline-flex mt-3 text-xs font-bold uppercase text-brand-amethyst">Placeholder: episode clip</a>
+          </article>
+        ))}
+      </div>
+      <a href="/podcast" class="inline-flex mt-6 text-xs font-bold uppercase text-brand-deepPurple">Browse Michelle's Own Show</a>
+    </div>
+  </section>
+
+  <section class="py-16 bg-[#faf6ff]">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple mb-6">Ready-to-Cover Story Hooks</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {hooks.map((hook) => (
+          <article class="glass-card p-5 rounded-3xl">
+            <h3 class="font-serif font-bold text-brand-deepPurple">{hook.title}</h3>
+            <p class="text-sm text-gray-600 mt-2">{hook.body}</p>
+            <p class="text-xs font-semibold mt-3">{hook.fit}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="bios" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">Approved Introductions & Bios</h2>
+      <p class="text-sm text-gray-600">The text is here to select and copy. The sample's copy button only showed a toast, so that fake confirmation was removed.</p>
+      {bios.map((bio) => (
+        <article class="p-5 rounded-3xl border border-purple-100">
+          <p class="text-xs font-bold uppercase text-brand-sunsetPeach">{bio.label}</p>
+          <p class="text-[11px] text-gray-500">{bio.use}</p>
+          <p class="text-sm text-gray-800 mt-2">"{bio.text}"</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="photos" class="py-16 bg-[#faf6ff]">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple mb-2">High-Resolution Press Photos</h2>
+      <p class="text-sm text-gray-600 mb-6">The sample used stock portraits labeled as Michelle, including a red-carpet stock photo. These are real photos from the live site instead. The ZIP bundle is not connected.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {photos.map((photo) => (
+          <figure class="bg-white rounded-3xl overflow-hidden border border-purple-100">
+            <img src={photo.src} alt={photo.alt} class="h-64 w-full object-cover" />
+            <figcaption class="p-4">
+              <p class="text-sm font-semibold text-brand-deepPurple">{photo.label}</p>
+              <p class="text-[11px] text-gray-500 break-all mt-1">{photo.source}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <a href="#placeholder" class="inline-flex mt-6 text-xs font-bold uppercase text-brand-amethyst">Placeholder: media asset ZIP</a>
+    </div>
+  </section>
+
+  <section id="request" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 glass-card rounded-3xl p-8 space-y-3">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">{pressRequest.title}</h2>
+      <p class="text-sm text-gray-600">{pressRequest.body}</p>
+      <p class="text-xs font-semibold text-brand-sunsetPeach">{pressRequest.note}</p>
+      <select disabled class="w-full px-3 py-2 rounded-xl border text-xs">{pressRequest.formats.map((item) => <option>{item}</option>)}</select>
+      <select disabled class="w-full px-3 py-2 rounded-xl border text-xs">{pressRequest.reach.map((item) => <option>{item}</option>)}</select>
+      <button type="button" disabled class="w-full py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white opacity-70 cursor-not-allowed">{pressRequest.button}</button>
+      <p class="text-[11px] text-gray-500">{pressRequest.footnote}</p>
+    </div>
+  </section>
+</BaseLayout>
