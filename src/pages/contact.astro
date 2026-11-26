@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmbedSlot from '../components/EmbedSlot.astro';
+import {
+  audit,
+  contactAnnouncement,
+  contactCtas,
+  contactFaqs,
+  contactFooter,
+  contactHero,
+  contactSeo,
+  departments,
+  hours,
+  meet,
+  messageForm,
+} from '../data/contact';
+---
+
+<BaseLayout title={contactSeo.title} description={contactSeo.description} ogImage={contactSeo.ogImage} ogAlt={contactSeo.ogAlt} announcement={contactAnnouncement} headerCtas={contactCtas} footer={contactFooter}>
+  <section class="relative py-20 overflow-hidden">
+    <img src={contactHero.image.src} alt={contactHero.image.alt} class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-brand-deepPurple/70"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-white space-y-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-brand-sunsetPeach font-bold">{contactHero.kicker}</p>
+      <h1 class="font-serif text-5xl font-bold">{contactHero.title}</h1>
+      <p class="text-purple-100">{contactHero.body}</p>
+      <p><a class="underline" href={`mailto:${contactHero.email}`}>{contactHero.email}</a></p>
+      <p><a href="#placeholder" class="underline">Placeholder: Instagram {contactHero.instagram}</a></p>
+      <p class="text-sm">{contactHero.response}</p>
+    </div>
+  </section>
+
+  <section id="message" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 glass-card rounded-3xl p-8 space-y-3 border border-purple-100">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">{messageForm.title}</h2>
+      <p class="text-sm text-gray-600">{messageForm.intro}</p>
+      <p class="text-xs font-semibold text-brand-sunsetPeach">{messageForm.note}</p>
+      <label class="text-xs font-semibold">Select Subject</label>
+      <select disabled class="w-full px-3 py-2 rounded-xl border text-xs">
+        <option>Choose the nature of your inquiry...</option>
+        {messageForm.subjects.map((item) => <option>{item}</option>)}
+      </select>
+      <p class="text-[11px] text-gray-500">{messageForm.consent}</p>
+      <button type="button" disabled class="w-full py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white opacity-70 cursor-not-allowed">{messageForm.button}</button>
+    </div>
+  </section>
+
+  <section class="py-16 bg-[#faf6ff]">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple mb-6">Fast-Track Communication</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {departments.map((item) => (
+          <a href={item.href} class="glass-card p-5 rounded-3xl border border-purple-100 block">
+            <h3 class="font-serif font-bold text-brand-deepPurple">{item.title}</h3>
+            <p class="text-sm text-gray-600 mt-2">{item.body}</p>
+            <p class="text-xs font-bold text-brand-amethyst mt-3">{item.label}</p>
+          </a>
+        ))}
+      </div>
+      <p class="text-sm text-gray-700 mt-6">{hours.body}</p>
+      <p class="text-xs font-semibold mt-2">{hours.place} · {hours.travel}</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <img src={meet.image.src} alt={meet.image.alt} class="rounded-3xl h-80 w-full object-cover" />
+        <div class="mt-4"><EmbedSlot label={meet.embedLabel} tone="light" /></div>
+        <p class="text-xs text-gray-500 mt-2">{meet.sampleTime}</p>
+      </div>
+      <div class="space-y-3">
+        <p class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach">{meet.eyebrow}</p>
+        <h2 class="font-serif text-4xl font-bold text-brand-deepPurple">{meet.title}</h2>
+        <p class="text-sm font-semibold text-brand-amethyst">{meet.role}</p>
+        {meet.paragraphs.map((paragraph) => <p class="text-sm text-gray-700">{paragraph}</p>)}
+        <a href="#audit" class="inline-flex px-6 py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white">Book a Free Clarity Call</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="audit" class="py-16 bg-[#faf6ff]">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">{audit.title}</h2>
+      <p class="text-sm text-gray-700 mt-2">{audit.body}</p>
+      <p class="text-sm text-gray-700 mt-2">{audit.note}</p>
+      <p class="text-xs text-gray-500 mt-3">{audit.slots}</p>
+      <button type="button" disabled class="mt-4 px-6 py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white opacity-70 cursor-not-allowed">{audit.button}</button>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 space-y-3">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">Before You Reach Out</h2>
+      {contactFaqs.map((item) => (
+        <details class="border border-purple-100 rounded-2xl p-4">
+          <summary class="font-semibold cursor-pointer">{item.q}</summary>
+          <p class="text-sm text-gray-600 mt-2">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

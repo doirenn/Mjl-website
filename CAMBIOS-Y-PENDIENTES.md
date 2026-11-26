@@ -258,3 +258,30 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Slot | Seccion | Archivo | URL de origen |
 | --- | --- | --- | --- |
 | Sin fotos | Toda la pagina | Ninguno | El sample de esta pagina no usaba imagenes de personas en el texto extraido. |
+
+## 12. Contact (`/contact`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `contact.html` ahora es `/contact`, con el correo, el horario, los departamentos y las preguntas del sample.
+2. El formulario no envia el mensaje y no muestra un exito falso.
+3. El video de YouTube de relleno se quito. Queda un espacio de embed vacio. El sample marcaba 02:18 / 05:40.
+4. El calendario de auditoria de octubre 2026 queda como texto de muestra, no como reserva.
+5. El retrato de Michelle es una foto real del sitio en vivo.
+6. Se elimino `contact.html`. El contenido editable esta en `src/data/contact.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Confirmar el correo info@michellejlamont.com, el horario de lunes a viernes de 9:00 a 17:00 CST y la respuesta en menos de 24 horas habiles.
+2. Confirmar el usuario de Instagram @michellejlamont y pasar el enlace.
+3. Conectar el formulario con el correo o con Kit.
+4. Pasar el video real de la historia de Michelle.
+5. Conectar el calendario de la auditoria gratuita.
+6. Confirmar la mencion de entrevistas con Oprah y Kim y la cifra de 700,000 descargas en el Top 100.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Fondo | Hero | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
+| Retrato de Michelle | Meet Michelle | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
