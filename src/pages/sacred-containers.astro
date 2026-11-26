@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmbedSlot from '../components/EmbedSlot.astro';
+import {
+  application,
+  fit,
+  intro,
+  levels,
+  sacredAnnouncement,
+  sacredCtas,
+  sacredFooter,
+  sacredHero,
+  sacredSeo,
+  stories,
+  voxer,
+  whyNow,
+} from '../data/sacred-containers';
+---
+
+<BaseLayout title={sacredSeo.title} description={sacredSeo.description} ogImage={sacredSeo.ogImage} ogAlt={sacredSeo.ogAlt} announcement={sacredAnnouncement} headerCtas={sacredCtas} footer={sacredFooter}>
+  <section class="relative pt-16 pb-24 overflow-hidden sunset-gradient">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{sacredHero.eyebrow}</p>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-deepPurple leading-tight">{sacredHero.title}</h1>
+        <p class="text-gray-700 text-base sm:text-lg">{sacredHero.body}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="#apply" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white">Placeholder: sacred container application</a>
+          <a href="#levels" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-brand-deepPurple border border-purple-200">Explore The 3 Levels of Mentorship ↓</a>
+        </div>
+        <ul class="flex flex-wrap gap-4 text-xs font-semibold text-gray-600 justify-center lg:justify-start">
+          {sacredHero.proofs.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
+          <img src={sacredHero.image.src} alt={sacredHero.image.alt} class="w-full h-[460px] object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/70 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 right-4 text-white font-serif">"{sacredHero.quote}"</p>
+        </div>
+        <p class="mt-3 text-xs font-bold uppercase tracking-wider text-brand-amethyst">{sacredHero.status}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-4">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{intro.eyebrow}</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple">{intro.title}</h2>
+        <p class="font-serif text-xl italic text-brand-amethyst">"{intro.quote}"</p>
+        {intro.paragraphs.map((paragraph) => <p class="text-gray-700 text-sm sm:text-base leading-relaxed">{paragraph}</p>)}
+        <div class="grid sm:grid-cols-2 gap-4">
+          {intro.points.map((point) => (
+            <div class="p-4 rounded-2xl bg-[#faf6ff] border border-purple-100">
+              <h3 class="font-serif font-bold text-brand-deepPurple">{point.title}</h3>
+              <p class="text-xs text-gray-600 mt-1">{point.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <img src={intro.image.src} alt={intro.image.alt} class="w-full h-96 object-cover rounded-3xl border-4 border-white shadow-xl" />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 sunset-gradient">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{whyNow.eyebrow}</p>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple">{whyNow.title}</h2>
+      <p class="text-gray-700">{whyNow.body}</p>
+      <p class="text-gray-700">{whyNow.hold}</p>
+      <ul class="space-y-2 text-sm text-gray-700">
+        {whyNow.points.map((point) => <li class="flex gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach mt-1"></i><span>{point}</span></li>)}
+      </ul>
+      <p class="font-serif italic text-brand-amethyst">"{whyNow.quote}"</p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{fit.eyebrow}</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple mt-2">{fit.title}</h2>
+        <p class="text-gray-600 mt-3">{fit.intro}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {fit.items.map((item) => (
+          <div class="glass-card p-6 rounded-3xl border border-purple-100">
+            <p class="text-xs font-bold text-brand-sunsetPeach">{item.n}</p>
+            <h3 class="font-serif text-xl font-bold text-brand-deepPurple mt-2">{item.title}</h3>
+            <p class="text-sm text-gray-600 mt-2">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="levels" class="py-20 bg-[#faf6ff]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{levels.eyebrow}</p>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-deepPurple mt-2">{levels.title}</h2>
+        <p class="text-gray-600 mt-3">{levels.intro}</p>
+        <p class="text-sm font-semibold text-brand-deepPurple mt-4">{levels.note}</p>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-8">
+        {levels.cards.map((card) => (
+          <article class:list={['rounded-3xl p-6 flex flex-col relative', card.featured ? 'spiritual-gradient text-white shadow-2xl lg:-translate-y-3' : 'glass-card border border-purple-100']}>
+            {card.ribbon && <p class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-sunsetPeach text-brand-deepPurple text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">{card.ribbon}</p>}
+            <img src={card.image.src} alt={card.image.alt} class="h-36 w-full object-cover rounded-xl mb-4" />
+            <p class="text-xs uppercase tracking-wider text-brand-sunsetPeach font-bold">{card.length} · {card.tier} · {card.name}</p>
+            <h3 class:list={['font-serif text-2xl font-bold mt-1', card.featured ? 'text-white' : 'text-brand-deepPurple']}>{card.title}</h3>
+            <p class:list={['text-sm font-semibold', card.featured ? 'text-brand-gold' : 'text-brand-amethyst']}>{card.subtitle}</p>
+            <p class:list={['text-xs mt-3 leading-relaxed', card.featured ? 'text-purple-100' : 'text-gray-600']}>{card.body}</p>
+            <ul class:list={['mt-4 space-y-2 text-xs flex-1', card.featured ? 'text-purple-100' : 'text-gray-700']}>
+              {card.points.map((point) => <li class="flex gap-2"><i class="fa-solid fa-check text-brand-sunsetPeach"></i>{point}</li>)}
+            </ul>
+            <a href="#apply" class:list={['mt-6 block text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider', card.featured ? 'bg-brand-sunsetPeach text-brand-deepPurple' : 'bg-brand-deepPurple text-white']}>{card.cta}</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5">
+        <img src={voxer.image.src} alt={voxer.image.alt} class="w-full h-80 object-cover rounded-3xl bg-white" />
+      </div>
+      <div class="lg:col-span-7 space-y-4">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{voxer.eyebrow}</p>
+        <p class="font-serif text-2xl italic text-brand-amethyst">"{voxer.quote}"</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple">{voxer.title}</h2>
+        <p class="text-gray-700 text-sm leading-relaxed">{voxer.body}</p>
+        <p class="text-gray-700 text-sm leading-relaxed">{voxer.detail}</p>
+        <p class="text-xs font-bold text-brand-deepPurple">{voxer.sampleTitle}</p>
+        <p class="text-[11px] text-gray-500">{voxer.sampleMeta}</p>
+        <EmbedSlot label={voxer.embedLabel} tone="light" />
+        <p class="text-xs italic text-gray-600">"{voxer.caption}"</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-[#faf6ff]">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple text-center mb-10">Transformation From The Sacred Containers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {stories.map((item) => (
+          <article class="glass-card p-6 rounded-3xl border border-purple-100">
+            <h3 class="font-serif font-bold text-brand-deepPurple">"{item.title}"</h3>
+            <p class="text-xs text-gray-600 italic mt-3">"{item.quote}"</p>
+            <p class="text-xs font-bold text-brand-deepPurple mt-4">{item.initials} · {item.name}</p>
+            <p class="text-[11px] text-gray-500">{item.detail}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4 glass-card rounded-3xl p-8 border border-purple-100 shadow-xl space-y-4">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{application.eyebrow}</p>
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">{application.title}</h2>
+      <p class="text-sm text-gray-600">{application.body}</p>
+      <p class="text-xs font-semibold text-brand-sunsetPeach">{application.note}</p>
+      <label class="block text-xs font-semibold">Preferred Sacred Container</label>
+      <select disabled class="w-full px-3 py-2 rounded-xl border border-purple-200 text-xs">
+        {application.containers.map((item) => <option>{item}</option>)}
+      </select>
+      <label class="block text-xs font-semibold">Previous Experience with Somatic Manifestation & Mentorship</label>
+      <select disabled class="w-full px-3 py-2 rounded-xl border border-purple-200 text-xs">
+        {application.experience.map((item) => <option>{item}</option>)}
+      </select>
+      <button type="button" disabled class="w-full py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white opacity-70 cursor-not-allowed">{application.button}</button>
+      <p class="text-[11px] text-center text-gray-500">{application.footnote}</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-[#faf6ff]">
+    <div class="max-w-5xl mx-auto px-4 spiritual-gradient rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="text-xs uppercase tracking-wider text-brand-sunsetPeach font-bold">Self-Paced Portal</p>
+        <h2 class="font-serif text-3xl font-bold mt-2">Looking for Self-Guided Mastery?</h2>
+        <p class="text-sm text-purple-100 mt-2">If 1-on-1 mentorship isn't aligned right now, step into the Manifesting Miracles Academy. Access Michelle’s foundational 8-week video modules, daily 333 rituals, and monthly live activations.</p>
+      </div>
+      <a href="/academy" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple">Join The Academy Today</a>
+    </div>
+  </section>
+</BaseLayout>

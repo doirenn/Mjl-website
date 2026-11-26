@@ -150,3 +150,33 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Episodio 308 | Lista | `/images/course-shadow-journal.jpg` | https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=900&auto=format&fit=crop&q=80 |
 | Episodio 307 | Lista | `/images/episode-stillness.jpg` | https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=900&auto=format&fit=crop&q=80 |
 | Bio de la anfitriona | About your host | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
+
+## 5. Sacred Containers (`/sacred-containers`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `sacred-containers.html` ahora es `/sacred-containers`, con los tres niveles, Voxer, los testimonios y la solicitud del sample.
+2. El audio de muestra de 01:15 que se simulaba quedo en un espacio de embed vacio.
+3. La solicitud ya no confirma un envio. Los botones de cada nivel bajan al formulario placeholder.
+4. Donde el sample mostraba a Michelle con stock, hay fotos reales del sitio en vivo. Las tarjetas de Foundations y Acceleration siguen con paisaje de stock. Mastery usa una cara de stock que el sample no identificaba como Michelle.
+5. Se elimino `sacred-containers.html`. El contenido editable esta en `src/data/sacred-containers.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Confirmar que solo hay 3 clientes a la vez y que los tres niveles (4 semanas, 3 meses, 6 meses) siguen vigentes. El sample no publica precios.
+2. Pasar el audio real del voice memo de Voxer.
+3. Conectar la solicitud confidencial. Hoy no se envia.
+4. Confirmar los testimonios de R. Henderson, Elena S. y Dr. Miriam L.
+5. Decidir si Mastery debe llevar una foto real de Michelle en lugar de la cara de stock.
+6. Confirmar el cupo del trimestre: "Only 3 client apertures open for the upcoming quarter".
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Retrato junto al agua | Hero | `/images/michelle-portrait-2022.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/08/Michelle-J-Lamont-00503.jpg |
+| Retrato | Introduccion | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
+| Foundations | Niveles | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
+| Acceleration | Niveles | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
+| Mastery | Niveles | `/images/client-avatar-1.jpg` | https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=faces |
+| Voxer | Acceso diario | `/images/michelle-headshot-square.png` | https://www.michellejlamont.com/wp-content/uploads/2022/07/mjl-web-photos-square2-1.png |
