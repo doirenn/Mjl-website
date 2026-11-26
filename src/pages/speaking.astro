@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmbedSlot from '../components/EmbedSlot.astro';
+import {
+  booking,
+  celebrity,
+  formats,
+  production,
+  reel,
+  speakingAnnouncement,
+  speakingCtas,
+  speakingFooter,
+  speakingHero,
+  speakingSeo,
+  topics,
+} from '../data/speaking';
+---
+
+<BaseLayout title={speakingSeo.title} description={speakingSeo.description} ogImage={speakingSeo.ogImage} ogAlt={speakingSeo.ogAlt} announcement={speakingAnnouncement} headerCtas={speakingCtas} footer={speakingFooter}>
+  <section class="py-20 sunset-gradient">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div class="space-y-4">
+        <p class="text-xs uppercase tracking-[0.2em] font-bold text-brand-sunsetPeach">{speakingHero.kicker}</p>
+        <h1 class="font-serif text-4xl sm:text-5xl font-bold text-brand-deepPurple">{speakingHero.title}</h1>
+        <p class="font-serif italic text-xl text-brand-amethyst">"{speakingHero.quote}"</p>
+        <p class="text-gray-700">{speakingHero.body}</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#book" class="px-6 py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white">Inquire for Availability</a>
+          <a href="#reel" class="px-6 py-3 rounded-full text-xs font-bold uppercase border border-purple-200 bg-white">Watch Speaker Reel</a>
+        </div>
+        <ul class="text-xs font-semibold text-gray-600 space-y-1">{speakingHero.proofs.map((item) => <li>{item}</li>)}</ul>
+      </div>
+      <img src={speakingHero.image.src} alt={speakingHero.image.alt} class="rounded-3xl h-[460px] w-full object-cover border-4 border-white shadow-xl" />
+    </div>
+  </section>
+
+  <section id="formats" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-serif text-4xl font-bold text-brand-deepPurple mb-6">Type of Presentations</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {formats.map((item) => (
+          <article class="p-5 rounded-3xl border border-purple-100 bg-[#faf6ff]">
+            <h3 class="font-serif font-bold text-brand-deepPurple">{item.title}</h3>
+            <p class="text-xs text-gray-600 mt-2">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="topics" class="py-16 sunset-gradient">
+    <div class="max-w-4xl mx-auto px-4 space-y-8">
+      <h2 class="font-serif text-4xl font-bold text-brand-deepPurple">Signature Speaking Topics</h2>
+      {topics.map((topic) => (
+        <article class="glass-card p-6 rounded-3xl">
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-sunsetPeach">{topic.kicker}</p>
+          <h3 class="font-serif text-2xl font-bold text-brand-deepPurple mt-1">{topic.title}</h3>
+          {topic.paragraphs.map((paragraph) => <p class="text-sm text-gray-700 mt-3">{paragraph}</p>)}
+          <ul class="mt-3 text-sm text-gray-700 list-disc pl-5">{topic.takeaways.map((item) => <li>{item}</li>)}</ul>
+          <a href="#book" class="inline-flex mt-4 text-xs font-bold uppercase text-brand-amethyst">Placeholder: select this topic</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-serif text-4xl font-bold text-brand-deepPurple">The Power of Manifestation in Action</h2>
+      <p class="text-gray-600 mt-3 mb-8">{celebrity.intro}</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        {celebrity.cards.map((card) => (
+          <figure class="rounded-3xl overflow-hidden border border-purple-100 shadow-lg bg-[#faf6ff]">
+            <img src={card.src} alt={card.alt} class="w-full h-80 object-cover" />
+            <figcaption class="p-5">
+              <h3 class="font-serif text-2xl font-bold text-brand-deepPurple">{card.title}</h3>
+              <p class="text-sm text-gray-600 mt-2">{card.body}</p>
+              <p class="text-[11px] text-gray-500 mt-2">Photo from the live site: {card.source}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <ul class="mt-8 flex flex-wrap gap-4 text-sm font-serif text-gray-600">{celebrity.logos.map((logo) => <li>{logo}</li>)}</ul>
+    </div>
+  </section>
+
+  <section id="reel" class="py-16 bg-[#faf6ff]">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">{reel.title}</h2>
+      <p class="text-sm text-gray-600 mt-2">{reel.body}</p>
+      <p class="text-xs text-gray-500 mt-2">{reel.meta}</p>
+      <div class="mt-4"><EmbedSlot label={reel.embedLabel} tone="light" /></div>
+      <a href="#placeholder" class="inline-flex mt-4 text-xs font-bold uppercase text-brand-amethyst">{reel.tickets}</a>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple mb-6">Everything You Need for a Seamless Production</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        {production.map((item) => (
+          <article class="p-5 rounded-3xl border border-purple-100">
+            <h3 class="font-serif font-bold text-brand-deepPurple">{item.title}</h3>
+            <p class="text-sm text-gray-600 mt-2">{item.body}</p>
+          </article>
+        ))}
+      </div>
+      <a href="#placeholder" class="inline-flex mt-4 text-xs font-bold uppercase text-brand-amethyst">Placeholder: speaker one-sheet PDF</a>
+    </div>
+  </section>
+
+  <section id="book" class="py-16 bg-[#faf6ff]">
+    <div class="max-w-3xl mx-auto px-4 glass-card rounded-3xl p-8 space-y-3">
+      <h2 class="font-serif text-3xl font-bold text-brand-deepPurple">{booking.title}</h2>
+      <p class="text-sm text-gray-600">{booking.body}</p>
+      <p class="text-xs font-semibold text-brand-sunsetPeach">{booking.note}</p>
+      <label class="text-xs font-semibold">Estimated Audience Size</label>
+      <select disabled class="w-full px-3 py-2 rounded-xl border text-xs">{booking.sizes.map((item) => <option>{item}</option>)}</select>
+      <button type="button" disabled class="w-full py-3 rounded-full text-xs font-bold uppercase bg-brand-deepPurple text-white opacity-70 cursor-not-allowed">{booking.button}</button>
+      <p class="text-[11px] text-gray-500">{booking.response}</p>
+    </div>
+  </section>
+</BaseLayout>

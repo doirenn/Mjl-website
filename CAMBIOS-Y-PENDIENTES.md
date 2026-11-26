@@ -259,6 +259,33 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | --- | --- | --- | --- |
 | Sin fotos | Toda la pagina | Ninguno | El sample de esta pagina no usaba imagenes de personas en el texto extraido. |
 
+## 10. Speaking (`/speaking`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `speaking.html` ahora es `/speaking`, con los formatos, los tres temas, el rider y la solicitud del sample.
+2. Las fotos de stock de Oprah y Kim se reemplazaron por las fotos reales del sitio en vivo.
+3. El reel de YouTube de relleno se quito. Queda un espacio de embed vacio. El sample decia 03:45 en HD.
+4. El PDF del one-sheet y las fechas de gira apuntan a `#placeholder`.
+5. La solicitud de llamada no se envia.
+6. El contenido editable esta en `src/data/speaking.ts`. `speaking.html` se elimina en este commit.
+
+### b) Pendientes para Marian o Michelle
+
+1. Confirmar que las fotos con Oprah y Kim pueden usarse, y el texto que las acompana.
+2. Pasar el reel real y el PDF del one-sheet.
+3. Confirmar audiencias de 50 a 5,000+, 100% de 5 estrellas y la reserva 2026-2027.
+4. Conectar la solicitud de speaking y las fechas de gira.
+5. Confirmar Apple Podcasts #1, Spotify Global, iHeartRadio, Forbes y Conscious Life Expo.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Retrato | Hero | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
+| Michelle y Oprah | Autoridad | `/images/michelle-with-oprah.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/04/Michelle-j-lamont-Oprah.jpg |
+| Michelle y Kim Kardashian | Autoridad | `/images/michelle-with-kim-kardashian.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/04/Michelle-j-lamont-kim-kardashian.jpg |
+
 ## 12. Contact (`/contact`)
 
 ### a) Qué cambió respecto al sample HTML
