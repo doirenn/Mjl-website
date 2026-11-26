@@ -1,5 +1,28 @@
 ---
 import { brand, footer, socialPlaceholders } from '../data/site';
+
+export interface FooterContent {
+  mark?: string;
+  blurb: string;
+  exploreTitle?: string;
+  explore: { href: string; label: string }[];
+  legalTitle?: string;
+  disclaimer: string;
+  copyright: string;
+  signoff?: string;
+  supportLabel?: string;
+  supportHref?: string;
+}
+
+interface Props {
+  content?: FooterContent;
+}
+
+const content: FooterContent = Astro.props.content ?? {
+  ...footer,
+  exploreTitle: 'Quick Exploration',
+  legalTitle: 'Disclaimer & Integrity',
+};
 ---
 
 <footer class="bg-brand-deepPurple text-white pt-16 pb-12 border-t border-white/10">
@@ -8,9 +31,9 @@ import { brand, footer, socialPlaceholders } from '../data/site';
       <div class="lg:col-span-5 space-y-4">
         <a href="/" class="inline-block">
           <span class="font-serif text-2xl font-bold tracking-tight text-white">{brand.name}</span>
-          <span class="block text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">{brand.mark}</span>
+          <span class="block text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">{content.mark ?? brand.mark}</span>
         </a>
-        <p class="text-xs text-purple-200 max-w-sm leading-relaxed">{footer.blurb}</p>
+        <p class="text-xs text-purple-200 max-w-sm leading-relaxed">{content.blurb}</p>
         <div class="flex space-x-4 pt-2">
           {
             socialPlaceholders.map((item) => (
@@ -29,27 +52,27 @@ import { brand, footer, socialPlaceholders } from '../data/site';
       </div>
 
       <div class="lg:col-span-3 space-y-3">
-        <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Quick Exploration</p>
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">{content.exploreTitle ?? 'Quick Exploration'}</p>
         <ul class="space-y-2 text-xs text-purple-200">
-          {footer.explore.map((link) => (
+          {content.explore.map((link) => (
             <li><a href={link.href} class="hover:text-white transition-colors">{link.label}</a></li>
           ))}
         </ul>
       </div>
 
       <div class="lg:col-span-4 space-y-3">
-        <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">Disclaimer & Integrity</p>
-        <p class="text-[11px] text-purple-300 leading-relaxed">{footer.disclaimer}</p>
-        <p class="text-[11px] text-purple-400">{footer.copyright}</p>
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-sunsetPeach">{content.legalTitle ?? 'Disclaimer & Integrity'}</p>
+        <p class="text-[11px] text-purple-300 leading-relaxed">{content.disclaimer}</p>
+        <p class="text-[11px] text-purple-400">{content.copyright}</p>
       </div>
     </div>
 
     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300">
-      <p>{footer.signoff}</p>
+      <p>{content.signoff ?? footer.signoff}</p>
       <div class="flex space-x-6 mt-3 sm:mt-0">
         <a href="#placeholder" class="hover:text-white" title="Placeholder: Privacy Policy">Placeholder: Privacy Policy</a>
         <a href="#placeholder" class="hover:text-white" title="Placeholder: Terms of Service">Placeholder: Terms of Service</a>
-        <a href="/contact" class="hover:text-white">Contact Support</a>
+        <a href={content.supportHref ?? '/contact'} class="hover:text-white">{content.supportLabel ?? 'Contact Support'}</a>
       </div>
     </div>
   </div>

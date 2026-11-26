@@ -68,6 +68,34 @@ export const images = {
       'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop&crop=faces',
     note: 'Stock face from the HTML sample. Not a verified client.',
   },
+  forestLight: {
+    src: '/images/forest-light.jpg',
+    alt: 'Sunlight through trees',
+    sourceUrl:
+      'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80',
+    note: 'Stock photo from the HTML sample. Not a photo of Michelle.',
+  },
+  courseNervousSystem: {
+    src: '/images/course-nervous-system.jpg',
+    alt: '21-Day Nervous System Reset',
+    sourceUrl:
+      'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=900&auto=format&fit=crop&q=80',
+    note: 'Stock photo from the HTML sample. Course thumbnail, not Michelle.',
+  },
+  courseRichRegulated: {
+    src: '/images/course-rich-regulated.jpg',
+    alt: 'Rich & Regulated',
+    sourceUrl:
+      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&auto=format&fit=crop&q=80',
+    note: 'Stock portrait from the HTML sample. Not Michelle. Swap if this card should show her.',
+  },
+  courseShadowJournal: {
+    src: '/images/course-shadow-journal.jpg',
+    alt: 'Wreck This Shadow Journal',
+    sourceUrl:
+      'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=900&auto=format&fit=crop&q=80',
+    note: 'Stock photo from the HTML sample. Course thumbnail, not Michelle.',
+  },
   testimonialElena: {
     src: '/images/testimonial-elena.jpg',
     alt: 'Elena R.',

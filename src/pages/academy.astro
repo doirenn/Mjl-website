@@ -1,0 +1,361 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmbedSlot from '../components/EmbedSlot.astro';
+import {
+  academyAnnouncement,
+  academyClose,
+  academyCtas,
+  academyFaqs,
+  academyFooter,
+  academyHero,
+  academySeo,
+  courses,
+  memberStories,
+  monthly,
+  pricing,
+  whySection,
+} from '../data/academy';
+---
+
+<BaseLayout
+  title={academySeo.title}
+  description={academySeo.description}
+  ogImage={academySeo.ogImage}
+  ogAlt={academySeo.ogAlt}
+  announcement={academyAnnouncement}
+  headerCtas={academyCtas}
+  footer={academyFooter}
+>
+  <section class="relative pt-16 pb-20 lg:pt-24 lg:pb-32 bg-[#faf6ff] overflow-hidden">
+    <div class="aurora-glow w-[36rem] h-[36rem] bg-brand-sunsetPeach/30 top-1/4 left-1/2 -translate-x-1/2"></div>
+    <div class="aurora-glow w-80 h-80 bg-brand-amethyst/35 top-10 left-10"></div>
+    <div class="aurora-glow w-80 h-80 bg-brand-gold/25 bottom-10 right-10"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-lavender text-brand-amethyst text-xs font-bold uppercase tracking-[0.25em]">
+            <i class="fa-solid fa-sparkles text-brand-sunsetPeach"></i>
+            <span>{academyHero.eyebrow}</span>
+          </div>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-deepPurple leading-[1.12]">
+            {academyHero.titleLead} <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-amethyst via-brand-sunsetPeach to-brand-gold">{academyHero.titleAccent}</span>
+          </h1>
+          <p class="font-serif text-xl sm:text-2xl text-brand-amethyst font-semibold italic leading-snug">"{academyHero.priceLine}"</p>
+          <div class="space-y-3 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p>If you've been feeling overwhelmed… anxious… stuck in loops you can't break… or spiritually disconnected, <strong>you are not alone</strong>.</p>
+            <p>And you don't need another generic course. You don't need another endless journal prompt. You don't need another toxic positivity <em>"just think good thoughts"</em> solution. <strong>You need support that holds you.</strong></p>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href={academyHero.primary.href} class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+              <i class="fa-solid fa-crown mr-2 text-base"></i> {academyHero.primary.label}
+            </a>
+            <a href={academyHero.secondary.href} class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider text-brand-deepPurple bg-white hover:bg-purple-50 border border-purple-200 shadow-sm transition-all">
+              {academyHero.secondary.label}
+            </a>
+          </div>
+          <p class="text-xs text-gray-500">Placeholder: Thinkific is not connected. Nothing starts a trial.</p>
+          <div class="pt-6 border-t border-purple-200/60 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-gray-600 font-semibold">
+            {academyHero.proofs.map((item) => (
+              <span class="flex items-center gap-1.5"><i class:list={[item.icon, item.iconClass]}></i> {item.label}</span>
+            ))}
+          </div>
+        </div>
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-72 sm:w-88 group">
+            <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-sunsetPeach via-brand-gold to-brand-amethyst blur-2xl opacity-50 group-hover:opacity-75 transition duration-700 animate-pulse"></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-2">
+              <div class="relative rounded-2xl overflow-hidden h-96 sm:h-[460px]">
+                <img src={academyHero.image.src} alt={academyHero.image.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/90 via-brand-deepPurple/40 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-2xl shadow-lg border border-white/80 text-left">
+                  <div class="flex items-center space-x-2 text-brand-sunsetPeach text-xs mb-1">
+                    <i class="fa-solid fa-circle-nodes"></i>
+                    <span class="font-bold uppercase tracking-wider text-[10px]">{academyHero.quoteEyebrow}</span>
+                  </div>
+                  <p class="font-serif font-bold text-brand-deepPurple text-xs sm:text-sm">"{academyHero.quote}"</p>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-4 -right-4 glass-card px-4 py-2.5 rounded-2xl shadow-xl border border-white/80 hidden sm:flex items-center space-x-2.5 animate-float">
+              <div class="w-8 h-8 rounded-full bg-brand-sunsetPeach text-brand-deepPurple flex items-center justify-center font-bold text-sm shadow">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="text-left">
+                <p class="text-[9px] uppercase font-bold text-gray-500">{academyHero.membersLabel}</p>
+                <p class="text-xs font-bold text-brand-deepPurple">{academyHero.membersValue}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 max-w-4xl mx-auto glass-card p-6 sm:p-8 rounded-3xl border border-purple-200/80 shadow-lg">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-4 border-b border-purple-100">
+          <div class="flex items-center space-x-3 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-2xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-podcast text-brand-sunsetPeach"></i>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-brand-sunsetPeach">{academyHero.audioEyebrow}</span>
+              <h4 class="font-serif font-bold text-lg text-brand-deepPurple">{academyHero.audioTitle}</h4>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-brand-amethyst">{academyHero.audioBadge}</span>
+        </div>
+        <div class="pt-6">
+          <EmbedSlot label={academyHero.embedLabel} tone="light" />
+        </div>
+        <p class="text-[11px] text-gray-500 italic mt-3 text-center sm:text-left">"{academyHero.audioCaption}"</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white border-y border-purple-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{whySection.eyebrow}</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">{whySection.title}</h2>
+        <p class="text-gray-600 text-base sm:text-lg">{whySection.intro}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {whySection.cards.map((card) => (
+          <div class:list={['p-6 sm:p-8 rounded-3xl flex flex-col justify-between space-y-4', card.featured ? 'spiritual-gradient text-white shadow-xl' : 'bg-[#faf6ff] border border-purple-100']}>
+            <div class:list={['w-12 h-12 rounded-2xl flex items-center justify-center text-xl', card.featured ? 'bg-white/20 text-brand-gold' : 'bg-brand-lavender text-brand-amethyst']}>
+              <i class:list={[card.icon, card.iconClass]}></i>
+            </div>
+            <div>
+              <h3 class:list={['font-serif font-bold text-lg', card.featured ? 'text-white' : 'text-brand-deepPurple']}>{card.title}</h3>
+              <p class:list={['text-xs mt-2 leading-relaxed', card.featured ? 'text-purple-100' : 'text-gray-600']}>{card.body}</p>
+            </div>
+            <span class:list={['text-[10px] uppercase font-bold', card.featured ? 'text-brand-gold' : 'text-gray-400']}>{card.foot}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="what-you-get" class="py-20 sunset-gradient relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{monthly.eyebrow}</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">{monthly.title}</h2>
+        <p class="text-gray-700 text-base sm:text-lg">{monthly.intro}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {monthly.items.map((item) => (
+          <div class="glass-card p-6 rounded-3xl border border-white shadow-md flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-brand-lavender text-brand-amethyst flex items-center justify-center text-lg">{item.emoji}</div>
+              <h3 class="font-serif font-bold text-base text-brand-deepPurple">{item.title}</h3>
+              <p class="text-xs text-gray-600 leading-relaxed">{item.body}</p>
+            </div>
+            <span class="text-[10px] font-bold text-brand-sunsetPeach uppercase tracking-wider mt-4">{item.foot}</span>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-12">
+        <a href={monthly.cta.href} class="inline-flex px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-lg transition-all">
+          {monthly.cta.label}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{courses.eyebrow}</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple mt-2 mb-3">{courses.title}</h2>
+        <p class="text-gray-600 text-sm sm:text-base">{courses.intro}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {courses.items.map((course) => (
+          <div class="glass-card rounded-3xl p-6 border border-purple-100 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
+            <div>
+              <div class="relative h-44 rounded-2xl overflow-hidden mb-4 bg-brand-deepPurple">
+                <img src={course.image.src} alt={course.image.alt} class="w-full h-full object-cover opacity-85" />
+                <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white text-brand-deepPurple">{course.badge}</span>
+              </div>
+              <h4 class="font-serif font-bold text-lg text-brand-deepPurple">{course.title}</h4>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">{course.body}</p>
+            </div>
+            <div class="pt-4 border-t border-purple-100 mt-4 flex items-center justify-between text-xs">
+              <span class="text-brand-sunsetPeach font-bold">{course.included}</span>
+              <span class="text-gray-400 font-mono">{course.value}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-20 sunset-gradient relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{pricing.eyebrow}</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-deepPurple mt-2 mb-4">{pricing.title}</h2>
+        <p class="text-gray-700 text-base sm:text-lg">{pricing.intro}</p>
+        <p class="mt-4 text-sm font-semibold text-brand-deepPurple">{pricing.note}</p>
+        <div class="mt-8 inline-flex items-center p-1.5 rounded-full bg-white/80 border border-purple-200 shadow-sm" data-plan-toggles>
+          <button type="button" data-plan-toggle="monthly" class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white shadow-sm transition-all">Monthly ($22.22/mo)</button>
+          <button type="button" data-plan-toggle="annual" class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-gray-700 hover:text-brand-deepPurple transition-all">Annual Pass (Save 15%)</button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+        {pricing.plans.map((plan) => (
+          <article data-plan={plan.id} class:list={[
+            'rounded-3xl p-8 flex flex-col justify-between relative',
+            plan.featured
+              ? 'spiritual-gradient border-2 border-brand-sunsetPeach text-white shadow-2xl transform lg:-translate-y-3'
+              : 'glass-card border border-purple-200/90 shadow-lg',
+          ]}>
+            {plan.ribbon && (
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+                {plan.ribbon}
+              </div>
+            )}
+            <div class="space-y-6">
+              <div class:list={['flex items-center justify-between', plan.featured && 'pt-2']}>
+                <span class:list={['px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider', plan.featured ? 'bg-white/20 text-brand-sunsetPeach' : 'bg-brand-lavender text-brand-amethyst']}>{plan.badge}</span>
+                <span class:list={['text-xs font-semibold', plan.featured ? 'text-brand-gold font-bold' : 'text-gray-400']}>{plan.aside}</span>
+              </div>
+              <div>
+                <h3 class:list={['font-serif text-2xl font-bold', plan.featured ? 'text-white' : 'text-brand-deepPurple']}>{plan.title}</h3>
+                <div class="py-3">
+                  <span class:list={['font-serif text-4xl sm:text-5xl font-bold', plan.featured ? 'text-white' : 'text-brand-deepPurple']}>{plan.price}</span>
+                  <span class:list={['text-xs font-medium', plan.featured ? 'text-purple-200' : 'text-gray-500']}>{plan.period}</span>
+                  <p class:list={['text-xs font-bold mt-1', plan.id === 'vip' ? 'text-emerald-600' : plan.featured ? 'text-brand-gold' : 'text-brand-sunsetPeach']}>{plan.trial}</p>
+                </div>
+                <p class:list={['text-xs leading-relaxed', plan.featured ? 'text-purple-100' : 'text-gray-600']}>{plan.body}</p>
+              </div>
+              <ul class:list={['space-y-2.5 text-xs pt-2 border-t', plan.featured ? 'text-purple-100 border-white/15' : 'text-gray-700 border-purple-100']}>
+                {plan.points.map((point) => (
+                  <li class="flex items-center gap-2">
+                    <i class:list={[plan.featured ? 'fa-solid fa-star text-brand-gold' : plan.id === 'vip' ? 'fa-solid fa-gem text-brand-sunsetPeach' : 'fa-solid fa-check text-brand-sunsetPeach']}></i>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="pt-8">
+              <a href="#placeholder" class:list={[
+                'block w-full py-4 rounded-full text-xs font-bold uppercase tracking-wider text-center transition-all',
+                plan.featured
+                  ? 'bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg'
+                  : 'bg-brand-deepPurple text-white hover:bg-brand-amethyst shadow-md',
+              ]}>{plan.cta}</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">{memberStories.eyebrow}</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-deepPurple mt-2 mb-3">{memberStories.title}</h2>
+        <div class="flex items-center justify-center gap-1 text-amber-400 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <span class="text-xs text-gray-600 font-semibold ml-2">{memberStories.rating}</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {memberStories.items.map((item) => (
+          <div class="glass-card p-7 rounded-3xl border border-purple-100 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-400 text-xs mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <h4 class="font-serif font-bold text-base text-brand-deepPurple mb-2">"{item.title}"</h4>
+              <p class="text-xs text-gray-600 leading-relaxed italic">"{item.quote}"</p>
+            </div>
+            <div class="pt-6 border-t border-purple-100 mt-6 flex items-center space-x-3">
+              <div class:list={['w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs', item.tone]}>{item.initials}</div>
+              <div>
+                <p class="text-xs font-bold text-brand-deepPurple">{item.name}</p>
+                <p class="text-[10px] text-gray-500">{item.detail}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-[#faf6ff]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-sunsetPeach">Clarity & Trust</span>
+        <h2 class="font-serif text-3xl font-bold text-brand-deepPurple mt-1">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-3.5" data-faq>
+        {academyFaqs.map((item) => (
+          <div class="border border-purple-100 rounded-2xl bg-white overflow-hidden shadow-sm">
+            <button type="button" data-faq-toggle aria-expanded="false" class="w-full px-6 py-4 text-left flex justify-between items-center text-gray-800 font-semibold text-sm sm:text-base hover:text-brand-amethyst transition-colors">
+              <span>{item.question}</span>
+              <i class="fa-solid fa-plus text-xs text-brand-sunsetPeach" data-faq-icon></i>
+            </button>
+            <div data-faq-panel class="hidden px-6 pb-4 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-purple-50 pt-3">{item.answer}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="spiritual-gradient rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="space-y-3 max-w-xl text-center md:text-left">
+          <span class="inline-block px-3 py-1 rounded-full bg-brand-sunsetPeach/20 text-brand-sunsetPeach text-xs font-bold tracking-wider uppercase">{academyClose.eyebrow}</span>
+          <h3 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">{academyClose.title}</h3>
+          <p class="text-purple-100 text-sm leading-relaxed">{academyClose.body}</p>
+        </div>
+        <a href={academyClose.cta.href} class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-sunsetPeach to-brand-warmRose text-brand-deepPurple hover:brightness-110 shadow-lg text-center transition-all">
+          {academyClose.cta.label}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const activeToggle = 'px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-deepPurple text-white shadow-sm transition-all';
+  const idleToggle = 'px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-gray-700 hover:text-brand-deepPurple transition-all';
+
+  document.querySelectorAll('[data-plan-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const id = button.getAttribute('data-plan-toggle');
+      document.querySelectorAll('[data-plan-toggle]').forEach((item) => {
+        item.className = idleToggle;
+      });
+      button.className = activeToggle;
+      document.querySelectorAll('[data-plan]').forEach((card) => {
+        card.classList.toggle('ring-4', card.getAttribute('data-plan') === id);
+        card.classList.toggle('ring-brand-sunsetPeach', card.getAttribute('data-plan') === id);
+      });
+      document.querySelector(`[data-plan="${id}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+
+  document.querySelectorAll('[data-faq-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const panel = button.parentElement?.querySelector('[data-faq-panel]');
+      const icon = button.querySelector('[data-faq-icon]');
+      const willOpen = panel?.classList.contains('hidden');
+      document.querySelectorAll('[data-faq-panel]').forEach((item) => item.classList.add('hidden'));
+      document.querySelectorAll('[data-faq-toggle]').forEach((item) => item.setAttribute('aria-expanded', 'false'));
+      document.querySelectorAll('[data-faq-icon]').forEach((item) => {
+        item.classList.remove('fa-minus');
+        item.classList.add('fa-plus');
+      });
+      if (willOpen) {
+        panel?.classList.remove('hidden');
+        button.setAttribute('aria-expanded', 'true');
+        icon?.classList.remove('fa-plus');
+        icon?.classList.add('fa-minus');
+      }
+    });
+  });
+</script>

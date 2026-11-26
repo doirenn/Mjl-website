@@ -51,3 +51,36 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Cara de Elena Rostova | Testimonios | `/images/testimonial-elena.jpg` | https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=faces |
 | Imagen Open Graph | SEO del inicio | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
 | Favicon | Sitio | `/favicon.svg` | Placeholder creado para esta reconstruccion. No viene del sample ni del sitio en vivo. |
+
+## 2. Academy (`/academy`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. La pagina `academy.html` ahora es `/academy`, con el mismo orden de secciones, precios y textos del sample.
+2. La barra, los botones del encabezado y el pie usan el texto propio de esta pagina. El pie compartido sigue marcando las redes como placeholders.
+3. El reproductor que simulaba el audio del lunes quedo en un espacio de embed vacio. No hay barra de progreso falsa.
+4. El modal de alta, la contraseña de Thinkific y el toast de bienvenida se quitaron. Los botones de prueba y de planes apuntan a `#placeholder` y dicen que Thinkific no esta conectado.
+5. El interruptor mensual o anual ya no muestra un toast. Solo resalta la tarjeta correspondiente. Los tres precios siguen visibles.
+6. Las fotos de stock de la portada y de los cursos se descargaron al proyecto. Ninguna se presenta como Michelle, salvo la miniatura de Rich & Regulated, que sigue siendo stock y esta marcada para revisar.
+7. Se elimino `academy.html`. El contenido editable esta en `src/data/academy.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Conectar Thinkific para la prueba de 14 dias, el plan de $22.22 al mes, el pase de $249 al ano y el circulo VIP de $499.
+2. Confirmar si esos precios, la prueba gratis y el texto de facturacion del pie siguen vigentes.
+3. Pasar el audio real del Monday Morning Abundance Call.
+4. Confirmar 500+ miembros, los valores de curso $199, $222 y $97, y el ahorro del pase anual.
+5. Confirmar los testimonios de Kara Miller, Dr. Rachel E. y Samantha T. No hay fotos reales de ellas en el sample.
+6. Decidir si la miniatura de Rich & Regulated debe ser una foto real de Michelle. Hoy es stock.
+7. Confirmar el enlace de Instagram `instagram.com/michellejlamont` que el sample usaba solo en esta pagina. El pie compartido lo dejo como placeholder.
+8. Pasar el enlace real de la comunidad privada, si es distinto de Thinkific.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Portada del hero | Hero | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
+| Curso 21-Day Nervous System Reset | Biblioteca | `/images/course-nervous-system.jpg` | https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=900&auto=format&fit=crop&q=80 |
+| Curso Rich & Regulated | Biblioteca | `/images/course-rich-regulated.jpg` | https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&auto=format&fit=crop&q=80 |
+| Curso Wreck This Shadow Journal | Biblioteca | `/images/course-shadow-journal.jpg` | https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=900&auto=format&fit=crop&q=80 |
+| Imagen Open Graph | SEO | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
