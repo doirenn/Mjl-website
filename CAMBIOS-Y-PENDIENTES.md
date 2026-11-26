@@ -114,3 +114,39 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Capitulo 02 | Historia | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
 | Capitulo 03 | Historia | `/images/michelle-portrait-2022.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/08/Michelle-J-Lamont-00503.jpg |
 | Imagen Open Graph | SEO | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |
+
+## 4. Podcast (`/podcast`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `podcast.html` ahora es `/podcast`, con el hero, el episodio destacado, los seis episodios del sample, la cita, la bio, las resenas y el bloque de academia.
+2. Se quitaron los iframes de YouTube, incluido el video de relleno. Quedan espacios de embed vacios para el episodio 312 y para el video destacado.
+3. El reproductor que simulaba avance, el copiado falso del RSS y el toast de exito desaparecieron.
+4. Apple, Spotify, YouTube e iHeart apuntan a `#placeholder`.
+5. La busqueda y los filtros si recorren los seis episodios reales del sample. No hay un boton de cargar mas que finja episodios nuevos.
+6. El formulario de invitados esta deshabilitado.
+7. El retrato de Michelle en la portada y en la bio es foto real del sitio en vivo. El resto de imagenes de episodios son el stock del sample.
+8. Se elimino `podcast.html`. El contenido editable esta en `src/data/podcast.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Pasar los enlaces reales de Apple Podcasts, Spotify, YouTube, iHeart y el RSS.
+2. Pasar el video y el audio del episodio destacado. El sample mezclaba el titulo de la barra (Ep. 312, Erased For 40 Years) con la ficha 312 (Reclaiming Your Energetic Space) y con el episodio 310 (Erased For 40 Years). Hay que confirmar cual es cual.
+3. Confirmar 750K+ descargas, Top 1%, 4.9 en Apple, 300+ episodios, 115+ paises y el horario Tuesday 6 AM EST.
+4. Confirmar las resenas de Jessica L., David K. y Maria R.
+5. Conectar el formulario de invitados, sponsors y prensa.
+6. Decidir si el archivo debe listar solo estos seis episodios hasta tener el catalogo real.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Fondo de la portada del show | Hero | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
+| Retrato circular de Michelle | Hero | `/images/michelle-headshot-square.png` | https://www.michellejlamont.com/wp-content/uploads/2022/07/mjl-web-photos-square2-1.png |
+| Video destacado | Episodio landmark | `/images/episode-movement.jpg` | https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80 |
+| Episodios 312 y fondo de cita | Lista y cita | `/images/forest-light.jpg` y `/images/sunset-beach.jpg` | Stock del sample, ya citado arriba y en el inicio |
+| Episodio 311 | Lista | `/images/course-nervous-system.jpg` | https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=900&auto=format&fit=crop&q=80 |
+| Episodio 309 | Lista | `/images/episode-love.jpg` | https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900&auto=format&fit=crop&q=80 |
+| Episodio 308 | Lista | `/images/course-shadow-journal.jpg` | https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=900&auto=format&fit=crop&q=80 |
+| Episodio 307 | Lista | `/images/episode-stillness.jpg` | https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=900&auto=format&fit=crop&q=80 |
+| Bio de la anfitriona | About your host | `/images/michelle-portrait-2023.jpg` | https://www.michellejlamont.com/wp-content/uploads/2023/09/MJL-Shoot-1-Final-02883-copia-low.jpg |

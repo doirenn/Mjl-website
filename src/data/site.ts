@@ -14,6 +14,7 @@ export interface Announcement {
   badge: string;
   emphasis: string;
   text: string;
+  icon?: string;
   links: AnnouncementLink[];
 }
 

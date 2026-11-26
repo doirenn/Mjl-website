@@ -21,7 +21,7 @@ const { announcement, ctas } = Astro.props;
       <span class="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">
         {announcement.badge}
       </span>
-      <span>✨ <strong>{announcement.emphasis}</strong> {announcement.text}</span>
+      <span>{announcement.icon ?? '✨'} <strong>{announcement.emphasis}</strong> {announcement.text}</span>
     </div>
     <div class="hidden md:flex items-center space-x-4">
       {
