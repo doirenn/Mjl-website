@@ -208,3 +208,29 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Fondo del hero | Hero | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
 | Cuencos | Audio 432Hz | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
 | Retrato de Michelle | Testimonio | `/images/michelle-portrait-2022.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/08/Michelle-J-Lamont-00503.jpg |
+
+## 7. The Portal (`/the-portal`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `the-portal.html` ahora es `/the-portal`, con las siete etapas, lo incluido, los tres planes y las condiciones del sample.
+2. El audio de sonido y agua (04:12 en el sample) quedo en un espacio de embed vacio.
+3. Los botones de pago y la solicitud no cobran ni confirman un envio.
+4. Se elimino `the-portal.html`. El contenido editable esta en `src/data/the-portal.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Confirmar precios: $7,500, 2 x $3,900 y 3 x $2,700, el bono de Voxer de $2,500 y el valor de MMA de $1,997.
+2. Confirmar que solo hay 1 fecha al mes y que los pagos no son reembolsables.
+3. Conectar el checkout y la solicitud.
+4. Pasar el audio real de 432Hz y agua.
+5. Confirmar si el dia virtual por estudio debe seguir en el formulario.
+6. La foto de stock que el sample rotulo como sala con velas es un retrato de otra persona. Decir si se reemplaza por una foto real del santuario.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Fondo del hero | Hero | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
+| Sonido y agua | Audio | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
+| Santuario | Lo incluido | `/images/course-rich-regulated.jpg` | https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&auto=format&fit=crop&q=80 |
