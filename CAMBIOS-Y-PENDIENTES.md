@@ -234,3 +234,27 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Fondo del hero | Hero | `/images/sunset-beach.jpg` | https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80 |
 | Sonido y agua | Audio | `/images/forest-light.jpg` | https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&auto=format&fit=crop&q=80 |
 | Santuario | Lo incluido | `/images/course-rich-regulated.jpg` | https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&auto=format&fit=crop&q=80 |
+
+## 8. Success Stories (`/success-stories`)
+
+### a) Qué cambió respecto al sample HTML
+
+1. `success-stories.html` ahora es `/success-stories`, con las seis historias, las cifras, las preguntas y el texto explicativo del sample.
+2. El formulario para compartir una historia no publica nada.
+3. El calendario de octubre 2026 con horarios del 22 de octubre queda marcado como muestra del HTML. No reserva una llamada.
+4. Los filtros si agrupan las historias del sample. Jessica T. aparece en abundancia y en amor.
+5. Se elimino `success-stories.html`. El contenido editable esta en `src/data/success-stories.ts`.
+
+### b) Pendientes para Marian o Michelle
+
+1. Confirmar 500+ vidas, 97% de breakthrough y $2M+ manifestados.
+2. Confirmar las seis historias y si los nombres pueden publicarse.
+3. Conectar el envio de testimonios.
+4. Conectar el calendario real de la llamada de 15 minutos. Los horarios del sample no estan vivos.
+5. El sample no traia fotos de estas personas. Decir si hay que agregar alguna.
+
+### Tabla de imágenes
+
+| Slot | Seccion | Archivo | URL de origen |
+| --- | --- | --- | --- |
+| Sin fotos | Toda la pagina | Ninguno | El sample de esta pagina no usaba imagenes de personas en el texto extraido. |

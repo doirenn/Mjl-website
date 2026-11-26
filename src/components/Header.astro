@@ -8,13 +8,14 @@ interface Cta {
 }
 
 interface Props {
-  announcement: Announcement;
+  announcement?: Announcement | null;
   ctas: Cta[];
 }
 
 const { announcement, ctas } = Astro.props;
 ---
 
+{announcement && (
 <div class="bg-gradient-to-r from-brand-deepPurple via-brand-amethyst to-brand-deepPurple text-white py-2.5 px-4 text-xs md:text-sm font-medium tracking-wide">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <div class="flex items-center space-x-2 mx-auto md:mx-0">
@@ -45,6 +46,7 @@ const { announcement, ctas } = Astro.props;
     </div>
   </div>
 </div>
+)}
 
 <header class="sticky top-0 z-50 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
