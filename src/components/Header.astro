@@ -18,11 +18,11 @@ const { announcement, ctas } = Astro.props;
 {announcement && (
 <div class="bg-gradient-to-r from-brand-deepPurple via-brand-amethyst to-brand-deepPurple text-white py-2.5 px-4 text-xs md:text-sm font-medium tracking-wide">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <div class="flex items-center space-x-2 mx-auto md:mx-0">
-      <span class="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">
+    <div class="flex items-center gap-2 min-w-0 mx-auto md:mx-0">
+      <span class="inline-flex shrink-0 items-center justify-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-sunsetPeach text-brand-deepPurple rounded-full animate-pulse">
         {announcement.badge}
       </span>
-      <span>{announcement.icon ?? '✨'} <strong>{announcement.emphasis}</strong> {announcement.text}</span>
+      <span class="min-w-0">{announcement.icon ?? '✨'} <strong>{announcement.emphasis}</strong> {announcement.text}</span>
     </div>
     <div class="hidden md:flex items-center space-x-4">
       {
@@ -49,10 +49,10 @@ const { announcement, ctas } = Astro.props;
 )}
 
 <header class="sticky top-0 z-50 transition-all duration-300 glass-card border-b border-purple-100/60 shadow-sm" id="mainHeader">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between gap-6 h-20">
-      <a href="/" class="flex flex-col shrink-0 group/logo">
-        <span class="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-brand-deepPurple group-hover/logo:text-brand-amethyst transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-4 2xl:px-8">
+    <div class="flex items-center justify-between gap-2 sm:gap-4 h-16 sm:h-20">
+      <a href="/" class="flex flex-col min-w-0 group/logo">
+        <span class="font-serif text-lg sm:text-2xl 2xl:text-3xl leading-tight font-bold tracking-tight text-brand-deepPurple group-hover/logo:text-brand-amethyst transition-colors">
           {brand.name}
         </span>
         <span class="text-[10px] tracking-[0.25em] font-semibold text-brand-sunsetPeach uppercase">
@@ -60,7 +60,7 @@ const { announcement, ctas } = Astro.props;
         </span>
       </a>
 
-      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5" aria-label="Primary">
+      <nav class="hidden xl:flex items-center gap-2 2xl:gap-5" aria-label="Primary">
         <a href={mainNav.academy.href} class="text-sm font-semibold text-brand-deepPurple hover:text-brand-amethyst transition-colors whitespace-nowrap">
           {mainNav.academy.label}
         </a>
@@ -117,25 +117,27 @@ const { announcement, ctas } = Astro.props;
         </a>
       </nav>
 
-      <div class="flex items-center space-x-3">
-        {ctas.map((cta) => (
-          <a href={cta.href} class={cta.className}>{cta.label}</a>
-        ))}
-        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenu" class="xl:hidden p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
+      <div class="flex items-center gap-2 shrink-0">
+        <div class="hidden sm:flex items-center gap-2">
+          {ctas.map((cta) => (
+            <a href={cta.href} class={cta.className}>{cta.label}</a>
+          ))}
+        </div>
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenu" class="xl:hidden shrink-0 p-2.5 rounded-lg text-gray-700 hover:bg-purple-50 focus:outline-none">
           <i class="fa-solid fa-bars text-xl"></i>
         </button>
       </div>
     </div>
   </div>
 
-  <div id="mobileMenu" class="hidden xl:hidden px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl transition-all">
+  <div id="mobileMenu" class="hidden xl:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto px-4 pt-2 pb-6 bg-white/95 backdrop-blur-xl border-b border-purple-100 shadow-xl">
     <div class="flex flex-col space-y-3 pt-2">
       <a href={mainNav.academy.href} class="text-base font-semibold text-brand-deepPurple hover:text-brand-amethyst py-1">{mainNav.academy.label}</a>
       <a href={mainNav.podcast.href} class="text-base font-medium text-gray-800 hover:text-brand-amethyst py-1">{mainNav.podcast.label}</a>
       <details>
         <summary class="cursor-pointer flex items-center justify-between text-base font-medium text-gray-800 py-1">
           1:1 Coaching
-          <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+          <i class="fa-solid fa-chevron-down text-xs text-gray-600"></i>
         </summary>
         <div class="flex flex-col pl-3 pt-2 space-y-2">
           {mainNav.coaching.map((item) => (
@@ -150,7 +152,7 @@ const { announcement, ctas } = Astro.props;
       <details>
         <summary class="cursor-pointer flex items-center justify-between text-base font-medium text-gray-800 py-1">
           Resources
-          <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+          <i class="fa-solid fa-chevron-down text-xs text-gray-600"></i>
         </summary>
         <div class="flex flex-col pl-3 pt-2 space-y-2">
           {mainNav.resources.map((item) => (

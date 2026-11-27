@@ -164,7 +164,7 @@ import {
         {episodes.map((episode) => (
           <article class="episode-card glass-card rounded-3xl overflow-hidden border border-purple-100 shadow-sm flex flex-col" data-category={episode.category} data-search={`${episode.title} ${episode.description} ${episode.category}`.toLowerCase()}>
             <div class="relative h-48 overflow-hidden">
-              <img src={episode.image} alt="" class="w-full h-full object-cover" />
+              <img src={episode.image} alt={episode.title} width="900" height="600" loading="lazy" decoding="async" class="w-full h-full object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-deepPurple/70 to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-brand-deepPurple">{episode.category}</span>
               <div class="absolute bottom-3 left-3 right-3 flex justify-between text-white text-xs">
@@ -173,7 +173,7 @@ import {
               </div>
             </div>
             <div class="p-6 space-y-2.5 flex-1">
-              <span class="text-[11px] font-semibold text-gray-400 block">{episode.date}</span>
+              <span class="text-[11px] font-semibold text-gray-600 block">{episode.date}</span>
               <h3 class="font-serif text-lg font-bold text-brand-deepPurple">{episode.title}</h3>
               <p class="text-xs text-gray-600 leading-relaxed">{episode.description}</p>
               <details class="text-xs text-gray-600">
@@ -248,7 +248,7 @@ import {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {listenerPraise.items.map((item) => (
           <div class="glass-card p-6 sm:p-8 rounded-3xl border border-purple-100 shadow-sm">
-            <h4 class="font-serif font-bold text-brand-deepPurple text-base mb-2">"{item.title}"</h4>
+            <h3 class="font-serif font-bold text-brand-deepPurple text-base mb-2">"{item.title}"</h3>
             <p class="text-xs text-gray-600 leading-relaxed italic">"{item.quote}"</p>
             <div class="pt-6 mt-6 border-t border-purple-100 flex items-center gap-3">
               <div class:list={['w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs', item.tone]}>{item.initials}</div>

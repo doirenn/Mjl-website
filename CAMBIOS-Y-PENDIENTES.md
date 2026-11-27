@@ -366,3 +366,37 @@ El host de las URLs canonicas y del sitemap es `https://mjl-website.vercel.app` 
 | Halo | Fotos | `/images/michelle-headshot-square.png` | https://www.michellejlamont.com/wp-content/uploads/2022/07/mjl-web-photos-square2-1.png |
 | Agua | Fotos | `/images/michelle-portrait-2022.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/08/Michelle-J-Lamont-00503.jpg |
 | Con Oprah | Fotos | `/images/michelle-with-oprah.jpg` | https://www.michellejlamont.com/wp-content/uploads/2022/04/Michelle-j-lamont-Oprah.jpg |
+
+## CHEQUEO DE CALIDAD (27 nov 2026)
+
+Se revisaron las 12 paginas en 375 px, 768 px y 1280 px. Tambien se recorrieron los enlaces internos, las imagenes, el SEO basico y un pase tipo Lighthouse en el inicio (movil): rendimiento 100 y accesibilidad 100 despues de estos arreglos.
+
+### Que se corrigio
+
+1. En el movil, el nombre y el boton del encabezado se salian de la pantalla y tapaban el menu. Ahora, bajo 640 px, el encabezado muestra el nombre y el menu. Los botones largos siguen dentro de cada pagina.
+2. El menu movil se puede desplazar si la lista es mas alta que la pantalla.
+3. En 1280 px, The Immersion y The Portal empujaban el boton de reserva fuera del borde. El menu de escritorio ahora entra.
+4. Las etiquetas color durazno sobre fondo claro y los textos gris claro quedaron mas oscuros para poder leerse. Sobre fondo morado el durazno sigue claro.
+5. Blog y podcast: las fotos de las notas y de los episodios ya tienen texto alternativo.
+6. Contacto: la meta descripcion se acorto con palabras que ya estaban en la pagina.
+7. Cada pagina tiene un `<main>`. En el inicio, los titulos que saltaban de nivel quedaron en orden.
+8. La foto del bosque paso de cerca de 1 MB a unos 340 KB.
+9. No habia enlaces internos rotos ni imagenes faltantes. El sitemap incluye las 12 rutas. `robots.txt` sigue apuntando a ese sitemap.
+
+### Que queda, por pagina
+
+1. Inicio: los enlaces de redes, podcasts, privacidad, terminos y Thinkific siguen en `#placeholder`. Falta confirmar cifras y el audio del episodio.
+2. Academy: 14 enlaces `#placeholder` (Thinkific y redes). Falta el audio del lunes.
+3. About: 6 enlaces `#placeholder`. Falta el audio de 60 segundos y confirmar testimonios.
+4. Podcast: 15 enlaces `#placeholder` (Apple, Spotify, YouTube, iHeart, RSS). Falta el audio y el video reales. Los titulos de los episodios 310 y 312 siguen mezclados en el sample.
+5. Sacred Containers: 6 enlaces `#placeholder`. La solicitud no se envia. El sample no trae precios.
+6. The Immersion: 6 enlaces `#placeholder`. El pago de $6,500 / $3,400 / $2,350 no esta conectado.
+7. The Portal: 6 enlaces `#placeholder`. El pago de $7,500 / $3,900 / $2,700 no esta conectado.
+8. Success stories: 7 enlaces `#placeholder`. El calendario de octubre 2026 no reserva.
+9. Press: 12 enlaces `#placeholder` (ZIP, clips y redes). Faltan los enlaces de los programas.
+10. Speaking: 9 enlaces `#placeholder` (reel, PDF, gira). Falta el video del reel.
+11. Blog: 6 enlaces `#placeholder`. Solo hay 9 extractos. No hay paginas de articulo.
+12. Contacto: 8 enlaces `#placeholder`, entre ellos Instagram. El correo `info@michellejlamont.com` esta como enlace mailto. El formulario y el video no estan conectados.
+13. En todas: las fuentes y los iconos se cargan desde Google Fonts y cdnjs. Responden, pero el sitio depende de esas dos redes.
+14. En todas: no hay enlaces externos rotos que reemplazar. Los `#placeholder` se dejan asi a proposito.
+15. `robots.txt` nombra `https://mjl-website.vercel.app/sitemap-index.xml`. Hoy esa direccion responde 404 porque el sitio publicado sigue siendo el HTML anterior. En esta rama el archivo si existe en `/sitemap-index.xml`. No se cambio ningun dominio.

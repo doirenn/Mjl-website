@@ -69,6 +69,18 @@ summary {
   animation: floatSlow 5s ease-in-out infinite;
 }
 
+/* Small peach labels on light backgrounds need a deeper tone to stay readable. */
+span.text-brand-sunsetPeach,
+p.text-brand-sunsetPeach {
+  color: #b4533f;
+}
+
+.spiritual-gradient :is(span, p).text-brand-sunsetPeach,
+.bg-brand-deepPurple :is(span, p).text-brand-sunsetPeach,
+.glass-dark :is(span, p).text-brand-sunsetPeach {
+  color: #f89a80;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

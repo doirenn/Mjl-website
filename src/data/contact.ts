@@ -5,7 +5,7 @@ import { images } from './images';
 export const contactSeo = {
   title: 'Contact Michelle J. Lamont | Spiritual Life Coach & Manifestation Mentor',
   description:
-    'Email info@michellejlamont.com or reach the alignment desk about mentorship, speaking, press, the podcast, or the Academy. The sample lists a response within 24 business hours.',
+    'Email info@michellejlamont.com about mentorship, speaking, press, the podcast, or the Academy.',
   ogImage: images.michellePortrait2023.src,
   ogAlt: 'Michelle J. Lamont',
 };

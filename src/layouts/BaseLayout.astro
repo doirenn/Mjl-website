@@ -37,7 +37,7 @@ const imageUrl = new URL(ogImage, Astro.site).href;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,7 +68,9 @@ const imageUrl = new URL(ogImage, Astro.site).href;
   </head>
   <body class="font-sans text-gray-800 bg-[#fdfaf8] antialiased overflow-x-hidden selection:bg-brand-sunsetPeach selection:text-white">
     <Header announcement={announcement} ctas={headerCtas} />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer content={footer} />
     <p id="placeholder" class="sr-only">Placeholder links are not connected.</p>
   </body>

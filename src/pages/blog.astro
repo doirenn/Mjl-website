@@ -15,7 +15,7 @@ const rest = articles.filter((article) => !article.featured);
   {featured && (
     <section class="py-12 bg-white">
       <a href="#archive" class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-        <img src={featured.image} alt="" class="rounded-3xl h-80 w-full object-cover" />
+        <img src={featured.image} alt={featured.title} width="1200" height="800" class="rounded-3xl h-80 w-full object-cover" />
         <div>
           <p class="text-xs font-bold uppercase text-brand-sunsetPeach">Editor's Channeled Pick · {featured.minutes}</p>
           <h2 class="font-serif text-3xl font-bold text-brand-deepPurple mt-2">{featured.title}</h2>
@@ -38,7 +38,7 @@ const rest = articles.filter((article) => !article.featured);
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {rest.map((article) => (
           <article class="blog-card glass-card rounded-3xl overflow-hidden border border-purple-100" data-category={article.category}>
-            <img src={article.image} alt="" class="h-40 w-full object-cover" />
+            <img src={article.image} alt={article.title} width="900" height="600" loading="lazy" decoding="async" class="h-40 w-full object-cover" />
             <div class="p-5">
               <p class="text-[11px] font-bold uppercase text-brand-sunsetPeach">{article.minutes} · By Michelle J. Lamont</p>
               <h3 class="font-serif text-xl font-bold text-brand-deepPurple mt-2">{article.title}</h3>

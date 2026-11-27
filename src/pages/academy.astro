@@ -97,7 +97,7 @@ import {
             </div>
             <div>
               <span class="text-[10px] font-bold uppercase tracking-widest text-brand-sunsetPeach">{academyHero.audioEyebrow}</span>
-              <h4 class="font-serif font-bold text-lg text-brand-deepPurple">{academyHero.audioTitle}</h4>
+              <h2 class="font-serif font-bold text-lg text-brand-deepPurple">{academyHero.audioTitle}</h2>
             </div>
           </div>
           <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-brand-amethyst">{academyHero.audioBadge}</span>
@@ -127,7 +127,7 @@ import {
               <h3 class:list={['font-serif font-bold text-lg', card.featured ? 'text-white' : 'text-brand-deepPurple']}>{card.title}</h3>
               <p class:list={['text-xs mt-2 leading-relaxed', card.featured ? 'text-purple-100' : 'text-gray-600']}>{card.body}</p>
             </div>
-            <span class:list={['text-[10px] uppercase font-bold', card.featured ? 'text-brand-gold' : 'text-gray-400']}>{card.foot}</span>
+            <span class:list={['text-[10px] uppercase font-bold', card.featured ? 'text-brand-gold' : 'text-gray-600']}>{card.foot}</span>
           </div>
         ))}
       </div>
@@ -176,12 +176,12 @@ import {
                 <img src={course.image.src} alt={course.image.alt} class="w-full h-full object-cover opacity-85" />
                 <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white text-brand-deepPurple">{course.badge}</span>
               </div>
-              <h4 class="font-serif font-bold text-lg text-brand-deepPurple">{course.title}</h4>
+              <h3 class="font-serif font-bold text-lg text-brand-deepPurple">{course.title}</h3>
               <p class="text-xs text-gray-600 mt-2 leading-relaxed">{course.body}</p>
             </div>
             <div class="pt-4 border-t border-purple-100 mt-4 flex items-center justify-between text-xs">
               <span class="text-brand-sunsetPeach font-bold">{course.included}</span>
-              <span class="text-gray-400 font-mono">{course.value}</span>
+              <span class="text-gray-600 font-mono">{course.value}</span>
             </div>
           </div>
         ))}
@@ -217,7 +217,7 @@ import {
             <div class="space-y-6">
               <div class:list={['flex items-center justify-between', plan.featured && 'pt-2']}>
                 <span class:list={['px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider', plan.featured ? 'bg-white/20 text-brand-sunsetPeach' : 'bg-brand-lavender text-brand-amethyst']}>{plan.badge}</span>
-                <span class:list={['text-xs font-semibold', plan.featured ? 'text-brand-gold font-bold' : 'text-gray-400']}>{plan.aside}</span>
+                <span class:list={['text-xs font-semibold', plan.featured ? 'text-brand-gold font-bold' : 'text-gray-600']}>{plan.aside}</span>
               </div>
               <div>
                 <h3 class:list={['font-serif text-2xl font-bold', plan.featured ? 'text-white' : 'text-brand-deepPurple']}>{plan.title}</h3>
@@ -268,7 +268,7 @@ import {
               <div class="flex text-amber-400 text-xs mb-3">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <h4 class="font-serif font-bold text-base text-brand-deepPurple mb-2">"{item.title}"</h4>
+              <h3 class="font-serif font-bold text-base text-brand-deepPurple mb-2">"{item.title}"</h3>
               <p class="text-xs text-gray-600 leading-relaxed italic">"{item.quote}"</p>
             </div>
             <div class="pt-6 border-t border-purple-100 mt-6 flex items-center space-x-3">
