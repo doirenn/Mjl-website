@@ -1,0 +1,40 @@
+---
+import { about } from '../data/goat';
+import CtaLink from './CtaLink.astro';
+import RichText from './RichText.astro';
+---
+
+<section class="border-b border-gold-500/20 bg-navy-800 py-20 text-ivory sm:py-28" aria-labelledby="about-title">
+  <div class="shell grid items-start gap-12 lg:grid-cols-12">
+    <div class="space-y-6 lg:sticky lg:top-28 lg:col-span-5">
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-gold-300">{about.eyebrow}</p>
+      <h2 id="about-title" class="font-serif text-4xl font-medium leading-tight text-ivory sm:text-5xl">{about.title}</h2>
+      <div class="h-px w-16 bg-gold-300"></div>
+      <p class="font-serif text-2xl italic leading-snug text-gold-300">{about.quote}</p>
+      <div class="grid grid-cols-2 gap-3.5 pt-2">
+        {
+          about.facts.map((fact) => (
+            <div class="rounded-xl border border-gold-300/25 bg-navy-950/70 p-4">
+              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gold-300">{fact.label}</p>
+              <p class="mt-1 block font-serif text-xl font-medium text-ivory">{fact.title}</p>
+              <p class="mt-1 text-xs text-ivory">{fact.detail}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="space-y-6 rounded-2xl border border-gold-500/30 bg-ivory p-8 text-base leading-relaxed text-ink shadow-card sm:p-11 sm:text-lg lg:col-span-7">
+      {about.paragraphs.map((parts) => <RichText parts={parts} surface="light" />)}
+      <div class="border-t border-gold-500/40 pt-4">
+        <p class="font-serif text-2xl italic text-navy-800 sm:text-3xl">{about.close}</p>
+      </div>
+      <CtaLink href={about.checkoutUrl}>
+        {about.cta}
+        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M4 10h12M12 5l5 5-5 5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </CtaLink>
+    </div>
+  </div>
+</section>

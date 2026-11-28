@@ -1,0 +1,29 @@
+---
+import { topBar } from '../data/goat';
+---
+
+<header id="top" class="sticky top-0 z-40 border-b border-gold-500/35 bg-navy-950/95 backdrop-blur-md">
+  <div class="shell flex flex-col items-center justify-between gap-3 py-3 sm:flex-row">
+    <a href="#top" class="inline-flex shrink-0 items-center rounded-sm">
+      <img
+        src="/images/mjl-logo.svg"
+        alt="Michelle J. Lamont"
+        width="250"
+        height="55"
+        class="h-11 w-auto sm:h-[52px]"
+      />
+    </a>
+    <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] font-medium uppercase tracking-[0.14em] text-ivory sm:text-xs">
+      <span>{topBar.seats}</span>
+      <span class="text-gold-300" aria-hidden="true">&#8226;</span>
+      <span>{topBar.kickoff}</span>
+      <span class="text-gold-300" aria-hidden="true">&#8226;</span>
+      <a
+        href={topBar.checkoutUrl}
+        class="inline-flex min-h-11 items-center text-gold-300 underline decoration-gold-300/80 underline-offset-4 hover:text-ivory"
+      >
+        {topBar.presale}
+      </a>
+    </p>
+  </div>
+</header>

@@ -1,0 +1,29 @@
+---
+import { michelle } from '../data/goat';
+import ImageSlot from './ImageSlot.astro';
+import RichText from './RichText.astro';
+---
+
+<section class="border-b border-gold-500/20 bg-navy-950 py-20 text-ivory sm:py-28" aria-labelledby="michelle-title">
+  <div class="shell grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
+    <div class="lg:col-span-5">
+      <figure class="overflow-hidden rounded-2xl border-2 border-gold-500 shadow-card">
+        <ImageSlot image={michelle.image} class="aspect-[4/5]" />
+        <figcaption class="border-t border-gold-300/50 bg-navy-950 px-6 py-4">
+          <span class="block text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-300">{michelle.captionKicker}</span>
+          <span class="font-serif text-2xl text-ivory">{michelle.name}</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="space-y-6 lg:col-span-7">
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-gold-300">{michelle.eyebrow}</p>
+      <h2 id="michelle-title" class="font-serif text-4xl font-medium text-ivory sm:text-5xl lg:text-6xl">{michelle.name}</h2>
+      <p class="text-xl leading-relaxed text-gold-300">{michelle.lead}</p>
+      <div class="space-y-5 text-base leading-relaxed text-ivory sm:text-lg">
+        {michelle.paragraphs.map((parts) => <RichText parts={parts} surface="dark" />)}
+      </div>
+      <p class="border-t border-ivory/20 pt-4 font-serif text-2xl italic text-gold-300 sm:text-3xl">{michelle.quote}</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+import About from '../components/About.astro';
+import Curriculum from '../components/Curriculum.astro';
+import Faq from '../components/Faq.astro';
+import FinalCta from '../components/FinalCta.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import MeetMichelle from '../components/MeetMichelle.astro';
+import Pillars from '../components/Pillars.astro';
+import Schedule from '../components/Schedule.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Tiers from '../components/Tiers.astro';
+import TopBar from '../components/TopBar.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <TopBar />
+  <main id="main">
+    <Hero />
+    <Pillars />
+    <About />
+    <MeetMichelle />
+    <Curriculum />
+    <Tiers />
+    <Schedule />
+    <Testimonials />
+    <Faq />
+    <FinalCta />
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+import { seo } from '../data/goat';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = seo.title, description = seo.description } = Astro.props;
+const image = new URL(seo.ogImage, seo.canonical).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href={seo.canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#0B1A33" />
+    <meta property="og:site_name" content="Michelle J. Lamont" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={seo.canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content={seo.ogImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content={seo.ogImageAlt} />
+  </head>
+  <body class="antialiased">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <slot />
+  </body>
+</html>

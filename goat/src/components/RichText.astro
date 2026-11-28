@@ -1,0 +1,30 @@
+---
+import type { Inline } from '../data/goat';
+
+interface Props {
+  parts: Inline[];
+  class?: string;
+  surface?: 'light' | 'dark';
+}
+
+const { parts, class: className = '', surface = 'light' } = Astro.props;
+const strongClass = surface === 'dark' ? 'font-semibold text-gold-300' : 'font-semibold text-gold-ink';
+const italicClass =
+  surface === 'dark'
+    ? 'font-serif text-xl italic text-gold-300'
+    : 'font-serif text-xl italic text-navy-800';
+---
+
+<p class={className}>
+  {
+    parts.map((part) =>
+      part.tone === 'strong' ? (
+        <strong class={strongClass}>{part.text}</strong>
+      ) : part.tone === 'italic' ? (
+        <em class={italicClass}>{part.text}</em>
+      ) : (
+        part.text
+      ),
+    )
+  }
+</p>
