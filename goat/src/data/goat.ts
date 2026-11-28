@@ -4,8 +4,8 @@
  * las frases que usan ese valor se actualizan solas.
  *
  * Fotos: cada `src` apunta a un archivo en public/images/.
- * Son las mismas fotos del sample, guardadas en local.
- * `sourceUrl` es la URL original del sample.
+ * Las de Pinterest son referencia sin licencia, solo para revision.
+ * `sourceUrl` guarda el origen. El retrato de Michelle es una foto real.
  * Si `src` queda vacio o el archivo no existe, se ve el bloque marcado.
  */
 
@@ -80,58 +80,58 @@ export const images = {
   heroBackground: {
     src: '/images/hero.jpg',
     suggestedSrc: '/images/hero.jpg',
-    alt: 'Confident woman in a tailored coat',
-    placeholder: 'IMAGE: hero background from the sample',
-    sourceUrl: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=85',
+    alt: 'A woman speaking on stage to an audience',
+    placeholder: 'IMAGE: hero background',
+    sourceUrl: 'https://i.pinimg.com/originals/11/6d/26/116d261c19c4c87392e7d7f3c1a0f8f4.jpg',
   },
   ownTheRoom: {
     src: '/images/own-the-room.jpg',
     suggestedSrc: '/images/own-the-room.jpg',
-    alt: 'Tailored black blazer',
-    placeholder: 'IMAGE: Own The Room from the sample',
-    sourceUrl: 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=600&q=80',
+    alt: 'A group of friends toasting together',
+    placeholder: 'IMAGE: Own The Room',
+    sourceUrl: 'https://i.pinimg.com/originals/64/29/db/6429dbb16d98cbb60b1826b15b2d6a01.jpg',
   },
   winterArc: {
     src: '/images/winter-arc.jpg',
     suggestedSrc: '/images/winter-arc.jpg',
-    alt: 'Winter cafe table with espresso and a journal',
-    placeholder: 'IMAGE: Winter Arc from the sample',
-    sourceUrl: 'https://images.unsplash.com/photo-1611288618898-e2a93f848cf6?auto=format&fit=crop&w=600&q=80',
+    alt: 'A woman in a black fur coat seated at a Paris cafe',
+    placeholder: 'IMAGE: Winter Arc',
+    sourceUrl: 'https://i.pinimg.com/originals/ad/f1/9c/adf19c5c468cf7e5a2d6a2aca5ad09f9.jpg',
   },
   theCrown: {
     src: '/images/the-crown.jpg',
     suggestedSrc: '/images/the-crown.jpg',
-    alt: 'Dinner table set for a toast',
-    placeholder: 'IMAGE: The Crown from the sample',
-    sourceUrl: 'https://images.unsplash.com/photo-1522322420883-600684d7f9f1?auto=format&fit=crop&w=600&q=80',
+    alt: 'Women in gold dresses toasting on a rooftop',
+    placeholder: 'IMAGE: The Crown',
+    sourceUrl: 'https://i.pinimg.com/736x/3a/5f/26/3a5f26ca58cf8da5f88e30ef4361d2a5.jpg',
   },
   pillarSpotlight: {
     src: '/images/pillar-spotlight.jpg',
     suggestedSrc: '/images/pillar-spotlight.jpg',
-    alt: 'Editorial portrait in dark styling',
-    placeholder: 'IMAGE: Step into the spotlight from the sample',
-    sourceUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85',
+    alt: 'A woman speaking into a microphone in front of a crowd',
+    placeholder: 'IMAGE: Step into the spotlight',
+    sourceUrl: 'https://i.pinimg.com/originals/ab/e7/2a/abe72a014e8f61f796750b8adea019d2.jpg',
   },
   pillarOpportunities: {
     src: '/images/pillar-opportunities.jpg',
     suggestedSrc: '/images/pillar-opportunities.jpg',
-    alt: 'Cafe table with a journal',
-    placeholder: 'IMAGE: Find opportunities everywhere from the sample',
-    sourceUrl: 'https://images.unsplash.com/photo-1564128153130-3c9cbaf1e0be?auto=format&fit=crop&w=900&q=85',
+    alt: 'A woman in sunglasses holding a coffee cup',
+    placeholder: 'IMAGE: Find opportunities everywhere',
+    sourceUrl: 'https://i.pinimg.com/originals/52/a8/c4/52a8c42f7e8aa17046602ec13d0af9e1.jpg',
   },
   pillarGreatest: {
     src: '/images/pillar-greatest.jpg',
     suggestedSrc: '/images/pillar-greatest.jpg',
-    alt: 'Winter coat and sunglasses',
-    placeholder: 'IMAGE: Become the greatest version of yourself from the sample',
-    sourceUrl: 'https://images.unsplash.com/photo-1504276288612-c18c8df55e05?auto=format&fit=crop&w=900&q=85',
+    alt: 'A man in a cream suit reading at a cafe',
+    placeholder: 'IMAGE: Become the greatest version of yourself',
+    sourceUrl: 'https://i.pinimg.com/originals/36/bf/e2/36bfe2417092051e9c57e2c2b8dc66c3.jpg',
   },
   michelle: {
     src: '/images/michelle.jpg',
     suggestedSrc: '/images/michelle.jpg',
-    alt: 'Portrait from the sample, shown in the Michelle J. Lamont slot',
+    alt: 'Michelle J. Lamont',
     placeholder: 'IMAGE: Michelle J. Lamont photo',
-    sourceUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=85',
+    sourceUrl: 'repo astro-rebuild public/images/michelle-portrait-2023.jpg',
   },
 } satisfies Record<string, ImageSlot>;
 

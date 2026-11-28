@@ -51,24 +51,28 @@ Los botones son enlaces. No hay selector de cuotas, ni modal de reserva, ni mens
 
 ### Imagenes
 
-Las fotos que se ven ahora son las mismas del sample `goat-sample/goat-sample.html`, guardadas en local. Para pedir un cambio, nombra el espacio o el archivo.
+Esta version es solo para revision. Las fotos de Pinterest no tienen licencia confirmada.
 
-| Espacio | Seccion | Archivo |
-| --- | --- | --- |
-| Fondo del hero | Hero | `public/images/hero.jpg` |
-| Own The Room | Hero | `public/images/own-the-room.jpg` |
-| Winter Arc | Hero | `public/images/winter-arc.jpg` |
-| The Crown | Hero | `public/images/the-crown.jpg` |
-| Step into the spotlight | Pilares | `public/images/pillar-spotlight.jpg` |
-| Find opportunities everywhere | Pilares | `public/images/pillar-opportunities.jpg` |
-| Become the greatest version of yourself | Pilares | `public/images/pillar-greatest.jpg` |
-| Retrato de Michelle J. Lamont | Meet Michelle J. Lamont | `public/images/michelle.jpg` |
+REFERENCIA SIN LICENCIA — reemplazar por foto con licencia antes del lanzamiento.
 
-La ruta de cada espacio esta en `src`, dentro de `images` en `src/data/goat.ts`. `sourceUrl` guarda la URL original del sample. Si `src` queda vacio o el archivo no existe, se ve el bloque marcado.
+| Espacio | Seccion | Archivo | Origen |
+| --- | --- | --- | --- |
+| Fondo del hero | Hero | `public/images/hero.jpg` | https://i.pinimg.com/originals/11/6d/26/116d261c19c4c87392e7d7f3c1a0f8f4.jpg |
+| Own The Room | Hero | `public/images/own-the-room.jpg` | https://i.pinimg.com/originals/64/29/db/6429dbb16d98cbb60b1826b15b2d6a01.jpg |
+| Winter Arc | Hero | `public/images/winter-arc.jpg` | https://i.pinimg.com/originals/ad/f1/9c/adf19c5c468cf7e5a2d6a2aca5ad09f9.jpg |
+| The Crown | Hero | `public/images/the-crown.jpg` | https://i.pinimg.com/736x/3a/5f/26/3a5f26ca58cf8da5f88e30ef4361d2a5.jpg |
+| Step into the spotlight | Pilares | `public/images/pillar-spotlight.jpg` | https://i.pinimg.com/originals/ab/e7/2a/abe72a014e8f61f796750b8adea019d2.jpg |
+| Find opportunities everywhere | Pilares | `public/images/pillar-opportunities.jpg` | https://i.pinimg.com/originals/52/a8/c4/52a8c42f7e8aa17046602ec13d0af9e1.jpg |
+| Become the greatest version of yourself | Pilares | `public/images/pillar-greatest.jpg` | https://i.pinimg.com/originals/36/bf/e2/36bfe2417092051e9c57e2c2b8dc66c3.jpg |
+| Retrato de Michelle J. Lamont | Meet Michelle J. Lamont | `public/images/michelle.jpg` | Foto real del repo, rama `astro-rebuild`, archivo `public/images/michelle-portrait-2023.jpg` |
 
-Para cambiar una foto, reemplaza el archivo en `goat/public/images/` con el mismo nombre, o escribe otra ruta local en `src`.
+Las siete fotos de Pinterest llevan esta nota: REFERENCIA SIN LICENCIA — reemplazar por foto con licencia antes del lanzamiento.
 
-El retrato de Michelle es la foto del sample, para que se pueda ver el encuadre. Cuando haya una foto real de Michelle J. Lamont, se reemplaza `public/images/michelle.jpg`.
+El retrato de Michelle es una foto real de ella, no una referencia de Pinterest.
+
+La pagina lleva `noindex, nofollow` y `public/robots.txt` bloquea todo el sitio, porque este mockup no debe indexarse.
+
+Para cambiar una foto, reemplaza el archivo en `goat/public/images/` con el mismo nombre.
 
 ## Como desplegar en Vercel, en un proyecto aparte
 
