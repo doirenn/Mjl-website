@@ -129,9 +129,9 @@ export const images = {
   michelle: {
     src: '/images/michelle.jpg',
     suggestedSrc: '/images/michelle.jpg',
-    alt: 'Michelle J. Lamont',
+    alt: 'Michelle J. Lamont on the beach in a blue dress',
     placeholder: 'IMAGE: Michelle J. Lamont photo',
-    sourceUrl: 'repo astro-rebuild public/images/michelle-portrait-2023.jpg',
+    sourceUrl: 'goat-assets/michelle-beach.jpg',
   },
 } satisfies Record<string, ImageSlot>;
 

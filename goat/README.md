@@ -64,7 +64,7 @@ REFERENCIA SIN LICENCIA — reemplazar por foto con licencia antes del lanzamien
 | Step into the spotlight | Pilares | `public/images/pillar-spotlight.jpg` | https://i.pinimg.com/originals/ab/e7/2a/abe72a014e8f61f796750b8adea019d2.jpg |
 | Find opportunities everywhere | Pilares | `public/images/pillar-opportunities.jpg` | https://i.pinimg.com/originals/52/a8/c4/52a8c42f7e8aa17046602ec13d0af9e1.jpg |
 | Become the greatest version of yourself | Pilares | `public/images/pillar-greatest.jpg` | https://i.pinimg.com/originals/36/bf/e2/36bfe2417092051e9c57e2c2b8dc66c3.jpg |
-| Retrato de Michelle J. Lamont | Meet Michelle J. Lamont | `public/images/michelle.jpg` | Foto real del repo, rama `astro-rebuild`, archivo `public/images/michelle-portrait-2023.jpg` |
+| Retrato de Michelle J. Lamont | Meet Michelle J. Lamont | `public/images/michelle.jpg` | Foto real de Michelle en la playa, vestido azul (`goat-assets/michelle-beach.jpg`) |
 
 Las siete fotos de Pinterest llevan esta nota: REFERENCIA SIN LICENCIA — reemplazar por foto con licencia antes del lanzamiento.
 

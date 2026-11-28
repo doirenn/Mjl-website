@@ -2,12 +2,17 @@
 import { topBar } from '../data/goat';
 ---
 
-<header class="sticky top-0 z-40 border-b border-gold-500/35 bg-navy-950/95 backdrop-blur-md">
+<header id="top" class="sticky top-0 z-40 border-b border-gold-500/35 bg-navy-950/95 backdrop-blur-md">
   <div class="shell flex flex-col items-center justify-between gap-3 py-3 sm:flex-row">
-    <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-ivory sm:text-sm sm:tracking-[0.22em]">
-      <span class="pulse-dot h-2.5 w-2.5 shrink-0 rounded-full bg-gold-300" aria-hidden="true"></span>
-      {topBar.brand}
-    </p>
+    <a href="#top" class="inline-flex shrink-0 items-center rounded-sm">
+      <img
+        src="/images/mjl-logo.svg"
+        alt="Michelle J. Lamont"
+        width="250"
+        height="55"
+        class="h-11 w-auto sm:h-[52px]"
+      />
+    </a>
     <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] font-medium uppercase tracking-[0.14em] text-ivory sm:text-xs">
       <span>{topBar.seats}</span>
       <span class="text-gold-300" aria-hidden="true">&#8226;</span>
